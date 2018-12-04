@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <a name="to-top15-2">
+            <h1>§ 15. Простые и составные условия</h1>
+        </a>
+        <h4> <a name="fif1-2">15.1. Логический тип данных</a>
+        </h4>
+        <p>Напомним изученные в 7-м классе понятия <i>высказывание</i> и <i>условие для
+                исполнителя</i>.</p>
+        <p><b>Высказывание</b> — повествовательное предложение (утверждение), о котором можно сказать, истинно оно или ложно.
+        </p>
+        <p><b>Условием для исполнителя</b> является известное ему высказывание, которое может соблюдаться (быть истинным) либо не соблюдаться (быть ложным).
+        </p>
+        <p>В языке программирования Pascal для работы с условиями определен л<b>огический тип данных boolean</b>. Величины типа
+            <font>boolean</font> могут принимать два значения —
+            <font>false</font> (ложь) и
+            <font>true</font> (истина).</p>
+        <p>Значения
+            <font>false</font> и
+            <font>true</font> получаются в результате выполнения операций сравнения над числовыми данными. Для сравнения используют знаки, указанные в таблице.</p>
+        <img src="img/table14-1.JPG" alt=""><br>
+        <p> Сравнивать можно константы, переменные, арифметические и логические выражения.
+        </p>
+        <p><b>Логическое выражение</b> — выражение, принимающее одно из двух значений:
+            <font>true</font> или
+            <font>false</font>.</p>
+        <p>Логические выражения можно присваивать переменным типа
+            <font>boolean</font>, а также выводить их значения на экран: будет выведено слово
+            <font>false</font> или
+            <font>true</font>
+            соответственно <a href="#pr15-1">(пример &#160;15.1)</a>. Условия для исполнителя являются частным случаем логических выражений.</p>
+        <h4> <a name="fif1-2">15.2. Составные условия</a>
+        </h4>
+        <p>С высказываниями можно производить логические операции (<b>НЕ, И,
+                ИЛИ</b>). Для логических переменных также определены логические операции, соответствующие операциям над высказываниями: <b>not, and, or</b>.</p>
+        <p class="bordered">Логические выражения, в которых наряду с простыми условиями (сравнениями) используются логические операции, называют <b>составными условиями</b>.</p>
+        <p>Приведем таблицы истинности логических операций.</p>
+        <table>
+            <tr>
+                <th colspan="2">Логическая переменная</th>
+                <th colspan="3">Результат операции</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td><b>not</b> A</td>
+                <td><b>not</b> B</td>
+                <td>A <b>or</b> B</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>true</td>
+                <td>false</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>true</td>
+                <td>true</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>false</td>
+                <td>false</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>false</td>
+                <td>true</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+        </table>
+        <p>В логических выражениях могут встречаться как арифметические операции, так и логические. Порядок выполнения операций определяется их приоритетом:
+        </p>
+        <p><br>
+            1) <b>
+                <font>not</font>
+            </b>;<br>
+
+            2) *, /, <b>
+                <font>div, mod, and</font>
+            </b>;<br>
+            3) +, −, <b>
+                <font>or</font>
+            </b>; <br>
+            4) =, &lt; &gt;, &lt;, &gt;, &lt;=, &gt;=.<br>
+        </p><br>
+        <p>(Рассмотрите <a href="#pr15-3">пример&#160;15.3</a>.)</p>
+        <p> Операции с одинаковым приоритетом выполняются по порядку, слева направо. Для изменения порядка выполнения операций применяют скобки (
+            <a href="#pr15-4">пример&#160;15.4</a>).</p>
+        <p>При составлении программ часто нужно строить отрицания сложным логическим выражениям. Для этого полезно использовать тождества, известные из алгебры логики (<a href="#pr15-5">пример&#160;15.5</a>), и следующую таблицу:</p>
+        <p><b><a href="#pr15-6">Пример&#160;15.6.</a></b> Написать программу, которая выдаст на экран значение
+            <font>true</font>
+            или
+            <font>false</font> в зависимости от того, находится ли число B между числами A и C.</p>
+        <p>
+            Этапы выполнения задания<br> I. Исходные данные: переменные А, B, C (вводимые числа).<br> II. Результат:
+            <font>rez</font> (True или False).<br> III. Алгоритм решения задачи.<br> 1. Ввод исходных данных.<br> 2. Вычисление значения логической переменной. Рассмотрим два случая.<br> Верно неравенство: А &lt; B &lt; C. Этому неравенству соответствует логическое выражение:
+            <font>(А &lt; B)</font> <b>and</b>
+            <font>(В &lt; С)</font>. Присвоим переменной
+            <font>r1</font> значение этого выражения.
+            <br> Верно неравенство: А &gt; B &gt; C. Этому неравенству соответствует логическое выражение:
+            <font>(А &gt; B)</font> <b>and</b>
+            <font>(В &gt; С)</font>. Присвоим переменной
+            <font>r2</font> значение этого выражения.
+            <br> Ответом на задачу будет значение логического выражения
+            <font>r1</font> <b>or</b>
+            <font>r2</font>.<br> 3. Вывод результата.<br> IV. Описание переменных: A, B, C — integer, r1, r2, rez — boolean.<br> Для работы с логическими величинами могут использоваться функции. Функция
+            <font>Ord</font> (порядковый номер значения) позволяет преобразовать логическое значение в числовое:
+            <font>Ord(false)</font> = 0, а
+            <font>Ord(true)</font> = 1. Функции Pred (предшествующее значение) и
+            <font>Succ</font> (последующее значение) позволяют преобразовывать логические значения:<br>
+            <font> D := Pred(true); {D = false} </font><br>
+            <font>E := Succ(false); {E = true}</font>
+        </p>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder15()">Тесты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Выберите верные утверждения.<br>
+                            <label for=""><input type="checkbox" id="t15-1-1">Логические выражения, в которых наряду с простыми условиями (сравнениями) используются логические операции, называют составными условиями. <br></label>
+                            <label for=""><input type="checkbox" id="t15-1-2">Значения false и true получаются в результате выполнения арифметических операций над числовыми данными. <br></label>
+                            <label for=""><input type="checkbox" id="t15-1-3">При составлении программ нельзя построить отрицание составного логического выражения. <br></label>
+                            <label for=""><input type="checkbox" id="t15-1-4">Логические выражения можно присваивать переменным типа <font>boolean. </font><br></label>
+
+                        </div>
+
+
+                        <button class="check" id="cht15-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Назовите логические операции, используемые в PascalABC. <br>
+                            <label for=""><input type="checkbox" id="t15-2-1">not. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-2">in. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-3">and. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-4">or. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-5">for. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-6">end. <br></label>
+
+                        </div>
+                        <button class="check" id="cht15-2">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Расставьте логические операции в порядке приоритета. <br>
+                            <label for=""><select id="t15-3-1">
+
+
+                                    <option value="2">and</option>
+                                    <option value="3">or</option>
+                                    <option value="1">not</option>
+
+
+                                </select></label>
+
+                            <label for=""><select id="t15-3-2">
+                                    <option value="3">or</option>
+                                    <option value="1">not</option>
+                                    <option value="2">and</option>
+
+
+
+                                </select></label>
+
+                            <label for=""><select id="t15-3-3">
+                                    <option value="1">not</option>
+                                    <option value="2">and</option>
+                                    <option value="3">or</option>
+
+
+
+
+                                </select></label>
+                        </div>
+                        <button class="check" id="cht15-3">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Выберите из списка истинные логические выражения.<br>
+                            <label for=""><input type="checkbox" id="t15-4-1">sin(0) > 1<br></label>
+
+                            <label for=""><input type="checkbox" id="t15-4-2">11 > 38<br></label>
+
+                            <label for=""><input type="checkbox" id="t15-4-3">7 < 13<br></label>
+
+                            <label for=""><input type="checkbox" id="t15-4-4">sqr(3) = 9<br></label>
+
+                            <label for=""><input type="checkbox" id="t15-4-5">2 + 4 * 3 = 18<br></label>
+
+                        </div>
+                        <button class="check" id="cht15-4">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Выберите из списка истинные составные логические выражения.<br>
+                            <label for=""><input type="checkbox" id="t15-5-1"> (7 &gt; 13) or (11 &lt; 15) <br></label>
+                            <label for=""><input type="checkbox" id="t15-5-2"> (sqr(4) = 16) and not(sqrt(5) = 25) <br></label>
+                            <label for=""><input type="checkbox" id="t15-5-3"> (cos(1000) &gt; 1) or(abs(3) = –3) <br></label>
+                            <label for=""><input type="checkbox" id="t15-5-4"> (17 &gt; 8) and (13 &lt; 8) <br></label>
+                            <label for=""><input type="checkbox" id="t15-5-5"> not(2 + 4 * 3 = 14) <br></label>
+
+                        </div>
+                        <button class="check" id="cht15-5">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Известно, что: <br>
+                            A:=3; <br>
+                            B:=4; <br>
+                            С:=2. <br>
+                            Определите значение логического выражения (A &lt; B) and (A &lt; C). В качестве ответа выберите <font> true</font> или <font>false</font>
+                            <br>
+                            <label for=""><input type="radio" value="1" name="t15-6"> true. <br></label>
+                            <label for=""><input type="radio" value="2" name="t15-6"> false.<br></label>
+
+                        </div>
+
+                        <button class="check" id="cht15-6">Проверить</button>
+                    </li>
+
+                    <li>
+                        <div class="flex-col">
+                            Известно, что: <br>
+                            A:= 3; <br>
+                            B:= 4; <br>
+                            С:= 2.<br>
+                            Определите значение логического выражения (С = A + B) or (A = sqr(С)). В качестве ответа выберите <font> true</font> или <font>false</font>
+                            <label for=""><input type="radio" value="1" name="t15-7"> true. <br></label>
+                            <label for=""><input type="radio" value="2" name="t15-7"> false. <br></label>
+
+
+                        </div>
+
+                        <button class="check" id="cht15-7">Проверить</button>
+                    </li>
+                </ol>
+
+
+            </div>
+            <button class="practise-btn">Упражнения</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+
+                    <li><b class="circled">1</b>Сформулируйте и реализуйте обратную задачу для <a href="#pr15-2">Пример&#160;15.2.</a>: для всех тех
+                        случаев, для которых в исходной задаче было <font>true</font>, нужно вывести <font>false</font> и, наоборот,
+                        для всех тех случаев, в которых в исходной задаче получалось <font>false</font>, получить <font>true</font>.
+                    </li>
+                    <li><b class="circled">2</b>В PascalABC определена логическая функция <font>odd(x)</font>. Значение этой функции
+                        <font>true</font>, если число x является нечетным, и <font>false</font>, если х — четное. Измените программу примера 15.2, используя функцию <font>odd</font>.</li>
+                    <li><b class="circled">3</b>Определите, что делают следующие программы, и дополните команду вывода.
+                        <ol>
+                            <li>
+                                <pre>
+                                    <font>
+<b>var</b> x: integer;
+a: boolean;
+<b>begin</b>
+write(ꞌВведите x =ꞌ);
+read(x);
+a := x mod 10 = 0;
+write(ꞌЧисло ... — ꞌ,a);
+<b>end</b>.
+                                        </font>
+                                </pre>
+                            </li>
+                            <li>
+                                <pre>
+                                    <font>
+<b>var</b> x: integer;
+a: boolean;
+<b>begin</b>
+write(ꞌВведите x =ꞌ);
+read(x);
+a := (x &#62 10) and (x &#60 100);
+write(ꞌЧисло ... — ꞌ,a);
+<b>end.</b></font>
+                                </pre>
+                            </li>
+                        </ol>
+
+                    </li>
+                    <li><b class="circled">4</b>Напишите программу, которая выведет на экран значение <font>true</font> или <font>false</font>, в зависимости от того, является ли введенное число x положительным или нет.</li>
+                    <li><b class="circled">5</b>Напишите программу, которая выведет на экран значение <font>true</font> или <font>false</font>, в зависимости от того, является ли введенное число x четырехзначным или нет.
+                    </li>
+                    <li><b class="circled">6*</b>Заданы два положительных числа x и y. Определите, верно ли, что первое число
+                        меньше второго и хотя бы одно из них нечетное. Выведите на экран <font>true</font> или <font>false</font>.
+                    </li>
+                </ul>
+                <br>
+            </div>
+        </div>
+        <hr>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top14-2">&#8592 Предыдущий параграф</a> </div>
+        <div class="to-right next"><a href="#to-top16-2">Следующий параграф &#8594</a></div><br><br><br>
+    </div>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                
+              
+        
+        
+        
+        $("#cht15-1").click(function () {
+            var ch1 = $("#t15-1-1").prop("checked");
+            var ch2 = $("#t15-1-2").prop("checked");
+            var ch3 = $("#t15-1-3").prop("checked");
+            var ch4 = $("#t15-1-4").prop("checked");
+             
+           
+            if (ch1 == true && ch2 == false && ch3 == false && ch4 == true) {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+                
+                 
+        $("#cht15-2").click(function () {
+            var ch1 = $("#t15-2-1").prop("checked");
+            var ch2 = $("#t15-2-2").prop("checked");
+            var ch3 = $("#t15-2-3").prop("checked");
+            var ch4 = $("#t15-2-4").prop("checked");
+             var ch5 = $("#t15-2-5").prop("checked");
+            var ch6 = $("#t15-2-6").prop("checked");
+             
+           
+            if (ch1 == true && ch2 == false && ch3 == true && ch4 == true && ch5 == false && ch6 == false) {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+        
+                
+         
+                
+       
+          $("#cht15-3").click(function () {   
+         var ch1 = $("#t15-3-1 option:selected").val();
+          var ch2 = $("#t15-3-2 option:selected").val();        
+            var ch3 = $("#t15-3-3 option:selected").val();        
+            
+           if (ch1 == "1" && ch2 == "2" && ch3 == "3") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });   
+                
+                 $("#cht15-4").click(function () {
+            var ch1 = $("#t15-4-1").prop("checked");
+            var ch2 = $("#t15-4-2").prop("checked");
+            var ch3 = $("#t15-4-3").prop("checked");
+            var ch4 = $("#t15-4-4").prop("checked");
+             var ch5 = $("#t15-4-5").prop("checked");
+           
+             
+           
+            if (ch1 == false && ch2 == false && ch3 == true && ch4 == true && ch5 == false ) {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+                
+                $("#cht15-5").click(function () {
+            var ch1 = $("#t15-5-1").prop("checked");
+            var ch2 = $("#t15-5-2").prop("checked");
+            var ch3 = $("#t15-5-3").prop("checked");
+            var ch4 = $("#t15-5-4").prop("checked");
+             var ch5 = $("#t15-5-5").prop("checked");
+           
+             
+           
+            if (ch1 == true && ch2 == true && ch3 == false && ch4 == false && ch5 == false ) {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+                
+         $("#cht15-6").click(function () {
+            var y2 = $("input[name='t15-6']:checked").attr("value");
+            if (y2 == "1") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });    
+                
+                  $("#cht15-7").click(function () {
+            var y2 = $("input[name='t15-7']:checked").attr("value");
+            if (y2 == "2") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });  
+                
+               
+                
+                });
+        })(jQuery);
+
+    </script>
+    <div lang='bel'>
+        <a name="to-top15-2">
+            <h1>§ 15. Простыя і састаўныя ўмовы</h1>
+        </a>
+        <h4> <a name="fif1-2">15.1. Лагічны тып даных</a>
+        </h4>
+        <p>Нагадаем вывучаныя ў 7-м класе паняцці <i>выказванне </i> и <i>ўмова для выка- наўцы</i>.</p>
+        <p><b>Выказванне </b> — апавядальны сказ (сцверджанне), пра які можна сказаць, праўдзівы ён ці непраўдзівы
+        </p>
+        <p><b>Умовай для выканаўцы </b> яз’яўляецца вядомае яму выказванне, якое можа выконвацца (быць праўдзівым) або не выконвацца (быць непраўдзівым).
+        </p>
+        <p>У мове праграміравання <font>Pascal </font> для работы з умовамі вызначаны <b>олагічны тып даных boolean</b>. Велічыні тыпу
+            <font>boolean</font> могуць прымаць два значэнні —
+            <font>false</font> (непраўдзіва) и
+            <font>true</font> (праўдзіва).</p>
+        <p>Значэнні
+            <font>false</font> і
+            <font>true</font> атрымліваюцца ў выніку выканання аперацый параўнання над лікавымі данымі. Для параўнання выкарыстоўваюць знакі, паказаныя ў табліцы.</p>
+        <img src="img/table14-1.JPG" alt=""><br>
+        <p> Параўноўваць можна канстанты, пераменныя, арыфметычныя і лагічныя выразы.
+        </p>
+        <p><b>Лагічны выраз</b> — выраз, які прымае адно з двух значэнняў:
+            <font>true</font> або
+            <font>false</font>.</p>
+        <p>Лагічныя выразы можна прысвойваць пераменным тыпу
+            <font>boolean</font>, а таксама выводзіць іх значэнні на экран: будзе выведзена слова
+            <font>false</font> або
+            <font>true</font>
+            адпаведна <a href="#pr15-1b">(Прыклад 15.1)</a>. Умовы для выканаўцы з’яўляюцца прыватным выпадкам лагічных выразаў.</p>
+        <p><a href="#pr15-2b">(Прыклад 15.2)</a>. Напісаць праграму, якая выведзе на экран значэнне <font>true</font> або <font>false</font>у залежнасці ад таго, з’яўляецца ўведзены лік x цотным ці не.</p>
+        <p>Этапы выканання задання
+            <br>I. Зыходныя даныя: x (уведзены лік).
+            <br>II. Вынік: a (<font>true</font> або <font>false</font>).
+            <br>III. Алгарытм рашэння задачы.
+            <br> 1. Увод зыходных даных.
+            <br> 2. Вылічэнне значэння лагічнай пераменнай. Лік з’яўляеца цотным, калі астача ад дзялення яго на 2 роўна нулю. Значэнне пераменнай a вызначаецца значэннем выразу x <b>mod</b> 2 = 0.
+            <br> 3. Вывад выніку.
+            <br>IV. Апісанне пераменных: x — <font>integer</font>, a — <font>boolean</font>.
+
+        </p>
+
+
+        <h4> <a name="fif1-2">15.2. Састаўныя ўмовы</a>
+        </h4>
+        <p>З выказваннямі можна выконваць лагічныя аперацыі (<b>НЕ, І, ИЛИ</b>). Для лагічных пераменных таксама вызначаны лагічныя аперацыі, якія адпавядаюць аперацыям над выказваннямі: <b>not, and, or</b>.</p>
+        <p class="bordered">Лагічныя выразы, у якіх поруч з простымі ўмовамі (параўнаннямі) выкарыстоўваюцца лагічныя аперацыі, называюць <b>састаўнымі ўмовамі</b>.</p>
+        <p>Прывядзём табліцы праўдзівасці лагічных аперацый.</p>
+        <table>
+            <tr>
+                <th colspan="2">Лагічная пераменная</th>
+                <th colspan="3">Вынік аперацыі</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td><b>not</b> A</td>
+                <td><b>not</b> B</td>
+                <td>A <b>or</b> B</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>true</td>
+                <td>false</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>true</td>
+                <td>true</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>false</td>
+                <td>false</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>false</td>
+                <td>true</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+        </table>
+        <p>У лагічных выразах могуць сустракацца як арыфметычныя аперацыі, так і лагічныя. Парадак выканання аперацый вызначаецца іх прыярытэтам:
+        </p>
+        1) <b>
+            <font>not</font>
+        </b>;<br> 2) *, /, <b>
+            <font>div, mod, and</font>
+        </b>;<br> 3) +, −, <b>
+            <font>or</font>
+        </b>;<br> 4) =, &lt; &gt;, &lt;, &gt;, &lt;=, &gt;=.<br> (Разгледзьце <a href="#pr15-3">прыклад 15.3</a>.)<br>
+        <p> Аперацыі з аднолькавым прыярытэтам выконваюцца па парадку, злева направа. Для змянення парадку выканання аперацый ужываюць дужкі (
+            <a href="#pr15-4b">прыклад 15.4</a>).</p>
+        <p>Пры складанні праграм часта трэба будаваць адмаўленні складаным лагічным выразам. Для гэтага карысна выкарыстоўваць тоеснасці, вядомыя з алгебры логікі (<a href="#pr15-5b">прыклад 15.5</a>), і наступную табліцу:</p>
+        <table>
+            <tr>
+                <th>Умова</th>
+                <th>Супрацьлеглая ўмова (адмаўленне ўмовы)
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <font>a &lt; b </font>
+                </td>
+                <td>
+                    <font>a &gt;= b</font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font>a &gt; b</font>
+                </td>
+                <td>
+                    <font>a &lt;= b</font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font>
+                        <font>a = b</font>
+                    </font>
+                </td>
+                <td>
+                    <font>a &lt;&gt; b</font>
+                </td>
+            </tr>
+
+        </table>
+        <p><b><a href="#pr15-6b">Прыклад 15.6.</a></b> Напісаць праграму, якая выдасць на экран значэнне
+            <font>true</font>
+            або
+            <font>false</font> ў залежнасці ад таго, ці знаходзіцца лік <i>B</i> паміж лікамі A і C.</p>
+        Этапы выканання задання
+        <br> I. Зыходныя даныя: пераменныя <i>А, B, C (лікі, якія ўводзяцца)</i>.
+        <br> II. II. Вынік: <font>rez</font> (True або False).
+        <br> III. III. Алгарытм рашэння задачы
+        <br> 1. Увод зыходных даных.
+        <br> 2. Вылічэнне значэння лагічнай пераменнай. Разгледзім два выпадкі.
+        <br> Правільная няроўнасць: <i>А &lt; B &lt; C</i>. Гэтай няроўнасці адпавядае лагічны выраз:
+        <font>(А &lt; B)</font> <b>and</b>
+        <font>(В &lt; С)</font>. Нададзім пераменнай
+        <font>r1</font> значэнне гэтага выразу.
+        <br> Правільная няроўнасць: <i>А &gt; B &gt; C</i>. Гэтай няроўнасці адпавядае лагічны выраз:
+        <font>(А &gt; B)</font> <b>and</b>
+        <font>(В &gt; С)</font>. Нададзім пераменнай
+        <font>r2</font> значэнне гэтага выразу.
+        <br> Адказам на задачу будзе значэнне лагічнага выразу
+        <font>r1</font> <b>or</b>
+        <font>r2</font>.<br> 3. Вывад выніку.<br> IV. Апісанне пераменных: <i>A, B, C</i> — <font>integer, r1, r2, rez — boolean</font>.<br> Для работы з лагічнымі велічынямі могуць выкарыстоўвацца функцыі. Функцыя <font>Ord</font> (парадкавы нумар значэння) дазваляе пераўтвараць лагічнае значэнне ў лікавае:
+        <font>Ord(false)</font> = 0, а
+        <font>Ord(true)</font> = 1. Функцыі Pred (папярэдняе значэнне) и
+        <font>Succ</font> (наступнае значэнне) дазваляюць пераўтвараць лагічныя значэнні:<br>
+        <font> D := Pred(true); {D = false} </font><br>
+        <font>E := Succ(false); {E = true}</font>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder15()">Тэсты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Выберите верные утверждения.<br>
+                            <label for=""><input type="checkbox" id="t15-1-1">Логические выражения, в которых наряду с простыми условиями (сравнениями) используются логические операции, называют составными условиями. <br></label>
+                            <label for=""><input type="checkbox" id="t15-1-2">Значения false и true получаются в результате выполнения арифметических операций над числовыми данными. <br></label>
+                            <label for=""><input type="checkbox" id="t15-1-3">При составлении программ нельзя построить отрицание составного логического выражения. <br></label>
+                            <label for=""><input type="checkbox" id="t15-1-4">Логические выражения можно присваивать переменным типа <font>boolean. </font><br></label>
+
+                        </div>
+
+
+                        <button class="check" id="cht15-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Назовите логические операции, используемые в PascalABC. <br>
+                            <label for=""><input type="checkbox" id="t15-2-1">not. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-2">in. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-3">and. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-4">or. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-5">for. <br></label>
+                            <label for=""><input type="checkbox" id="t15-2-6">end. <br></label>
+
+                        </div>
+                        <button class="check" id="cht15-2">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Расставьте логические операции в порядке приоритета. <br>
+                            <label for=""><select id="t15-3-1">
+                                    <option value="3">or</option>
+                                    <option value="1">not</option>
+                                    <option value="2">and</option>
+
+
+
+                                </select></label>
+
+                            <label for=""><select id="t15-3-2">
+
+                                    <option value="1">not</option>
+                                    <option value="2">and</option>
+                                    <option value="3">or</option>
+
+
+                                </select></label>
+
+                            <label for=""><select id="t15-3-3">
+                                    <option value="2">and</option>
+                                    <option value="1">not</option>
+
+                                    <option value="3">or</option>
+
+
+
+
+                                </select></label>
+                        </div>
+                        <button class="check" id="cht15-3">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Выберите из списка истинные логические выражения.<br>
+                            <label for=""><input type="checkbox" id="t15-4-1">sin(0) > 1<br></label>
+
+                            <label for=""><input type="checkbox" id="t15-4-2">11 > 38<br></label>
+
+                            <label for=""><input type="checkbox" id="t15-4-3">7 < 13<br></label>
+
+                            <label for=""><input type="checkbox" id="t15-4-4">sqr(3) = 9<br></label>
+
+                            <label for=""><input type="checkbox" id="t15-4-5">2 + 4 * 3 = 18<br></label>
+
+                        </div>
+                        <button class="check" id="cht15-4">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Выберите из списка истинные составные логические выражения.<br>
+                            <label for=""><input type="checkbox" id="t15-5-1"> (7 &gt; 13) or (11 &lt; 15) <br></label>
+                            <label for=""><input type="checkbox" id="t15-5-2"> (sqr(4) = 16) and not(sqrt(5) = 25) <br></label>
+                            <label for=""><input type="checkbox" id="t15-5-3"> (cos(1000) &gt; 1) or(abs(3) = –3) <br></label>
+                            <label for=""><input type="checkbox" id="t15-5-4"> (17 &gt; 8) and (13 &lt; 8) <br></label>
+                            <label for=""><input type="checkbox" id="t15-5-5"> not(2 + 4 * 3 = 14) <br></label>
+
+                        </div>
+                        <button class="check" id="cht15-5">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Известно, что: <br>
+                            A:=3; <br>
+                            B:=4; <br>
+                            С:=2. <br>
+                            Определите значение логического выражения (A &lt; B) and (A &lt; C). В качестве ответа выберите <font> true</font> или <font>false</font>
+                            <br>
+                            <label for=""><input type="radio" value="1" name="t15-6"> true. <br></label>
+                            <label for=""><input type="radio" value="2" name="t15-6"> false.<br></label>
+
+                        </div>
+
+                        <button class="check" id="cht15-6">Проверить</button>
+                    </li>
+
+                    <li>
+                        <div class="flex-col">
+                            Известно, что: <br>
+                            A:= 3; <br>
+                            B:= 4; <br>
+                            С:= 2.<br>
+                            Определите значение логического выражения (С = A + B) or (A = sqr(С)). В качестве ответа выберите <font> true</font> или <font>false</font>
+                            <label for=""><input type="radio" value="1" name="t15-7"> true. <br></label>
+                            <label for=""><input type="radio" value="2" name="t15-7"> false. <br></label>
+
+
+                        </div>
+
+                        <button class="check" id="cht15-7">Проверить</button>
+                    </li>
+                </ol>
+
+
+            </div>
+            <button class="practise-btn">Упражнения</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+
+                    <li><b class="circled">1</b>Сформулируйте и реализуйте обратную задачу для примера 15.2: для всех тех
+                        случаев, для которых в исходной задаче было <font>true</font>, нужно вывести <font>false</font> и, наоборот,
+                        для всех тех случаев, в которых в исходной задаче получалось <font>false</font>, получить <font>true</font>.
+                    </li>
+                    <li><b class="circled">2</b>В PascalABC определена логическая функция <font>odd(x)</font>. Значение этой функции
+                        <font>true</font>, если число x является нечетным, и <font>false</font>, если х — четное. Измените программу примера 15.2, используя функцию <font>odd</font>.</li>
+                    <li><b class="circled">3</b>Определите, что делают следующие программы, и дополните команду вывода.
+                        <ol>
+            </div>
+
+
+            <button class="practise-btn">Практыкаванні</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+
+                    <li><b class="circled">1</b>Сфармулюйце і рэалізуйце адваротную задачу для прыкладу 15.2: для ўсіх тых выпадкаў, для якіх у зыходнай задачы было <font>true</font>, трэба вывесці <font>false</font> і, наадварот, для ўсіх тых выпадкаў, у якіх у зыходнай задачы атрымлівалася <font>false</font>, атрымаць <font>true</font>.
+                    </li>
+                    <li><b class="circled">2</b>У PascalABC вызначана лагічная функцыя <font>odd(x)</font>. Значэнне гэтай функцыі
+                        <font>true</font>, калі лік x з’яўляецца няцотным, і <font>false</font>, калі х — цотны. Змяніце праграму прыкладу 15.2, выкарыстоўваючы функцыю <font>odd</font>.</li>
+                    <li><b class="circled">3</b>Вызначыце, што робяць наступныя праграмы, і дапоўніце каманду вываду.
+                        <ol>
+                            <li>
+                                <pre>
+                                    <font>
+var x: integer;
+a: boolean;
+begin
+write(ꞌУвядзіце  x =ꞌ);
+read(x);
+a := x mod 10 = 0;
+write(ꞌЛік  ... — ꞌ,a);
+end.
+                                        </font>
+                                </pre>
+                            </li>
+                            <li>
+                                <pre>
+                                    <font>
+var x: integer;
+a: boolean;
+begin
+write(ꞌУвядзіце  x =ꞌ);
+read(x);
+a := (x &gt; 10) and (x &lt; 100);
+write(ꞌЛік  ... — ꞌ,a);
+end.</font>
+                                </pre>
+                            </li>
+                        </ol>
+
+                    </li>
+                    <li><b class="circled">4</b>Напішыце праграму, якая выведзе на экран значэнне <font>true</font> або <font>false</font>, у залежнасці ад таго, з’яўляецца ўведзены лік x дадатным ці не.</li>
+                    <li><b class="circled">5</b>Напішыце праграму, якая выведзе на экран значэнне <font>true</font> або <font>false</font>, у залежнасці ад таго, з’яўляецца ўведзены лік x чатырохзначным ці не.</li>
+                    <li><b class="circled">6*</b>Зададзены два дадатныя лікі x і y. Вызначыце, ці дакладна, што першы лік меншы за другі і хоць бы адзін з іх няцотны. Выведзіце на экран <font>true</font> або <font>false</font>.
+                    </li>
+                </ul>
+                <br>
+            </div>
+            <hr>
+        </div>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top14-1"> Папярэдні параграф</a> </div>
+        <div class="to-right next"><a href="#to-top16-1">Наступны параграф &#8594</a></div><br><br><br>
+
+    </div>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+
+
+
+
+
+                $("#cht15-1").click(function() {
+                    var ch1 = $("#t15-1-1").prop("checked");
+                    var ch2 = $("#t15-1-2").prop("checked");
+                    var ch3 = $("#t15-1-3").prop("checked");
+                    var ch4 = $("#t15-1-4").prop("checked");
+
+
+                    if (ch1 == true && ch2 == false && ch3 == false && ch4 == true) {
+                        myalert("Правильно!");
+                    } else {
+                        myalert("Не правильно!");
+                    }
+                });
+
+
+                $("#cht15-2").click(function() {
+                    var ch1 = $("#t15-2-1").prop("checked");
+                    var ch2 = $("#t15-2-2").prop("checked");
+                    var ch3 = $("#t15-2-3").prop("checked");
+                    var ch4 = $("#t15-2-4").prop("checked");
+                    var ch5 = $("#t15-2-5").prop("checked");
+                    var ch6 = $("#t15-2-6").prop("checked");
+
+
+                    if (ch1 == true && ch2 == false && ch3 == true && ch4 == true && ch5 == false && ch6 == false) {
+                        myalert("Правильно!");
+                    } else {
+                        myalert("Не правильно!");
+                    }
+                });
+
+
+
+
+
+                $("#cht15-3").click(function() {
+                    var ch1 = $("#t15-3-1 option:selected").val();
+                    var ch2 = $("#t15-3-2 option:selected").val();
+                    var ch3 = $("#t15-3-3 option:selected").val();
+
+                    if (ch1 == "1" && ch2 == "2" && ch3 == "3") {
+                        myalert("Правильно!");
+                    } else {
+                        myalert("Не правильно!");
+                    }
+                });
+
+                $("#cht15-4").click(function() {
+                    var ch1 = $("#t15-4-1").prop("checked");
+                    var ch2 = $("#t15-4-2").prop("checked");
+                    var ch3 = $("#t15-4-3").prop("checked");
+                    var ch4 = $("#t15-4-4").prop("checked");
+                    var ch5 = $("#t15-4-5").prop("checked");
+
+
+
+                    if (ch1 == false && ch2 == false && ch3 == true && ch4 == true && ch5 == false) {
+                        myalert("Правильно!");
+                    } else {
+                        myalert("Не правильно!");
+                    }
+                });
+
+                $("#cht15-5").click(function() {
+                    var ch1 = $("#t15-5-1").prop("checked");
+                    var ch2 = $("#t15-5-2").prop("checked");
+                    var ch3 = $("#t15-5-3").prop("checked");
+                    var ch4 = $("#t15-5-4").prop("checked");
+                    var ch5 = $("#t15-5-5").prop("checked");
+
+
+
+                    if (ch1 == true && ch2 == true && ch3 == false && ch4 == false && ch5 == false) {
+                        myalert("Правильно!");
+                    } else {
+                        myalert("Не правильно!");
+                    }
+                });
+
+                $("#cht15-6").click(function() {
+                    var y2 = $("input[name='t15-6']:checked").attr("value");
+                    if (y2 == "1") {
+                        myalert("Правильно!");
+                    } else {
+                        myalert("Не правильно!");
+                    }
+                });
+
+                $("#cht15-7").click(function() {
+                    var y2 = $("input[name='t15-7']:checked").attr("value");
+                    if (y2 == "2") {
+                        myalert("Правильно!");
+                    } else {
+                        myalert("Не правильно!");
+                    }
+                });
+
+
+
+            });
+        })(jQuery);
+
+    </script>
+</body>
+
+</html>

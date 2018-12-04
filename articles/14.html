@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <a name="to-top14-2">
+            <h1>§ 14. Графические возможности среды программирования PascalABC</h1>
+        </a>
+        <h4> <a name="fo1-2">14.1. Основы работы с графикой</a></h4>
+        <p>Вы уже знакомы с графическими редакторами, в которых для построения изображений на компьютере используются графические примитивы — простые геометрические фигуры: прямоугольник, окружность, эллипс, отрезок и т. д. Графический редактор — программа, написанная на каком-либо языке программирования.</p>
+        <p>Для работы с графикой языки программирования используют специальные библиотеки (модули), содержащие наборы команд для построения изображений. В PascalABC для работы с графикой используется библиотека GraphABC. Для подключения этой библиотеки в программе записывается команда <b>uses</b>
+            <font>GraphABC</font>;
+        </p>
+        <p>Положение фигур задается координатами в графическом окне. Координатная плоскость в нем отличается от той, которую вы используете на уроках математики. Началом координат является верхний левый угол графического окна — точка (0; 0) <a href="#pr14-1">(пример&#160;14.1)</a>. Координаты задают порядковый номер пикселя по горизонтали и вертикали, поэтому они могут быть только целыми числами. Отсчет значений координаты <i>х</i> происходит слева направо, а координаты <i>y</i> — сверху вниз. По умолчанию создается графическое окно размером 640 × 480 пикселей.</p>
+        <h4>
+            <a name="fo2-2">14.2. Работа со справочной системой среды программирования PascalABC </a></h4>
+        <p> В библиотеке GraphABC содержится большое количество команд. Эти команды описаны в справочной системе среды PascalABC <a href="#pr14-2">(пример&#160;4.2)</a>. Здесь есть описание графических примитивов, названия цветовых констант, описание работы с пером и кистью, команды работы с графическим окном.</p>
+        <p>Команды библиотеки GraphABC — вспомогательные алгоритмы, записанные как отдельные процедуры. Использование команды в программе означает вызов соответствующего алгоритма.</p>
+
+
+        <h4>
+            <a name="fo3-2"> 14.3. Основные графические примитивы</a></h4>
+
+        <p>Рассмотрим команды для рисования графических примитивов:</p>
+        <ul>
+            <li>
+                <font>Line(x1,y1,x2,y2)</font> — отрезок, соединяющий точки с координатами (<i>x1, y1</i>) и (<i>x2, y2</i>).
+            </li>
+            <li>
+                <font>MoveTo(x,y)</font> — устанавливает текущую позицию рисования в точку (<i>x, y</i>);
+            </li>
+            <li>
+                <font>LineTo(x,y)</font> — отрезок от текущей позиции до точки (<i>x, y</i>);
+            </li>
+            <li>
+                <font>Rectangle(x1,y1,x2,y2)</font> — прямоугольник, заданный координатами противоположных вершин (<i>x1, y1</i>) и (<i>x2, y2</i>);
+            </li>
+            <li>
+                <font>Circle(x1,y1,r)</font> — круг с центром в точке (<i>x1, y1</i>) и радиусом r;
+            </li>
+            <li>
+                <font>Ellipse(x1,y1,x2,y2)</font> — овал (эллипс), вписанный в прямоугольник с координатами противоположных вершин (<i>x1, y1</i>) и (<i>x2, y2</i>).
+            </li>
+
+        </ul>
+        <p>(Рассмотрите <a href="#pr14-3">пример&#160;4.3.</a>)</p>
+        <p> Команды для рисования других графических примитивов имеются в справочной системе и в <i>Приложении</i>.</p>
+        <p><b>Пример&#160;14.4.</b> Написать программу, которая строит изображение домика, используя процедуры
+            <font>Line, Lineto, Rectangle, Circle.</font>
+        </p>
+        <p>Этапы выполнения задания<br>
+
+            I. Исходные данные: результат работы
+            программы не зависит от исходных
+            данных.<br>
+            II. Результат: готовый рисунок.<br>
+            III. Алгоритм решения задачи.
+            Рисунок состоит из: прямоугольников,
+            отрезков, круга. Для расчета
+            координат рекомендуется предварительно
+            сделать рисунок на листе бумаги в
+            клеточку.<br>
+            IV. Описание переменных. Переменные
+            не используются.</p>
+        <h4> <a name="fo4-2">14.4. Работа с Пером и Кистью</a></h4>
+        <p> В графических редакторах, прежде чем рисовать какие-либо фигуры, устанавливают их цвет. Обычно выбирают два цвета. Цвет 1 определяет цвет линий и контуров фигур, Цвет 2 используется для заливки фигур. Кроме того, можно изменять стиль линий и заливки, а также определять толщину линий.</p>
+        <p>В графическом режиме PascalABC настройки линии определяет перо (Pen), а настройки внутренней области фигур — кисть (Brush). Команды для работы с кистью и пером приведены в таблице.</p>
+        <table>
+            <tr>
+                <th>Команда</th>
+                <th>Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetPenColor</font>
+                </td>
+                <td>Цвет линий</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetPenWidth</font>
+                </td>
+                <td>Толщина линии</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetPenStyle</font>
+                </td>
+                <td>Стиль линий</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetBrushColor</font>
+                </td>
+                <td>Цвет заливки</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetBrushStyle</font>
+                </td>
+                <td>Стиль заливки</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetBrushHatch</font>
+                </td>
+                <td>Вид штриховки для заливки</td>
+            </tr>
+
+        </table>
+        <p>Значение, которое нужно установить для каждой из команд, записывается в скобках. Например:</p>
+        <ul>
+            <li>
+                <font>SetPenColor(clRed)</font> — красный цвет рисования линий;
+            </li>
+            <li>
+                <font>SetBrushColor(clBlue)</font> — синий цвет заливки фигур;
+            </li>
+            <li>
+                <font>SetPenWidth(3)</font> — толщина пера в 3 пикселя;
+            </li>
+            <li>
+                <font>SetPenStyle(psDot)</font> — штриховая линия;
+            </li>
+            <li>
+                <font>SetBrushStyle(bsHatch)</font> — штриховая заливка;
+            </li>
+            <li>
+                <font>SetBrushHatch(bhCross)</font> — штриховка в клеточку.
+            </li>
+        </ul>
+        <p>Значения цветовых констант, стилей линий и заливок можно найти в справочной системе среды PascalABC (<a href="#pr14-5">примеры&#160;14.5—14.7</a>) и в <i>Приложении</i>).</p>
+        <p> Команды для установки цвета и стиля записывают перед командой рисования фигуры. Эти команды действуют до тех пор, пока цвет или стиль не будет изменен. Если, например, для пера была установлена толщина в 3 пикселя, то отрезки и границы фигур будут иметь толщину в 3 пикселя до новой смены толщины пера.</p>
+        <p>Для фигур по умолчанию установлена заливка белым цветом. Если цвет кисти выбрать до рисования фигуры, то фигура будет закрашена установленным цветом. Цвет уже нарисованной фигуры можно изменить с помощью команды заливки:</p>
+        <p>
+            <font>FloodFill(x,y,c);</font> — заливает ограниченную область одного цвета цветом c, начиная с точки внутри области (x,y) (в <a href="#pr14-8">примере&#160;14.8</a> показано, как раскрашен домик из <a href="#pr14-4">примера&#160;14.4</a>).
+        </p>
+        <p>Среда программирования PascalABC позволяет обращаться к свойствам кисти и пера по-другому. Так, например, для изменения цвета (стиля, толщины) можно записать</p>
+        <font>Pen.Color := clRed;<br> Pen.Style := psDot;<br> Pen.Width := 3;<br></font>
+        <p>Подсказка среды выглядит следующим образом:</p>
+        <img src="img/14-4.jpg" alt=""><br>
+        <p>Вторую часть команды можно выбрать из выпадающего списка.</p>
+        <p>При изучении векторной графики вы познакомились с цветовой моделью RGB, которая позволяет записать любой цвет тремя составляющими: красной, зеленой и синей. Функция
+            <font>RGB (r, g, b)</font> позволяет определить цвет по трем составляющим. Так, команда
+            <font>SetPenColor (clRed);</font> аналогична команде
+            <font>SetPenColor (RGB(255,0,0));</font>
+            Такой способ задания цвета позволяет задавать цвета, значения которых не описаны цветовыми константами. Значения составляющих цвета можно посмотреть в графическом редакторе Paint <a href="#pr14-9">(пример&#160;14.9)</a>.</p>
+        <p>В графическом режиме PascalABC можно выводить в графическое окно тексты и числа.</p>
+        <p>
+            <font>TextOut(x,y,z);</font> — выводит строку или число z в прямоугольник с коор- динатами левого верхнего угла (x,y).
+        </p>
+        <p>Если нужно вывести строку, то ее символы заключают в кавычки, для вывода числа можно использовать переменные или значения чисел. Если в качестве <i>z</i> записать арифметическое выражение, то будет выведено его значение.</p>
+        <p>Для изменения параметров текста применяют следующие команды:</p>
+        <table>
+            <tr>
+                <th>Команда</th>
+                <th>Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetFontColor</font>
+                </td>
+                <td>Цвет символов</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetFontSize</font>
+                </td>
+                <td>Размер символов</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetFontName</font>
+                </td>
+                <td>Имя текущего шрифта</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetFontStyle</font>
+                </td>
+                <td>Стиль текста</td>
+            </tr>
+
+        </table>
+        <p>Команда
+            <font>SetBrushColor</font> устанавливает цвет прямоугольника, внутри которого будет находиться текст
+            <a href="#pr14-10">(пример 14.10)</a>. Команда действует до тех пор, пока цвет не будет изменен. Для записи текста без фона нужно установить прозрачный фон кисти:
+            <font>SetBrushStyle(bsClear)</font>.</p>
+        <p>Все параметры для текста задаются до команды вывода его в графическое окно. Имя шрифта, которым будет выведен текст, заключается в кавычки. Возможные варианты можно посмотреть в Word. Стиль текста может иметь следующие значения:
+            <font>fsNormal</font> (обычный),
+            <font>fsBold</font> (жирный),
+            <font>fsItalic</font> (на- клонный),
+            <font>fsUnderline</font> (подчеркнутый) или их комбинации:
+            <font>fsBoldUnderline</font>
+            (жирный подчеркнутый).</p>
+
+
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder14()">Тесты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда используется для подключения графической библиотеки в PascalABC?<br>
+                            <label for=""><input type="radio" value="1" name="t14-1"> Uses Robot. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-1"> Uses Drawman. <br></label>
+
+                            <label for=""><input type="radio" value="3" name="t14-1"> Uses GraphABC. <br></label>
+
+                            <label for=""><input type="radio" value="4" name="t14-1"> Uses Math. <br></label>
+                            <label for=""><input type="radio" value="5" name="t14-1"> Uses Colors. <br></label>
+
+                        </div>
+                        <button class="check" id="cht14-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какие координаты может иметь точка в графическом окне на рисунке?<br>
+                            <img src="/img/t14-2.jpg" alt="" width="200px"><br>
+                            <label for=""><input type="radio" value="1" name="t14-2"> (50; 100). <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-2"> (200; 200). <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-2"> (100; 50). <br></label>
+
+                        </div>
+                        <button class="check" id="cht14-2">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда позволяет задать размеры графического окна?<br>
+                            <label for=""><input type="radio" value="1" name="t14-3"> SizeWindow. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-3"> SetPixel. <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-3"> SetWindowSize. <br></label>
+                            <label for=""><input type="radio" value="4" name="t14-3"> SetWindowTitle. <br></label>
+
+                        </div>
+
+                        <button class="check" id="cht14-3">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда предназначена для определения цвета линий?<br>
+                            <label for=""><input type="radio" value="1" name="t14-4"> SetPenColor. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-4"> SetPenWidth. <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-4"> SetPenStyle. <br></label>
+                            <label for=""><input type="radio" value="4" name="t14-4"> SetBrushColor. <br></label>
+                            <label for=""><input type="radio" value="5" name="t14-4"> SetBrushStyle. <br></label>
+                            <label for=""><input type="radio" value="6" name="t14-4"> SetBrushHatch. <br></label>
+
+                        </div>
+
+                        <button class="check" id="cht14-4">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда предназначена для определения цвета заливки?<br>
+                            <label for=""><input type="radio" value="1" name="t14-5"> SetPenColor. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-5"> SetPenWidth. <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-5"> SetPenStyle. <br></label>
+                            <label for=""><input type="radio" value="4" name="t14-5"> SetBrushColor. <br></label>
+                            <label for=""><input type="radio" value="5" name="t14-5"> SetBrushStyle. <br></label>
+                            <label for=""><input type="radio" value="6" name="t14-5"> SetBrushHatch<br></label>
+
+                        </div>
+                        <button class="check" id="cht14-5">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда предназначена для вывода текста в графическом окне?<br>
+                            <label for=""><input type="radio" value="1" name="t14-6"> TextOut. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-6"> SetFontColor. <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-6"> SetFontSize. <br></label>
+                            <label for=""><input type="radio" value="4" name="t14-6"> SetFontName. <br></label>
+                            <label for=""><input type="radio" value="5" name="t14-6"> SetFontStyle. <br></label>
+
+
+                        </div>
+                        <button class="check" id="cht14-6">Проверить</button>
+                    </li>
+
+                    <li>
+                        <div class="flex-col">
+                            Установите соответствие между действиями и командами для рисования основных графических примитивов.<br>
+
+                            <label for="">Рисует отрезок от точки (x1,y1) до точки (x2,y2)<select id="t14-7-1">
+
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="5">FloodFill(x,y,c)</option>
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+                                    <option value="2">Circle(x,y,r)</option>
+
+                                </select></label>
+
+                            <label for="">Рисует заполненный круг с центром (x,y) и радиусом r<select id="t14-7-2">
+
+                                    <option value="2">Circle(x,y,r)</option>
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="5">FloodFill(x,y,c)</option>
+
+                                </select></label>
+
+                            <label for="">Рисует заполненный круг с центром (x,y) и радиусом r<select id="t14-7-3">
+                                    <option value="5">FloodFill(x,y,c)</option>
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="2">Circle(x,y,r)</option>
+
+
+
+                                </select></label>
+
+                            <label for="">Рисует заполненный прямоугольник, заданный координатами противоположных вершин (x1,y1) и (x2,y2)<select id="t14-7-4">
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="2">Circle(x,y,r)</option>
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+
+                                    <option value="5">FloodFill(x,y,c)</option>
+                                </select></label>
+
+                            <label for="">Заливает область одного цвета цветом c, начиная с точки (x,y)<select id="t14-7-5">
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+                                    <option value="2">Circle(x,y,r)</option>
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="5">FloodFill(x,y,c)</option>
+
+                                </select></label>
+
+
+
+
+
+
+                        </div>
+                        <button class="check" id="cht14-7">Проверить</button>
+
+
+                    </li>
+
+                </ol>
+            </div>
+            <button class="practise-btn">Упражнения</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Подпишите изображение из примера 14.8.</li>
+                    <li><b class="circled">2</b>Дополните изображение домика из примера 14.8 изображениями
+                        трубы и дыма из трубы в виде нескольких овалов:<br><img src="/img/upr14-2.JPG" alt=""></li>
+                    <li><b class="circled">3</b>Дополните результат, полученный при выполнении задания 2, какими-либо из
+                        предложенных изображений или придумайте свои.<br><img src="/img/upr14-3.JPG" alt=""></li>
+                    <li><b class="circled">4</b>Напишите программу для создания изображения. Раскрасьте данное изображение по своему усмотрению. Дополнительные команды для построения графических
+                        примитивов можно найти в справочной системе.<br><img src="/img/upr14-4.JPG" alt="" width="95%"></li>
+
+
+
+
+
+
+                </ul>
+                <br>
+
+            </div>
+            <hr>
+        </div>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top13-2">&#8592 Предыдущий параграф</a> </div>
+        <div class="to-right next"><a href="#to-top15-2">Следующий параграф &#8594</a></div><br><br><br>
+    </div>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                
+                $("#cht14-1").click(function () {
+            var y2 = $("input[name='t14-1']:checked").attr("value");
+            if (y2 == "3") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+                
+               
+                
+                $("#cht14-2").click(function () {
+            var y2 = $("input[name='t14-2']:checked").attr("value");
+            if (y2 == "3") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+        
+                   $("#cht14-3").click(function () {
+            var y2 = $("input[name='t14-3']:checked").attr("value");
+            if (y2 == "3") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+                
+                   $("#cht14-4").click(function () {
+            var y2 = $("input[name='t14-4']:checked").attr("value");
+            if (y2 == "1") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+                
+                   $("#cht14-5").click(function () {
+            var y2 = $("input[name='t14-5']:checked").attr("value");
+            if (y2 == "4") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+        
+                   $("#cht14-6").click(function () {
+            var y2 = $("input[name='t14-6']:checked").attr("value");
+            if (y2 == "1") {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });
+        
+      
+       
+          $("#cht14-7").click(function () {   
+         var ch1 = $("#t14-7-1 option:selected").val();
+          var ch2 = $("#t14-7-2 option:selected").val();        
+            var ch3 = $("#t14-7-3 option:selected").val();        
+             var ch4 = $("#t14-7-4 option:selected").val();  
+              var ch5 = $("#t14-7-5 option:selected").val();    
+                
+           if (ch1 == "1" && ch2 == "2" && ch3 == "3" && ch4 == "4" && ch5 == "5" ) {
+                myalert("Правильно!");
+            } else {
+                myalert("Не правильно!");
+            }
+        });      
+                
+                
+                
+               
+                
+                });
+        })(jQuery);
+
+    </script>
+    <div lang='bel'>
+        <a name="to-top14-2">
+            <h1>§ 14. Графічныя магчымасці асяроддзя праграміравання PascalABC</h1>
+        </a>
+        <h4> <a name="fo1-2">14.1. Асновы работы з графікай</a></h4>
+        <p>Вы ўжо знаёмыя з графічнымі рэдактарамі, у якіх для пабудовы відарысаў на камп’ютары выкарыстоўваюцца графічныя прымітывы — простыя геаметрычныя фігуры: прамавугольнік, акружнасць, эліпс, адрэзак і г. д. Графічны рэдактар — праграма, напісаная на якой-небудзь мове праграміравання.</p>
+        <p>Для работы з графікай мовы праграміравання выкарыстоўваюць спецыяльныя бібліятэкі (модулі), якія змяшчаюць наборы каманд для пабудовы відарысаў. У PascalABC для работы з графікай выкарыстоўваецца бібліятэка GraphABC. Для падключэння гэтай бібліятэкі ў праграме запісваецца каманда <b>uses</b>
+            <font>GraphABC</font>;
+        </p>
+        <p>Становішча фігур задаецца каардынатамі ў графічным акне. Каардынатная плоскасць у ім адрозніваецца ад той, якую вы выкарыстоўваеце на ўроках матэматыкі. Пачаткам каардынат
+            з’яўляецца верхні левы вугал графічнага акна — пункт (0; 0) <a href="#pr14-1b">(прыклад 14.1)</a>. Каардынаты задаюць парадкавы нумар пікселя па гарызанталі і па вертыкалі, таму яны могуць быць толькі цэлымі лікамі. Адлік значэнняў каардынаты х адбываецца злева направа, а каардынаты у — зверху ўніз. Па змоўчанні ствараецца графічнае акно паме- рам 640 x 480 пікселяў.</p>
+        <h4>
+            <a name="fo2-2">14.2. Работа з даведачнай сістэмай асяроддзя праграміравання PascalABC </a></h4>
+        <p> У бібліятэцы GraphABC змяшчаецца вялікая колькасць каманд. Гэтыя каманды апісаны ў даведачнай сістэме асяроддзя PascalABC <a href="#pr14-2b">(прыклад 14.2)</a>. Тут ёсць апісанне графічных прымітываў, назвы колеравых канстант, апісанне работы з пяром і пэндзлем, каманды работы з графічным акном.</p>
+        <p>Каманды бібліятэкі GraphABC — дапаможныя алгарытмы, запісаныя як асобныя працэдуры. Выкарыстанне каманды ў праграме азначае выклік адпаведнага алгарытму.</p>
+
+
+        <h4>
+            <a name="fo3-2"> 14.3. Асноўныя графічныя прымітывы</a></h4>
+
+        <p>Разгледзім каманды для рысавання графічных прымітываў:</p>
+        <ul>
+            <li>
+                <font>Line(x1,y1,x2,y2)</font> — оадрэзак, які злучае пункты з каардынатамі (x1, y1) и (x2, y2).
+            </li>
+            <li>
+                <font>MoveTo(x,y)</font> — устанаўлівае бягучую пазіцыю рысавання ў пункт (x, y);
+            </li>
+            <li>
+                <font>LineTo(x,y)</font> — адрэзак ад бягучай пазіцыі да пункта (x, y);
+            </li>
+            <li>
+                <font>Rectangle(x1,y1,x2,y2)</font> — прамавугольнік, зададзены каардынатамі супрацьлеглых вяршынь (x1, y1) и (x2, y2);
+            </li>
+            <li>
+                <font>Circle(x1,y1,r)</font> — круг з цэнтрам у пункце (x1, y1) і радыусам r;
+            </li>
+            <li>
+                <font>Ellipse(x1,y1,x2,y2)</font> — авал (эліпс), упісаны ў прамавугольнік з каардынатамі супрацьлегых вяршынь (x1, y1) и (x2, y2).
+            </li>
+
+        </ul>
+        <p>(Разгледзьце <a href="#pr14-3b">прыклад 14.3.</a>)</p>
+        <p> ККаманды для рысавання іншых графічных прымітываў маюцца ў даведачнай сістэме і ў <i>Дадатку 3</i>.</p>
+        <p><b>Прыклад 14.4.</b> Напісаць праграму, якая будуе відарыс доміка, выкарыстоўваючы працэдуры
+            <font>Line, Lineto, Rectangle, Circle.</font>
+        </p>
+        <p>Этапы выканання задання</p>
+        <pre>
+I. Зыходныя даныя: вынік работы праграмы не залежыць ад зыходных даных.
+II.	Вынік: гатовы рысунак.
+III.	Алгарытм рашэння задачы. Рысунак складаецца з: прамавугольнікаў, адрэзкаў, круга. 
+Для разліку каардынат рэкамендуецца спачатку зрабіць рысунак на лісце паперы ў клетачку.
+IV.	Апісанне пераменных. Перамен- ныя не выкарыстоўваюцца.</pre>
+        <h4> <a name="fo4-2">14.4. Работа з пяром і пэндзлем</a></h4>
+        <p> У графічных рэдактарах, перш чым рысаваць якія-небудзь фігуры, устанаўліваюць іх колер. Звычайна выбіраюць два колеры. Колер 1 вызначае колер ліній і контураў фігур, Колер 2 выкарыстоўваецца для заліўкі фігур. Акрамя таго, можна змяняць стыль ліній і заліўкі, а таксама вызначаць таўшчыню ліній.</p>
+        <p>У графічным рэжыме PascalABC настройкі лініі вызначае пяро (Pen), а настройкі ўнутранай вобласці фігур — пэндзаль (Brush). Каманды для работы з пэндзлем і пяром прыведзены ў табліцы.</p>
+        <table>
+            <tr>
+                <th>Каманда</th>
+                <th>Апісанне</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetPenColor</font>
+                </td>
+                <td>Колер ліній</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetPenWidth</font>
+                </td>
+                <td>Таўшчына ліній</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetPenStyle</font>
+                </td>
+                <td>Стыль ліній</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetBrushColor</font>
+                </td>
+                <td>Колер заліўкі</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetBrushStyle</font>
+                </td>
+                <td>Стыль заліўкі</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetBrushHatch</font>
+                </td>
+                <td>Від штрыхоўкі для заліўкі</td>
+            </tr>
+
+        </table>
+        <p>Значэнне, якое трэба ўстанавіць для кожнай з каманд, запісваецца ў дужках. Напрыклад:</p>
+        <ul>
+            <li>
+                <font>SetPenColor(clRed)</font> — чырвоны колер рысавання ліній;
+            </li>
+            <li>
+                <font>SetBrushColor(clBlue)</font> — сіні колер заліўкі фігур;
+            </li>
+            <li>
+                <font>SetPenWidth(3)</font> — таўшчыня пяра ў 3 пікселі;
+            </li>
+            <li>
+                <font>SetPenStyle(psDot)</font> — штрыхавая лінія;
+            </li>
+            <li>
+                <font>SetBrushStyle(bsHatch)</font> — штрыхавая заліўка;
+            </li>
+            <li>
+                <font>SetBrushHatch(bhCross)</font> — штрыхоўка ў клетачку.
+            </li>
+        </ul>
+        <p>Значэнні колеравых канстант, стыляў ліній і залівак можна знайсці ў даведачнай сістэме асяроддзя PascalABC (<a href="#pr14-5b">прыклады 14.5—14.7</a>) і ў <i>Дадатку 3</i>).</p>
+        <p> Каманды для ўстаноўкі колеру і стылю запісваюць перад камандай рысавання фігуры. Гэтыя каманды дзейнічаюць да таго часу, пакуль колер або стыль не будзе зменены. Калі, напрыклад, для пяра была ўстаноўлена таўшчыня ў 3 пікселі, то адрэзкі і межы фігур будуць мець таўшчыню ў тры пікселі да новай змены таўшчыні інструмента.</p>
+        <p>Для фігур па змоўчанні ўстаноўлена заліўка белым колерам. Калі колер пэндзля выбраць да рысавання фігуры, то фігура будзе зафарбавана ўстаноўленым колерам. Колер ужо нарысаванай фігуры можна змяніць з дапамогай каманды заліўкі:</p>
+        <p>
+            <font>FloodFill(x,y,c);</font> — залівае абмежа- ваную вобласць аднаго колеру колерам c, пачынаючы з пункта ўнутры вобласці (x,y) (у <a href="#pr14-8b">прыкладзе 14.8</a> паказана, як расфарбаваны домік з <a href="#pr14-4">прыкладу 14.4</a>).
+        </p>
+        <p>Асяроддзе праграміравання Pascal- ABC дазваляе звяртацца да ўласцівасцей пэндзля і пяра паіншаму. Так, напрыклад, для змянення колеру (стылю, таўшчыні) можна запісаць </p>
+        <font>Pen.Color := clRed;<br> Pen.Style := psDot;<br> Pen.Width := 3;<br></font>
+        <p>Падказка асяроддзя выглядае наступным чынам:</p>
+        <img src="img/14-4.jpg" alt=""><br>
+        <p>Другую частку каманды можна вы- браць з выпадаючага спіса.</p>
+        <p>ППры вывучэнні вектарнай графікі вы пазнаёміліся з колеравай мадэллю RGB, якая дазваляе запісаць любы колер трыма складнікамі: чырвоным, зялёным і сінім. Функцыя
+            <font>RGB (r, g, b)</font> дазваляе вызначыць колер па трох складніках. Так, каманда
+            <font>SetPenColor (clRed);</font> аналагічная камандзе
+            <font>SetPenColor (RGB(255,0,0));</font>
+            Такі спосаб задання колеру дазваляе задаваць колеры, значэнні якіх не апісаны колеравымі канстантамі. Значэнні складнікаў колеру можна паглядзець у графічным рэдактары <font>Paint</font> <a href="#pr14-9b">(прыклад 14.9)</a>.</p>
+        <p>У графічным рэжыме PascalABC можна выводзіць у графічнае акно тэксты і лікі.</p>
+        <p>
+            <font>TextOut(x,y,z);</font> — выводзіць радок або лік z у прамавугольнік з каардынатамі левага верхняга вугла (x,y).
+        </p>
+        <p>ЕКалі трэба вывесці радок, то яго сімвалы змяшчаюць у двукоссе, для вываду ліку можна выкарыстоўваць пераменныя або значэнні лікаў. Калі ў якасці <i>z</i> запісаць арыфметычны выраз, то будзе выведзена яго значэнне.</p>
+        <p>Для змянення параметраў тэксту ўжываюць наступныя каманды:</p>
+        <table>
+            <tr>
+                <th>Каманда</th>
+                <th>Апісанне</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetFontColor</font>
+                </td>
+                <td>Колер сімвалаў</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetFontSize</font>
+                </td>
+                <td>Памер сімвалаў</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetFontName</font>
+                </td>
+                <td>Імя бягучага шрыфту</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetFontStyle</font>
+                </td>
+                <td>Стыль тэксту</td>
+            </tr>
+
+        </table>
+        <p>Каманда
+            <font>SetBrushColor</font> уустанаў лівае колер прамавугольніка, унутры якога будзе знаходзіцца тэкст
+            <a href="#pr14-10b">(прыклад 14.10)</a>. Каманда дзейнічае да таго часу, пакуль колер не будзе зменены. Для запісу тэксту без фону трэба ўстанавіць празрысты фон пэндзля:
+            <font>SetBrushStyle(bsClear)</font>.</p>
+        <p>Усе параметры для тэксту задаюцца да каманды вываду яго ў графічнае акно. Імя шрыфта, якім будзе выведзены тэкст, змяшчаюць у двукоссе. Магчымыя варыянты можна паглядзець у Word. Стыль тэксту можа мець наступныя значэнні:
+            <font>fsNormal</font> (звычайны)),
+            <font>fsBold</font> (тлусты),
+            <font>fsItalic</font> (нахільны),
+            <font>fsUnderline</font> (падкрэслены) або іх камбінацыі
+            <font>fsBoldUnderline</font>
+            (тлусты падкрэслены).</p>
+
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder14()">Тэсты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда используется для подключения графической библиотеки в PascalABC?<br>
+                            <label for=""><input type="radio" value="1" name="t14-1"> Uses Robot. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-1"> Uses Drawman. <br></label>
+
+                            <label for=""><input type="radio" value="3" name="t14-1"> Uses GraphABC. <br></label>
+
+                            <label for=""><input type="radio" value="4" name="t14-1"> Uses Math. <br></label>
+                            <label for=""><input type="radio" value="5" name="t14-1"> Uses Colors. <br></label>
+
+                        </div>
+                        <button class="check" id="cht14-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какие координаты может иметь точка в графическом окне на рисунке?<br>
+                            <img src="/img/t14-2.jpg" alt="" width="200px"><br>
+                            <label for=""><input type="radio" value="1" name="t14-2"> (50; 100). <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-2"> (200; 200). <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-2"> (100; 50). <br></label>
+
+                        </div>
+                        <button class="check" id="cht14-2">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда позволяет задать размеры графического окна?<br>
+                            <label for=""><input type="radio" value="1" name="t14-3"> SizeWindow. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-3"> SetPixel. <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-3"> SetWindowSize. <br></label>
+                            <label for=""><input type="radio" value="4" name="t14-3"> SetWindowTitle. <br></label>
+
+                        </div>
+
+                        <button class="check" id="cht14-3">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда предназначена для определения цвета линий?<br>
+                            <label for=""><input type="radio" value="1" name="t14-4"> SetPenColor. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-4"> SetPenWidth. <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-4"> SetPenStyle. <br></label>
+                            <label for=""><input type="radio" value="4" name="t14-4"> SetBrushColor. <br></label>
+                            <label for=""><input type="radio" value="5" name="t14-4"> SetBrushStyle. <br></label>
+                            <label for=""><input type="radio" value="6" name="t14-4"> SetBrushHatch. <br></label>
+
+                        </div>
+
+                        <button class="check" id="cht14-4">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда предназначена для определения цвета заливки?<br>
+                            <label for=""><input type="radio" value="1" name="t14-5"> SetPenColor. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-5"> SetPenWidth. <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-5"> SetPenStyle. <br></label>
+                            <label for=""><input type="radio" value="4" name="t14-5"> SetBrushColor. <br></label>
+                            <label for=""><input type="radio" value="5" name="t14-5"> SetBrushStyle. <br></label>
+                            <label for=""><input type="radio" value="6" name="t14-5"> SetBrushHatch<br></label>
+
+                        </div>
+                        <button class="check" id="cht14-5">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какая команда предназначена для вывода текста в графическом окне?<br>
+                            <label for=""><input type="radio" value="1" name="t14-6"> TextOut. <br></label>
+                            <label for=""><input type="radio" value="2" name="t14-6"> SetFontColor. <br></label>
+                            <label for=""><input type="radio" value="3" name="t14-6"> SetFontSize. <br></label>
+                            <label for=""><input type="radio" value="4" name="t14-6"> SetFontName. <br></label>
+                            <label for=""><input type="radio" value="5" name="t14-6"> SetFontStyle. <br></label>
+
+
+                        </div>
+                        <button class="check" id="cht14-6">Проверить</button>
+                    </li>
+
+                    <li>
+                        <div class="flex-col">
+                            Установите соответствие между действиями и командами для рисования основных графических примитивов.<br>
+
+                            <label for="">Рисует отрезок от точки (x1,y1) до точки (x2,y2)<select id="t14-7-1">
+
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="5">FloodFill(x,y,c)</option>
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+                                    <option value="2">Circle(x,y,r)</option>
+
+                                </select></label>
+
+                            <label for="">Рисует заполненный круг с центром (x,y) и радиусом r<select id="t14-7-2">
+
+                                    <option value="2">Circle(x,y,r)</option>
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="5">FloodFill(x,y,c)</option>
+
+                                </select></label>
+
+                            <label for="">Рисует заполненный круг с центром (x,y) и радиусом r<select id="t14-7-3">
+                                    <option value="5">FloodFill(x,y,c)</option>
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="2">Circle(x,y,r)</option>
+
+
+
+                                </select></label>
+
+                            <label for="">Рисует заполненный прямоугольник, заданный координатами противоположных вершин (x1,y1) и (x2,y2)<select id="t14-7-4">
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="2">Circle(x,y,r)</option>
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+
+                                    <option value="5">FloodFill(x,y,c)</option>
+                                </select></label>
+
+                            <label for="">Заливает область одного цвета цветом c, начиная с точки (x,y)<select id="t14-7-5">
+                                    <option value="1">Line(x1,y1,x2,y2)</option>
+                                    <option value="2">Circle(x,y,r)</option>
+                                    <option value="3">Ellipse(x1,y1,x2,y2)</option>
+                                    <option value="4">Rectangle(x1,y1,x2,y2)</option>
+                                    <option value="5">FloodFill(x,y,c)</option>
+
+                                </select></label>
+
+
+
+
+
+
+                        </div>
+                        <button class="check" id="cht14-7">Проверить</button>
+
+
+                    </li>
+
+                </ol>
+            </div>
+
+
+
+            <button class="practise-btn">Практыкаванні</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Падпішыце відарыс з прыкладу 14.8.</li>
+                    <li><b class="circled">2</b>Дапоўніце відарыс доміка з прыкладу 14.8 відарысамі трубы і дыму з трубы ў выглядзе некалькіх авалаў:<br><img src="/img/upr14-2.JPG" alt=""></li>
+                    <li><b class="circled">3</b>Дапоўніце вынік, атрыманы пры выкананні задання 2, якімі-небудзь з прапанаваных відарысаў або прыдумайце свае.<br><img src="/img/upr14-3.JPG" alt=""></li>
+                    <li><b class="circled">4</b>Напішыце праграму для стварэння відарыса. Размалюйце дадзены відарыс па сваім вырашэнні. Дадатковыя каманды для пабудовы графічных прымітываў можна знайсці ў даведачнай сістэме.<br><img src="/img/upr14-4.JPG" alt="" width="95%"></li>
+
+
+
+
+
+
+                </ul>
+                <br>
+
+            </div>
+            <br><br>
+            <div class="to-Left prev"><a href="#to-top13-1">&#8592 Папярэдні параграф</a> </div>
+            <div class="to-right next"><a href="#to-top15-1">Наступны параграф &#8594</a></div><br><br><br>
+
+        </div>
+        <script>
+            (function($) {
+                $(document).ready(function() {
+
+                    $("#cht14-1").click(function() {
+                        var y2 = $("input[name='t14-1']:checked").attr("value");
+                        if (y2 == "3") {
+                            myalert("Правильно!");
+                        } else {
+                            myalert("Не правильно!");
+                        }
+                    });
+
+
+
+                    $("#cht14-2").click(function() {
+                        var y2 = $("input[name='t14-2']:checked").attr("value");
+                        if (y2 == "3") {
+                            myalert("Правильно!");
+                        } else {
+                            myalert("Не правильно!");
+                        }
+                    });
+
+                    $("#cht14-3").click(function() {
+                        var y2 = $("input[name='t14-3']:checked").attr("value");
+                        if (y2 == "3") {
+                            myalert("Правильно!");
+                        } else {
+                            myalert("Не правильно!");
+                        }
+                    });
+
+                    $("#cht14-4").click(function() {
+                        var y2 = $("input[name='t14-4']:checked").attr("value");
+                        if (y2 == "1") {
+                            myalert("Правильно!");
+                        } else {
+                            myalert("Не правильно!");
+                        }
+                    });
+
+                    $("#cht14-5").click(function() {
+                        var y2 = $("input[name='t14-5']:checked").attr("value");
+                        if (y2 == "4") {
+                            myalert("Правильно!");
+                        } else {
+                            myalert("Не правильно!");
+                        }
+                    });
+
+                    $("#cht14-6").click(function() {
+                        var y2 = $("input[name='t14-6']:checked").attr("value");
+                        if (y2 == "1") {
+                            myalert("Правильно!");
+                        } else {
+                            myalert("Не правильно!");
+                        }
+                    });
+
+
+
+                    $("#cht14-7").click(function() {
+                        var ch1 = $("#t14-7-1 option:selected").val();
+                        var ch2 = $("#t14-7-2 option:selected").val();
+                        var ch3 = $("#t14-7-3 option:selected").val();
+                        var ch4 = $("#t14-7-4 option:selected").val();
+                        var ch5 = $("#t14-7-5 option:selected").val();
+
+                        if (ch1 == "1" && ch2 == "2" && ch3 == "3" && ch4 == "4" && ch5 == "5") {
+                            myalert("Правильно!");
+                        } else {
+                            myalert("Не правильно!");
+                        }
+                    });
+
+
+
+
+
+                });
+            })(jQuery);
+
+        </script>
+</body>
+
+</html>

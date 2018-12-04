@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <div class="green-back">
+            <p>Цикл с заданным условием окончания работы в PascalABC записывается следующим образом:</p>
+            <pre><font>
+ repeat
+тело цикла;
+until &lt;условие&gt;;      
+   </font></pre>
+            <p>Цикл работает, пока условие ложно, и прекращает работу, когда условие становится истинным.</p>
+            <p>Этот цикл называют <b>циклом
+                    с постусловием</b>, так как проверка
+                условия осуществляется после выполнения тела цикла. Цикл с постусловием всегда выполняется хотя
+                бы один раз.</p>
+            <p>Циклы <font>repeat</font> и <font>while</font> в PascalABC
+                взаимозаменяемы, поэтому при написании программ достаточно использования только одного из них.</p>
+        </div>
+
+
+
+
+        <div class="blue-back">
+            <a name="pr17-1"><b>Пример 17.1.</b>
+                <p>V. Программа:
+            </a>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>var</b> x, y, 
+ r: integer;
+<b>begin</b>
+ r := 10;
+ x := 10; y := 10;
+<b>while</b> x &lt; 640 <b>do</b>
+<b>begin</b>
+ Circle(x, y, r);
+ x := x + 20;
+<b>end;</b>
+<b>end.  </b>    
+   </font></pre>
+            <p>VI. Тестирование<br>
+                Запустить программу. Результат:</p>
+            <div class="info-type"><img src="/img/pr17-1-1.jpg" alt=""></div>
+            <p> VII. Числовое значение в условии
+                цикла можно заменить функцией,
+                определяющей горизонтальное разрешение окна: <font>WindowWidth</font>:</p>
+            <p>
+                <font>while x &lt; WindowWidth do</font>
+            </p>
+            <p>Функции <font>RedColor, GreenColor,
+                    BlueColor</font> позволяют менять интенсивность соответствующего цвета.</p>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>var</b> x, y, r, 
+ c: integer;
+<b>begin</b>
+ r := 10;
+ x := 10; y := 10;
+ c := 255;
+<b>while</b> x &lt; 640<b> do</b>
+<b>begin</b>
+ //Интенсивность 
+ //красного
+ SetBrushColor
+ (RedColor(c));
+ Circle(x,y,r);
+ x := x + 20;
+ //Уменьшение 
+ //интенсивности
+ c := c-5;
+<b>end;</b>
+<b>end.</b>     
+ </font></pre>
+            <div class="info-type"><img src="/img/pr17-1-2.jpg" alt=""></div>
+
+        </div>
+        <div class="green-back">
+            <p>Любой цикл <font>for</font> может быть заменен на цикл <font>while</font>:</p>
+            <div class="info-type"><img src="/img/h17-1.JPG" alt=""></div>
+            <p>Обратное не всегда возможно.</p>
+        </div>
+
+        <div class="blue-back">
+            <a name="pr17-2"><b>Пример 17.2.</b>
+                <p>V. Программа:
+            </a>
+            <pre><font>
+<b>var</b> x, c : integer;
+<b>begin</b>
+ write('Введите x = '); 
+ read(x);
+<b>for var</b> a : = 1 to 9 do
+<b>begin</b>
+ c := a * x;
+ writeln(a,' * ',x,' = ',c);
+<b>end;</b>
+<b>end. </b>    
+  </font></pre>
+            <p>VI. Тестирование.<br>
+                Запустить программу. Ввести <i>x</i> = 7.</p>
+            <div class="info-type"><img src="/img/pr17-2.jpg" alt=""></div>
+            <p>Решение с помощью цикла <font>while</font>:</p>
+            <pre><font>
+<b>var</b> a, x, c : integer;
+<b>begin</b>
+ write('Введите x = '); 
+ read(x);
+ a := 1;
+ while a &lt; = 9 do
+<b>begin</b>
+ c := a * x;
+ writeln(a,' * ',x,'= ',c);
+ a := a + 1;
+<b>end;</b>
+<b>end.</b>      
+  </font></pre>
+            <p>VII. Проверить результат.</p>
+
+        </div>
+        <div class="green-back">
+            <p>При решении задач с использованием оператора цикла важно правильно выбрать вид цикла. Если известно количество повторений тела
+                цикла, то выбирают цикл <font>for</font>, а иначе — цикл <font>while</font>.</p>
+            <p>Внутри цикла можно использовать операторы <font>break</font> (немедленный
+                выход из текущего цикла) и оператор <font>continue</font> (переход к концу тела
+                цикла).</p>
+        </div>
+        <div class="blue-back">
+            <a name="pr17-3"><b>Пример 17.3.</b>
+                <p>V. Программа:
+            </a>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>var</b> a,x1,y1,
+ x2,y2: integer;
+<b>begin</b>
+ write('Введи a = ');
+ read(a); write(a);
+ x1 := 50; y1 := 50;
+ x2 := 450; y2 := 450;
+<b>for var</b> i := 1 to 20 do
+<b>begin</b>
+ Rectangle(x1,y1, x2,y2);
+ x1 := x1 + a; 
+ y1 := y1 + a;
+ x2 := x2 - a; 
+ y2 := y2 - a;
+<b>end;</b>
+<b>end.</b>          
+      </font></pre>
+            <p>VI. Тестирование.<br>
+                Запустить программу и ввести
+                значение a = 10. Результат:</p>
+            <div class="info-type"><img src="/img/pr17-3.jpg" alt=""></div>
+
+            <a name="pr17-4"><b>Пример 17.4*.</b>
+                <p>V. Программа:
+            </a>
+            <pre><font>
+<b>var</b> i, n, 
+ m, x : integer;
+<b>begin</b>
+ writeln('Введите 
+ границы n, m');
+ read(n,m);
+ write('Введи x = ');
+ read(x);
+ i := m;
+<b>while</b> (i &gt; = n) <b>and</b>
+(i <b>mod</b> x &lt; &gt; 0) <b>do</b>
+ i := i - 1;
+<b>if</b> i = n - 1 <b>then</b>
+ writeln('Нет таких 
+чисел')
+<b>else</b>
+ writeln('Искомое
+ число — ',i);
+end.     
+ </font></pre>
+            <p>VI. Тестирование.<br>
+                Запустить программу и ввести
+                значения <i>n</i> = 10, <i>m</i> = 20, <i>x</i> = 3. Результат:</p>
+            <div class="info-type"><img src="/img/pr17-4-1.jpg" alt=""></div>
+            <p>Запустить программу и ввести
+                значения <i>n</i> = 38, <i>m</i> = 45, <i>x</i> = 37. Результат:</p>
+            <div class="info-type"><img src="/img/pr17-4-2.jpg" alt=""></div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <div lang='bel'>
+        <div class="green-back">
+            <p>Цыкл з зададзенай умовай за- канчэння работы ў <font>PascalABC</font> запісваецца наступным чынам:</p>
+            <pre><font>
+ repeat
+цела цыкла;
+until &lt;умова&gt;;      
+   </font></pre>
+            <p>Цыкл працуе, пакуль умова непраўдзівая, і спыняе работу, калі ўмова становіцца праўдзівай.</p>
+            <p>Гэты цыкл называюць <b>цыклам з постумовай</b>, паколькі праверка ўмовы ажыццяўляецца пасля выканання цела цыкла. Цыкл з постумовай заўсёды выконваецца хоць бы адзін раз..</p>
+            <p>Цыклы <font>repeat</font> і <font>while</font> while ў <font>PascalABC</font> узаемазамяняльныя, таму пры напісанні праграм дастаткова выкарыстання толькі аднаго з іх.</p>
+        </div>
+
+
+
+
+        <div class="blue-back">
+            <a name="pr17-1b"><b>Прыклад 17.1.</b>
+                <p>V. Праграма:
+            </a>
+            <pre><font>
+ uses GraphABC;
+var x, y, 
+r: integer;
+begin
+r := 10;
+x := 10; y := 10;
+while x &lt; 640 do
+begin
+Circle(x, y, r);
+x := x + 20;
+end;
+end.      
+   </font></pre>
+            <p>VI. Тэсціраванне<br>
+                Запусціць праграму. Вынік</p>
+            <div class="info-type"><img src="/img/pr17-1-1.jpg" alt=""></div>
+            <p> VII. Лікавае значэнне ва ўмове цыкла можна замяніць функцыяй, якая вызначае гарызантальнае разрашэнне акна: <font>WindowWidth</font>:</p>
+            <p>
+                <font>while x &lt; WindowWidth do</font>
+            </p>
+            <p>Функцыі <font>RedColor, GreenColor,
+                    BlueColor</font> дазваляюць мяняць інтэнсіўнасць адпаведнага колеру.</p>
+            <pre><font>
+uses GraphABC;
+var x, y, r, 
+c: integer;
+begin
+r := 10;
+x := 10; y := 10;
+c := 255;
+while x &lt; 640 do
+begin
+//Інтэнсіўнасць чырвонага
+SetBrushColor
+(RedColor(c));
+Circle(x,y,r);
+x := x + 20;
+//Памяншэнне інтэнсіўнасці
+c := c-5;
+end;
+end.     
+ </font></pre>
+            <div class="info-type"><img src="/img/pr17-1-2.jpg" alt=""></div>
+
+        </div>
+        <div class="green-back">
+            <p>Любы цыкл <font>for</font> можа быць заменены на цыкл
+                <font>while</font>:</p>
+            <div class="info-type"><img src="/img/h17-1.JPG" alt=""></div>
+            <p>Адваротнае не заўсёды магчыма.</p>
+        </div>
+
+        <div class="blue-back">
+            <a name="pr17-2b"><b>Прыклад 17.2.</b>
+                <p>V. Праграма:
+            </a>
+            <pre><font>
+ var x, c : integer;
+begin
+write('Увядзіце  x = '); 
+read(x);
+for var a : = 1 to 9 do
+begin
+c := a * x;
+writeln(a,' * ',x,' = ',c);
+end;
+end.     
+  </font></pre>
+            <p>VI. Тэсціраванне.<br>
+                Запусціць праграму. Увесці <i>x</i> = 7.</p>
+            <div class="info-type"><img src="/img/pr17-2.jpg" alt=""></div>
+            <p>Рашэнне з дапамогай цыкла <font>while</font>:</p>
+            <pre><font>
+var a, x, c : integer;
+begin
+write('Увядзіце  x = '); 
+ read(x);
+a := 1;
+while a &lt; = 9 do
+begin
+c := a * x;
+writeln(a,' * ',x,'= ',c);
+a := a + 1;
+end;
+end.      
+  </font></pre>
+            <p>VII. Праверыць вынік.</p>
+
+        </div>
+        <div class="green-back">
+            <p>Пры вырашэнні задач з выкарыстаннем аператара цыкла важна правільна выбраць від цыкла. Калі вядома колькасць паўтарэнняў цела цыклу, то выбіраюць цыкл <font>for</font>, а інакш <font>while</font>.</p>
+            <p>Ўнутры цыклу можна выкарыстоўваць аператары <font>break</font> ((неадкладны выхад з бягучага цыкла) і аператар <font>continue</font> (пераход да канца цела цыкла).</p>
+        </div>
+        <div class="blue-back">
+            <a name="pr17-3"><b>Прыклад 17.3.</b>
+                <p>V. Праграма:
+            </a>
+            <pre><font>
+uses GraphABC;
+var a,x1,y1,
+x2,y2: integer;
+begin
+write('Увядзі  a = ');
+read(a); write(a);
+x1 := 50; y1 := 50;
+x2 := 450; y2 := 450;
+for var i := 1 to 20 do
+begin
+Rectangle(x1,y1, x2,y2);
+x1 := x1 + a; 
+y1 := y1 + a;
+x2 := x2 - a; 
+y2 := y2 - a;
+end;
+end.          
+      </font></pre>
+            <p>VI. Тэсціраванне.<br>
+                Запусціць праграму і ўвесці зна- чэнне a = 10. Вынік:</p>
+            <div class="info-type"><img src="/img/pr17-3.jpg" alt=""></div>
+
+            <a name="pr17-4"><b>Прыклад 17.4*.</b>
+                <p>V. Праграма:
+            </a>
+            <pre><font>
+var i, n, 
+m, x : integer;
+begin
+writeln('Увядзіце межы  n, m');
+read(n,m);
+write('Увядзіце  x = ');
+read(x);
+i := m;
+while (i &gt; = n) and
+(i mod x &lt; &gt; 0) do
+i := i - 1;
+if i = n - 1 then
+writeln('Няма такіх лікаў')
+else
+writeln('Шуканы лік  — ',i);
+end.     
+ </font></pre>
+            <p>VI. Тэсціраванне.<br>
+                Запусціць праграму і ўвесці значэнні <i>n</i> = 10, <i>m</i> = 20, <i>x</i> = 3. Вынік:</p>
+            <div class="info-type"><img src="/img/pr17-4-1.jpg" alt=""></div>
+            <p>Запусціць праграму і ўвесці значэнні <i>n</i> = 38, <i>m</i> = 45, <i>x</i> = 37. Вынік:</p>
+            <div class="info-type"><img src="/img/pr17-4-2.jpg" alt=""></div>
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <div class="green-back">
+            <div class="info-type"><img src="img/h14-1.jpg" alt=""></div>
+            <p>Первые компьютеры не имели возможностей работы с графикой. На
+                печатающих устройствах выводились
+                «картинки», состоящие из символов<sup>1</sup> .</p>
+            <p>В 1958 г. был запущен компьютер
+                Lincoln TX-2, впервые использующий
+                графический экран. В 1981 г. начали применять цвета. В графическом
+                режиме при разрешении 320 × 200
+                пикселей использовались 4 цвета из
+                стандартных палитр: пурпурный,
+                сине-зеленый, белый, черный или
+                красный, зеленый, желтый, черный.</p>
+        </div>
+        <div class="blue-back">
+            <a name="pr14-1"><b>Пример 14.1.</b>
+                <p> Графическое окно
+                    среды программирования PascalABC
+                    с изображением координатных осей
+                    и точки с координатами (70, 40).</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-1.jpg" alt=""></div>
+            <p>Точка расположена на расстоянии
+                70 пикселей от левого края окна и на
+                расстоянии 40 пикселей от верхнего
+                края.</p>
+            <p>Размеры графического окна можно
+                задать командой <font>SetWindowSize(n,m)</font>;
+                В скобках указаны размеры окна по
+                горизонтали и вертикали.</p>
+            <a name="pr14-2"><b>Пример 14.2.</b>
+                <p> Работа со справочной
+                    системой. Для перехода в справочник
+                    необходимо нажать клавишу <b>F1</b> или
+                    выполнить команду меню: <b>Помощь &#8594; Справка</b>. В открывшемся окне перейти в раздел <b>Стандартные модули</b>
+                    и выбрать <b>Модуль GraphABC</b>.</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-2.jpg" alt=""></div>
+
+            <a name="pr14-3"><b>Пример 14.3.</b>
+                <p> Графические примитивы:</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-3.jpg" alt=""></div>
+            <p>Программа для их рисования:</p>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>begin</b>
+ //Круг
+ Circle(250, 125, 30);
+ //Прямоугольник
+ Rectangle
+ (100,200,400,450);
+ //Эллипс
+ Ellipse
+ (100,200,400,450);
+ //Отрезок
+ Line
+ (450, 50, 550, 350);
+<b>end</b>.    
+</font></pre>
+            <a name="pr14-4"><b>Пример 14.4.</b>
+                V. Программа:
+            </a>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>begin</b>
+ //Дом
+ Rectangle
+ (100,200,400,450);
+ //Окно
+ Rectangle
+ (200,250,300,350);
+ Line
+ (250, 250, 250, 350);
+ Line
+ (200, 300, 300, 300);
+ //Крыша
+ MoveTo(100,200);
+ LineTo(250, 0);
+ LineTo(400, 200);
+ Circle(250, 125, 30);
+<b>end.</b>    
+</font></pre>
+            <p>VI. Тестирование программы:<br>
+                Запустить программу. Результат:</p>
+            <div class="info-type"><img src="img/pr14-4.jpg" alt=""></div>
+        </div>
+        <div class="green-back">
+            <p>Обратите внимание, что при написании команд у вас появляются подсказки:</p>
+            <div class="info-type"><img src="img/h14-2.jpg" alt=""></div>
+            <p>Подсказка появляется также при
+                наведении указателя мыши на уже
+                написанную команду.</p>
+            <p>Если установить текстовый курсор
+                на команду и нажать F1, то откроется страница из справочника с описанием этой команды.</p>
+        </div>
+        <div class="blue-back">
+            <a name="pr14-5"><b>Пример 14.5.</b>
+                <p>Цветовые константы.</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-5.jpg" alt=""></div>
+            <a name="pr14-6"><b>Пример 14.6.</b>
+                <p>Стили пера.</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-6.jpg" alt=""></div>
+            <a name="pr14-7"><b>Пример 14.7.</b>
+                <p>Стили штриховки
+                    кисти.</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-7.jpg" alt=""></div>
+            <a name="pr14-8"><b>Пример 14.8.</b>
+                <p>Программа:</p>
+            </a>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>begin</b>
+ /Дом
+ SetPenColor(RGB(255,0,0));
+ SetBrushColor(clBlue);
+ Rectangle
+ (100,200,400,450);
+ //Окно
+ SetBrushColor(clYellow);
+ Rectangle
+ (200,250,300,350);
+ SetPenColor(clRed);
+ SetPenStyle(psDot);
+ SetPenWidth(2);
+ Line(250,250,250,350);
+ Line(200,300,300,300);
+ //Крыша
+ SetPenStyle(psSolid);
+ SetPenWidth(1);
+ Line(100, 200, 250, 0);
+ Line(250, 0, 400, 200);
+ SetBrushStyle(bsHatch);
+ SetBrushColor
+ (clLightGreen);
+ SetBrushHatch(bhCross);
+ Circle(250, 125, 30);
+ FloodFill(250,70, clPlum);
+<b>end.</b>           
+       </font></pre>
+            <p>Результат работы программы:</p>
+            <div class="info-type"><img src="img/pr14-8.jpg" alt=""></div>
+            <a name="pr14-9"><b>Пример 14.9.</b>
+                <p>Составляющие цвета:</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-9.jpg" alt=""></div>
+
+            <a name="pr14-10"><b>Пример 14.10.</b>
+                <p>Выведем в графическое окно приветствие миру, используя разные свойства текста.<br>
+                    Программа:</p>
+            </a>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>begin</b>
+ //Цвет фона для текста
+ SetBrushColor(clYellow);
+ SetFontName
+ ('Comic Sans MS');
+ //Цвет букв
+ SetFontColor(clBlue);
+ //Размер шрифта
+ SetFontSize(25);
+ //Полужирный шрифт
+ SetFontStyle(fsBold);
+ TextOut
+ (20,30,'Здравствуй,');
+ SetBrushColor(clPink);
+ StFontName
+ ('Monotype Corsiva');
+ SetFontColor(clSalmon);
+ SetFontSize(50);
+ SetFontStyle(fsUnderline);
+ TextOut(120,130,'МИР!');
+ //Прозрачный фон
+ SetBrushStyle(bsClear);
+ SetFontName('Tahoma');
+ SetFontColor(clViolet);
+ SetFontSize(20);
+ SetFontStyle(fsItalic);
+ TextOut
+ (300,130,'PascalABC');
+<b>end. </b>              
+           </font></pre>
+            <p>Результат выполнения программы:</p>
+            <div class="info-type"><img src="img/pr14-10.jpg" alt=""></div>
+
+
+
+
+            <hr>
+            <p><sup>1</sup>Ссылка <a href="https://www.asciiart.eu/buildings-and-places/houses">https://www.asciiart.eu/</a> (дата доступа: 26.07.2018).</p>
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <div lang='bel'>
+        <div class="green-back">
+            <div class="info-type"><img src="img/h14-1.jpg" alt=""></div>
+            <p>Першыя камп’ютары не мелі магчымасцей работы з графікай. На друкавальных устройствах выводзіліся «карцінкі», што складаліся з сімвалаў</p>
+            <p>У 1958 г. быў запушчаны камп’ютар Lincoln TX-2, у якім упершыню выкарыстоўваўся графічны экран. У 1981 г. пачалі выкарыстоўваць колеры. У графічным рэжыме пры разрашэнні 320 × 200 пікселяў выкарыстоўваліся 4 колеры са стандартных палітр: пурпурны, сіне-зялёны, белы, чорны або чырвоны, зялёны, жоўты, чорны.</p>
+        </div>
+        <div class="blue-back">
+            <a name="pr14-1b"><b>Прыклад 14.1.</b>
+                <p> Графічнае акно асяроддзя праграміравання PascalABC з адлюстраваннем каардынатных восей і пункта з каардынатамі (70; 40).
+                </p>
+            </a>
+            <div class="info-type"><img src="img/pr14-1.jpg" alt=""></div>
+            <p>ТПункт размешчаны на адлегласці
+                70 пікселяў ад левага краю акна і на адлегласці 40 пікселяў ад верхняга краю.
+            </p>
+            <p>Памеры графічнага акна можна задаць камандай <font>SetWindowSize(n,m)</font>;
+                У дужках пададзены памеры акна па гарызанталі і па вертыкалі.</p>
+            <a name="pr14-2b"><b>Прыклад 14.2.</b>
+                <p> РРабота з даведачнай
+                    сістэмай. Для пераходу ў даведнік неабходна націснуць клавішу <b>F1</b> або выканаць каманду меню:
+                    <b>Помощь → Справка</b>. У акне, якое адкрыецца, перайсці ў раздзел <b>Стандартные модули</b>
+                    і выбраць <b>Модуль GraphABC</b>.</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-2.jpg" alt=""></div>
+
+            <a name="pr14-3b"><b>Прыклад 14.3.</b>
+                <p> Графічныя прымітывы:</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-3.jpg" alt=""></div>
+            <p>Праграма для іх рысавання:</p>
+            <pre><font>
+uses GraphABC;
+begin
+//Круг
+Circle(250, 125, 30);
+//Прамавугольнік 
+Rectangle
+(100,200,400,450);
+//Эліпс 
+Ellipse
+(100,200,400,450);
+//Адрэзак
+Line
+(450, 50, 550, 350);
+end.    
+</font></pre>
+            <a name="pr14-4b"><b>Прыклад 14.4.</b>
+                <p>V. Праграма:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+begin
+//Дом
+Rectangle
+(100,200,400,450);
+//Акно 
+Rectangle
+(200,250,300,350);
+Line
+(250, 250, 250, 350);
+Line
+(200, 300, 300, 300);
+//Дах 
+MoveTo(100,200);
+LineTo(250, 0);
+LineTo(400, 200);
+Circle(250, 125, 30);
+end.    
+</font></pre>
+            <p>VI. Тэсціраванне праграмы: Запусіць праграму. Вынік:</p>
+            <div class="info-type"><img src="img/pr14-4.jpg" alt=""></div>
+        </div>
+        <div class="green-back">
+            <p>Звярніце ўвагу, што пры напісанні каманд у вас з’яўляюцца падказкі </p>
+            <div class="info-type"><img src="img/h14-2.jpg" alt=""></div>
+            <p>Падказка з'яўляецца таксама пры навядзенні мышы на ўжо напісаную каманду </p>
+            <p>Калі ўстанавіць тэкставы курсор на каманду і націснуць F1, то адкрыецца старонка з даведніка з апісаннем гэтай каманды.</p>
+        </div>
+        <div class="blue-back">
+            <a name="pr14-5b"><b>Прыклад 14.5.</b>
+                <p>Колеравыя канстанты.</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-5.jpg" alt=""></div>
+            <a name="pr14-6b"><b>Прыклад 14.6.</b>
+                <p>Стылі пяра.</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-6.jpg" alt=""></div>
+            <a name="pr14-7b"><b>Прыклад 14.7.</b>
+                <p>Стылі штрыхоўкі пэндзля.</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-7.jpg" alt=""></div>
+            <a name="pr14-8b"><b>Прыклад 14.8.</b>
+                <p>Праграма:</p>
+            </a>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>begin</b>
+//Дом
+SetPenColor(RGB(255,0,0));
+SetBrushColor(clBlue);
+Rectangle
+(100,200,400,450);
+//Акно 
+SetBrushColor(clYellow);
+Rectangle
+(200,250,300,350);
+SetPenColor(clRed);
+SetPenStyle(psDot);
+SetPenWidth(2);
+Line(250,250,250,350);
+Line(200,300,300,300);
+//Дах 
+SetPenStyle(psSolid);
+SetPenWidth(1);
+Line(100, 200, 250, 0);
+Line(250, 0, 400, 200);
+SetBrushStyle(bsHatch);
+SetBrushColor
+(clLightGreen);
+SetBrushHatch(bhCross);
+Circle(250, 125, 30);
+FloodFill(250,70, clPlum);
+<b>end.</b>           
+       </font></pre>
+            <p>Вынік работы праграмы:</p>
+            <div class="info-type"><img src="img/pr14-8.jpg" alt=""></div>
+            <a name="pr14-9b"><b>Прыклад 14.9.</b>
+                <p>Складнікі колеру:</p>
+            </a>
+            <div class="info-type"><img src="img/pr14-9.jpg" alt=""></div>
+
+            <a name="pr14-10b"><b>Прыклад 14.10.</b>
+                <p>Выведзем у графічнае акно прывітанне свету, выкарыстоўваючы розныя ўласцівасці тэксту.<br>
+                    Праграма:</p>
+            </a>
+            <pre><font>
+<b>uses</b> GraphABC;
+<b>begin</b>
+//Колер фону для тэксту 
+SetBrushColor(clYellow);
+SetFontName
+('Comic Sans MS');
+//Цвет букв
+SetFontColor(clBlue);
+//Памер шрыфту
+SetFontSize(25);
+//Паўтлусты шрыфт 
+SetFontStyle(fsBold);
+TextOut
+(20,30,'Прывітанне,');
+SetBrushColor(clPink);
+StFontName
+('Monotype Corsiva');
+SetFontColor(clSalmon);
+SetFontSize(50);
+SetFontStyle(fsUnderline);
+TextOut(120,130,''СВЕТ!');
+//Празрысты фон 
+SetBrushStyle(bsClear);
+SetFontName('Tahoma');
+SetFontColor(clViolet);
+SetFontSize(20);
+SetFontStyle(fsItalic);
+TextOut
+(300,130,'PascalABC');
+<b>end. </b>              
+           </font></pre>
+            <p>Вынік выканання праграмы:</p>
+            <div class="info-type"><img src="img/pr14-10.jpg" alt=""></div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

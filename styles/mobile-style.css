@@ -1,0 +1,138 @@
+@media only screen and (max-width: 850px) {
+    .main, .right{
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .header-arrow{
+        width: 9%;
+    }
+    #arrow-left {
+        left: 1%;
+    }
+    .main{
+        left: 2%;
+        width: 92%;
+        padding: 2% 4% 2% 2%;
+        font-size: 1em;
+    }
+    .left{
+        left: -100%;
+        width: 98%;
+        font-size: 0.9em;
+    
+    }
+    .right{
+        left: 300%;
+        width: 98%;
+    }
+    .head-right{
+        max-width: 17%;
+       
+    }
+    #letters{
+        display: none;
+    }
+    #head-title{
+       position: absolute;
+       width:100%;
+       display: inline-block;
+      
+    }
+    #head-title p{
+        display: none;
+    }
+    #head-title strong{
+        position: absolute;
+        top: 32px;
+        text-align: center;
+    }
+    .close-img{
+        width: 5%;
+    }
+    #reference{
+        width: 93%;
+        left: 1%;
+    }
+    #reference p{
+        margin: 1% 0 2% 0%; ;
+    }
+    .white, .blue, .green, .yellow{
+        width: 20%;
+    }
+    .for-email{
+        width: 80%;
+        left: 10%;
+        min-height: 30%;
+        height: auto;
+    }
+    .for-email button{
+        width: 30%;
+        height: 2em;
+    }
+    #close-ref, #close-right, .right>br{
+       display: none;
+    }
+    #for-tiltoop-pics{
+        width: 70%;
+        height: 40%;
+        left: 15%;
+    }
+    .main button:not(.check){
+        width: 40%;
+        
+        font-size: 1em;
+    }
+    .check{
+        width: 40%;
+        
+        font-size: 1em;
+    }
+    .questions-btn{
+        margin: 3% 3% 3% 9%;
+    }
+    .loader {
+       
+        position: absolute;
+        top: 30%;
+        left: 40%;
+      }
+    .main ol, .main ul{
+        margin-left: 5%;
+    }
+    .prev, .next{
+        font-size: 0.7em;
+    }
+    .glos{
+       
+        width: 30%;
+    }
+    .about22 img{
+        margin-right: 10px;
+    }
+    .about22 div{
+        margin-top: 10px;
+    }
+    .glossary-link{
+        width: 90%;
+    }
+    #for-tiltoop-pics {
+        width: 96%;
+        height:80vh;
+        top: 90px;
+        left: 2%;
+    }
+    .start-dynamic-wrapper img{
+        align-self: center;
+       
+        width: 80%;
+        
+        
+    }
+   
+    .my-alert button{
+        width: 100px;
+       
+       
+    
+    }
+}

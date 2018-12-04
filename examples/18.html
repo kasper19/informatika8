@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+
+        <div class="blue-back">
+            <a name="pr18-1"><b>Пример 18.1.</b>
+                <p>V. Программа:</p>
+            </a>
+
+            <pre><font>
+uses GraphABC;
+var a,b,x,y,x_c, 
+y_c:integer;
+begin
+writeln('Введите 
+координаты');
+read(x,y);
+ writeln (x,' ',y);
+writeln('Введите
+ длины катетов');
+read(a,b); 
+writeln (a,' ',b);
+Line(x,y,x+a,y); 
+Line(x,y,x,y+b);
+Line(x+a,y,x,y+b);
+//Координаты точки
+//Внутри треугольника
+x_c := x + 2;
+ y_c := y + 2;
+FloodFill(x_c,y_c,clRandom);
+end.     
+ </font></pre>
+            <p>VI. Тестирование.<br>
+                Запустить программу и ввести
+                значения: координаты (100; 100),
+                длины катетов 70 и 120. Результат:</p>
+            <div class="info-type"><img src="/img/pr18-1-1.jpg" alt=""></div>
+            <p>Другой вариант:</p>
+            <div class="info-type"><img src="/img/pr18-1-2.jpg" alt=""></div>
+
+            <a name="pr18-2"><b>Пример 18.2*.</b>
+                <p>V. Программа:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var x,y,d: integer;
+begin
+writeln('Координаты');
+read(x,y);
+writeln (x,' ',y);
+writeln('Сторона');
+read(d);
+writeln (d);
+SetBrushColor(clYellow);
+Ellipse (x + d 
+ div 3,y,
+x + 2 * d div 3,y+d);
+SetBrushColor(clBrown);
+Pie(x + d div 2,y+d 
+ div 3,
+d div 3,0,180);
+end.
+</font></pre>
+            <p>VI. Тестирование.<br>
+                Запустить программу и ввести
+                значения: координаты (100; 100), сторона 150. Результат:</p>
+            <div class="info-type"><img src="/img/pr18-2-1.jpg" alt=""></div>
+            <p>* Гриб можно вписывать не в квадрат, а в прямоугольник. В этом
+                случае нужно задавать две величины, определяющие размеры прямоугольника: длину (<i>d1</i>) и ширину (<i>d2</i>).</p>
+            <p>В программу рисования гриба
+                нужно внести изменения, позволяющие рассчитать положение ножки и
+                шляпки гриба относительно координат (<i>x; y</i>) и величин <i>d1</i> и <i>d2</i>.</p>
+            <pre><font>
+var x,y,d1,d2: integer;
+...
+writeln('Стороны');
+read(d1, d2);
+writeln (d1, ' ',d2);
+SetBrushColor(clYellow);
+Ellipse(x+d1 div 3, y,
+x + 2 * d1 div 3, y +d2);
+SetBrushColor(clBrown);
+Pie(x + d1 div 2, y +d2
+ div 3,
+max(d1,d2) div 3,0,180);    
+</font></pre>
+            <p>Результат:</p>
+            <div class="info-type"><img src="/img/pr18-2-2.jpg" alt=""></div>
+        </div>
+        <div class="green-back">
+            <p>
+                <b>Случайное число</b> — число, которое принимает одно значение из множества, причем появление того или
+                иного значения нельзя точно предсказать. Например, если бы числа
+                появились в результате вытягивания
+                бочонков в лото, то такая последовательность чисел была бы случайной.
+            </p>
+            <p>В языках программирования используют <b>псевдослучайные числа</b>,
+                которые получают с использованием
+                генератора случайных чисел – алгоритма, порождающего последовательность чисел, элементы которой
+                почти независимы друг от друга и
+                обычно распределены равномерно на
+                заданном интервале.</p>
+        </div>
+
+        <div class="blue-back">
+            <a name="pr18-3"><b>Пример 18.3.</b>
+                <p>V. Программа:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var x,y,r: integer;
+begin
+SetPenWidth(3);
+SetBrushStyle(bsClear);
+for var i:= 1 
+to 10 do
+begin
+x := random(600);
+y := random(400);
+R := random(150);
+SetPenColor(clRandom);
+circle(x,y,r);
+end;
+end.    
+</font></pre>
+            <p>VI. Тестирование.<br>
+                Запустить программу. Должно
+                быть нарисовано 10 окружностей.
+                Разные варианты работы программы:</p>
+            <div class="info-type"><img src="/img/pr18-3-1.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr18-3-2.jpg" alt=""></div>
+            <a name="pr18-4"><b>Пример 18.4.</b>
+                <p>V. Программа:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var n, x, y, a :integer;
+procedure pr_treug (x,y,
+ a, b : integer);
+var x_c, y_c:integer;
+begin
+line(x, y, x + a,y);
+line(x, y, x, y + b);
+line(x + a, y, x, y+b);
+x_c := x + 2; 
+y_c := y + 2;
+FloodFill(x_c,y_c,
+clRandom);
+end;
+begin
+writeln('Ввeдите 
+количество');
+read(n); writeln (n);
+writeln('Ввeдите
+ длину катета');
+read(a); writeln (a);
+for var i:= 1 to n do
+begin
+x:= random(500);
+y:= random(400);
+pr_treug(x, y, a, a);
+end;
+end.    
+</font></pre>
+            <p>VI. Тестирование.<br>
+                Запустить программу. Результат:</p>
+            <div class="info-type"><img src="/img/pr18-4.jpg" alt=""></div>
+            <p>При вводе других значений результаты будут иными.</p>
+            <a name="pr18-5"><b>Пример 18.5*.</b>
+                <p>V. Программа:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var x,y,d:integer;
+procedure 
+grib(x,y,d:integer);
+begin
+SetBrushColor(clYellow);
+Ellipse(x + d div 3, y,
+x + 2*d div 3, y + d);
+SetBrushColor(clBrown);
+Pie(x + d div 2,y + d
+  div 3,
+d div 3, 0, 180);
+end;
+Begin
+for var i: = 1 
+to 10 do
+begin
+x:= random(400);
+y:= random(200);
+d:= random(150);
+grib(x,y,d);
+end;
+end.    
+</font></pre>
+            <p>VI. Тестирование.<br>
+                Результат может быть следующим:</p>
+            <div class="info-type"><img src="/img/pr18-5-1.jpg" alt=""></div>
+            <p>Можно добавить раскраску случайным цветом:</p>
+            <div class="info-type"><img src="/img/pr18-5-2.jpg" alt=""></div>
+
+            <a name="pr18-6"><b>Пример 18.6.</b>
+                <p>V. Программа:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var x, y, r:integer;
+procedure 
+row(y : integer);
+begin
+x :=10; R:= 10;
+while x &lt;WindowWidth 
+do
+begin
+Circle(x,y,r);
+ x := x+20;
+end;
+end;
+begin
+y := 10;
+while y &lt;=WindowHeight
+ do
+begin
+Row(y); y := y + 20;
+end;
+end.     
+ </font></pre>
+            <p>VI. Тестирование.<br>
+                Результат:</p>
+            <div class="info-type"><img src="/img/pr18-6.jpg" alt=""></div>
+
+        </div>
+
+
+
+
+    </div>
+    <div lang='bel'>
+
+        <div class="blue-back">
+            <a name="pr18-1b"><b>Прыклад 18.1.</b>
+                <p>V. Программа:</p>
+            </a>
+
+            <pre><font>
+uses GraphABC;
+var a,b,x,y,x_c, 
+y_c:integer;
+begin
+writeln('Увядзіце каардынаты');
+read(x,y);
+ writeln (x,' ',y);
+writeln('Увядзіце даўжыні катэтаў');
+read(a,b); 
+writeln (a,' ',b);
+Line(x,y,x+a,y); 
+Line(x,y,x,y+b);
+Line(x+a,y,x,y+b);
+//Каардынаты пункта
+//Унутры трохвугольніка
+x_c := x + 2;
+ y_c := y + 2;
+FloodFill(x_c,y_c,clRandom);
+end.     
+ </font></pre>
+            <p>VI. Тэсціраванне.<br>
+                Запусціць праграму і ўвесці значэнні: каардынаты (100; 100), даўжыні катэтаў 70 и 120. Вынік:</p>
+            <div class="info-type"><img src="/img/pr18-1-1.jpg" alt=""></div>
+            <p>Іншы варыянт</p>
+            <div class="info-type"><img src="/img/pr18-1-2.jpg" alt=""></div>
+
+            <a name="pr18-2b"><b>Прыклад 18.2*.</b>
+                <p>V. Праграма:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var x,y,d: integer;
+begin
+writeln('Каардынаты');
+read(x,y);
+writeln (x,' ',y);
+writeln('Старана');
+read(d);
+writeln (d);
+SetBrushColor(clYellow);
+Ellipse (x + d 
+ div 3,y,
+x + 2 * d div 3,y+d);
+SetBrushColor(clBrown);
+Pie(x + d div 2,y+d 
+ div 3,
+d div 3,0,180);
+end.
+</font></pre>
+            <p>VI. Тэсціраванне.<br>
+                ЗЗапусціць праграму і ўвесці значэнні: каапрдынаты (100; 100), старана 150. Вынік:</p>
+            <div class="info-type"><img src="/img/pr18-2-1.jpg" alt=""></div>
+            <p>* Грыб можна ўпісаць не ў квадрат, а ў прамавугольнік. У гэтым выпадку трэба задаваць дзве велічыні, якія вызначаюць памеры прамавугольніка: даўжыню
+                (<i>d1</i>) і шырыню (<i>d2</i>).</p>
+            <p>У праграму рысавання грыба трэба ўнесці змяненні, якія дазваляюць разлічыць становішча ножкі і шапачкі грыба адносна каардынат (<i>x; y</i>) і велічынь <i>d1</i> і <i>d2</i>.</p>
+            <pre><font>
+var x,y,d1,d2: integer;
+...
+writeln('Стораны');
+read(d1, d2);
+writeln (d1, ' ',d2);
+SetBrushColor(clYellow);
+Ellipse(x+d1 div 3, y,
+x + 2 * d1 div 3, y +d2);
+SetBrushColor(clBrown);
+Pie(x + d1 div 2, y +d2
+ div 3,
+max(d1,d2) div 3,0,180);    
+</font></pre>
+            <p>Вынік:</p>
+            <div class="info-type"><img src="/img/pr18-2-2.jpg" alt=""></div>
+        </div>
+        <div class="green-back">
+            <p>
+                <b>Выпадковы лік</b> — лік, які прымае адно значэнне з мноства, прычым з’яўленне таго ці іншага значэння нельга дакладна прадказаць. Напрыклад, калі б лікі з’явіліся ў выніку выцягвання бочачак у лато, то такая паслядоўнасць лікаў была б выпадковай.
+            </p>
+            <p>У мовах праграміравання выка- рыстоўваюць <b>псеўдавыпадковыя лікі</b>,
+                якія атрымліваюць з выкарыстаннем генератара выпадковых лікаў — алгарытму, што спараджае паслядоўнасць лікаў, элементы якой амаль незалежныя адзін ад аднаго і звычайна размеркаваны раўнамерна на зададзеным інтэрвале.</p>
+        </div>
+
+        <div class="blue-back">
+            <a name="pr18-3b"><b>Прыклад 18.3.</b>
+                <p>V. Праграма:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var x,y,r: integer;
+begin
+SetPenWidth(3);
+SetBrushStyle(bsClear);
+for var i:= 1 
+to 10 do
+begin
+x := random(600);
+y := random(400);
+R := random(150);
+SetPenColor(clRandom);
+circle(x,y,r);
+end;
+end.    
+</font></pre>
+            <p>VI. Тэсціраванне.<br>
+                Запусціць праграму. Павінна быць нарысавана 10 акружнасцей. Розныя варыянты работы праграмы:</p>
+            <div class="info-type"><img src="/img/pr18-3-1.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr18-3-2.jpg" alt=""></div>
+            <a name="pr18-4b"><b>Прыклад 18.4.</b>
+                <p>V. Праграма:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var n, x, y, a :integer;
+procedure pr_treug (x,y,
+ a, b : integer);
+var x_c, y_c:integer;
+begin
+line(x, y, x + a,y);
+line(x, y, x, y + b);
+line(x + a, y, x, y+b);
+x_c := x + 2; 
+y_c := y + 2;
+FloodFill(x_c,y_c,
+clRandom);
+end;
+begin
+writeln('Увядзіце колькасць');
+read(n); writeln (n);
+writeln('Увядзіце даўжыню
+катэта');
+read(a); writeln (a);
+for var i:= 1 to n do
+begin
+x:= random(500);
+y:= random(400);
+pr_treug(x, y, a, a);
+end;
+end.    
+</font></pre>
+            <p>VI. Тэсціраванне.<br>
+                Запусціць праграму. Вынік:</p>
+            <div class="info-type"><img src="/img/pr18-4.jpg" alt=""></div>
+            <p>Пры ўводзе іншых значэнняў вынікі будуць іншымі.
+            </p>
+            <a name="pr18-5b"><b>Прыклад 18.5*.</b>
+                <p>V. Праграма:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var x,y,d:integer;
+procedure 
+grib(x,y,d:integer);
+begin
+SetBrushColor(clYellow);
+Ellipse(x + d div 3, y,
+x + 2*d div 3, y + d);
+SetBrushColor(clBrown);
+Pie(x + d div 2,y + d
+  div 3,
+d div 3, 0, 180);
+end;
+Begin
+for var i: = 1 
+to 10 do
+begin
+x:= random(400);
+y:= random(200);
+d:= random(150);
+grib(x,y,d);
+end;
+end.    
+</font></pre>
+            <p>VI. Тэсціраванне.<br>
+                Вынік можа быць наступным:</p>
+            <div class="info-type"><img src="/img/pr18-5-1.jpg" alt=""></div>
+            <p>Можна дабавіць размалёўванне выпадковым колерам:
+            </p>
+            <div class="info-type"><img src="/img/pr18-5-2.jpg" alt=""></div>
+
+            <a name="pr18-6b"><b>Прыклад 18.6.</b>
+                <p>V. Праграма:</p>
+            </a>
+            <pre><font>
+uses GraphABC;
+var x, y, r:integer;
+procedure 
+row(y : integer);
+begin
+x :=10; R:= 10;
+while x &lt;WindowWidth 
+do
+begin
+Circle(x,y,r);
+ x := x+20;
+end;
+end;
+begin
+y := 10;
+while y &lt;=WindowHeight
+ do
+begin
+Row(y); y := y + 20;
+end;
+end.     
+ </font></pre>
+            <p>VI. Тэсціраванне<br>
+                Вынік:</p>
+            <div class="info-type"><img src="/img/pr18-6.jpg" alt=""></div>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
