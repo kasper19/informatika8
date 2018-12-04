@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <a name = "_app-3-2"> </a>
+        <h4>Математические функции языка Pascal</h4>
+       
+        <table>
+            <tr>
+                <th>Запись на Pasca</th>
+                <th> Находит модуль числа x.</th>
+            </tr>
+			<tr>
+                <td>
+                    <font>abs(x(x)</font>
+                </td>
+                <td> Находит модуль числа <i>x</i>.  </td>
+            </tr>
+            <tr>
+                <td>
+                    <font>ceil(x)</font>
+                </td>
+                <td>Находит наименьшее целое &#8805; x <font>(real)</font> . Результат — число типа <font>integer</font>. </td>
+            </tr>
+            <tr>
+                <td>
+                    <font>cos(x)</font>
+                </td>
+                <td>Вычисляет косинус числа <i>x</i>. Число <i>x</i> задается в радианах.</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>DegToRad(x)</font>
+                </td>
+                <td>Переводит градусы в радианы.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>ﬂoor(x) </font>
+                </td>
+                <td>Находит наибольшее целое &#8804; <i>x</i> <font>(real)</font> . Результат — число типа <font>integer</font>.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>frac(x) </font>
+                </td>
+                <td>Находит дробную часть действительного числа <i>x</i> <font>(real)</font> . Результат — число типа <font>real</font></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>int(x) </font>
+                </td>
+                <td>Находит целую часть действительного числа <i>x</i> (<font>(real)</font> . Результат — число типа <font>real</font>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Max(a,b) </font>
+                </td>
+                <td>Находит максимальное из чисел <i>a</i> и <i>b</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Min(a,b) </font>
+                </td>
+                <td>Находит минимальное из чисе <i>a</i> и <i>b</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Odd(i) </font>
+                </td>
+                <td>Логическая функция, которая возвращает значение True, если i нечетно, и False в противном случае.  </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Power(x, y) </font>
+                </td>
+                <td> Находит значение x<sup>y</sup> <font>(x, y — real)</font>. Результат — число типа <font>real</font>  </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>RadToDeg(x) </font>
+                </td>
+                <td>Переводит радианы в градусы.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>round(x) </font>
+                </td>
+                <td>Округляет число x до ближайшего целого. Если число находится посередине между двумя целыми, то округляется к ближайшему 
+				четному (банковское округление): <font>round(2.5) = 2, round(3.5)= 4</font>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>sin(x) </font>
+                </td>
+                <td>Вычисляет синус числа <i>x</i>. Число <i>x</i> задается в радианах. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>sqr(x)</font>
+                </td>
+                <td>Возводит число <i>x</i> в квадрат. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>sqrt(x)</font>
+                </td>
+                <td>Находит корень квадратный из числа <i>x</i>. Результат — всегда число типа <font>real</font></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>tan(x)</font>
+                </td>
+                <td>Вычисляет тангенс числа <i>x</i>. Число <i>x</i> задается в радианах</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>trunc(x)</font>
+                </td>
+                <td> Находит целую часть действительного числа <i>x</i> <font>(real)</font> . Результат — число типа <font>integer<font>.</td>
+            </tr>
+            
+			
+
+        </table>
+		
+		
+		
+		
+		<h4>Некоторые графические примитивы</h4>
+       
+        <table>
+            <tr>
+                <th>Запись на Pascal</th>
+                <th> Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetPixel(x,y,c)</font>
+                </td>
+                <td> Закрашивает пиксел с координатами <i>(x, y)</i> цветом <i>c</i>.  </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>MoveTo(x,y)</font>
+                </td>
+                <td>  Устанавливает текущую позицию рисования в точку <i>(x, y)</i>.   </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>LineTo(x,y)</font>
+                </td>
+                <td>Рисует отрезок от текущей позиции до точки <i>(x, y)<i>. Текущая позиция переносится в точку <i>(x, y)</i>.   </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Line(x1,y1,x2,y2)</font>
+                </td>
+                <td>Рисует отрезок от точки <i>(x1, y1)<i> до точки <i>(x2, y2)</i>.   </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Line(x1,y1,x2,y2,c)</font>
+                </td>
+                <td> Рисует отрезок от точки <i>(x1, y1)</i> до точки <i>(x2, y2)</i> цветом c.  </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Circle(x,y,r)</font>
+                </td>
+                <td> Рисует заполненный круг с центром <i>(x, y)</i> и радиусом <i>r</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Ellipse(x1,y1,x2,y2)</font>
+                </td>
+                <td>Рисует заполненный эллипс, ограниченный прямоугольником, заданным координатами противоположных вершин <i>(x1, y1)</i> и <i>(x2, y2)</i></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Rectangle(x1,y1,x2,y2)</font>
+                </td>
+                <td>Рисует заполненный прямоугольник, заданный координатами противоположных вершин <i>(x1, y1)</i> и <i>(x2, y2)</i>.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>RoundRect(x1,y1,x2,y2,w,h)</font>
+                </td>
+                <td>Рисует заполненный прямоугольник со скругленными краями; <i>(x1, y1)</i> и <i>(x2, y2)</i> 
+				задают пару противоположных вершин, <i>а w и h</i> — ширину и высоту эллипса, используемого для скругления краев.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Arc(x,y,r,a1,a2)</font>
+                </td>
+                <td>Рисует дугу окружности с центром в точке <i>(x, y)</i> и радиусом <i> r</i> , заключенную между двумя лучами, образующими 
+				углы <i>a1</i>  и <i> a2</i>  с осью <i>OX</i>  (<i>a1</i>  и <i>a2</i>  — вещественные, задаются в градусах и отсчитываются против часовой стрелки).</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Pie(x,y,r,a1,a2)</font>
+                </td>
+                <td>Рисует заполненный сектор круга с центром в точке <i>(x, y)</i> и радиусом <i> r</i>, заключенный между двумя лучами, образующими углы <i>a1</i> и <i>a2</i> с осью <i>OX</i> 
+				(<i>a1</i> и <i>a2</i> — вещественные, задаются в градусах и отсчитываются против часовой стрелки). </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>TextOut(x,y,z)</font>
+                </td>
+                <td>Выводит строку или число <i>z</i> в прямоугольник с координатами левого верхнего угла <i>(x, y)</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>DrawTextCentered(x,y,x1,y1,z)</font>
+                </td>
+                <td>Выводит строку или число <i>z</i>, отцентрированную в прямоугольнике с координатами <i>(x, y, x1, y1)</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>FloodFill(x,y,c)</font>
+                </td>
+                <td> Заливает область одного цвета цветом <i>c</i>, начиная с точки <i>(x, y)</i>.</i>. </td>
+            </tr>
+		</table>
+		
+		<h4>Стили пера (Pen)</h4>
+		<table>
+            <tr>
+                <th>Запись на Pascal</th>
+                <th> Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>psSolid</font>
+                </td>
+                <td>  Сплошное перо (по умолчанию) </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psClear</font>
+                </td>
+                <td>Прозрачное перо</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psDash</font>
+                </td>
+                <td>Штриховое перо</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psDot</font>
+                </td>
+                <td>Пунктирное перо</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psDashDot</font>
+                </td>
+                <td>Штрихпунктирное перo</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psDashDotDot</font>
+                </td>
+                <td>Альтернативное штрихпунктирное перо (штрих два пунктира)</td>
+            </tr>
+		</table>
+		
+		<h4>Стили кисти (Brush)</h4>
+	<table>
+			<tr>
+                <th>Запись на Pascal</th>
+                <th> Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>bsSolid</font>
+                </td>
+                <td>Сплошная кисть (по умолчанию</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bsClear</font>
+                </td>
+                <td>Прозрачная кисть</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bsHatch</font>
+                </td>
+                <td>Штриховая кисть</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bsGradient</font>
+                </td>
+                <td> Градиентная кисть</td>
+            </tr>
+			<tr>
+                <td colspan="2">
+                    <font>Для всех кистей используется свойство <font>Color</font>. Для штриховой кисти дополнительно можно устанавливать 
+					свойства <font>Hatch</font> и <font>HatchBackgroundColor</font>, для градиентной — свойство <font>GradientSecondColor.</font>
+                </td>
+                
+            </tr>
+	</table>
+		
+		
+		<h4>Некоторые стили штриховки кисти (HatchStyle)</h4>
+	<table>
+			<tr>
+                <th>Запись на Pascal</th>
+                <th> Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>bhHorizontal</font>
+                </td>
+                <td><img src="img/p-3-1.jpg"></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bhVertical</font>
+                </td>
+                <td><img src="img/p-3-2.jpg"></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bhCross</font>
+                </td>
+                <td><img src="img/p-3-5.jpg"></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bhZigZag</font>
+                </td>
+                <td><img src="img/p-3-4.jpg"></td>
+            </tr>
+	</table>
+		
+            
+			
+	
+    </div>
+
+
+	
+	
+	
+	
+	
+	
+    <div lang='bel'>
+        <a name = "_app-3-2"> </a>
+        <h4>Математические функции языка Pascal</h4>
+       
+        <table>
+            <tr>
+                <th>Запись на Pasca</th>
+                <th> Находит модуль числа x.</th>
+            </tr>
+			<tr>
+                <td>
+                    <font>abs(x(x)</font>
+                </td>
+                <td> Находит модуль числа <i>x</i>.  </td>
+            </tr>
+            <tr>
+                <td>
+                    <font>ceil(x)</font>
+                </td>
+                <td>Находит наименьшее целое &#8805; x <font>(real)</font> . Результат — число типа <font>integer</font>. </td>
+            </tr>
+            <tr>
+                <td>
+                    <font>cos(x)</font>
+                </td>
+                <td>Вычисляет косинус числа <i>x</i>. Число <i>x</i> задается в радианах.</td>
+            </tr>
+            <tr>
+                <td>
+                    <font>DegToRad(x)</font>
+                </td>
+                <td>Переводит градусы в радианы.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>ﬂoor(x) </font>
+                </td>
+                <td>Находит наибольшее целое &#8804; <i>x</i> <font>(real)</font> . Результат — число типа <font>integer</font>.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>frac(x) </font>
+                </td>
+                <td>Находит дробную часть действительного числа <i>x</i> <font>(real)</font> . Результат — число типа <font>real</font></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>int(x) </font>
+                </td>
+                <td>Находит целую часть действительного числа <i>x</i> (<font>(real)</font> . Результат — число типа <font>real</font>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Max(a,b) </font>
+                </td>
+                <td>Находит максимальное из чисел <i>a</i> и <i>b</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Min(a,b) </font>
+                </td>
+                <td>Находит минимальное из чисе <i>a</i> и <i>b</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Odd(i) </font>
+                </td>
+                <td>Логическая функция, которая возвращает значение True, если i нечетно, и False в противном случае.  </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Power(x, y) </font>
+                </td>
+                <td> Находит значение x<sup>y</sup> <font>(x, y — real)</font>. Результат — число типа <font>real</font>  </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>RadToDeg(x) </font>
+                </td>
+                <td>Переводит радианы в градусы.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>round(x) </font>
+                </td>
+                <td>Округляет число x до ближайшего целого. Если число находится посередине между двумя целыми, то округляется к ближайшему 
+				четному (банковское округление): <font>round(2.5) = 2, round(3.5)= 4</font>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>sin(x) </font>
+                </td>
+                <td>Вычисляет синус числа <i>x</i>. Число <i>x</i> задается в радианах. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>sqr(x)</font>
+                </td>
+                <td>Возводит число <i>x</i> в квадрат. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>sqrt(x)</font>
+                </td>
+                <td>Находит корень квадратный из числа <i>x</i>. Результат — всегда число типа <font>real</font></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>tan(x)</font>
+                </td>
+                <td>Вычисляет тангенс числа <i>x</i>. Число <i>x</i> задается в радианах</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>trunc(x)</font>
+                </td>
+                <td> Находит целую часть действительного числа <i>x</i> <font>(real)</font> . Результат — число типа <font>integer<font>.</td>
+            </tr>
+            
+			
+
+        </table>
+		
+		
+		
+		
+		<h4>Некоторые графические примитивы</h4>
+       
+        <table>
+            <tr>
+                <th>Запись на Pascal</th>
+                <th> Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>SetPixel(x,y,c)</font>
+                </td>
+                <td> Закрашивает пиксел с координатами <i>(x, y)</i> цветом <i>c</i>.  </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>MoveTo(x,y)</font>
+                </td>
+                <td>  Устанавливает текущую позицию рисования в точку <i>(x, y)</i>.   </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>LineTo(x,y)</font>
+                </td>
+                <td>Рисует отрезок от текущей позиции до точки <i>(x, y)<i>. Текущая позиция переносится в точку <i>(x, y)</i>.   </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Line(x1,y1,x2,y2)</font>
+                </td>
+                <td>Рисует отрезок от точки <i>(x1, y1)<i> до точки <i>(x2, y2)</i>.   </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Line(x1,y1,x2,y2,c)</font>
+                </td>
+                <td> Рисует отрезок от точки <i>(x1, y1)</i> до точки <i>(x2, y2)</i> цветом c.  </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Circle(x,y,r)</font>
+                </td>
+                <td> Рисует заполненный круг с центром <i>(x, y)</i> и радиусом <i>r</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Ellipse(x1,y1,x2,y2)</font>
+                </td>
+                <td>Рисует заполненный эллипс, ограниченный прямоугольником, заданным координатами противоположных вершин <i>(x1, y1)</i> и <i>(x2, y2)</i></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Rectangle(x1,y1,x2,y2)</font>
+                </td>
+                <td>Рисует заполненный прямоугольник, заданный координатами противоположных вершин <i>(x1, y1)</i> и <i>(x2, y2)</i>.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>RoundRect(x1,y1,x2,y2,w,h)</font>
+                </td>
+                <td>Рисует заполненный прямоугольник со скругленными краями; <i>(x1, y1)</i> и <i>(x2, y2)</i> 
+				задают пару противоположных вершин, <i>а w и h</i> — ширину и высоту эллипса, используемого для скругления краев.</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Arc(x,y,r,a1,a2)</font>
+                </td>
+                <td>Рисует дугу окружности с центром в точке <i>(x, y)</i> и радиусом <i> r</i> , заключенную между двумя лучами, образующими 
+				углы <i>a1</i>  и <i> a2</i>  с осью <i>OX</i>  (<i>a1</i>  и <i>a2</i>  — вещественные, задаются в градусах и отсчитываются против часовой стрелки).</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>Pie(x,y,r,a1,a2)</font>
+                </td>
+                <td>Рисует заполненный сектор круга с центром в точке <i>(x, y)</i> и радиусом <i> r</i>, заключенный между двумя лучами, образующими углы <i>a1</i> и <i>a2</i> с осью <i>OX</i> 
+				(<i>a1</i> и <i>a2</i> — вещественные, задаются в градусах и отсчитываются против часовой стрелки). </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>TextOut(x,y,z)</font>
+                </td>
+                <td>Выводит строку или число <i>z</i> в прямоугольник с координатами левого верхнего угла <i>(x, y)</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>DrawTextCentered(x,y,x1,y1,z)</font>
+                </td>
+                <td>Выводит строку или число <i>z</i>, отцентрированную в прямоугольнике с координатами <i>(x, y, x1, y1)</i>. </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>FloodFill(x,y,c)</font>
+                </td>
+                <td> Заливает область одного цвета цветом <i>c</i>, начиная с точки <i>(x, y)</i>.</i>. </td>
+            </tr>
+		</table>
+		
+		<h4>Стили пера (Pen)</h4>
+		<table>
+            <tr>
+                <th>Запись на Pascal</th>
+                <th> Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>psSolid</font>
+                </td>
+                <td>  Сплошное перо (по умолчанию) </td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psClear</font>
+                </td>
+                <td>Прозрачное перо</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psDash</font>
+                </td>
+                <td>Штриховое перо</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psDot</font>
+                </td>
+                <td>Пунктирное перо</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psDashDot</font>
+                </td>
+                <td>Штрихпунктирное перo</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>psDashDotDot</font>
+                </td>
+                <td>Альтернативное штрихпунктирное перо (штрих два пунктира)</td>
+            </tr>
+		</table>
+		
+		<h4>Стили кисти (Brush)</h4>
+	<table>
+			<tr>
+                <th>Запись на Pascal</th>
+                <th> Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>bsSolid</font>
+                </td>
+                <td>Сплошная кисть (по умолчанию</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bsClear</font>
+                </td>
+                <td>Прозрачная кисть</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bsHatch</font>
+                </td>
+                <td>Штриховая кисть</td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bsGradient</font>
+                </td>
+                <td> Градиентная кисть</td>
+            </tr>
+			<tr>
+                <td colspan="2">
+                    <font>Для всех кистей используется свойство <font>Color</font>. Для штриховой кисти дополнительно можно устанавливать 
+					свойства <font>Hatch</font> и <font>HatchBackgroundColor</font>, для градиентной — свойство <font>GradientSecondColor.</font>
+                </td>
+                
+            </tr>
+	</table>
+		
+		
+		<h4>Некоторые стили штриховки кисти (HatchStyle)</h4>
+	<table>
+			<tr>
+                <th>Запись на Pascal</th>
+                <th> Описание</th>
+            </tr>
+            <tr>
+                <td>
+                    <font>bhHorizontal</font>
+                </td>
+                <td><img src="img/p-3-1.jpg"></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bhVertical</font>
+                </td>
+                <td><img src="img/p-3-2.jpg"></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bhCross</font>
+                </td>
+                <td><img src="img/p-3-5.jpg"></td>
+            </tr>
+			<tr>
+                <td>
+                    <font>bhZigZag</font>
+                </td>
+                <td><img src="img/p-3-4.jpg"></td>
+            </tr>
+	</table>
+    </div>
+    </div>
+</body>
+
+</html>
