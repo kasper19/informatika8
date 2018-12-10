@@ -370,16 +370,16 @@ k := k + 1</font>
             <h1>§ 17. Аператар цыкла</h1>
         </a>
         <h4><a name="se1-1">17.1. Аператар цыкла з перадумовай</a></h4>
-        <p><b>Алгарытмічная канструкцыя <i><b>паўтарэнне</b> (цыкл)</i></b> уяўляе сабой паслядоўнасць дзеянняў, якія выконваюцца шматразова (гл. блок-схему ў href="pr13-2b">прыкладзе 13.2</a>). Саму последовательность называют <b>телом цикла</b>.</p>
-        <p class="bordered"><b>Аператар цыкла</b> — каманда, якая рэалізуе алгарытмічную кан- струкцыю <i>паўтарэнне</i> на мове праграміравання.</p>
+        <p><b>Алгарытмічная канструкцыя <i><b>паўтарэнне</b> (цыкл)</i></b> уяўляе сабой паслядоўнасць дзеянняў, якія выконваюцца шматразова (гл. блок-схему ў <a href="pr13-2b">прыкладзе 13.2</a>). Саму последовательность называют <b>телом цикла</b>.</p>
+        <p class="bordered"><b>Аператар цыкла</b> — каманда, якая рэалізуе алгарытмічную канструкцыю <i>паўтарэнне</i> на мове праграміравання.</p>
         <p>У Pascal існуюць розныя магчымасці кіраваць тым, колькі разоў будзе паўтарацца цела цыкла. Можа быць зададзена ўмова працягвання або заканчэння работы цыкла, а таксама лік паўтарэнняў цела цыкла.</p>
-        <p><b>Цыкл з перадумовай выкарыстоўваецца ў тым выпадку, калі вядома ўмова працягвання работы. Для запісу аператара цыкла з перадумовай выкарыстоўваецца каманда
-                <font>while</font>. Фармат каманды:</p>
+        <p><b>Цыкл з перадумовай</b> выкарыстоўваецца ў тым выпадку, калі вядома ўмова працягвання работы. Для запісу аператара цыкла з перадумовай выкарыстоўваецца каманда
+            <font><b>while</b></font>. Фармат каманды:</p>
         <pre>
-        <font> while  &lt;умова&gt; do
-             begin
+        <font> <b>while</b>  &lt;умова&gt; <b>do</b>
+             <b>begin</b>
              цела цыкла;
-             end;  </font>
+             <b>end;</b>  </font>
        </pre>
 
         <a href="#pr17-1bb">Прыклад 17.1</a>
@@ -464,33 +464,33 @@ k := k + 1</font>
                 <ol>
                     <li>
                         <div class="flex-col">
-                            Что называют оператором цикла?<br>
-                            <label for=""><input type="radio" value="1" name="t17-1"> Команду, реализующую алгоритмическую конструкцию ветвление на языке программирования. <br></label>
-                            <label for=""><input type="radio" value="2" name="t17-1"> Команду, реализующую алгоритмическую конструкцию повторение на языке программирования. <br></label>
+                            Што называюць аператарам цыкла?<br>
+                            <label for=""><input type="radio" value="1" name="t17-1b"> Каманду, якая рэалізуе алгарытмічную канструкцыю <i>галінаванне</i> на мове праграміравання. <br></label>
+                            <label for=""><input type="radio" value="2" name="t17-1b"> Каманду, якая рэалізуе алгарытмічную канструкцыю <i>паўтарэнне</i> на мове праграміравання. <br></label>
 
-                            <label for=""><input type="radio" value="3" name="t17-1"> Команду вызова вспомогательного алгоритма. <br></label>
-                            <label for=""><input type="radio" value="4" name="t17-1"> Команду, с помощью которой вычисляется значение арифметического выражения. <br></label>
-                            <label for=""><input type="radio" value="5" name="t17-1"> Команду вызова вспомогательного алгоритма. <br></label>
+                            <label for=""><input type="radio" value="3" name="t17-1b"> Каманду выкліку дапаможнага алгарытму. <br></label>
+                            <label for=""><input type="radio" value="4" name="t17-1b"> Каманду, з дапамогай якой вылічаецца значэнне арыфметычнага выразу. <br></label>
+                            <label for=""><input type="radio" value="5" name="t17-1b"> Каманду выкліку дапаможнага алгарытму. <br></label>
 
                         </div>
 
-                        <button class="check" id="cht17-1">Проверить</button>
+                        <button class="check" id="cht17-1b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            Команда цикла будет выполняться, если:<br>
-                            <label for=""><input type="checkbox" id="t17-2-1">Несколько команд заключены в операторные скобки. <br></label>
-                            <label for=""><input type="checkbox" id="t17-2-2">В теле цикла обязательно присутствуют команды&nbsp; <font>break</font>&nbsp; и &nbsp;<font>continue</font>.<br></label>
-                            <label for=""><input type="checkbox" id="t17-2-3">Задано условие продолжения работы цикла. <br></label>
-                            <label for=""><input type="checkbox" id="t17-2-4">Известно количество повторений тела цикла. <br></label>
+                            Каманда цыкла будзе выконвацца, калі:<br>
+                            <label for=""><input type="checkbox" id="t17-2-1b">Некалькі каманд заключаны ў аператарныя дужкі. <br></label>
+                            <label for=""><input type="checkbox" id="t17-2-2b">У целе цыкла абавязкова прысутнічаюць каманды&nbsp; <font>break</font>&nbsp; i &nbsp;<font>continue</font>.<br></label>
+                            <label for=""><input type="checkbox" id="t17-2-3b">Зададзена ўмова працягвання работы цыкла. <br></label>
+                            <label for=""><input type="checkbox" id="t17-2-4b">Вядомая колькасць паўтарэнняў цела цыкла. <br></label>
 
                         </div>
-                        <button class="check" id="cht17-2">Проверить</button>
+                        <button class="check" id="cht17-2b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            Выберите записи цикла с параметром.<br>
-                            <label for=""><input type="checkbox" id="t17-3-1">
+                            Выберыце запісы цыкла з параметрам.<br>
+                            <label for=""><input type="checkbox" id="t17-3-1b">
                                 <pre><font> 
 i := 10; s := 0;
 while i &lt;= 1 do
@@ -498,17 +498,17 @@ begin
   s := s - i;
   i := i + 0.5;
 end;  </font></pre> <br></label>
-                            <label for=""><input type="checkbox" id="t17-3-2">
+                            <label for=""><input type="checkbox" id="t17-3-2b">
                                 <pre><font>
  s := 0
 for var i := 1 to n do
   s := s − i; </font></pre> <br></label>
-                            <label for=""><input type="checkbox" id="t17-3-3">
+                            <label for=""><input type="checkbox" id="t17-3-3b">
                                 <pre><font>
 s := 0;
 for var i := n downto 1 do
   s := s + i; </font></pre> <br></label>
-                            <label for=""><input type="checkbox" id="t17-3-4">
+                            <label for=""><input type="checkbox" id="t17-3-4b">
                                 <pre><font>
 i := 1; s := 0; n := 10;
 while i &lt;= 10 do
@@ -519,57 +519,57 @@ end; </font></pre> <br></label>
 
 
                         </div>
-                        <button class="check" id="cht17-3">Проверить</button>
+                        <button class="check" id="cht17-3b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            Если говорят, что программа зациклилась, то это значит, что:<br>
-                            <label for=""><input type="radio" value="1" name="t17-4">Тело цикла выполняется один раз. <br></label>
-                            <label for=""><input type="radio" value="2" name="t17-4">Тело цикла не выполняется. <br></label>
-                            <label for=""><input type="radio" value="3" name="t17-4">Тело цикла выполняется бесконечно долго. <br></label>
-                            <label for=""><input type="radio" value="4" name="t17-4">При попытке выполнения тела цикла программа завершается с ошибкой. <br></label>
+                            Калі гавораць, што праграма зацыклілася, то гэта значыць, што:<br>
+                            <label for=""><input type="radio" value="1" name="t17-4b">Цела цыкла выконваецца адзін раз. <br></label>
+                            <label for=""><input type="radio" value="2" name="t17-4b">Цела цыкла не выконваецца. <br></label>
+                            <label for=""><input type="radio" value="3" name="t17-4b">Цела цыкла выконваецца бясконца доўга. <br></label>
+                            <label for=""><input type="radio" value="4" name="t17-4b">Пры спробе выканання цела цыкла праграма завяршаецца з памылкай. <br></label>
 
                         </div>
-                        <button class="check" id="cht17-4">Проверить</button>
+                        <button class="check" id="cht17-4b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            Какой из перечисленных заголовков цикла не содержит ошибок и позволит выполниться циклу хотя бы один раз?<br>
-                            <label for=""><input type="radio" value="1" name="t17-5">for var i:=1 downto 6 do<br></label>
-                            <label for=""><input type="radio" value="2" name="t17-5">for var i:=1 to 6 do <br></label>
-                            <label for=""><input type="radio" value="3" name="t17-5">for var i:=7 to −3 do<br></label>
-                            <label for=""><input type="radio" value="4" name="t17-5">for var k=3 to 20 do<br></label>
+                            Які з пералічаных загалоўкаў цыкла не змяшчае памылак і дазволіць выканацца цыклу хоць бы адзін раз?<br>
+                            <label for=""><input type="radio" value="1" name="t17-5b">for var i:=1 downto 6 do<br></label>
+                            <label for=""><input type="radio" value="2" name="t17-5b">for var i:=1 to 6 do <br></label>
+                            <label for=""><input type="radio" value="3" name="t17-5b">for var i:=7 to −3 do<br></label>
+                            <label for=""><input type="radio" value="4" name="t17-5b">for var k=3 to 20 do<br></label>
 
                         </div>
-                        <button class="check" id="cht17-5">Проверить</button>
+                        <button class="check" id="cht17-5b">Праверыць</button>
                     </li>
 
                     <li>
                         <div class="flex-col">
-                            Укажите процессы, которые демонстрируют работу алгоритма с циклом:<br>
-                            <label for=""><input type="checkbox" id="t17-6-1">Движение рейсового автобуса по заданному маршруту. <br></label>
-                            <label for=""><input type="checkbox" id="t17-6-2">Направо пойдешь — коня потеряешь, налево пойдешь — ничего не найдешь. <br></label>
-                            <label for=""><input type="checkbox" id="t17-6-3">Вычисление значения арифметического выражения. <br></label>
-                            <label for=""><input type="checkbox" id="t17-6-4">Движение часовой стрелки. <br></label>
-                            <label for=""><input type="checkbox" id="t17-6-5">Определение азимута объекта. <br></label>
-                            <label for=""><input type="checkbox" id="t17-6-6">Смена времен года. <br></label>
+                            Выберыце працэсы, якія дэманструюць работу алгарытму з цыклам:<br>
+                            <label for=""><input type="checkbox" id="t17-6-1b">Рух рэйсавага аўтобуса па зададзеным маршруце. <br></label>
+                            <label for=""><input type="checkbox" id="t17-6-2b">Направа пойдзеш — каня страціш, налева пойдзеш — нічога не знойдзеш. <br></label>
+                            <label for=""><input type="checkbox" id="t17-6-3b">Вылічэнне значэння арыфметычнага выразу. <br></label>
+                            <label for=""><input type="checkbox" id="t17-6-4b">Рух гадзіннікавай стрэлкі. <br></label>
+                            <label for=""><input type="checkbox" id="t17-6-5b">Вызначэнне азімута аб’екта. <br></label>
+                            <label for=""><input type="checkbox" id="t17-6-6b">Змена пор года. <br></label>
 
                         </div>
-                        <button class="check" id="cht17-6">Проверить</button>
+                        <button class="check" id="cht17-6b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            Определите, сколько раз выполнится цикл:
+                            ОВызначыце, колькі разоў выканаецца цыкл:
                             <pre>
     <font>
 for var i := 2 to 5 do
 k := k + 1</font>
 </pre>
                             <br>
-                            <label>Ответ:<input type="text" id="t17-7"></label>
+                            <label>Адказ:<input type="text" id="t17-7b"></label>
 
                         </div>
-                        <button class="check" id="cht17-7">Проверить</button>
+                        <button class="check" id="cht17-7b">Праверыць</button>
                     </li>
 
 
@@ -627,12 +627,12 @@ k := k + 1</font>
         (function($) {
             $(document).ready(function() {
 
-                $("#cht17-1").click(function() {
-                    var y2 = $("input[name='t17-1']:checked").attr("value");
+                $("#cht17-1b").click(function() {
+                    var y2 = $("input[name='t17-1b']:checked").attr("value");
                     if (y2 == "2") {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
@@ -643,81 +643,81 @@ k := k + 1</font>
 
 
 
-                $("#cht17-2").click(function() {
-                    var ch1 = $("#t17-2-1").prop("checked");
-                    var ch2 = $("#t17-2-2").prop("checked");
-                    var ch3 = $("#t17-2-3").prop("checked");
-                    var ch4 = $("#t17-2-4").prop("checked");
+                $("#cht17-2b").click(function() {
+                    var ch1 = $("#t17-2-1b").prop("checked");
+                    var ch2 = $("#t17-2-2b").prop("checked");
+                    var ch3 = $("#t17-2-3b").prop("checked");
+                    var ch4 = $("#t17-2-4b").prop("checked");
 
 
 
                     if (ch1 == false && ch2 == false && ch3 == true && ch4 == true) {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
-                $("#cht17-3").click(function() {
-                    var ch1 = $("#t17-3-1").prop("checked");
-                    var ch2 = $("#t17-3-2").prop("checked");
-                    var ch3 = $("#t17-3-3").prop("checked");
-                    var ch4 = $("#t17-3-4").prop("checked");
+                $("#cht17-3b").click(function() {
+                    var ch1 = $("#t17-3-1b").prop("checked");
+                    var ch2 = $("#t17-3-2b").prop("checked");
+                    var ch3 = $("#t17-3-3b").prop("checked");
+                    var ch4 = $("#t17-3-4b").prop("checked");
 
 
 
                     if (ch1 == false && ch2 == true && ch3 == true && ch4 == false) {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
-                $("#cht17-4").click(function() {
-                    var y2 = $("input[name='t17-4']:checked").attr("value");
+                $("#cht17-4b").click(function() {
+                    var y2 = $("input[name='t17-4b']:checked").attr("value");
                     if (y2 == "3") {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
-                $("#cht17-5").click(function() {
-                    var y2 = $("input[name='t17-5']:checked").attr("value");
+                $("#cht17-5b").click(function() {
+                    var y2 = $("input[name='t17-5b']:checked").attr("value");
                     if (y2 == "2") {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
-                $("#cht17-6").click(function() {
-                    var ch1 = $("#t17-6-1").prop("checked");
-                    var ch2 = $("#t17-6-2").prop("checked");
-                    var ch3 = $("#t17-6-3").prop("checked");
-                    var ch4 = $("#t17-6-4").prop("checked");
-                    var ch5 = $("#t17-6-5").prop("checked");
-                    var ch6 = $("#t17-6-6").prop("checked");
+                $("#cht17-6b").click(function() {
+                    var ch1 = $("#t17-6-1b").prop("checked");
+                    var ch2 = $("#t17-6-2b").prop("checked");
+                    var ch3 = $("#t17-6-3b").prop("checked");
+                    var ch4 = $("#t17-6-4b").prop("checked");
+                    var ch5 = $("#t17-6-5b").prop("checked");
+                    var ch6 = $("#t17-6-6b").prop("checked");
 
 
 
                     if (ch1 == true && ch2 == false && ch3 == false && ch4 == true && ch5 == false && ch6 == true) {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
 
-                $("#cht17-7").click(function() {
-                    var ch1 = $("#t17-7").val();
+                $("#cht17-7b").click(function() {
+                    var ch1 = $("#t17-7b").val();
 
 
 
 
                     if (ch1 === "4") {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 

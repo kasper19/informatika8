@@ -415,7 +415,7 @@ end.
     <div lang='bel'>
 
         <div class="green-back">
-            <p>Пацвярджэннем важнасці лікавых паслядоўнасцей з’яўляецца той факт, што створана цэлая энцыклапедыя лікавых паслядоўнасцей1</p>
+            <p>Пацвярджэннем важнасці лікавых паслядоўнасцей з’яўляецца той факт, што створана цэлая энцыклапедыя лікавых паслядоўнасцей<sup>1</sup></p>
         </div>
         <div class="blue-back">
             <a name="pr19-1b"><b>Прыклад 19.1.</b>
@@ -430,104 +430,104 @@ end.
 
             <a name="pr19-2b"><b>Прыклад 19.2.</b>
                 <p>Адной з найбольш
-                    вядомых паслядоўнасцей з’яўляецца паслядоўнасць Фібаначы: 1, 1, 2, 3, 5, 8, 13, … . Нескладана заўважыць, што кожны яе элемент, пачынаючы з трэцяга, роўны суме двух папярэдніх. Гэта можно запісаць так: <i>f<sub>n</sub> = f<sub>n – 1</sub> + f<sub>n – 2</sub></i>, <i>f</i>1 = 1, <i>f</i>2 = 1.</p>
+                    вядомых паслядоўнасцей з’яўляецца паслядоўнасць Фібаначы: 1, 1, 2, 3, 5, 8, 13, … . Нескладана заўважыць, што кожны яе элемент, пачынаючы з трэцяга, роўны суме двух папярэдніх. Гэта можно запісаць так:<br> <i>f<sub>n</sub> = f<sub>n – 1</sub> + f<sub>n – 2</sub></i>, <i>f</i>1 = 1, <i>f</i>2 = 1.</p>
             </a>
 
             <a name="pr19-3b"><b>Прыклад 19.3.</b>
-                <p>Разгледзім паслядоўнасць 2, 4, 8, 16, … . Кожны лік у гэтай паслядоўнасці з’яўляецца ступеню ліку 2, таму можна задаць паслядоўнасць формулай <i>a<sub>n</sub> = 2<sup>n</sup></i>. З іншага боку, кожны элемент паслядоўнасці, пачынаючы з другога, у два разы большы за папярэдні. Атрымаем формулу <i>a<sub>n</sub> = 2a<sub>n – 1</sub></i> (для <i>n</i> &gt; 1, <i>a</i><sub>1</sub> = 2).</p>
+                <p>Разгледзім паслядоўнасць 2,4,8,16,… . Кожны лік у гэтай паслядоўнасці з’яўляецца ступеню ліку 2, таму можна задаць паслядоўнасць формулай <br><i>a<sub>n</sub> = 2<sup>n</sup></i>.<br> З іншага боку, кожны элемент паслядоўнасці, пачынаючы з другога, у два разы большы за папярэдні. Атрымаем формулу<br><i>a<sub>n</sub> = 2a<sub>n – 1</sub></i> (для <i>n</i> &gt; 1, <i>a</i><sub>1</sub> = 2).</p>
             </a>
             <a name="pr19-4b"><b>Прыклад 19.4.</b>
-                <p>V. V. Праграма:</p>
+                <p> V. Праграма:</p>
             </a>
             <pre><font>
- var k, a: integer;
-begin
-write('Колькасць  k=');
+<b>var</b> k, a: integer;
+<b>begin</b>
+ write('Колькасць  k=');
  read(k);
-for var n :=1 to k do
-begin
-a:= 2*n; 
-write(a, ' ');
-end;
-end.         
+ <b>for var</b> n :=1 <b>to</b> k <b>do</b>
+ <b>begin</b>
+  a:= 2*n; 
+  write(a, ' ');
+ <b>end;</b>
+<b>end.</b>         
       </font></pre>
 
             <p>VI. Тэсціраванне.<br>
                 Запусціць праграму і ўвесці
                 значэнне <i>k</i> = 5. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-4-1.jpg" alt=""></div>
-            <p>ЗЗапусціць праграму і ўвесцізначэнне
+            <div class="info-type"><img src="/img/pr19-4-1b.JPG" alt=""></div>
+            <p>Запусціць праграму і ўвесцізначэнне
                 <i>k</i> = 100. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-4-2.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-4-2b.JPG" alt=""></div>
             <a name="pr19-5b"><b>Прыклад 19.5.</b>
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-var a, b, c,
- x: integer;
-begin
-write('Мяжа  x = '); 
+<b>var</b> a, b, c,
+x: integer;
+<b>begin</b>
+ write('Мяжа  x = '); 
  read(x);
-c := 1; b := 1;a := 2;
-write(c, ' ',b, ' ');
-while a &lt; x do
-begin
-write(a, ' ');
-c := b; b := a; 
-a := b + c;
-end;
-end.          
+ c := 1; b := 1;a := 2;
+ write(c, ' ',b, ' ');
+  <b>while</b> a &lt; x <b>do</b>
+  <b>begin</b>
+  write(a, ' ');
+  c := b; b := a; 
+  a := b + c;
+ <b>end;</b>
+<b>end.</b>          
       </font></pre>
             <p>VI. Тэсціраванне.<br>
                 Запусціць праграму і ўвесці значэнне <i>x</i> = 100. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-5-1.jpg" alt=""></div>
-            <p>Каб даведацца, колькі лікаў атрымалі ў якасці выніку, вызначым пераменную <i>k</i>. ППераменная будзе павялічваць сваё значэнне на 1 кожны раз, калі выводзіцца чарговы лік. Пасля завяршэння цыкла можна вывесці значэнне <i>k</i>.</p>
+            <div class="info-type"><img src="/img/pr19-5-1b.JPG" alt=""></div>
+            <p>Каб даведацца, колькі лікаў атрымалі ў якасці выніку, вызначым пераменную <i>k</i>. Пераменная будзе павялічваць сваё значэнне на 1 кожны раз, калі выводзіцца чарговы лік. Пасля завяршэння цыкла можна вывесці значэнне <i>k</i>.</p>
             <pre><font>
-var a,b,c,x,k:integer;
-begin
-write('Мяжа  x= ');
-read(x);
-c := 1; b := 1; 
-a := 2;
-write(c, ' ',b, ' ');
-k := 2;
-while a &lt; x do
-begin
-write(a, ' '); 
- k := k+1;
-c := b; b := a;
- a := b + c;
-end;
-writeln;
-write('k = ',k);
-end.    
+<b>var</b> a,b,c,x,k:integer;
+<b>begin</b>
+ write('Мяжа  x= ');
+ read(x);
+ c := 1; b := 1; 
+ a := 2;
+ write(c, ' ',b, ' ');
+ k := 2;
+ <b>while</b> a &lt; x <b>do</b>
+ <b>begin</b>
+  write(a, ' '); 
+  k := k+1;
+  c := b; b := a;
+  a := b + c;
+ <b>end;</b>
+ writeln;
+ write('k = ',k);
+<b>end.</b>   
 </font></pre>
             <p>Вынік для <i>x</i> = 1000.</p>
-            <div class="info-type"><img src="img/pr19-5-2.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-5-2b.JPG" alt=""></div>
             <a name="pr19-6b"><b>Прыклад 19.6.</b>
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-var n,k,a:integer;
-begin
-write('Колькасць білетаў  n = ');
-read(n); k:= 0;
-for var i:= 1 
-to n do
-begin
-a:= random(1,100);
- write(a,' ');
-if a mod 5 = 0 then
-k := k+1;
-end;
-writeln;
-writeln('Выйграла ',
+<b>var</b> n,k,a:integer;
+<b>begin</b>
+ write('Колькасць білетаў  n = ');
+ read(n); k:= 0;
+ <b>for</b> var i:= 1 
+ <b>to</b> n <b>do</b>
+ <b>begin</b>
+  a:= random(1,100);
+  write(a,' ');
+   <b>if</b> a <b>mod</b> 5 = 0 <b>then</b>
+  k := k+1;
+ <b>end;</b>
+ writeln;
+ writeln('Выйграла ',
  k,' білеты(-а,аў')');
-end.    
+<b>end.</b>    
 </font></pre>
-            <p>VI. Тэсціраванне. Запусціць пра- граму і ўвесці значэнне <i>n</i> = 20.
+            <p>VI. Тэсціраванне. Запусціць праграму і ўвесці значэнне <i>n</i> = 20.
                 Вынік:</p>
-            <div class="info-type"><img src="img/pr19-6.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-6b.JPG" alt=""></div>
             <p>Пры адным і тым жа значэнні <i>n</i>
                 праграма можа выдаваць розныя вынікі, паколькі лікі атрымліваюцца выпадковым чынам.
             </p>
@@ -536,101 +536,101 @@ end.
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-var m : integer;
-a, S: real;
-begin
-write('Колькасць дзён  m = ');
-read(m); S := 0;
-for var n:=1 to m do
-begin
-a := n*n*n/
- (sqrt(n*n*n)-n+1);
-S := S+a;
-end;
-writeln('Усяго бактэрый  =
-= ',S, ' млн');
-end.
+<b>var</b> m : integer;
+ a, S: real;
+<b>begin</b>
+ write('Колькасць дзён  m = ');
+ read(m); S := 0;
+ <b>for var</b> n:=1 <b>to</b> m <b>do</b>
+ <b>begin</b>
+  a := n*n*n/
+  (sqrt(n*n*n)-n+1);
+  S := S+a;
+ <b>end;</b>
+ writeln('Усяго бактэрый  =
+ = ',S, ' млн');
+<b>end.</b>
 </font></pre>
             <p>VI. Тэсціраванне.<br>
                 Запусціць праграму і ўвесці значэнне <i>m</i> = 3. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-7-1.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-7-1b.JPG" alt=""></div>
             <p>Для праверкі правільнасці выніку можна палічыць значэнне сумы на калькулятары:</p>
-            <div class="info-type"><img src="img/pr19-7-2.JPG" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-7-2b.JPG" alt=""></div>
             <p>Запусціць праграму і ўвесці значэнне <i>m</i> = 30. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-7-3.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-7-3b.JPG" alt=""></div>
 
             <a name="pr19-8b"><b>Прыклад 19.8.</b>
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-var n, m: integer;
-a, S: real;
-begin
-write('Аснова  a= '); 
-read(a);
-write('Паказчык  n= ');
-  read(n);
-S := 1; m := abs(n);
-for var i:= 1 to m do
-S := S*a;
-if n􀀫0 then S:= 1/S;
-writeln('Ступень  ',S);
-end.     
+<b>var</b> n, m: integer;
+ a, S: real;
+<b>begin</b>
+ write('Аснова  a= '); 
+ read(a);
+ write('Паказчык  n= ');
+ read(n);
+ S := 1; m := abs(n);
+ <b>for var</b> i:= 1 <b>to</b> m <b>do</b>
+  S := S*a;
+ <b>if</b> n&lt;0 <b>then</b> S:= 1/S;
+ writeln('Ступень  ',S);
+<b>end. </b>    
  </font></pre>
             <p>VI. Тэсціраванне праграмы.<br>
                 Запусціць праграму і ўвесці значэнні <i>a</i> = 5, <i>n</i> = 3. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-8-1.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-8-1b.JPG" alt=""></div>
             <p>Запусціць праграму і ўвесці значэнні
                 <i>a</i> = 3, <i>n</i> = 0. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-8-2.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-8-2b.JPG" alt=""></div>
             <p>Запусціць праграму і ўвесці значэнні <i>a</i> = 5, <i>n</i> = –2. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-8-3.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-8-3b.JPG" alt=""></div>
             <p>VII. Правільнасць вылічэнняў праверыць на калькулятары.</p>
 
             <a name="pr19-9b"><b>Прыклад 19.9.</b>
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-var k:integer;
-x,y,h:real;
-begin
-writeln('Колькасць значэнняў');
-readln(k); x := -3; 
-h := 0.5;
-for var n:= 1 to k do
-begin
-y := (x+2)/(x*x+3);
-writeln(x:7:2,y:10:3);
- x := x+h;
-end;
-end.    
+<b>var</b> k:integer;
+ x,y,h:real;
+<b>begin</b>
+ writeln('Колькасць значэнняў');
+ readln(k); x := -3; 
+ h := 0.5;
+ <b>for var</b> n:= 1 <b>to</b> k <b>do</b>
+ <b>begin</b>
+  y := (x+2)/(x*x+3);
+  writeln(x:7:2,y:10:3);
+  x := x+h;
+ <b>end;</b>
+<b>end. </b>  
 </font></pre>
             <p>VI. Тэсціраванне праграмы. Запусціць праграму і ўвесці значэнне <i>k</i> = 5. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-9-1.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-9-1b.JPG" alt=""></div>
             <p>Дабавім у праграму вывад меж табліцы:</p>
             <pre><font>
-var k:integer;
-x,y,h: real;
-begin
-writeln('Колькасць значэнняў');
-readln(k); 
-x := -3;
+<b>var</b> k:integer;
+ x,y,h: real;
+<b>begin</b>
+ writeln('Колькасць значэнняў');
+ readln(k); 
+ x := -3;
  h := 0.5;
-writeln('--------');
-writeln('|x|y|');
-writeln('--------');
-for var n:=1 to k do
-begin
-y := (x+2)/(x*x+3);
-writeln('|',x:7:2,'|'
- ,y:10:3,'|');
-x := x+h;
-end;
-writeln('--------');
-end.     
+ writeln('--------');
+ writeln('|x|y|');
+ writeln('--------');
+ <b>for var</b> n:=1 <b>to</b> k <b>do</b>
+ <b>begin</b>
+  y := (x+2)/(x*x+3);
+  writeln('|',x:7:2,'|'
+  y:10:3,'|');
+  x := x+h;
+ <b>end;</b>
+ writeln('--------');
+<b>end.</b>     
  </font></pre>
             <p>Вынік пры <i>k</i> = 4:</p>
-            <div class="info-type"><img src="img/pr19-9-2.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-9-2b.JPG" alt=""></div>
 
 
         </div>
@@ -643,30 +643,30 @@ end.
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-var k,n,z: integer;
-begin
-write('Увядзіце  n= ');
-read(n);
-k := 0;
-while n &gt; 0 do
-begin
-//Бягучая лічба 
-z := n mod 10;
-writeln(z);
-//Памяншэнне ліку ў 10 разоў
-n := n div 10;
-//Падлік колькасці лічбаў
-k := k + 1;
-end;
-writeln('в числе ', k,
-'цифр(-а/-ы))');
-end     
+<b>var</b> k,n,z: integer;
+<b>begin</b>
+ write('Увядзіце  n= ');
+ read(n);
+ k := 0;
+ <b>while</b> n &gt; 0 <b>do</b>
+ <b>begin</b>
+  //Бягучая лічба 
+  z := n <b>mod</b> 10;
+  writeln(z);
+  //Памяншэнне ліку ў 10 разоў
+  n := n <b>div</b> 10;
+  //Падлік колькасці лічбаў
+  k := k + 1;
+<b>end;</b>
+ writeln('в числе ', k,
+ 'цифр(-а/-ы))');
+<b>end</b>    
  </font></pre>
             <p>VI. Тэсціраванне.<br>
                 Запусціць праграму і ўвесці значэнне <i>n</i> = 13579. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-10-1.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-10-1b.JPG" alt=""></div>
             <p>Запусціць праграму і ўвесці значэнне <i>n</i> = 1. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-10-2.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-10-2b.JPG" alt=""></div>
 
         </div>
         <div class="green-back">
@@ -685,25 +685,25 @@ end
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-var a,b:integer;
-begin
-write('Значкі ў Іры  a = ');
-read(a);
-write('Значкі ў Ігара b = ');
-read(b);
-while a&lt;&gt;b do
-if a&gt;b then
-a := a - b
-else
-b := b - a;
+<b>var</b> a,b:integer;
+<b>begin</b>
+ write('Значкі ў Іры  a = ');
+ read(a);
+ write('Значкі ў Ігара b = ');
+ read(b);
+ <b>while</b> a&lt;&gt;b <b>do</b>
+ <b>if</b> a&gt;b <b>then</b>
+   a := a - b
+ <b>else</b>
+   b := b - a;
 writeln('Усяго сяброў  = ',a);
-end.     
+<b>end. </b>    
  </font></pre>
             <p>VI. Тэсціраванне.<br>
-                Запусціць праграму і ўвесці зна- чэнні: <i>а</i> = 42, <i>b</i> = 24. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-12-1.jpg" alt=""></div>
+                Запусціць праграму і ўвесці значэнні:<br> <i>а</i> = 42, <i>b</i> = 24. Вынік:</p>
+            <div class="info-type"><img src="/img/pr19-12-1b.JPG" alt=""></div>
             <p>Для значэнняў <i>a</i> = 1449, <i>b</i> = 596 атрымаем:</p>
-            <div class="info-type"><img src="img/pr19-12-2.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-12-2b.JPG" alt=""></div>
             <p>Дадзены вынік азначае, што лікі 1449 і 596 узаемна простыя і ўсе значкі можна аддаць толькі аднаму сябру.
             </p>
 
@@ -719,14 +719,14 @@ end.
             </p>
             <p>Агульны вгляд функцыі:</p>
             <pre><font>
-function &lt;имя&gt;(&lt;список
+<b>function </b>&lt;имя&gt;(&lt;список
 параметраў&gt;:тып):
 тып выніку;
-var ... //Можа адсутнічаць 
-begin
+<b>var</b> ... //Можа адсутнічаць 
+<b>begin</b>
 &lt;каманды&gt;
 &lt;імя&gt;:= &lt;значэнне&gt;;
-end;   
+<b>end;</b>  
 </font></pre>
         </div>
 
@@ -735,38 +735,42 @@ end;
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var x,y,z,d,f:integer;
-function NOD
-(a,b:integer):integer;
-begin
-while a&lt;&gt;b do
-if a&gt;b then
-a := a-b
-else
-b := b-a;
-NOD := a;
-end;
-begin
-write('Увядзіце  x= ');
-read(x);
-write('Увядзіце  y= ');
-read(y);
-write'Увядзіце  z= ');
-read(z);
-d := NOD(x,y);
-f := NOD(d,z);
-writeln('НОД = ',f);
-end.                    
+<b>var</b> x,y,z,d,f:integer;
+<b>function</b> NOD
+ (a,b:integer):integer;
+<b>begin</b>
+ <b>while</b> a&lt;&gt;b <b>do</b>
+  <b>if</b> a&gt;b <b>then</b>
+  a := a-b
+  <b>else</b>
+  b := b-a;
+ NOD := a;
+<b>end;</b>
+<b>begin</b>
+ write('Увядзіце  x= ');
+ read(x);
+ write('Увядзіце  y= ');
+ read(y);
+ write'Увядзіце  z= ');
+ read(z);
+ d := NOD(x,y);
+ f := NOD(d,z);
+ writeln('НОД = ',f);
+<b>end.</b>                  
                 </font></pre>
 
             <p>VI. Тэсціраванне.<br>
                 Запусціць праграму і ўвесці значэнн: <i>x</i> = 26, <i>y</i> = 143, <i>z</i> = 65. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-13-1.JPG" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-13-1b.JPG" alt=""></div>
             <p>Запусціць праграму і ўвесці значэнн: <i>x</i> = 354, <i>y</i> = 847, <i>z</i> = 125. Вынік:</p>
-            <div class="info-type"><img src="img/pr19-13-2.JPG" alt=""></div>
+            <div class="info-type"><img src="/img/pr19-13-2b.JPG" alt=""></div>
             <p>Дадзены вынік азначале, што лікі 354,847 и 125 узаемна простыя.
             </p>
+            <hr>
+            <p> <sup>1</sup>Анлайн-энцыклапедыя цэлалікавых паслядоўнасцей. Рэжым доступу:
+                <a href="http://oeis.org/?language=russian">http://oeis.org/</a> <br>(дата доступу: 17.01.2018).</p>
         </div>
+
 
 
     </div>

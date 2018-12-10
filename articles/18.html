@@ -500,7 +500,7 @@ end;
         </h4>
         <p><a href="#pr18-1b">Прыклад 18.1.</a> Нарысаваць прамавугольны трохвугольнік, які адпавядае рысунку (катэты трохвугольніка паралельныя восям каардынат). Даўжыні катэтаў і каардынаты прамога вугла ўводзяцца.
         </p>
-        <img src="img/treug.jpg" alt="">
+        <img src="/img/treug.JPG" alt="">
         <p>
             Этапы выканання задання<br> I. Зыходныя даныя: <i>a</i> і <i>b</i> (даўжыні катэтаў), <i>x</i> і <i>y</i> (каардынаты вяршыні прамога вугла).
             <br> II. Вынік: адлюстраванне прамавугольнага трохвугольніка.
@@ -509,12 +509,12 @@ end;
             <br> 2. Каб адлюстраваць тохвугольнік, трэба выканаць наступныя дзеянні:
             <br> 1) пабудаваць лініі з пункта з каардынатай (<i>x; y</i>) у пункты з каардынатамі (<i>x + a; y</i>) і (<i>x; y + b</i>);
             <br> 2) злучыць лініяй пункты (<i>x + a; y</i>) і (<i>x; y + b</i>);
-            <br> 3) зафарбаваць трохвугольнік. Для зафарбоўвання трохвугольніка трэба ведаць каардынаты якога-небудзь пункта ўнутры трохвугольніка. Такім пунктам у дадзеным выпадку можа быць пункт з каардынатамі (<i>x + 2; y + 2</i>).
-            <br> IV. Апісанне пераменных: усе пера- менныя маюць тып <font>integer</font>.
+            <br> 3) зафарбаваць трохвугольнік. Для зафарбоўвання трохвугольніка трэба ведаць каардынаты якога-небудзь пункта ўнутры трохвугольніка. Такім пунктам у дадзеным выпадку можа быць пункт з каардынатамі (<i>x + 2; y + 2</i>).<sup>1</sup>
+            <br> IV. Апісанне пераменных: усе пераменныя маюць тып <font>integer</font>.
             <br> Шмат якія графічныя пабудовы можна падагульніць, калі дапусціць, што фігура павінна быць упісана ў квадрат. У гэтым выпадку для пабудовы фігуры дастаткова задаць каардынаты (<i>x; y</i>) вверхняга левага вугла квадрата і даўжыню яго стараны — <i>d</i>. Выкарыстоўваючы гэтыя велічыні, можна атрымаць каардынаты іншых вяршынь квадрата: (<i>x + d; y</i>), (<i>x; y + d</i>), (<i>x + d; y + d</i>). ). Можна атрымаць кардынаты сярэдзіны стараны (<i>x + d div 2; y</i>) або цэнтра квадрата (<i>x + d div 2; y + d div 2</i>).
         </p>
         <p><a href="#pr18-2b">Прыклад 18.2*.</a> Нарысаваць у графічным акне грыб. Задаць каардынаты верхняга левага вугла квадрата і даўжыню яго стараны для вызначэння месцазнаходжання і памераў грыба.</p>
-        <img src="img/grib.jpg" alt="">
+        <img src="/img/grib.JPG" alt="">
         <p>
             Этапы выканання задання
             <br> I. Зыходныя даныя: <i>x</i> і <i>y</i> — каардынаты верхняга левага вугла квадрата, у які ўпісаны грыб, <i>d</i> — даўжыня яго стараны.
@@ -524,26 +524,29 @@ end;
             <br> 2. Для таго каб пабудаваць грыб, трэба выканаць наступныя дзеянні:
             <br> 1) пабудаваць авал для адлюстравання ножкі грыба. Параметры каманды для адлюстравання эліпса вызначым наступным чынам:
             <font>ellipse(x + d <b>div</b> 3, y, x + 2*d <b>div</b> 3, y + d)</font>;
-            <br><img src="img/ell.jpg" alt="">
+            <br><img src="/img/ell.JPG" alt="">
             <br> 2) нарысаваць шапачку грыба. Для гэтага можна выкарыстоўваць каманду <font>Pie</font> (пабудова сектара круга). Каардынаты цэнтра (x + d/2; y + d/3), радиус — d/3. Углы равны 0° и 180° соответственно.
             <br> IV. Апісанне пераменных: усе пераменныя маюць тып <font>integer</font>.
         </p>
-        <p>Случайные числа имеют широкое применение в программировании. Они используются в шифровании и в моделировании. Многие компьютерные игры используют случайные числа. На основе случайных чисел генерируются капчи и пароли, реализуются различные лотереи.Выпадковыя лікі маюць шырокае выкарыстанне ў праграміраванні. Яны выкарыстоўваюцца ў шыфраванні і ў мадэляванні. Шмат яікія камп’ютарныя гульні выкарыстоўваюць выпадковыя лікі. На аснове выпадковых лікаў генерыруюцца капчы і паролі, рэалізуюцца розныя латарэі</p>
+        <p>Выпадковыя лікі маюць шырокае выкарыстанне ў праграміраванні.
+            Яны выкарыстоўваюцца ў шыфраванні і ў мадэляванні. Шмат яікія
+            камп’ютарныя гульні выкарыстоўваюць выпадковыя лікі. На аснове выпадковых лікаў генерыруюцца капчы
+            і паролі, рэалізуюцца розныя латарэі.</p>
         <p>В PascalABC для атрымання выпадковага ліку выкароытоўваюць функцыю
             <font>random</font>. Спосабы запісу функцыі:</p>
         <ul>
             <li>
-                <font>Random</font>(a, b); — ввяртае выпадковы цэлы ў дыяпазоне ад a дa b;
+                <font>Random (a, b);</font> — ввяртае выпадковы цэлы ў дыяпазоне ад <i>a</i> дa <i>b</i>;
             </li>
             <li>
-                <font>Random</font>(a); — вяртае выпадковы цэлы ў дыяпазоне ад 0 дa a – 1;
+                <font>Random (a);</font> — вяртае выпадковы цэлы ў дыяпазоне ад 0 дa <i>a</i> – 1;
             </li>
             <li>
                 <font>Random</font>; — вяртае выпадковы рэчыўны ў дыяпазоне [0..1).
             </li>
         </ul>
         <p>
-            <font>Функцыя clRandom дазваляе задаць выпадковы колер.</font>
+            Функцыя <font>clRandom</font> дазваляе задаць выпадковы колер.
         </p>
         <p><a href="#pr18-3b">Прыклад 18.3.</a> Напісаць праграму для рысавання на экране 10 рознака- ляровых акружнасцей. Размяшчэнне акружнасцей, іх радыусы і колер вызначаюцца выпадковым чынам.</p>
         <p>Этапы выканання задання
@@ -578,16 +581,16 @@ end;
             <br> 1) месцазнаходжанне трохвугольніка задаецца каардынатамі прамога вугла, якія вызначым выпадковым чынам;
             <br> 2) катэты прамавугольнага трохвугольніка маюць аднолькавую даўжыню — значэнне <i>a</i>.
             <br> 5. Пабудову аднаго прамавугольнага трохвугольніка апішам у дапаможным <font>pr_treug</font>. Параметры працэдуры пабудовы трохвугольніка — каардынаты вяршыні прамога вугла і даўжыні катэтаў. Алгарытм апісаны ў <a href="#pr18-2b">прыкладзе 18.2.</a>
-            <br> IV. Апісанне пераменных: усе пера- менныя маюць тып <font>integer</font>.
+            <br> IV. Апісанне пераменных: усе пераменныя маюць тып <font>integer</font>.
         </p>
         <p><a href="#pr18-5b">Прыклад 18.5*.</a> Нарысаваць 10 грыбоў. Размяшчэнне і іх памеры вызнача- юцца выпадковым чынам. </p>
         <p>Этапы выканання задання
             <br> Вынікам работы праграмы, які не залежыць ад зыходных даных, будзе адлюстраванне 10 грыбоў.
             <br> III. Алгарытм рашэння задачы.
             <br> 1. 1. Пабудову аднаго грыба апішам у дапаможным алгарытме. Алгарытм апісаны ў <a href="#pr18-2b">прыкладзе 18.2.</a>
-            <br> 2. Значэнні каардынат верхняга ле- вага вугла і памер грыба вызначаюцца функцыяй <font>random</font>.
+            <br> 2. Значэнні каардынат верхняга левага вугла і памер грыба вызначаюцца функцыяй <font>random</font>.
             <br> 3. Паколькі колькасць паўтарэнняў вядомая, будзем выкарыстоўваць цыкл <b>for</b>.
-            <br> IV. Апісанне пераменных: <i>x, y</i> y (каардынаты верхняга левага вугла), <i>d</i> (па- мер) —
+            <br> IV. Апісанне пераменных: <i>x, y</i> y (каардынаты верхняга левага вугла), <i>d</i> (памер) —
             <font>integer</font>.</p>
         <p><a href="#pr18-6b">Прыклад 18.6.</a> Запоўніць графічнае акно акружнасцямі з радыусам 10 </p>
         <p>
@@ -601,12 +604,16 @@ end;
             <br> IV. Апісанне пераменных: <i>x, y, r</i> —
             <font>integer</font>.
         </p>
-        <p>У <a href="#pr18-6b">прыкладзе 18.6.</a>паказана, як запоўніць графічнае акно акружнасцямі. Унёсшы невялікія змяненні ў гэту праграму, можна запаўняць графічнае акно любымі іншымі фігуркамі. Для гэтага дастаткова замяніць каманду
+        <p>У <a href="#pr18-6b">прыкладзе 18.6.</a> паказана, як запоўніць графічнае акно акружнасцямі. Унёсшы невялікія змяненні ў гэту праграму, можна запаўняць графічнае акно любымі іншымі фігуркамі. Для гэтага дастаткова замяніць каманду
             <font>Circle(x,y,r)</font> у працэдуры
             <font>row</font>
-            на іншую каманду. Можна выбраць графіч- ны прымітыў з бібліятэкі <font>GraphABC<font> або самастойна напісаць працэдуру рысавання фігуркі (напрыклад, выкарыстаць працэдуру рысавання грыба з <a href="#pr18-6b">прыкладу 18.5.</a>).</p>
+            на іншую каманду. Можна выбраць графічны прымітыў з бібліятэкі <font>GraphABC</font> або самастойна напісаць працэдуру рысавання фігуркі (напрыклад, выкарыстаць працэдуру рысавання грыба з <a href="#pr18-6b">прыкладу 18.5.</a>).</p>
 
         <br>
+        <hr>
+        <p><sup>1</sup>Для адвольнага трохвугольніка можна выкарыстаць формулы:</p><br>
+        <img src="/img/uravn.JPG" alt="">
+
         <div class="not-linked">
             <hr>
             <button class="questions-btn" onclick="changeOrder18()">Тэсты</button>
@@ -615,43 +622,43 @@ end;
                 <ol>
                     <li>
                         <div class="flex-col">
-                            Установите соответствия между действиями и командами.<br>
-                            <label for="">Случайное вещественное число в диапазоне [0..1)<select id="t18-1-1">
+                            Устанавіце адпаведнасць паміж дзеяннямі і камандамі.<br>
+                            <label for="">Выпадковы рэчыўны лік у дыяпазоне [0..1)<select id="t18-1-1b">
 
                                     <option value="2">Random(a);</option>
                                     <option value="3">Random(a, b);</option>
                                     <option value="1">Random;</option>
                                 </select></label>
 
-                            <label for="">Случайное целое в диапазоне от 0 до a –1;<select id="t18-1-2">
+                            <label for="">Выпадковы цэлы ў дыяпазоне ад 0 да <i>a</i> –1;<select id="t18-1-2b">
                                     <option value="1">Random;</option>
 
                                     <option value="3">Random(a, b);</option>
                                     <option value="2">Random(a);</option>
                                 </select></label>
 
-                            <label for="">Случайное целое в диапазоне от a до b<select id="t18-1-3">
+                            <label for="">Выпадковы цэлы ў дыяпазоне ад <i>a</i> да <i>b</i><select id="t18-1-3b">
                                     <option value="1">Random;</option>
                                     <option value="2">Random(a);</option>
                                     <option value="3">Random(a, b);</option>
                                 </select></label>
                         </div>
-                        <button class="check" id="cht18-1">Проверить</button>
+                        <button class="check" id="cht18-1b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            С помощью какой команды задается случайный цвет?<br>
-                            <label for=""><input type="radio" value="1" name="t18-2">RandomColor. <br></label>
-                            <label for=""><input type="radio" value="2" name="t18-2">Random. <br></label>
-                            <label for=""><input type="radio" value="3" name="t18-2">clRandom. <br></label>
-                            <label for=""><input type="radio" value="4" name="t18-2">Randomize. <br></label>
+                            З дапамогай якой каманды задаецца выпадковы колер?<br>
+                            <label for=""><input type="radio" value="1" name="t18-2b">RandomColor. <br></label>
+                            <label for=""><input type="radio" value="2" name="t18-2b">Random. <br></label>
+                            <label for=""><input type="radio" value="3" name="t18-2b">clRandom. <br></label>
+                            <label for=""><input type="radio" value="4" name="t18-2b">Randomize. <br></label>
 
                         </div>
-                        <button class="check" id="cht18-2">Проверить</button>
+                        <button class="check" id="cht18-2b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            Для построения следующего изображения написали программу, в которой потеряли одну команду.<br>
+                            Для пабудовы наступнага відарыса напісалі праграму, у якой страцілі адну каманду.<br>
                             <img src="/img/t18-3.jpg" alt="" width="200px"><br>
                             <pre><font>
 uses GraphABC;
@@ -662,37 +669,39 @@ begin
    …
   end;
 end. </font></pre>
-                            <label for=""><input type="radio" value="1" name="t18-3">MoveTo(random(640), random(480)). <br></label>
+                            <p>Якая каманда павінна быць на месцы пропуску?
+                                <p />
+                                <label for=""><input type="radio" value="1" name="t18-3b">MoveTo(random(640), random(480)). <br></label>
 
-                            <label for=""><input type="radio" value="2" name="t18-3">LineTo(random(640), random(480)). <br></label>
+                                <label for=""><input type="radio" value="2" name="t18-3b">LineTo(random(640), random(480)). <br></label>
 
-                            <label for=""><input type="radio" value="3" name="t18-3">RandomLine(640, 480). <br></label>
+                                <label for=""><input type="radio" value="3" name="t18-3b">RandomLine(640, 480). <br></label>
 
-                            <label for=""><input type="radio" value="4" name="t18-3">Line(0, 0, random(640), random(480)). <br></label>
+                                <label for=""><input type="radio" value="4" name="t18-3b">Line(0, 0, random(640), random(480)). <br></label>
 
-                            <label for=""><input type="radio" value="5" name="t18-3">Line(random(640), random(480), random(640), random(480)). <br></label>
+                                <label for=""><input type="radio" value="5" name="t18-3b">Line(random(640), random(480), random(640), random(480)). <br></label>
 
                         </div>
-                        <button class="check" id="cht18-3">Проверить</button>
+                        <button class="check" id="cht18-3b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            Выберите из предложенных описаний процедур те, которые имеют два целочисленных параметра.<br>
-                            <label for=""><input type="checkbox" id="t18-4-1">
+                            Выберыце з прапанаваных апісанняў працэдур тыя, якія маюць два цэлалікавыя параметры.<br>
+                            <label for=""><input type="checkbox" id="t18-4-1b">
                                 <pre><font>
 procedure p(x, y, z: integer);
 begin
 
 end;
 </font></pre> <br></label>
-                            <label for=""><input type="checkbox" id="t18-4-2">
+                            <label for=""><input type="checkbox" id="t18-4-2b">
                                 <pre><font>
 procedure p(x: integer; y: integer);
 begin
 
 end;
 </font></pre> <br></label>
-                            <label for=""><input type="checkbox" id="t18-4-3">
+                            <label for=""><input type="checkbox" id="t18-4-3b">
                                 <pre><font>
 procedure p(x: real; y: integer);
 begin
@@ -700,7 +709,7 @@ begin
 end;
 </font></pre> <br></label>
 
-                            <label for=""><input type="checkbox" id="t18-4-4">
+                            <label for=""><input type="checkbox" id="t18-4-4b">
                                 <pre><font>
 procedure p(x, y: real);
 begin
@@ -708,7 +717,7 @@ begin
 end;
 </font></pre> <br></label>
 
-                            <label for=""><input type="checkbox" id="t18-4-5">
+                            <label for=""><input type="checkbox" id="t18-4-5b">
                                 <pre><font>
 procedure p(x: integer; y: real);
 begin
@@ -716,7 +725,7 @@ begin
 end;
 </font></pre> <br></label>
 
-                            <label for=""><input type="checkbox" id="t18-4-6">
+                            <label for=""><input type="checkbox" id="t18-4-6b">
                                 <pre><font>
 procedure p(x, y: integer);
 begin
@@ -726,15 +735,15 @@ end;
 
 
                         </div>
-                        <button class="check" id="cht18-4">Проверить</button>
+                        <button class="check" id="cht18-4b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
-                            Установите соответствие между процедурой и изображением, которое получается в результате ее выполнения. <br>
-                            <p>Рисунок 1 <img src="/img/t18-5-4.jpg" alt=""></p>
-                            <p>Рисунок 2 <img src="/img/t18-5-2.jpg" alt=""></p>
-                            <p>Рисунок 3 <img src="/img/t18-5-3.jpg" alt=""></p>
-                            <p>Рисунок 4 <img src="/img/t18-5-1.jpg" alt=""></p>
+                            Устанавіце адпаведнасць паміж працэдурай і відарысам, які атрымліваецца ў выніку яе выканання. <br>
+                            <p>Варыянт 1 <img src="/img/t18-5-4.jpg" alt=""></p>
+                            <p>Варыянт 2 <img src="/img/t18-5-2.jpg" alt=""></p>
+                            <p>Варыянт 3 <img src="/img/t18-5-3.jpg" alt=""></p>
+                            <p>Варыянт 4 <img src="/img/t18-5-1.jpg" alt=""></p>
                             <label for="">
                                 <pre><font>
 procedure p(x, y, a:integer);
@@ -745,11 +754,11 @@ begin
   LineTo(x, y + a);
 end;
 
-                              </font></pre><select id="tt18-5-1">
-                                    <option value="1">Рисунок 1</option>
-                                    <option value="2">Рисунок 2</option>
-                                    <option value="3">Рисунок 3</option>
-                                    <option value="4">Рисунок 4</option>
+                              </font></pre><select id="tt18-5-1b">
+                                    <option value="1">Варыянт 1</option>
+                                    <option value="2">Варыянт 2</option>
+                                    <option value="3">Варыянт 3</option>
+                                    <option value="4">Варыянт 4</option>
                                 </select></label>
 
                             <label for="">
@@ -763,11 +772,11 @@ begin
 end;
 
 
-                              </font></pre><select id="tt18-5-2">
-                                    <option value="1">Рисунок 1</option>
-                                    <option value="2">Рисунок 2</option>
-                                    <option value="3">Рисунок 3</option>
-                                    <option value="4">Рисунок 4</option>
+                              </font></pre><select id="tt18-5-2b">
+                                    <option value="1">Варыянт 1</option>
+                                    <option value="2">Варыянт 2</option>
+                                    <option value="3">Варыянт 3</option>
+                                    <option value="4">Варыянт 4</option>
                                 </select></label>
 
                             <label for="">
@@ -782,11 +791,11 @@ end;
 
 
 
-                              </font></pre><select id="tt18-5-3">
-                                    <option value="1">Рисунок 1</option>
-                                    <option value="2">Рисунок 2</option>
-                                    <option value="3">Рисунок 3</option>
-                                    <option value="4">Рисунок 4</option>
+                              </font></pre><select id="tt18-5-3b">
+                                    <option value="1">Варыянт 1</option>
+                                    <option value="2">Варыянт 2</option>
+                                    <option value="3">Варыянт 3</option>
+                                    <option value="4">Варыянт 4</option>
                                 </select></label>
 
                             <label for="">
@@ -802,17 +811,17 @@ end;
 
 
 
-                              </font></pre><select id="tt18-5-4">
-                                    <option value="1">Рисунок 1</option>
-                                    <option value="2">Рисунок 2</option>
-                                    <option value="3">Рисунок 3</option>
-                                    <option value="4">Рисунок 4</option>
+                              </font></pre><select id="tt18-5-4b">
+                                    <option value="1">Варыянт 1</option>
+                                    <option value="2">Варыянт 2</option>
+                                    <option value="3">Варыянт 3</option>
+                                    <option value="4">Варыянт 4</option>
                                 </select></label>
 
 
 
                         </div>
-                        <button class="check" id="cht18-5">Проверить</button>
+                        <button class="check" id="cht18-5b">Праверыць</button>
                     </li>
 
                 </ol>
@@ -859,11 +868,11 @@ end;
 
 
                     </li>
-                    <li><b class="circled">4</b>Напішыце праграму, якая будуе выпадковым чынам відарысы 20 гарызантальных адрэзкаў даўжынёй 30 пікселяў. Распрацуйце два варыянты рашэння задачы. Адзін з выкарыстаннем цыкла <font>while</font>, а іншы — цыкла <font>for</font>.
+                    <li><b class="circled">4</b>Напішыце праграму, якая будуе выпадковым чынам відарысы 20 гарызантальных адрэзкаў даўжынёй 30 пікселяў. Распрацуйце два варыянты рашэння задачы. Адзін з выкарыстаннем цыкла <font><b>while</b></font>, а іншы — цыкла <font><b>for</b></font>.
                         <ol>
                             <li>Параўнайце дзве праграмы рашэння задачы. Які варыянт рашэння дадзенай задачы ўяўляецца вам лепшым? Чаму?</li>
                             <li>Задайце ў праграме таўшчыню адрэзка ў 3 пікселі.</li>
-                            <li>Якія змяненні патрэбны ў праграме, каб таўшчыня адрэзка была вы- падковым лікам з прамежека [2; 8]?</li>
+                            <li>Якія змяненні патрэбны ў праграме, каб таўшчыня адрэзка была выпадковым лікам з прамежека [2; 8]?</li>
                             <li>Унясіце змяненні ў праграму так, каб карыстальнік мог уводзіць колькасць адрэзкаў, якія адлюстроўваюцца на экране.</li>
                             <li>Якія змяненні трэба ўнесці ў праграму, каб замест гарызантальных адрэзкаў адлюстроўваліся вертыкальныя? Дыяганальныя?</li>
                         </ol>
@@ -875,8 +884,8 @@ end;
                     </li>
 
                     <li><b class="circled">5</b> Выкарыстоўваючы працэдуру рысавання трохвугольніка з <a href="#pr18-4">прыкладу 18.4</a>, нарысуйце рад трохвугольнікаў уздоўж верхняга (левага) краю графічнага акна.</li>
-                    <li><b class="circled">6*</b>Напішыце праграму для рысавання адной з фігурак. Задаюцца каардынаты верх- няга левага вугла і даўжыня стараны квадрата (даўжыні старон прамавугольніка):<br><img src="/img/upr18-6.JPG" width="95%" alt=""></li>
-                    <li><b class="circled">7*</b>ННапішыце праграму, якая нарысуе рад фігурак уздоўж краю графічнага акна. Выкарыстоўвайце фігуркі, якія рысавалі ў заданні 6.</li>
+                    <li><b class="circled">6*</b>Напішыце праграму для рысавання адной з фігурак. Задаюцца каардынаты верхняга левага вугла і даўжыня стараны квадрата (даўжыні старон прамавугольніка):<br><img src="/img/upr18-6.JPG" width="95%" alt=""></li>
+                    <li><b class="circled">7*</b>Напішыце праграму, якая нарысуе рад фігурак уздоўж краю графічнага акна. Выкарыстоўвайце фігуркі, якія рысавалі ў заданні 6.</li>
                     <li><b class="circled">8</b>Выканайце заданні для <a href="#pr18-6">прыкладу 18.6.</a>
                         <ol>
                             <li>Змяніце ў праграме значэнне <i>r</i> = 10 на <i>r</i> = 20. Чаму атрымаўся такі рысунак? Паэксперыментуйце са значэннямі радыуса, устанавіўшы празрыстую заліўку.</li>
@@ -910,33 +919,33 @@ end;
 
 
 
-                $("#cht18-1").click(function() {
-                    var ch1 = $("#t18-1-1 option:selected").val();
-                    var ch2 = $("#t18-1-2 option:selected").val();
-                    var ch3 = $("#t18-1-3 option:selected").val();
+                $("#cht18-1b").click(function() {
+                    var ch1 = $("#t18-1-1b option:selected").val();
+                    var ch2 = $("#t18-1-2b option:selected").val();
+                    var ch3 = $("#t18-1-3b option:selected").val();
 
                     if (ch1 == "1" && ch2 == "2" && ch3 == "3") {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
-                $("#cht18-2").click(function() {
-                    var y2 = $("input[name='t18-2']:checked").attr("value");
+                $("#cht18-2b").click(function() {
+                    var y2 = $("input[name='t18-2b']:checked").attr("value");
                     if (y2 == "3") {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
-                $("#cht18-3").click(function() {
-                    var y2 = $("input[name='t18-3']:checked").attr("value");
+                $("#cht18-3b").click(function() {
+                    var y2 = $("input[name='t18-3b']:checked").attr("value");
                     if (y2 == "4") {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
@@ -947,36 +956,36 @@ end;
 
 
 
-                $("#cht18-4").click(function() {
-                    var ch1 = $("#t18-4-1").prop("checked");
-                    var ch2 = $("#t18-4-2").prop("checked");
-                    var ch3 = $("#t18-4-3").prop("checked");
-                    var ch4 = $("#t18-4-4").prop("checked");
-                    var ch5 = $("#t18-4-5").prop("checked");
-                    var ch6 = $("#t18-4-6").prop("checked");
+                $("#cht18-4b").click(function() {
+                    var ch1 = $("#t18-4-1b").prop("checked");
+                    var ch2 = $("#t18-4-2b").prop("checked");
+                    var ch3 = $("#t18-4-3b").prop("checked");
+                    var ch4 = $("#t18-4-4b").prop("checked");
+                    var ch5 = $("#t18-4-5b").prop("checked");
+                    var ch6 = $("#t18-4-6b").prop("checked");
 
 
 
                     if (ch1 == false && ch2 == true && ch3 == false && ch4 == false && ch5 == false && ch6 == true) {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 
 
 
 
-                $("#cht18-5").click(function() {
-                    var ch1 = $("#tt18-5-1 option:selected").val();
-                    var ch2 = $("#tt18-5-2 option:selected").val();
-                    var ch3 = $("#tt18-5-3 option:selected").val();
-                    var ch4 = $("#tt18-5-4 option:selected").val();
+                $("#cht18-5b").click(function() {
+                    var ch1 = $("#tt18-5-1b option:selected").val();
+                    var ch2 = $("#tt18-5-2b option:selected").val();
+                    var ch3 = $("#tt18-5-3b option:selected").val();
+                    var ch4 = $("#tt18-5-4b option:selected").val();
 
                     if (ch1 === "4" && ch2 === "2" && ch3 === "3" && ch4 === "1") {
-                        myalert("Правильно!");
+                        myalert("Правiльна!");
                     } else {
-                        myalert("Не правильно!");
+                        myalert("Няправiльна!");
                     }
                 });
 

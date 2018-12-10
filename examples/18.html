@@ -17,27 +17,27 @@
             </a>
 
             <pre><font>
-uses GraphABC;
-var a,b,x,y,x_c, 
-y_c:integer;
-begin
-writeln('Введите 
-координаты');
-read(x,y);
+<b>uses</b> GraphABC;
+<b>var</b> a,b,x,y,x_c, 
+ y_c:integer;
+<b>begin</b>
+ writeln('Введите 
+ координаты');
+ read(x,y);
  writeln (x,' ',y);
-writeln('Введите
+ writeln('Введите
  длины катетов');
-read(a,b); 
-writeln (a,' ',b);
-Line(x,y,x+a,y); 
-Line(x,y,x,y+b);
-Line(x+a,y,x,y+b);
-//Координаты точки
-//Внутри треугольника
-x_c := x + 2;
+ read(a,b); 
+ writeln (a,' ',b);
+ Line(x,y,x+a,y); 
+ Line(x,y,x,y+b);
+ Line(x+a,y,x,y+b);
+ //Координаты точки
+ //Внутри треугольника
+ x_c := x + 2;
  y_c := y + 2;
-FloodFill(x_c,y_c,clRandom);
-end.     
+ FloodFill(x_c,y_c,clRandom);
+<b>end.</b>     
  </font></pre>
             <p>VI. Тестирование.<br>
                 Запустить программу и ввести
@@ -51,24 +51,24 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var x,y,d: integer;
-begin
-writeln('Координаты');
-read(x,y);
-writeln (x,' ',y);
-writeln('Сторона');
-read(d);
-writeln (d);
-SetBrushColor(clYellow);
-Ellipse (x + d 
- div 3,y,
-x + 2 * d div 3,y+d);
-SetBrushColor(clBrown);
-Pie(x + d div 2,y+d 
- div 3,
-d div 3,0,180);
-end.
+<b>uses</b> GraphABC;
+<b>var</b> x,y,d: integer;
+<b>begin</b>
+ writeln('Координаты');
+ read(x,y);
+ writeln (x,' ',y);
+ writeln('Сторона');
+ read(d);
+ writeln (d);
+ SetBrushColor(clYellow);
+ Ellipse (x + d 
+ <b>div</b> 3,y,
+ x + 2 * d <b>div</b> 3,y+d);
+ SetBrushColor(clBrown);
+ Pie(x + d <b>div</b> 2,y+d 
+ <b>div</b> 3,
+ d <b>div</b> 3,0,180);
+<b>end.</b>
 </font></pre>
             <p>VI. Тестирование.<br>
                 Запустить программу и ввести
@@ -80,18 +80,18 @@ end.
                 нужно внести изменения, позволяющие рассчитать положение ножки и
                 шляпки гриба относительно координат (<i>x; y</i>) и величин <i>d1</i> и <i>d2</i>.</p>
             <pre><font>
-var x,y,d1,d2: integer;
+<b>var</b> x,y,d1,d2: integer;
 ...
-writeln('Стороны');
-read(d1, d2);
-writeln (d1, ' ',d2);
-SetBrushColor(clYellow);
-Ellipse(x+d1 div 3, y,
-x + 2 * d1 div 3, y +d2);
-SetBrushColor(clBrown);
-Pie(x + d1 div 2, y +d2
- div 3,
-max(d1,d2) div 3,0,180);    
+ writeln('Стороны');
+ read(d1, d2);
+ writeln (d1, ' ',d2);
+ SetBrushColor(clYellow);
+ Ellipse(x+d1 <b>div</b> 3, y,
+ x + 2 * d1 <b>div</b> 3, y +d2);
+ SetBrushColor(clBrown);
+ Pie(x + d1 <b>div</b> 2, y +d2
+ <b>div</b> 3,
+ max(d1,d2) <b>div</b> 3,0,180);    
 </font></pre>
             <p>Результат:</p>
             <div class="info-type"><img src="img/pr18-2-2.jpg" alt=""></div>
@@ -116,21 +116,21 @@ max(d1,d2) div 3,0,180);
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var x,y,r: integer;
-begin
-SetPenWidth(3);
-SetBrushStyle(bsClear);
-for var i:= 1 
-to 10 do
-begin
-x := random(600);
-y := random(400);
-R := random(150);
-SetPenColor(clRandom);
-circle(x,y,r);
-end;
-end.    
+<b>uses</b> GraphABC;
+<b>var</b> x,y,r: integer;
+<b>begin</b>
+ SetPenWidth(3);
+ SetBrushStyle(bsClear);
+ <b>for var</b> i:= 1 
+ <b>to</b> 10 <b>do</b>
+ <b>begin</b>
+  x := random(600);
+  y := random(400);
+  R := random(150);
+  SetPenColor(clRandom);
+  circle(x,y,r);
+ <b>end;</b>
+<b>end. </b>   
 </font></pre>
             <p>VI. Тестирование.<br>
                 Запустить программу. Должно
@@ -142,34 +142,34 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var n, x, y, a :integer;
-procedure pr_treug (x,y,
- a, b : integer);
-var x_c, y_c:integer;
-begin
-line(x, y, x + a,y);
-line(x, y, x, y + b);
-line(x + a, y, x, y+b);
-x_c := x + 2; 
-y_c := y + 2;
-FloodFill(x_c,y_c,
-clRandom);
-end;
-begin
-writeln('Ввeдите 
-количество');
-read(n); writeln (n);
-writeln('Ввeдите
+<b>uses</b> GraphABC;
+<b>var</b> n, x, y, a :integer;
+<b>procedure</b> pr_treug (x,y,
+     a, b : integer);
+<b>var</b> x_c, y_c:integer;
+<b>begin</b>
+ line(x, y, x + a,y);
+ line(x, y, x, y + b);
+ line(x + a, y, x, y+b);
+ x_c := x + 2; 
+ y_c := y + 2;
+ FloodFill(x_c,y_c,
+ clRandom);
+<b>end;</b>
+<b>begin</b>
+ writeln('Ввeдите 
+ количество');
+ read(n); writeln (n);
+ writeln('Ввeдите
  длину катета');
-read(a); writeln (a);
-for var i:= 1 to n do
-begin
-x:= random(500);
-y:= random(400);
-pr_treug(x, y, a, a);
-end;
-end.    
+ read(a); writeln (a);
+ <b>for var</b> i:= 1 <b>to</b> n <b>do</b>
+ <b>begin</b>
+ x:= random(500);
+ y:= random(400);
+ pr_treug(x, y, a, a);
+ <b>end;</b>
+<b>end.</b>    
 </font></pre>
             <p>VI. Тестирование.<br>
                 Запустить программу. Результат:</p>
@@ -179,29 +179,29 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var x,y,d:integer;
-procedure 
-grib(x,y,d:integer);
-begin
-SetBrushColor(clYellow);
-Ellipse(x + d div 3, y,
-x + 2*d div 3, y + d);
-SetBrushColor(clBrown);
-Pie(x + d div 2,y + d
-  div 3,
-d div 3, 0, 180);
-end;
-Begin
-for var i: = 1 
-to 10 do
-begin
-x:= random(400);
-y:= random(200);
-d:= random(150);
-grib(x,y,d);
-end;
-end.    
+<b>uses</b> GraphABC;
+<b>var</b> x,y,d:integer;
+<b>procedure </b>
+ grib(x,y,d:integer);
+<b>begin</b>
+ SetBrushColor(clYellow);
+ Ellipse(x + d div 3, y,
+ x + 2*d <b>div</b> 3, y + d);
+ SetBrushColor(clBrown);
+ Pie(x + d <b>div</b> 2,y + d
+  <b>div</b> 3,
+ d <b>div</b> 3, 0, 180);
+<b>end;</b>
+<b>Begin</b>
+<b>for var</b> i: = 1 
+<b>to</b> 10 <b>do</b>
+<b>begin</b>
+ x:= random(400);
+ y:= random(200);
+ d:= random(150);
+ grib(x,y,d);
+ <b>end;</b>
+<b>end.</b>    
 </font></pre>
             <p>VI. Тестирование.<br>
                 Результат может быть следующим:</p>
@@ -213,27 +213,27 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var x, y, r:integer;
-procedure 
-row(y : integer);
-begin
-x :=10; R:= 10;
-while x &lt;WindowWidth 
-do
-begin
-Circle(x,y,r);
- x := x+20;
-end;
-end;
-begin
-y := 10;
-while y &lt;=WindowHeight
- do
-begin
-Row(y); y := y + 20;
-end;
-end.     
+<b>uses</b> GraphABC;
+<b>var</b> x, y, r:integer;
+<b>procedure</b> 
+ row(y : integer);
+<b>begin</b>
+ x :=10; R:= 10;
+ <b>while</b> x &lt;WindowWidth 
+ <b>do</b>
+ <b>begin</b>
+  Circle(x,y,r);
+  x := x+20;
+ <b>end;</b>
+<b>end;</b>
+<b>begin</b>
+ y := 10;
+ <b>while</b> y &lt;=WindowHeight
+ <b>do</b>
+ <b>begin</b>
+ Row(y); y := y + 20;
+ <b>end;</b>
+<b>end. </b>   
  </font></pre>
             <p>VI. Тестирование.<br>
                 Результат:</p>
@@ -251,79 +251,83 @@ end.
             <a name="pr18-1b"><b>Прыклад 18.1.</b>
                 <p>V. Программа:</p>
             </a>
-
             <pre><font>
-uses GraphABC;
-var a,b,x,y,x_c, 
-y_c:integer;
-begin
-writeln('Увядзіце каардынаты');
-read(x,y);
+<b>uses</b> GraphABC;
+<b>var</b> a,b,x,y,x_c, 
+ y_c:integer;
+<b>begin</b>
+ writeln('Увядзіце 
+ каардынаты');
+ read(x,y);
  writeln (x,' ',y);
-writeln('Увядзіце даўжыні катэтаў');
-read(a,b); 
-writeln (a,' ',b);
-Line(x,y,x+a,y); 
-Line(x,y,x,y+b);
-Line(x+a,y,x,y+b);
-//Каардынаты пункта
-//Унутры трохвугольніка
-x_c := x + 2;
+ writeln('Увядзіце
+ даўжыні катэтаў');
+ read(a,b); 
+ writeln (a,' ',b);
+ Line(x,y,x+a,y); 
+ Line(x,y,x,y+b);
+ Line(x+a,y,x,y+b);
+ //Каардынаты пункта
+ //Унутры трохвугольніка
+ x_c := x + 2;
  y_c := y + 2;
-FloodFill(x_c,y_c,clRandom);
-end.     
+ FloodFill(x_c,y_c,clRandom);
+<b>end.</b>     
  </font></pre>
+
             <p>VI. Тэсціраванне.<br>
                 Запусціць праграму і ўвесці значэнні: каардынаты (100; 100), даўжыні катэтаў 70 и 120. Вынік:</p>
-            <div class="info-type"><img src="img/pr18-1-1.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr18-1-1b.JPG" alt=""></div>
             <p>Іншы варыянт</p>
-            <div class="info-type"><img src="img/pr18-1-2.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr18-1-2b.JPG" alt=""></div>
 
             <a name="pr18-2b"><b>Прыклад 18.2*.</b>
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var x,y,d: integer;
-begin
-writeln('Каардынаты');
-read(x,y);
-writeln (x,' ',y);
-writeln('Старана');
-read(d);
-writeln (d);
-SetBrushColor(clYellow);
-Ellipse (x + d 
- div 3,y,
-x + 2 * d div 3,y+d);
-SetBrushColor(clBrown);
-Pie(x + d div 2,y+d 
- div 3,
-d div 3,0,180);
-end.
+<b>uses</b> GraphABC;
+<b>var</b> x,y,d: integer;
+<b>begin</b>
+ writeln('Каардынаты');
+ read(x,y);
+ writeln (x,' ',y);
+ writeln('Старана');
+ read(d);
+ writeln (d);
+ SetBrushColor(clYellow);
+ Ellipse (x + d 
+ <b>div</b> 3,y,
+ x + 2 * d <b>div</b> 3,y+d);
+ SetBrushColor(clBrown);
+ Pie(x + d <b>div</b> 2,y+d 
+ <b>div</b> 3,
+ d <b>div</b> 3,0,180);
+<b>end.</b>
 </font></pre>
+
             <p>VI. Тэсціраванне.<br>
-                ЗЗапусціць праграму і ўвесці значэнні: каапрдынаты (100; 100), старана 150. Вынік:</p>
+                Запусціць праграму і ўвесці значэнні: каапрдынаты (100; 100), старана 150. Вынік:</p>
             <div class="info-type"><img src="img/pr18-2-1.jpg" alt=""></div>
             <p>* Грыб можна ўпісаць не ў квадрат, а ў прамавугольнік. У гэтым выпадку трэба задаваць дзве велічыні, якія вызначаюць памеры прамавугольніка: даўжыню
                 (<i>d1</i>) і шырыню (<i>d2</i>).</p>
             <p>У праграму рысавання грыба трэба ўнесці змяненні, якія дазваляюць разлічыць становішча ножкі і шапачкі грыба адносна каардынат (<i>x; y</i>) і велічынь <i>d1</i> і <i>d2</i>.</p>
             <pre><font>
-var x,y,d1,d2: integer;
+<b>var</b> x,y,d1,d2: integer;
 ...
-writeln('Стораны');
-read(d1, d2);
-writeln (d1, ' ',d2);
-SetBrushColor(clYellow);
-Ellipse(x+d1 div 3, y,
-x + 2 * d1 div 3, y +d2);
-SetBrushColor(clBrown);
-Pie(x + d1 div 2, y +d2
- div 3,
-max(d1,d2) div 3,0,180);    
+ writeln('Стораны');
+ read(d1, d2);
+ writeln (d1, ' ',d2);
+ SetBrushColor(clYellow);
+ Ellipse(x+d1 <b>div</b> 3, y,
+ x + 2 * d1 <b>div</b> 3, y +d2);
+ SetBrushColor(clBrown);
+ Pie(x + d1 <b>div</b> 2, y +d2
+ <b>div</b> 3,
+ max(d1,d2) <b>div</b> 3,0,180);    
 </font></pre>
+
             <p>Вынік:</p>
-            <div class="info-type"><img src="img/pr18-2-2.jpg" alt=""></div>
+            <div class="info-type"><img src="/img/pr18-2-2b.JPG" alt=""></div>
         </div>
         <div class="green-back">
             <p>
@@ -338,21 +342,21 @@ max(d1,d2) div 3,0,180);
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var x,y,r: integer;
-begin
-SetPenWidth(3);
-SetBrushStyle(bsClear);
-for var i:= 1 
-to 10 do
-begin
-x := random(600);
-y := random(400);
-R := random(150);
-SetPenColor(clRandom);
-circle(x,y,r);
-end;
-end.    
+<b>uses</b> GraphABC;
+<b>var</b> x,y,r: integer;
+<b>begin</b>
+ SetPenWidth(3);
+ SetBrushStyle(bsClear);
+ <b>for var</b> i:= 1 
+ <b>to</b> 10 <b>do</b>
+ <b>begin</b>
+  x := random(600);
+  y := random(400);
+  R := random(150);
+  SetPenColor(clRandom);
+  circle(x,y,r);
+ <b>end;</b>
+<b>end. </b>   
 </font></pre>
             <p>VI. Тэсціраванне.<br>
                 Запусціць праграму. Павінна быць нарысавана 10 акружнасцей. Розныя варыянты работы праграмы:</p>
@@ -362,33 +366,34 @@ end.
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var n, x, y, a :integer;
-procedure pr_treug (x,y,
- a, b : integer);
-var x_c, y_c:integer;
-begin
-line(x, y, x + a,y);
-line(x, y, x, y + b);
-line(x + a, y, x, y+b);
-x_c := x + 2; 
-y_c := y + 2;
-FloodFill(x_c,y_c,
-clRandom);
-end;
-begin
-writeln('Увядзіце колькасць');
-read(n); writeln (n);
-writeln('Увядзіце даўжыню
-катэта');
-read(a); writeln (a);
-for var i:= 1 to n do
-begin
-x:= random(500);
-y:= random(400);
-pr_treug(x, y, a, a);
-end;
-end.    
+<b>uses</b> GraphABC;
+<b>var</b> n, x, y, a :integer;
+<b>procedure</b> pr_treug (x,y,
+     a, b : integer);
+<b>var</b> x_c, y_c:integer;
+<b>begin</b>
+ line(x, y, x + a,y);
+ line(x, y, x, y + b);
+ line(x + a, y, x, y+b);
+ x_c := x + 2; 
+ y_c := y + 2;
+ FloodFill(x_c,y_c,
+ clRandom);
+<b>end;</b>
+<b>begin</b>
+ writeln('Ввeдите 
+ количество');
+ read(n); writeln (n);
+ writeln('Ввeдите
+ длину катета');
+ read(a); writeln (a);
+ <b>for var</b> i:= 1 <b>to</b> n <b>do</b>
+ <b>begin</b>
+ x:= random(500);
+ y:= random(400);
+ pr_treug(x, y, a, a);
+ <b>end;</b>
+<b>end.</b>    
 </font></pre>
             <p>VI. Тэсціраванне.<br>
                 Запусціць праграму. Вынік:</p>
@@ -399,29 +404,29 @@ end.
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var x,y,d:integer;
-procedure 
-grib(x,y,d:integer);
-begin
-SetBrushColor(clYellow);
-Ellipse(x + d div 3, y,
-x + 2*d div 3, y + d);
-SetBrushColor(clBrown);
-Pie(x + d div 2,y + d
-  div 3,
-d div 3, 0, 180);
-end;
-Begin
-for var i: = 1 
-to 10 do
-begin
-x:= random(400);
-y:= random(200);
-d:= random(150);
-grib(x,y,d);
-end;
-end.    
+<b>uses</b> GraphABC;
+<b>var</b> x,y,d:integer;
+<b>procedure </b>
+ grib(x,y,d:integer);
+<b>begin</b>
+ SetBrushColor(clYellow);
+ Ellipse(x + d div 3, y,
+ x + 2*d <b>div</b> 3, y + d);
+ SetBrushColor(clBrown);
+ Pie(x + d <b>div</b> 2,y + d
+  <b>div</b> 3,
+ d <b>div</b> 3, 0, 180);
+<b>end;</b>
+<b>Begin</b>
+<b>for var</b> i: = 1 
+<b>to</b> 10 <b>do</b>
+<b>begin</b>
+ x:= random(400);
+ y:= random(200);
+ d:= random(150);
+ grib(x,y,d);
+ <b>end;</b>
+<b>end.</b>    
 </font></pre>
             <p>VI. Тэсціраванне.<br>
                 Вынік можа быць наступным:</p>
@@ -434,27 +439,27 @@ end.
                 <p>V. Праграма:</p>
             </a>
             <pre><font>
-uses GraphABC;
-var x, y, r:integer;
-procedure 
-row(y : integer);
-begin
-x :=10; R:= 10;
-while x &lt;WindowWidth 
-do
-begin
-Circle(x,y,r);
- x := x+20;
-end;
-end;
-begin
-y := 10;
-while y &lt;=WindowHeight
- do
-begin
-Row(y); y := y + 20;
-end;
-end.     
+<b>uses</b> GraphABC;
+<b>var</b> x, y, r:integer;
+<b>procedure</b> 
+ row(y : integer);
+<b>begin</b>
+ x :=10; R:= 10;
+ <b>while</b> x &lt;WindowWidth 
+ <b>do</b>
+ <b>begin</b>
+  Circle(x,y,r);
+  x := x+20;
+ <b>end;</b>
+<b>end;</b>
+<b>begin</b>
+ y := 10;
+ <b>while</b> y &lt;=WindowHeight
+ <b>do</b>
+ <b>begin</b>
+ Row(y); y := y + 20;
+ <b>end;</b>
+<b>end. </b>   
  </font></pre>
             <p>VI. Тэсціраванне<br>
                 Вынік:</p>
