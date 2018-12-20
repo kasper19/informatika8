@@ -11,23 +11,19 @@
 <body>
     <div lang='ru'>
         <div class="green-back">
-            <p>Подтверждением важности число-
-                вых последовательностей является
-                тот факт, что создана целая энци-
-                клопедия числовых последователь-
-                ностей</p>
+            <p>Подтверждением важности числовых последовательностей является
+                тот факт, что создана целая энциклопедия числовых последовательностей<sup>1</sup></p>
         </div>
         <div class="blue-back">
             <a name="pr19-1"><b>Пример 19.1.</b>
                 <p>Элементы последовательности нечетных положительных
                     чисел можно описать с помощью
-                    формулы <i>a<sub>n</sub> = 2n – 1</i>. В этой формуле
-                    <i>n</i> — номер элемента в последовательности. Минимальное значение числа
+                    формулы&#160;<i>a<sub>n</sub>&#160;=&#160;2n&#160;–&#160;1</i>. В этой формуле&#160;<i>n</i>&#160;— номер элемента в последовательности. Минимальное значение числа
                     <i>n</i> = 1. Используя формулу, получим
                     последовательность: 1, 3, 5, 7, ... .</p>
             </a>
             <p>Элементы последовательности могут быть действительными числами.
-                Например, формула <i>a<sub>n</sub> = n / n<sup>2</sup> + 1</i>
+                Например, формула&#160;<i>a<sub>n</sub>&#160;=&#160;n&#160;/&#160;n<sup>2</sup>&#160;+&#160;1</i>
 
                 задает следующую последовательность:
                 0.5, 0.4, 0.3, 0.235, 0.192, ... .</p>
@@ -46,23 +42,22 @@
                     можно задать последовательность
                     формулой <i>a<sub>n</sub> = 2<sup>n</sup></i>. С другой стороны,
                     каждый элемент последовательности, начиная со второго, в два раза
-                    больше предыдущего. Получим фор-
-                    мулу <i>a<sub>n</sub> = 2a<sub>n – 1</sub></i> (для <i>n</i> &gt; 1, <i>a</i><sub>1</sub> = 2).</p>
+                    больше предыдущего. Получим формулу <i>a<sub>n</sub> = 2a<sub>n – 1</sub></i> (для <i>n</i> &gt; 1, <i>a</i><sub>1</sub> = 2).</p>
             </a>
             <a name="pr19-4"><b>Пример 19.4.</b>
                 <p>V. Программа:</p>
             </a>
             <pre><font>
- var k, a: integer;
-begin
-write('Количество k=');
+<b>var</b> k, a: integer;
+<b>begin</b>
+ write('Количество k=');
  read(k);
-for var n :=1 to k do
-begin
-a:= 2*n; 
-write(a, ' ');
-end;
-end.         
+ <b>for var</b> n :=1 <b>to</b> k <b>do</b>
+ <b>begin</b>
+  a:= 2*n; 
+  write(a, ' ');
+ <b>end;</b>
+<b>end.</b>         
       </font></pre>
 
             <p>VI. Тестирование.<br>
@@ -76,20 +71,20 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var a, b, c,
- x: integer;
-begin
-write('Граница x = '); 
+<b>var</b> a, b, c,
+x: integer;
+<b>begin</b>
+ write('Граница x = '); 
  read(x);
-c := 1; b := 1;a := 2;
-write(c, ' ',b, ' ');
-while a 􀀫 x do
-begin
-write(a, ' ');
-c := b; b := a; 
-a := b + c;
-end;
-end.          
+ c := 1; b := 1;a := 2;
+ write(c, ' ',b, ' ');
+ <b>while</b> a &lt; x <b>do</b>
+ <b>begin</b>
+  write(a, ' ');
+  c := b; b := a; 
+  a := b + c;
+ <b>end;</b>
+<b>end.</b>          
       </font></pre>
             <p>VI. Тестирование.<br>
                 Запустить программу и ввести
@@ -99,24 +94,24 @@ end.
                 увличивать свое значение на 1 каждый раз, когда выводится очередное число. После завершения цикла
                 можно вывести значение <i>k</i>.</p>
             <pre><font>
-var a,b,c,x,k:integer;
-begin
-write('Граница x= ');
-read(x);
-c := 1; b := 1; 
-a := 2;
-write(c, ' ',b, ' ');
-k := 2;
-while a &lt; x do
-begin
-write(a, ' '); 
- k := k+1;
-c := b; b := a;
- a := b + c;
-end;
-writeln;
-write('k = ',k);
-end.    
+<b>var</b> a,b,c,x,k:integer;
+<b>begin</b>
+ write('Граница x= ');
+ read(x);
+ c := 1; b := 1; 
+ a := 2;
+ write(c, ' ',b, ' ');
+ k := 2;
+ <b>while</b> a &lt; x <b>do</b>
+ <b>begin</b>
+  write(a, ' '); 
+  k := k+1;
+  c := b; b := a;
+  a := b + c;
+ <b>end;</b>
+ writeln;
+ write('k = ',k);
+<b>end.</b>    
 </font></pre>
             <p>Результат для <i>x</i> = 1000.</p>
             <div class="info-type"><img src="img/pr19-5-2.jpg" alt=""></div>
@@ -124,23 +119,23 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var n,k,a:integer;
-begin
-write('Количество 
-билетов n = ');
-read(n); k:= 0;
-for var i:= 1 
-to n do
-begin
-a:= random(1,100);
- write(a,' ');
-if a mod 5 = 0 then
-k := k+1;
-end;
-writeln;
-writeln('Выиграло ',
+<b>var</b> n,k,a:integer;
+<b>begin</b>
+ write('Количество 
+ билетов n = ');
+ read(n); k:= 0;
+ <b>for var</b> i:= 1 
+ <b>to</b> n <b>do</b>
+ <b>begin</b>
+  a:= random(1,100);
+  write(a,' ');
+ <b>if</b> a <b>mod</b> 5 = 0 <b>then</b>
+  k := k+1;
+ <b>end;</b>
+ writeln;
+ writeln('Выиграло ',
  k,' билета(-ов)');
-end.    
+<b>end.</b>    
 </font></pre>
             <p>VI. Тестирование. Запустить программу и ввести значение <i>n</i> = 20.
                 Результат:</p>
@@ -152,22 +147,22 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var m : integer;
-a, S: real;
-begin
-write('Количество
+<b>var</b> m : integer;
+ a, S: real;
+<b>begin</b>
+ write('Количество
  дней m = ');
-read(m); S := 0;
-for var n:=1 to m do
-begin
-a := n*n*n/
- (sqrt(n*n*n)-n+1);
-S := S+a;
-end;
-writeln('Всего 
+ read(m); S := 0;
+ <b>for var</b> n:=1 <b>to</b> m <b>do</b>
+ <b>begin</b>
+  a := n*n*n/
+  (sqrt(n*n*n)-n+1);
+  S := S+a;
+ <b>end;</b>
+ writeln('Всего 
  бактерий =
-= ',S, ' млн');
-end.
+ = ',S, ' млн');
+<b>end.</b>
 </font></pre>
             <p>VI. Тестирование.<br>
                 Запустить программу и ввести значение <i>m</i> = 3. Результат:</p>
@@ -182,19 +177,19 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var n, m: integer;
-a, S: real;
-begin
-write('Основание a= '); 
-read(a);
-write('Показатель n= ');
-  read(n);
-S := 1; m := abs(n);
-for var i:= 1 to m do
-S := S*a;
-if n􀀫0 then S:= 1/S;
-writeln('Степень ',S);
-end.     
+<b>var</b> n, m: integer;
+ a, S: real;
+<b>begin</b>
+ write('Основание a= '); 
+ read(a);
+ write('Показатель n= ');
+ read(n);
+ S := 1; m := abs(n);
+ <b>for var</b> i:= 1 <b>to</b> m <b>do</b>
+  S := S*a;
+ <b>if</b> n&lt;0 <b>then</b> S:= 1/S;
+ writeln('Степень ',S);
+<b>end.</b>     
  </font></pre>
             <p>VI. Тестирование программы.<br>
                 Запустить программу и ввести
@@ -212,20 +207,20 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var k:integer;
-x,y,h:real;
-begin
-writeln('Количество
+<b>var</b> k:integer;
+ x,y,h:real;
+<b>begin</b>
+ writeln('Количество
  значений');
-readln(k); x := -3; 
-h := 0.5;
-for var n:= 1 to k do
-begin
-y := (x+2)/(x*x+3);
-writeln(x:7:2,y:10:3);
- x := x+h;
-end;
-end.    
+ readln(k); x := -3; 
+ h := 0.5;
+ <b>for var</b> n:= 1 <b>to</b> k <b>do</b>
+ <b>begin</b>
+  y := (x+2)/(x*x+3);
+  writeln(x:7:2,y:10:3);
+  x := x+h;
+ <b>end;</b>
+<b>end.</b>  
 </font></pre>
             <p>VI. Тестирование программы.<br>
                 Запустить программу и ввести
@@ -233,26 +228,26 @@ end.
             <div class="info-type"><img src="img/pr19-9-1.jpg" alt=""></div>
             <p>Добавим в программу вывод границ таблицы:</p>
             <pre><font>
-var k:integer;
-x,y,h: real;
-begin
-writeln('Количество 
-значений');
-readln(k); 
-x := -3;
+<b>var</b> k:integer;
+ x,y,h: real;
+<b>begin</b>
+ writeln('Количество 
+ значений');
+ readln(k); 
+ x := -3;
  h := 0.5;
-writeln('--------');
-writeln('|x|y|');
-writeln('--------');
-for var n:=1 to k do
-begin
-y := (x+2)/(x*x+3);
-writeln('|',x:7:2,'|'
- ,y:10:3,'|');
-x := x+h;
-end;
-writeln('--------');
-end.     
+ writeln('--------');
+ writeln('|x|y|');
+ writeln('--------');
+ <b>for var</b> n:=1 <b>to</b> k <b>do</b>
+ <b>begin</b>
+  y := (x+2)/(x*x+3);
+  writeln('|',x:7:2,'|',
+  y:10:3,'|');
+  x := x+h;
+ <b>end;</b>
+ writeln('--------');
+<b>end.</b>     
  </font></pre>
             <p>Результат при <i>k</i> = 4:</p>
             <div class="info-type"><img src="img/pr19-9-2.jpg" alt=""></div>
@@ -270,24 +265,24 @@ end.
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var k,n,z: integer;
-begin
-write('Введите n= ');
-read(n);
-k := 0;
-while n &gt; 0 do
-begin
-//Текущая цифра
-z := n mod 10;
-writeln(z);
-//Уменьшение  в 10 раз
-n := n div 10;
-//Подсчет к-ва цифр
-k := k + 1;
-end;
-writeln('в числе ', k,
-'цифр(-а/-ы))');
-end     
+<b>var</b> k,n,z: integer;
+<b>begin</b>
+ write('Введите n= ');
+ read(n);
+ k := 0;
+ <b>while</b> n &gt; 0 <b>do</b>
+ <b>begin</b>
+  //Текущая цифра
+  z := n <b>mod</b> 10;
+  writeln(z);
+  //Уменьшение  в 10 раз
+  n := n <b>div</b> 10;
+  //Подсчет к-ва цифр
+  k := k + 1;
+ <b>end;</b>
+ writeln('в числе ', k,
+ 'цифр(-а/-ы))');
+<b>end</b>    
  </font></pre>
             <p>VI. Тестирование.<br>
                 Запустить программу и ввести
@@ -299,7 +294,7 @@ end
 
         </div>
         <div class="green-back">
-            <p>Алгоритм Евклида — алгоритм
+            <p>Алгоритм Евклида&#160;— алгоритм
                 для нахождения наибольшего общего делителя двух целых чисел. Алгоритм назван в честь древнегреческого математика Е в к л и д а (III в.
                 до н. э.), который впервые описал его
                 в книгах «Начала». Это один из старейших численных алгоритмов, используемых в наше время.</p>
@@ -318,22 +313,22 @@ end
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var a,b:integer;
-begin
-write('Значки у 
-Иры a = ');
-read(a);
-write('Значки у 
-Игоря b = ');
-read(b);
-while a&lt;&gt;b do
-if a&gt;b then
-a := a - b
-else
-b := b - a;
-writeln('Всего 
-друзей = ',a);
-end.     
+<b>var</b> a,b:integer;
+<b>begin</b>
+ write('Значки у 
+ Иры a = ');
+ read(a);
+ write('Значки у 
+ Игоря b = ');
+ read(b);
+<b>while</b> a&lt;&gt;b <b>do</b>
+ <b>if</b> a&gt;b <b>then</b>
+  a := a - b
+ <b>else</b>
+  b := b - a;
+  writeln('Всего 
+  друзей = ',a);
+<b>end. </b>    
  </font></pre>
             <p>VI. Тестирование.<br>
                 Запустить программу и ввести
@@ -360,15 +355,15 @@ end.
             </p>
             <p>Общий вид функции:</p>
             <pre><font>
-function &lt;имя&gt;(&lt;список
-параметров&gt;:тип):
-тип результата;
-var ... //Может 
-//отсутствовать
-begin
-&lt;команды&gt;
-&lt;имя&gt;:= &lt;значение&gt;;
-end;   
+<b>function</b> &lt;имя&gt;(&lt;список
+ параметров&gt;:тип):
+ тип результата;
+<b>var</b> ... //Может 
+ //отсутствовать
+<b>begin</b>
+ &lt;команды&gt;
+ &lt;имя&gt;:= &lt;значение&gt;;
+<b>end; </b> 
 </font></pre>
         </div>
 
@@ -377,28 +372,28 @@ end;
                 <p>V. Программа:</p>
             </a>
             <pre><font>
-var x,y,z,d,f:integer;
-function NOD
-(a,b:integer):integer;
-begin
-while a&lt;&gt;b do
-if a&gt;b then
-a := a-b
-else
-b := b-a;
-NOD := a;
-end;
-begin
-write('Введите x= ');
-read(x);
-write('Введите y= ');
-read(y);
-write('Введите z= ');
-read(z);
-d := NOD(x,y);
-f := NOD(d,z);
-writeln('НОД = ',f);
-end.                    
+<b>var</b> x,y,z,d,f:integer;
+<b>function</b> NOD
+ (a,b:integer):integer;
+<b>begin</b>
+<b>while</b> a&lt;&gt;b <b>do</b>
+ <b>if</b> a&gt;b <b>then</b>
+  a := a-b
+ <b>else</b>
+  b := b-a;
+ NOD := a;
+<b>end;</b>
+<b>begin</b>
+ write('Введите x= ');
+ read(x);
+ write('Введите y= ');
+ read(y);
+ write('Введите z= ');
+ read(z);
+ d := NOD(x,y);
+ f := NOD(d,z);
+ writeln('НОД = ',f);
+<b>end.</b>                    
                 </font></pre>
 
             <p>VI. Тестирование.<br>
@@ -408,6 +403,9 @@ end.
             <div class="info-type"><img src="img/pr19-13-2.JPG" alt=""></div>
             <p>Данный результат означает, что
                 числа 354, 847 и 125 взаимно простые.</p>
+            <hr>
+            <p> <sup>1</sup>Онлайн-энциклопедия целочисленных последовательностей. Режим доступа:
+                <a href="http://oeis.org/?language=russian" target="_blank">http://oeis.org/</a> <br>(дата доступа: 17.01.2018).</p>
         </div>
 
 
@@ -420,7 +418,7 @@ end.
         <div class="blue-back">
             <a name="pr19-1b"><b>Прыклад 19.1.</b>
                 <p>Элементы паслядоўнасці няцотных дадатных лікаў можна апісаць з дапамогай формулы <i>a<sub>n</sub> = 2n – 1</i>. гэтай формуле
-                    <i>n</i> — нумар элемента ў паслядооўнасці. Мінімальнае значэнне ліку
+                    <i>n</i>&#160;— нумар элемента ў паслядооўнасці. Мінімальнае значэнне ліку
                     <i>n</i> = 1. Выкарыстоўваючы формулу, атрымаем паслядоўнасць: 1, 3, 5, 7, ... .</p>
             </a>
             <p>Элементы паслядоўнасці могуць быць рэчаіснымі лікамі. Напрыклад формула <i>a<sub>n</sub> = n / (n<sup>2</sup> + 1)</i>
@@ -670,7 +668,7 @@ x: integer;
 
         </div>
         <div class="green-back">
-            <p>Алгарытм Эўкліда — алгарытм для знаходжання найбольшага агульнага дзельніка двух цэлых лікаў. Алгарытм названы ў гонар старажытнагрэчаскага матэматыка Эўкліда (III ст. да н. э.), які ўпершыню апісаў яго ў кнігах «Пачаткі». Гэта адзін з найбольш старых лікавых алгарытмаў, якія выкарыстоўваюцца ў наш час.
+            <p>Алгарытм Эўкліда&#160;— алгарытм для знаходжання найбольшага агульнага дзельніка двух цэлых лікаў. Алгарытм названы ў гонар старажытнагрэчаскага матэматыка Эўкліда (III ст. да н. э.), які ўпершыню апісаў яго ў кнігах «Пачаткі». Гэта адзін з найбольш старых лікавых алгарытмаў, якія выкарыстоўваюцца ў наш час.
             </p>
             <p>Эўклід выкарыстоўваў дадзены алгарытм не толькі для лікаў, але і для геаметрычных велічынь: даўжынь, плошчаў, аб'ёмаў. У XIX ст. алгарытм быў абагульнены на іншыя матэматычныя аб'екты. Сёння алгарытм Эўкліда выкарыстоўваецца пры шыфраванні даных..</p>
         </div>
@@ -768,7 +766,7 @@ writeln('Усяго сяброў  = ',a);
             </p>
             <hr>
             <p> <sup>1</sup>Анлайн-энцыклапедыя цэлалікавых паслядоўнасцей. Рэжым доступу:
-                <a href="http://oeis.org/?language=russian">http://oeis.org/</a> <br>(дата доступу: 17.01.2018).</p>
+                <a href="http://oeis.org/?language=russian" target="_blank">http://oeis.org/</a> <br>(дата доступу: 17.01.2018).</p>
         </div>
 
 

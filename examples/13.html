@@ -15,7 +15,7 @@
             <a name="pr13-1"><b> Пример 13.1.</b>
                 <p> Этапы решения задачи по программированию:</p>
             </a>
-            <div class="info-type"><img src="img/pr13-1.JPG" alt=""></div>
+            <div class="info-type"><img src="img/263.png" alt=""></div>
             <p>В процессе решения задачи некоторые этапы приходится повторять до тех пор, пока анализ результатов не покажет, что задача решена верно.</p>
             <p>Для поиска ошибок можно использовать средства отладки программ (см. Приложение 3).</p>
         </div>
@@ -29,14 +29,14 @@
                 <p>Блок-схемы алгоритмических конструкций:</p>
             </a>
             <p>1. Следование:</p>
-            <div class="info-type"><img src="img/pr13-2-1.JPG" alt=""></div>
+            <div class="info-type"><img src="img/264.png" alt=""></div>
             <p> 2. Цикл:</p>
             <p>1) цикл с параметром (значение параметра изменяется от 1 до N) </p>
-            <div class="info-type"><img src="img/pr13-2-2.JPG" alt=""></div>
+            <div class="info-type"><img src="img/265.png" alt=""></div>
             <p>2) цикл с предусловием</p>
-            <div class="info-type"><img src="img/pr13-2-3.JPG" alt=""></div>
+            <div class="info-type"><img src="img/266/png" alt=""></div>
             <p>3. Команда ветвления</p>
-            <div class="info-type"><img src="img/pr13-2-4.JPG" alt=""></div>
+            <div class="info-type"><img src="img/267.png" alt=""></div>
             <a name="pr13-3"><b> Пример 13.3.</b>
                 <p>Даны <i>x, y</i>. Написать
                     программу для вычисления значения
@@ -54,16 +54,16 @@
                 IV. Описание переменных: все переменные, определенные для решения задачи, имеют тип <font>real</font>.<br>
                 V. Программа:</p>
             <pre><font>
-var x,y,a: real;
-begin
+<b>var</b> x,y,a: real;
+<b>begin</b>
  write('Введите x =');
  read(x);
  write('Введите y =');
  read(y);
  a:= 2 * x * (x-y)/
  (7 + y * y);
-writeln('a =',a);
-End.
+ writeln('a =',a);
+<b>End.</b>
 </font></pre>
             <p>VI. Тестирование программы:<br>
                 Запустить программу и ввести
@@ -81,37 +81,37 @@ End.
                 <p>Написать программу
                     для вывода изображения:</p>
             </a>
-            <div class="info-type"><img src="img/pr13-4.JPG" alt=""></div>
+            <div class="info-type"><img src="img/269.png" alt=""></div>
             <p>Изображение состоит из двух одинаковых фигур. Оформим вспомогательный алгоритм <font>Figura</font> для изображения одной фигуры. Программа:</p>
 
             <pre><font>
-   uses Drawman;
-procedure Figura;
-begin
-PenDown; OnVector(1, 0);
-OnVector(0, 3); 
-OnVector(-1, 0);
-OnVector(0, -1); 
-OnVector(3, 0);
-OnVector(0, 1); 
-OnVector(-1, 0);
-OnVector(0, -2); 
-OnVector(-2, 0);
-OnVector(0, -1); 
-PenUp;
-end;
-begin
-Field(10, 5);
-ToPoint(1, 1); Figura;
-ToPoint(6, 1); Figura;
-end.
+<b>uses</b> Drawman;
+<b>procedure</b> Figura;
+<b>begin</b>
+ PenDown; OnVector(1, 0);
+ OnVector(0, 3); 
+ OnVector(-1, 0);
+ OnVector(0, -1); 
+ OnVector(3, 0);
+ OnVector(0, 1); 
+ OnVector(-1, 0);
+ OnVector(0, -2); 
+ OnVector(-2, 0);
+ OnVector(0, -1); 
+ PenUp;
+<b>end;</b>
+<b>begin</b>
+ Field(10, 5);
+ ToPoint(1, 1); Figura;
+ ToPoint(6, 1); Figura;
+<b>end.</b>
     
 </font></pre>
             <a name="pr13-5"><b> Пример 13.5.</b>
                 <p>Перечень математических функций можно посмотреть в
                     справке PascalABC:</p>
             </a>
-            <div class="info-type"><img src="img/pr13-5.jpg" alt=""></div>
+            <div class="info-type"><img src="img/270.png" alt=""></div>
             <table>
                 <tr>
                     <th>Запись на языке Pascal
@@ -122,14 +122,14 @@ end.
                     <td>
                         <font></font>trunc(x)
                     </td>
-                    <td>Находит целую часть действительного числа x <font>(real)</font>. Результат — число типа <font>integer</font>
+                    <td>Находит целую часть действительного числа x <font>(real)</font>. Результат&#160;— число типа <font>integer</font>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <font>frac(x)</font>
                     </td>
-                    <td>Находит дробную часть действительного числа x <font>(real)</font>. Результат — число типа <font>real</font>
+                    <td>Находит дробную часть действительного числа x <font>(real)</font>. Результат&#160;— число типа <font>real</font>
                     </td>
                 </tr>
                 <tr>
@@ -192,7 +192,7 @@ writeln('d =',d);
             <p>VI. Тестирование программы.<br>
                 Запустить программу и ввести
                 значение <i>a</i> = 5.6. Результат:</p>
-            <div class="info-type"><img src="img/pr13-6.jpg" alt=""></div>
+            <div class="info-type"><img src="img/pr13-6.JPG" alt=""></div>
             <p>Правильность вычислений можно
                 проверить на калькуляторе.</p>
 
@@ -215,7 +215,7 @@ writeln('d =',d);
             <a name="pr13-1b"><b> Прыклад 13.1.</b>
                 <p> Этапы рашэння задачы па праграміраванню:</p>
             </a>
-            <div class="info-type"><img src="img/pr13-1b.JPG" alt=""></div>
+            <div class="info-type"><img src="img/bel/263.png" alt=""></div>
             <p>У працэсе рашэння задачы некаторыя этапы даводзіцца паўтараць да таго часу, пакуль аналіз вынікаў не пакажа, што задача рэшана правільна.</p>
             <p>Для пошуку памылак можна выкарыстоўваць сродкі наладкі праграм (гл. Дадатак).</p>
         </div>
@@ -230,14 +230,14 @@ writeln('d =',d);
                 </p>
             </a>
             <p>1. Паслядоўнасць:</p>
-            <div class="info-type"><img src="img/pr13-2-1b.JPG" alt=""></div>
+            <div class="info-type"><img src="img/bel/264.png" alt=""></div>
             <p> 2. Цыкл:</p>
             <p>1) цыкл з параметрам (значэнне параметра змяняецца ад 1 да <i>N</i>) </p>
-            <div class="info-type"><img src="img/pr13-2-2b.JPG" alt=""></div>
+            <div class="info-type"><img src="img/bel/265.png" alt=""></div>
             <p>2) цыкл з перадумовай</p>
-            <div class="info-type"><img src="img/pr13-2-3b.JPG" alt=""></div>
+            <div class="info-type"><img src="img/bel/266.png" alt=""></div>
             <p>3. Каманда галінавання</p>
-            <div class="info-type"><img src="img/pr13-2-4b.JPG" alt=""></div>
+            <div class="info-type"><img src="img/bel/267.png" alt=""></div>
             <a name="pr13-3b"><b> Прыклад 13.3.</b>
                 <p>Дадзены <i>x, y</i>. Напісаць праграму для вылічэння значэння выразу</p>
             </a>
@@ -318,7 +318,7 @@ writeln('d =',d);
                 2. Вылічэнне плошчы па формуле <br><i>S = a<sup>2</sup></i>.<br>
                 3. Вылічэнне даўжыні дыяганалі па формуле <i>d = a√2</i>.<br>
                 4. Вывад выніку<br>
-                IV. IV. Апісанне пераменных: усе пераменныя, вызначаныя для рашэння задачы, маюць тып <font>real</font>.<br>
+                IV. Апісанне пераменных: усе пераменныя, вызначаныя для рашэння задачы, маюць тып <font>real</font>.<br>
                 V. Праграма:</p>
             <pre><font>
 <b>var</b> a, S, d: real;

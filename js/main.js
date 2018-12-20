@@ -86,7 +86,7 @@ let emailClickStatus = null;
             $(ev.target.children[2]).toggleClass('rotate-icon')
         }
     })
-//уменьшение текста
+    //уменьшение текста
     $('#little-a').on('click', () => {
         let startMainSize = +$('.main').css('font-size').split('px')[0]
         let startRightSize = +$('.right').css('font-size').split('px')[0]
@@ -99,7 +99,7 @@ let emailClickStatus = null;
         $('#big-a').css('opacity', 0.5)
         $('#little-a').css('opacity', 1)
     })
-//увеличение текста
+    //увеличение текста
 
     $('#big-a').on('click', () => {
         let startMainSize = +$('.main').css('font-size').split('px')[0]
@@ -107,10 +107,10 @@ let emailClickStatus = null;
         $('.main').css({
             'font-size': startMainSize + 2 + 'px'
         })
-        
+
         $('.right').css({
-        'font-size': startRightSize + 2 + 'px'
-    })
+            'font-size': startRightSize + 2 + 'px'
+        })
         $('#big-a').css('opacity', 1)
         $('#little-a').css('opacity', 0.5)
     })
@@ -129,15 +129,15 @@ let emailClickStatus = null;
 
     // вывод боковых картинок на весь экран
     $('body').on('click', (ev) => {
-        if (ev.target.matches('.right img:not(.not-incresed)') || ev.target.matches('.hiddenEl img:not(.close-pop)')) {
+        if (ev.target.matches('.right img:not(.not-incresed)') || ev.target.matches('.hiddenEl img:not(.close-pop)') || ev.target.matches('.end img')) {
             clickState = !clickState
-            
+
             imgState = !imgState
             if (clickState && imgState) {
                 $('#for-tiltoop-pics, #dark-back').css({
                     "display": "block"
                 })
-               
+
                 let src = ev.target.src.split('/img')[1];
 
                 $('#for-tiltoop-pics img').attr('src', `img/${src}`)
@@ -247,7 +247,7 @@ let emailClickStatus = null;
         if (ev.target.matches('.questions-btn')) {
 
             $(ev.target.parentElement.children[2]).slideToggle();
-           
+
         }
         if (ev.target.matches('.practise-btn')) {
             $(ev.target.parentElement.children[4]).slideToggle();
@@ -304,10 +304,10 @@ let emailClickStatus = null;
             $('.help').css({
                 "padding-top": "32px"
             })
-            if(location.hash!=='#_glossary'){
+            if (location.hash !== '#_glossary') {
                 addLink(glossaryItemsBel)
             }
-            
+
 
 
         } else {
@@ -319,21 +319,21 @@ let emailClickStatus = null;
             })
 
             $('#lng').html(`РУС <img src="images/arrow-lng.png">`)
-            if(location.hash!=='#_glossary'){
+            if (location.hash !== '#_glossary') {
                 addLink(glossaryItemsRu)
             }
-            
+
         }
     }
-    $('.start-dynamic-wrapper').on('click', function(){
+    $('.start-dynamic-wrapper').on('click', function () {
         $(this).fadeOut()
-        setTimeout(()=>{
+        setTimeout(() => {
             $(this).remove()
-        },3000)
-       
+        }, 3000)
+
     })
 
     window.onload = function () {
-       $('#dark-back1').hide()
+        $('#dark-back1').hide()
     }
 })()

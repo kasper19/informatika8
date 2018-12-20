@@ -6,6 +6,23 @@
 
 }
 
+.tab {
+
+    border-color: transparent;
+}
+
+.p16 {
+    margin-top: -25px;
+}
+
+.p17 {
+    margin-top: -16px;
+}
+
+.forStar {
+    list-style-type: none;
+}
+
 pre {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -64,6 +81,10 @@ font {
 font pre {
     font-family: Courier New, monospace !important;
 
+}
+
+.right pre {
+    font-size: 0.9em;
 }
 
 div p pre {
@@ -443,6 +464,13 @@ header > div {
     overflow: hidden;
 }
 
+.info-type2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .catalog {
     display: flex;
     justify-content: center;
@@ -453,6 +481,14 @@ header > div {
 
 .info-type img {
     width: 65%;
+}
+
+.info-type2 img {
+    width: 35%;
+}
+
+.info-type3 img {
+    width: 90%;
 }
 
 .right table img {
@@ -882,7 +918,7 @@ a [href] {
     width: 96%;
 }
 
-table:not(.gloss-table) {
+table {
     border-collapse: collapse;
     border: 1px solid grey;
     text-align: center;
@@ -890,6 +926,7 @@ table:not(.gloss-table) {
     font-size: 0.9em;
     width: 100%;
 }
+
 
 
 th,
@@ -1096,6 +1133,10 @@ figcaption {
 
 }
 
+.ttt {
+    text-align: center !important;
+}
+
 .gloss-table {
     border-collapse: collapse;
     border: none;
@@ -1105,9 +1146,27 @@ figcaption {
     width: 100%;
 }
 
+.gloss-table1 {
+    border-collapse: collapse;
+    border: none;
+    text-align: center;
+    table-layout: fixed;
+    font-size: 0.8em;
+    width: 100%;
+}
+
+
+
+
 .gloss-table td {
     border: none;
     text-align: left;
+    padding: 1%;
+}
+
+.gloss-table1 td {
+    border: none;
+    text-align: center;
     padding: 1%;
 }
 
