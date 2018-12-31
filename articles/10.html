@@ -29,20 +29,20 @@
         </p>
         <p>Самая простая анимация движения&#160;— движение по прямой <a href="#pr10-2">(пример&#160;10.2)</a>.</p>
         <p>После выполнения команды <b>Создать анимацию движения</b> между ключевыми кадрами появляется сплошная стрелка, расположенная на лилово-голубом фоне. Промежуточные кадры отражают последовательность фаз движения <a href="#pr10-3">(пример&#160;10.3)</a>. При создании анимации движения важно, чтобы:</p>
-        <ul>
-            <li>1. Начальная и конечная фазы анимации были получены из точных копий одного и того же объекта.</li>
-            <li>2. В начальном и в конечном ключевых кадрах находились только единственные объекты.</li>
-        </ul>
+        <ol>
+            <li>Начальная и конечная фазы анимации были получены из точных копий одного и того же объекта.</li>
+            <li>В начальном и в конечном ключевых кадрах находились только единственные объекты.</li>
+        </ol>
         <h4><a name="t2-2">10.2. Движение по траектории</a></h4>
         <p>Для создания анимации движения по заданной траектории необходим специальный <b>направляющий слой</b>.</p>
         <p>Направляющий слой размещается над слоем с анимируемым объектом. Для добавления направляющего слоя нужно:
         </p>
-        <ul>
-            <li>1. Выделить слой с анимируемым объектом.
+        <ol>
+            <li>Выделить слой с анимируемым объектом.
             </li>
-            <li>2. Нажать кнопку <b>Добавить движение (Add Motion Guide)</b>:</li>
-        </ul>
-        <img src="img/200.png" alt="" class="center-img">
+            <li>Нажать кнопку <b>Добавить движение (Add Motion Guide)</b>:</li>
+        </ol>
+        <img src="img/200.png" alt="" class="center-img" width="250px">
         <p>На направляющем слое изображается траектория, по которой будет перемещаться анимируемый объект. При просмотре фильма линия траектории не отображается. В слое с анимируемым объектом задается анимация движения, как в случае прямолинейного движения <a href="#pr10-4">(пример&#160;10.4)</a>.</p>
         <p>Для привязки объекта к траектории необходимо:
         </p>
@@ -63,22 +63,22 @@
                     <li>
                         <div class="flex-col">
                             К каким объектам можно применить анимацию движения?<br>
-                            <label for=""><input type="radio" value="1" name="t10-1"> К одному символу в слое.<br></label>
-                            <label for=""> <input type="radio" value="2" name="t10-1">К любым.<br></label>
-                            <label for=""><input type="radio" value="3" name="t10-1"> К объектам, не являющимся символами.<br></label>
-                            <label for=""><input type="radio" value="4" name="t10-1">Только к импортированным объектам. <br></label>
-                            <label for=""><input type="radio" value="5" name="t10-1">К группе символов в слое.<br> </label>
+                            <label for="" class="q10-1"><input type="radio" value="1" name="t10-1"> К одному символу в слое.<br></label>
+                            <label for="" class="q10-2"> <input type="radio" value="2" name="t10-1">К любым.<br></label>
+                            <label for="" class="q10-3"><input type="radio" value="3" name="t10-1"> К объектам, не являющимся символами.<br></label>
+                            <label for="" class="q10-4"><input type="radio" value="4" name="t10-1">Только к импортированным объектам. <br></label>
+                            <label for="" class="q10-5"><input type="radio" value="5" name="t10-1">К группе символов в слое.<br> </label>
                         </div>
                         <button class="check" id="cht10-1">Проверить</button>
                     </li>
                     <li>
                         <div class="flex-col">
                             Как создать анимацию движения?<br>
-                            <label for=""><input type="checkbox" id="t10-2-1"> С помощью соответствующей команды контекстных меню начального кадра.<br></label>
-                            <label for=""><input type="checkbox" id="t10-2-2"> Преобразовать все кадры в ключевые.<br></label>
-                            <label for=""> <input type="checkbox" id="t10-2-3"> С помощью соответствующей кнопки на шкале времени.<br></label>
-                            <label for=""><input type="checkbox" id="t10-2-4"> На панели инспектора свойств выбрать соответствующую команду в списке Tween, который раскроется.<br></label>
-                            <label for=""><input type="checkbox" id="t10-2-5"> С помощью соответствующей команды контекстных меню монтажного стола.<br> </label>
+                            <label for="" class="q10-6"><input type="checkbox" id="t10-2-1"> С помощью соответствующей команды контекстных меню начального кадра.<br></label>
+                            <label for="" class="q10-7"><input type="checkbox" id="t10-2-2"> Преобразовать все кадры в ключевые.<br></label>
+                            <label for="" class="q10-8"> <input type="checkbox" id="t10-2-3"> С помощью соответствующей кнопки на шкале времени.<br></label>
+                            <label for="" class="q10-9"><input type="checkbox" id="t10-2-4"> На панели инспектора свойств выбрать соответствующую команду в списке Tween, который раскроется.<br></label>
+                            <label for="" class="q10-10"><input type="checkbox" id="t10-2-5"> С помощью соответствующей команды контекстных меню монтажного стола.<br> </label>
                         </div>
 
                         <button class="check" id="cht10-2">Проверить</button>
@@ -86,11 +86,11 @@
                     <li>
                         <div class="flex-col">
                             Как удалить анимацию движения?<br>
-                            <label for=""><input type="radio" value="1" name="t10-3"> С помощью клавиши Delete.<br></label>
-                            <label for=""><input type="radio" value="2" name="t10-3">С помощью соответствующей кнопки на шкале времени.<br></label>
-                            <label for=""><input type="radio" value="3" name="t10-3"> С помощью соответствующей команды контекстных меню начального кадра.<br></label>
-                            <label for=""><input type="radio" value="4" name="t10-3"> С помощью соответствующей команды контекстных меню монтажного стола.<br></label>
-                            <label for=""><input type="radio" value="5" name="t10-3">С помощью клавиши Backspace.<br></label>
+                            <label for="" class="q10-11"><input type="radio" value="1" name="t10-3"> С помощью клавиши Delete.<br></label>
+                            <label for="" class="q10-12"><input type="radio" value="2" name="t10-3">С помощью соответствующей кнопки на шкале времени.<br></label>
+                            <label for="" class="q10-13"><input type="radio" value="3" name="t10-3"> С помощью соответствующей команды контекстных меню начального кадра.<br></label>
+                            <label for="" class="q10-14"><input type="radio" value="4" name="t10-3"> С помощью соответствующей команды контекстных меню монтажного стола.<br></label>
+                            <label for="" class="q10-15"><input type="radio" value="5" name="t10-3">С помощью клавиши Backspace.<br></label>
 
                         </div>
 
@@ -99,11 +99,11 @@
                     <li>
                         <div class="flex-col">
                             Для чего предназначен направляющий слой?<br>
-                            <label for=""><input type="radio" value="1" name="t10-4"> Для создания анимации движения по заданной траектории.<br></label>
-                            <label for=""> <input type="radio" value="2" name="t10-4">Для создания анимации движения.<br></label>
-                            <label for=""> <input type="radio" value="3" name="t10-4"> Для размещения объектов, анимируюцца.<br></label>
-                            <label for=""><input type="radio" value="4" name="t10-4"> Для размещения объектов, которые импортируются.<br></label>
-                            <label for=""><input type="radio" value="5" name="t10-4">Для задания направления движения.<br></label>
+                            <label for="" class="q10-16"><input type="radio" value="1" name="t10-4"> Для создания анимации движения по заданной траектории.<br></label>
+                            <label for="" class="q10-17"> <input type="radio" value="2" name="t10-4">Для создания анимации движения.<br></label>
+                            <label for="" class="q10-18"> <input type="radio" value="3" name="t10-4"> Для размещения объектов, анимируюцца.<br></label>
+                            <label for="" class="q10-19"><input type="radio" value="4" name="t10-4"> Для размещения объектов, которые импортируются.<br></label>
+                            <label for="" class="q10-20"><input type="radio" value="5" name="t10-4">Для задания направления движения.<br></label>
                         </div>
 
                         <button class="check" id="cht10-4">Проверить</button>
@@ -111,22 +111,24 @@
                     <li>
                         <div class="flex-col">
                             Как создается направляющий слой?<br>
-                            <label for=""> <input type="checkbox" id="t10-5-1"> <span>С помощью соответствующей кнопки, расположенной под списком слоев,командой <b>Вставить → Направляющая движения (Insert → Motion Guide).</b></span>
+                            <label for="" class="q10-21"> <input type="checkbox" id="t10-5-1"> <span>С помощью соответствующей кнопки, расположенной под списком слоев.командой <b>Вставить → Направляющая движения (Insert → Motion Guide).</b></span>
                                 <br></label>
-                            <label for=""><input type="checkbox" id="t10-5-2"> С помощью соответствующей команды контекстных меню слоя, анимируется объектом.<br></label>
-                            <label for=""> <input type="checkbox" id="t10-5-3"> С помощью соответствующей кнопки, расположенной под списком инструментов.<br></label>
-                            <label for=""><input type="checkbox" id="t10-5-4"> С помощью соответствующей команды контекстных меню монтажного стола.<br></label>
+                            <label for="" class="q10-22"> <input type="checkbox" id="t10-5-5"> <span>Командой <b>Вставить → Направляющая движения (Insert → Motion Guide).</b></span>
+                                <br></label>
+                            <label for="" class="q10-23"><input type="checkbox" id="t10-5-2"> С помощью соответствующей команды контекстных меню слоя, с анимируемым объектом.<br></label>
+                            <label for="" class="q10-24"> <input type="checkbox" id="t10-5-3"> С помощью соответствующей кнопки, расположенной под списком инструментов.<br></label>
+                            <label for="" class="q10-25"><input type="checkbox" id="t10-5-4"> С помощью соответствующей команды контекстных меню монтажного стола.<br></label>
                         </div>
                         <button class="check" id="cht10-5">Проверить</button>
                     </li>
                     <li>
                         <div class="flex-col">
                             Какие действия необходимо выполнять, чтобы связать траекторию с объектом движения?<br>
-                            <label for=""><input type="checkbox" id="t10-6-1"> <span>Включить параметр <b>Защелка (Snap)</b> с помощью соответствующей кнопки на <b>Панели инструментов</b>.</span><br></label>
-                            <label for=""> <input type="checkbox" id="t10-6-2"> <span>Включить параметр <b>Защелка (Snap)</b> с помощью соответствующей кнопки на <b>Панели свойств.</b></span><br></label>
-                            <label for=""><input type="checkbox" id="t10-6-3"> <span>Включить параметр <b>Защелка (Snap)</b> с помощью соответствующей кнопки, расположенной под списком слоев.</span><br></label>
-                            <label for=""> <input type="checkbox" id="t10-6-4"> Совместить точку трансформации объекта с началом линии траектории и с концом.<br></label>
-                            <label for=""><input type="checkbox" id="t10-6-5"> Совместить точку трансформации объекта с началом линии траектории.<br></label>
+                            <label for="" class="q10-26"><input type="checkbox" id="t10-6-1"> <span>Включить параметр <b>Защелка (Snap)</b> с помощью соответствующей кнопки на <b>Панели инструментов</b>.</span><br></label>
+                            <label for="" class="q10-27"> <input type="checkbox" id="t10-6-2"> <span>Включить параметр <b>Защелка (Snap)</b> с помощью соответствующей кнопки на <b>Панели свойств.</b></span><br></label>
+                            <label for="" class="q10-28"><input type="checkbox" id="t10-6-3"> <span>Включить параметр <b>Защелка (Snap)</b> с помощью соответствующей кнопки, расположенной под списком слоев.</span><br></label>
+                            <label for="" class="q10-29"> <input type="checkbox" id="t10-6-4"> Совместить точку трансформации объекта с началом линии траектории и с концом.<br></label>
+                            <label for="" class="q10-30"><input type="checkbox" id="t10-6-5"> Совместить точку трансформации объекта с началом линии траектории.<br></label>
                         </div>
                         <button class="check" id="cht10-6">Проверить</button>
                     </li>
@@ -154,7 +156,7 @@
                         <img src="img/upr10-3-1.jpg" alt=""><br> 2. В кадр 30 вставьте копию ключевого кадра.<br> 3. Перейдите на первый кадр и откройте <b>Панель свойств</b>. В списке
                         <b>Определение (Tween)</b> выберите <b>Движение (Motion)</b>. В списке <b>Поворот (Rotate)</b> выберите принудительное вращение <b>по (CW)</b>или <b>против (CCW)
                             часовой стрелки.</b><br>
-                        <img src="img/209.png" alt=""><br> 4. Запустите анимацию на просмотр. Сохраните изменения в файле. Опубликуйте анимацию.
+                        <img src="img/209.png" alt="" class="center-img" width="250px"><br> 4. Запустите анимацию на просмотр. Сохраните изменения в файле. Опубликуйте анимацию.
 
                     </li>
                     <li><b class="circled">4</b>
@@ -163,7 +165,7 @@
 
                     </li>
                     <li><b class="circled">5</b>
-                        Создайте анимацию движения по траектории. Выполните импорт изображений из файлов.<br><img src="/img/tabl_upr_5.png" alt="" width="95%">
+                        Создайте анимацию движения по траектории. Выполните импорт изображений из файлов.<br><img src="img/tabl_upr_5.png" alt="" width="95%">
 
 
                     </li>
@@ -234,8 +236,9 @@
             var ch2 = $("#t10-5-2").prop("checked");
             var ch3 = $("#t10-5-3").prop("checked");
             var ch4 = $("#t10-5-4").prop("checked");
+             var ch5 = $("#t10-5-5").prop("checked");
             
-            if (ch1 == true && ch2 == true && ch3 == false && ch4 == false) {
+            if (ch1 == true && ch2 == true && ch3 == false && ch4 == false && ch5 == true) {
                 myalert("Правильно!");
             } else {
                 myalert("Неправильно!");
@@ -282,10 +285,10 @@
         </p><br>
         <p>Самая простая анімацыя руху&#160;— рух па прамой <a href="#pr10-2b">(прыклад&#160;10.2)</a>.</p>
         <p>Пасля выканання каманды Создать анимацию движения паміж ключавымі кадрамі з’яўляецца суцэльная стрэлка, размешчаная на ліловаблакітным фоне. Прамежкавыя кадры адлюстроўваюць паслядоўнасць фаз руху <a href="#pr10-3b">(прыклад&#160;10.3)</a>. Пры стварэнні анімацыі руху важна, каб:</p>
-        <ul>
+        <ol>
             <li>Пачатковая і канчатковая фазы анімацыі былі атрыманы з дакладных копій аднаго і таго ж аб’екта.</li>
             <li>У пачатковым і ў канчатковым ключавых кадрах знаходзіліся толькі адзіныя аб’екты.</li>
-        </ul>
+        </ol>
         <h4><a name="t2-1">10.2. Рух па траекторыі</a></h4>
         <p>Для стварэння анімацыі руху па зададзенай траекторыі неабходны спецыяльны <b>накіравальны слой</b>.</p>
         <p>Накіравальны слой змяшчаецца над слоем з аніміруемым аб’ектам. Для дабаўлення накіравальнага слоя трэба:
@@ -293,9 +296,9 @@
         <ol>
             <li>Вылучыць слой з аніміруемым аб’ектам.
             </li>
-            <li>Націснуць кнопку: <b>Добавить движение (Add Motion Guide)</b>:</li>
+            <li>Націснуць кнопку <b>Добавить движение (Add Motion Guide)</b>:</li>
         </ol>
-        <img src="img/200.png" alt="" class="center-img">
+        <img src="img/200.png" alt="" class="center-img" width="250px">
         <p>На накіравальным слоі адлюстроўваецца траекторыя, па якой будзе перамяшчацца аніміруемы аб’ект. Пры праглядзе фільма лінія траекторыі не адлюстроўваецца. У слоі з аніміруемым аб’ектам задаецца анімацыя руху, як у выпадку прамалінейнага руху <a href="#pr10-4b">(прыклад&#160;10.4)</a>.</p>
         <p>Для прывязкі аб’екта да траекторыі неабходна:
         </p>
@@ -315,22 +318,22 @@
                     <li>
                         <div class="flex-col">
                             У дачыненні да якіх аб’ектаў можна выкарыстоўваць анімацыю руху?<br>
-                            <label for=""><input type="radio" value="1" name="t10-1b"> У дачыненні да любых.<br></label>
-                            <label for=""> <input type="radio" value="2" name="t10-1b">У дачыненні да аб’ектаў, якія не з’яўляюцца сімваламі.<br></label>
-                            <label for=""><input type="radio" value="3" name="t10-1b"> Толькі ў дачыненні да імпартаваных аб’ектаў.<br></label>
-                            <label for=""><input type="radio" value="4" name="t10-1b"> У дачыненні да аднаго сімвала ў слоі. <br></label>
-                            <label for=""><input type="radio" value="5" name="t10-1b">У дачыненні да групы сімвалаў у слоі.<br> </label>
+                            <label for="" class="q10-1"><input type="radio" value="1" name="t10-1b"> У дачыненні да любых.<br></label>
+                            <label for="" class="q10-2"> <input type="radio" value="2" name="t10-1b">У дачыненні да аб’ектаў, якія не з’яўляюцца сімваламі.<br></label>
+                            <label for="" class="q10-3"><input type="radio" value="3" name="t10-1b"> Толькі ў дачыненні да імпартаваных аб’ектаў.<br></label>
+                            <label for="" class="q10-4"><input type="radio" value="4" name="t10-1b"> У дачыненні да аднаго сімвала ў слоі. <br></label>
+                            <label for="" class="q10-5"><input type="radio" value="5" name="t10-1b">У дачыненні да групы сімвалаў у слоі.<br> </label>
                         </div>
                         <button class="check" id="cht10-1b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
                             Як стварыць анімацыю руху?<br>
-                            <label for=""><input type="checkbox" id="t10-2-1b"> З дапамогай адпаведнай каманды кантэкставага меню пачатковага кадра.<br></label>
-                            <label for=""><input type="checkbox" id="t10-2-2b">Пераўтварыць усе кадры ў ключавыя.<br></label>
-                            <label for=""> <input type="checkbox" id="t10-2-3b"> З дапамогай адпаведнай кнопкі на шкале часу.<br></label>
-                            <label for=""><input type="checkbox" id="t10-2-4b"> На панэлі інспектара ўласцівасцей выбраць адпаведную каманду ў  спісе Tween, які раскрыецца.<br></label>
-                            <label for=""><input type="checkbox" id="t10-2-5b"> З дапамогай адпаведнай кнопкі на шкале часу.<br> </label>
+                            <label for="" class="q10-6"><input type="checkbox" id="t10-2-1b"> З дапамогай адпаведнай каманды кантэкставага меню пачатковага кадра.<br></label>
+                            <label for="" class="q10-7"><input type="checkbox" id="t10-2-2b">Пераўтварыць усе кадры ў ключавыя.<br></label>
+                            <label for="" class="q10-8"> <input type="checkbox" id="t10-2-3b"> З дапамогай адпаведнай кнопкі на шкале часу.<br></label>
+                            <label for="" class="q10-9"><input type="checkbox" id="t10-2-4b"> На панэлі інспектара ўласцівасцей выбраць адпаведную каманду ў  спісе Tween, які раскрыецца.<br></label>
+                            <label for="" class="q10-10"><input type="checkbox" id="t10-2-5b"> З дапамогай адпаведнай кнопкі на шкале часу.<br> </label>
                         </div>
 
                         <button class="check" id="cht10-2b">Праверыць</button>
@@ -338,11 +341,11 @@
                     <li>
                         <div class="flex-col">
                             Как удалить анимацию движения?<br>
-                            <label for=""><input type="radio" value="1" name="t10-3b"> З дапамогай клавішы Delete.<br></label>
-                            <label for=""><input type="radio" value="2" name="t10-3b">З дапамогай адпаведнай кнопкі на шкале часу.<br></label>
-                            <label for=""><input type="radio" value="3" name="t10-3b"> З дапамогай адпаведнай каманды кантэкставага меню пачатковага кадра.<br></label>
-                            <label for=""><input type="radio" value="4" name="t10-3b"> З дапамогай адпаведнай каманды кантэкставага меню мантажнага стала.<br></label>
-                            <label for=""><input type="radio" value="5" name="t10-3b">З дапамогай клавішы Backspace.<br></label>
+                            <label for="" class="q10-11"><input type="radio" value="1" name="t10-3b"> З дапамогай клавішы Delete.<br></label>
+                            <label for="" class="q10-12"><input type="radio" value="2" name="t10-3b">З дапамогай адпаведнай кнопкі на шкале часу.<br></label>
+                            <label for="" class="q10-13"><input type="radio" value="3" name="t10-3b"> З дапамогай адпаведнай каманды кантэкставага меню пачатковага кадра.<br></label>
+                            <label for="" class="q10-14"><input type="radio" value="4" name="t10-3b"> З дапамогай адпаведнай каманды кантэкставага меню мантажнага стала.<br></label>
+                            <label for="" class="q10-15"><input type="radio" value="5" name="t10-3b">З дапамогай клавішы Backspace.<br></label>
 
                         </div>
 
@@ -351,11 +354,11 @@
                     <li>
                         <div class="flex-col">
                             Для чаго прызначаны накіравальны слой?<br>
-                            <label for=""><input type="radio" value="1" name="t10-4b"> Для стварэння анімацыі руху па зададзенай траекторыі.<br></label>
-                            <label for=""> <input type="radio" value="2" name="t10-4b">Для стварэння анімацыі руху.<br></label>
-                            <label for=""> <input type="radio" value="3" name="t10-4b"> Для размяшчэння аб’ектаў, якія аніміруюцца.<br></label>
-                            <label for=""><input type="radio" value="4" name="t10-4b"> Для размяшчэння аб’ектаў, якія імпартуюцца.<br></label>
-                            <label for=""><input type="radio" value="5" name="t10-4b">Для задання напрамку руху.<br></label>
+                            <label for="" class="q10-16"><input type="radio" value="1" name="t10-4b"> Для стварэння анімацыі руху па зададзенай траекторыі.<br></label>
+                            <label for="" class="q10-17"> <input type="radio" value="2" name="t10-4b">Для стварэння анімацыі руху.<br></label>
+                            <label for="" class="q10-18"> <input type="radio" value="3" name="t10-4b"> Для размяшчэння аб’ектаў, якія аніміруюцца.<br></label>
+                            <label for="" class="q10-19"><input type="radio" value="4" name="t10-4b"> Для размяшчэння аб’ектаў, якія імпартуюцца.<br></label>
+                            <label for="" class="q10-20"><input type="radio" value="5" name="t10-4b">Для задання напрамку руху.<br></label>
                         </div>
 
                         <button class="check" id="cht10-4b">Праверыць</button>
@@ -363,22 +366,24 @@
                     <li>
                         <div class="flex-col">
                             Як ствараецца накіравальны слой?<br>
-                            <label for=""> <input type="checkbox" id="t10-5-1b"> <span>З дапамогай адпаведнай кнопкі, размешчанай пад спісам слаёў, камандай <b>Вставить → Направляющая движения (Insert → Motion Guide).</b></span>
+                            <label for="" class="q10-21"> <input type="checkbox" id="t10-5-1b"> <span>З дапамогай адпаведнай кнопкі, размешчанай пад спісам слаёў.</span>
                                 <br></label>
-                            <label for=""><input type="checkbox" id="t10-5-2b"> З дапамогай адпаведнай каманды кантэкставага меню слоя, які аніміруецца аб’ектам.<br></label>
-                            <label for=""> <input type="checkbox" id="t10-5-3b"> З дапамогай адпаведнай кнопкі, размешчанай пад спісам інструментаў.<br></label>
-                            <label for=""><input type="checkbox" id="t10-5-4b"> З дапамогай адпаведнай каманды кантэкставага меню мантажнага стала.<br></label>
+                            <label for="" class="q10-22"> <input type="checkbox" id="t10-5-5b"> <span>Камандай <b>Вставить → Направляющая движения (Insert → Motion Guide).</b></span>
+                                <br></label>
+                            <label for="" class="q10-23"><input type="checkbox" id="t10-5-2b"> З дапамогай адпаведнай каманды кантэкставага меню слоя, які аніміруецца аб’ектам.<br></label>
+                            <label for="" class="q10-24"> <input type="checkbox" id="t10-5-3b"> З дапамогай адпаведнай кнопкі, размешчанай пад спісам інструментаў.<br></label>
+                            <label for="" class="q10-25"><input type="checkbox" id="t10-5-4b"> З дапамогай адпаведнай каманды кантэкставага меню мантажнага стала.<br></label>
                         </div>
                         <button class="check" id="cht10-5b">Праверыць</button>
                     </li>
                     <li>
                         <div class="flex-col">
                             Какие действия необходимо выполнять, чтобы связать траекторию с объектом движения?<br>
-                            <label for=""><input type="checkbox" id="t10-6-1b"> <span>Уключыць параметр <b>Защелка (Snap)</b> з дапамогай адпаведнай кнопкі на <b>Панэлі інструментаў.</b></span><br></label>
-                            <label for=""> <input type="checkbox" id="t10-6-2b"> <span>Уключыць параметр <b>Защелка (Snap)</b> з дапамогай адпаведнай кнопкі на <b>Панэлі ўласцівасцей.</b><br></span></label>
-                            <label for=""><input type="checkbox" id="t10-6-3b"> <span>Уключыць параметр <b>Защелка (Snap)</b> з дапамогай адпаведнай кнопкі, размешчанай пад спісам слаёў.<br></span></label>
-                            <label for=""> <input type="checkbox" id="t10-6-4b"> Сумясціць пункт трансфармацыі аб’екта з пачаткам лініі траекторыі і з канцом. точку трансформации объекта с началом линии траектории и с концом.<br></label>
-                            <label for=""><input type="checkbox" id="t10-6-5b"> Сумясціць пункт трансфармацыі аб’екта з пачаткам лініі траекторыі.<br></label>
+                            <label for="" class="q10-26"><input type="checkbox" id="t10-6-1b"> <span>Уключыць параметр <b>Защелка (Snap)</b> з дапамогай адпаведнай кнопкі на <b>Панэлі інструментаў.</b></span><br></label>
+                            <label for="" class="q10-27"> <input type="checkbox" id="t10-6-2b"> <span>Уключыць параметр <b>Защелка (Snap)</b> з дапамогай адпаведнай кнопкі на <b>Панэлі ўласцівасцей.</b><br></span></label>
+                            <label for="" class="q10-28"><input type="checkbox" id="t10-6-3b"> <span>Уключыць параметр <b>Защелка (Snap)</b> з дапамогай адпаведнай кнопкі, размешчанай пад спісам слаёў.<br></span></label>
+                            <label for="" class="q10-29"> <input type="checkbox" id="t10-6-4b"> Сумясціць пункт трансфармацыі аб’екта з пачаткам лініі траекторыі і з канцом. точку трансформации объекта с началом линии траектории и с концом.<br></label>
+                            <label for="" class="q10-30"><input type="checkbox" id="t10-6-5b"> Сумясціць пункт трансфармацыі аб’екта з пачаткам лініі траекторыі.<br></label>
                         </div>
                         <button class="check" id="cht10-6b">Праверыць</button>
                     </li>
@@ -407,7 +412,7 @@
                         <br> 1. З дапамогай інструмента <img src="img/trans.JPG" width="25px" alt=""> перанясіце пункт трансфармацыі (цэнтр будучага вярчэння) на некаторую адлегласць.<br>
                         <img src="img/upr10-3-1.jpg" alt=""><br> 2. У кадр 30 устаўце копію ключавога кадра.<br> 3. Перайдзіце на першы кадр і адкрыйце <b>Панэль уласцівасцей</b>. У спісе <b>Определение (Tween)</b> выберыц <b>Движение (Motion)</b>. У спісе <b>Поворот (Rotate)</b> выберыце прымусовае вярчэнне <b>па</b> (CW) або <b>супраць (CCW)
                             гадзіннікавай стрэлкі.</b><br>
-                        <img src="209.png" alt=""><br> 4. Запусціце анімацыю на прагляд. Захавайце змяненні ў файле. Апублікуйце анімацыю.
+                        <img src="209.png" alt="" class="center-img" width="250px"><br> 4. Запусціце анімацыю на прагляд. Захавайце змяненні ў файле. Апублікуйце анімацыю.
 
                     </li>
                     <li><b class="circled">4</b>
@@ -485,8 +490,9 @@
                     var ch2 = $("#t10-5-2b").prop("checked");
                     var ch3 = $("#t10-5-3b").prop("checked");
                     var ch4 = $("#t10-5-4b").prop("checked");
+                    var ch5 = $("#t10-5-5b").prop("checked");
 
-                    if (ch1 == true && ch2 == true && ch3 == false && ch4 == false) {
+                    if (ch1 == true && ch2 == true && ch3 == false && ch4 == false && ch5 == true) {
                         myalert("Правiльна!");
                     } else {
                         myalert("Ня правiльна!");
@@ -512,6 +518,137 @@
 
             });
         })(jQuery);
+
+        function changeOrder10() {
+            let arr1 = rand(5, 1, 5)
+            let arr2 = rand(5, 1, 5)
+            let arr3 = rand(5, 1, 5)
+            let arr4 = rand(5, 1, 5)
+            let arr5 = rand(5, 1, 5)
+            let arr6 = rand(5, 1, 5)
+
+
+            $('.q10-1').css({
+                'order': arr1[0]
+            })
+            $('.q10-2').css({
+                'order': arr1[1]
+            })
+            $('.q10-3').css({
+                'order': arr1[2]
+            })
+            $('.q10-4').css({
+                'order': arr1[3]
+            })
+            $('.q10-5').css({
+                'order': arr1[4]
+
+
+            })
+            $('.q10-6').css({
+                'order': arr2[0]
+            })
+
+
+            $('.q10-7').css({
+                'order': arr2[1]
+            })
+            $('.q10-8').css({
+                'order': arr2[2]
+            })
+
+
+            $('.q10-9').css({
+                'order': arr2[2]
+            })
+            $('.q10-10').css({
+                'order': arr2[4]
+            })
+
+
+            $('.q10-11').css({
+                'order': arr3[0]
+            })
+            $('.q10-12').css({
+                'order': arr3[1]
+            })
+            $('.q10-13').css({
+                'order': arr3[2]
+            })
+
+            $('.q10-14').css({
+                'order': arr3[3]
+            })
+            $('.q10-15').css({
+                'order': arr3[4]
+            })
+
+
+            $('.q10-16').css({
+                'order': arr4[0]
+            })
+            $('.q10-17').css({
+                'order': arr4[1]
+            })
+
+            $('.q10-18').css({
+                'order': arr4[2]
+            })
+            $('.q10-19').css({
+                'order': arr4[3]
+            })
+            $('.q10-20').css({
+                'order': arr4[4]
+            })
+
+            $('.q10-21').css({
+                'order': arr5[0]
+            })
+
+
+            $('.q10-22').css({
+                'order': arr5[1]
+            })
+
+            $('.q10-23').css({
+                'order': arr5[2]
+            })
+            $('.q10-24').css({
+                'order': arr5[3]
+            })
+            $('.q10-25').css({
+                'order': arr5[4]
+            })
+
+
+            $('.q10-26').css({
+                'order': arr6[0]
+            })
+
+
+
+            $('.q10-27').css({
+                'order': arr6[1]
+            })
+
+            $('.q10-28').css({
+                'order': arr6[2]
+            })
+            $('.q10-29').css({
+                'order': arr6[3]
+            })
+            $('.q10-30').css({
+                'order': arr6[4]
+            })
+
+
+
+
+
+
+
+
+        }
 
     </script>
 

@@ -167,17 +167,17 @@
 
         <div class="not-linked">
             <hr>
-            <button class="questions-btn" onclick="changeOrder23()">Тесты</button>
+            <button class="questions-btn" onclick="changeOrder25()">Тесты</button>
             <div class="hiddenEl">
                 <img src="images/ref-pics/ref1.png" width="50px" height="50px">
                 <ol>
                     <li>
                         <div class="flex-col">
                             Что понимают под стилем текста в текстовом документе?<br>
-                            <label for=""><input type="radio" value="1" name="t25-1">Оформление текста. <br></label>
-                            <label for=""><input type="radio" value="2" name="t25-1">Текст, отличающийся от обычного. <br></label>
-                            <label for=""><input type="radio" value="3" name="t25-1">Набор параметров форматирования текста, имеющий имя. <br></label>
-                            <label for=""><input type="radio" value="4" name="t25-1">Разновидность литературного языка. <br></label>
+                            <label for="" class="q25-1"><input type="radio" value="1" name="t25-1">Оформление текста. <br></label>
+                            <label for="" class="q25-2"><input type="radio" value="2" name="t25-1">Текст, отличающийся от обычного. <br></label>
+                            <label for="" class="q25-3"><input type="radio" value="3" name="t25-1">Набор параметров форматирования текста, имеющий имя. <br></label>
+                            <label for="" class="q25-4"><input type="radio" value="4" name="t25-1">Разновидность литературного языка. <br></label>
 
                         </div>
                         <button class="check" id="cht25-1">Проверить</button>
@@ -185,13 +185,13 @@
                     <li>
                         <div class="flex-col">
                             Какие преимущества дает применение стилей?<br>
-                            <label for=""><input type="checkbox" id="t25-2-1">Применить стиль как набор параметров форматирования значительно быстрее, чем последовательно применять отдельные параметры. <br></label>
+                            <label for="" class="q25-5"><input type="checkbox" id="t25-2-1">Применить стиль как набор параметров форматирования значительно быстрее, чем последовательно применять отдельные параметры. <br></label>
 
-                            <label for=""><input type="checkbox" id="t25-2-2">Способствует единообразному оформлению текстового документа. <br></label>
+                            <label for="" class="q25-6"><input type="checkbox" id="t25-2-2">Способствует единообразному оформлению текстового документа. <br></label>
 
-                            <label for=""><input type="checkbox" id="t25-2-3">Позволяет быстро изменить вид отдельных элементов во всем документе. <br></label>
+                            <label for="" class="q25-7"><input type="checkbox" id="t25-2-3">Позволяет быстро изменить вид отдельных элементов во всем документе. <br></label>
 
-                            <label for=""><input type="checkbox" id="t25-2-4">Никаких. <br></label>
+                            <label for="" class="q25-8"><input type="checkbox" id="t25-2-4">Никаких. <br></label>
 
                         </div>
                         <button class="check" id="cht25-2">Проверить</button>
@@ -202,31 +202,35 @@
 
                             <label for="">1<select id="t25-3-1">
 
-                                    <option value="1">Выполнить команду «Создать стиль»</option>
+
                                     <option value="2">Задать имя стиля</option>
                                     <option value="3">Выбрать объект, для которого определяется стиль</option>
                                     <option value="4">Задать параметры форматирования</option>
+                                    <option value="1">Выполнить команду «Создать стиль»</option>
                                 </select></label>
 
                             <label for="">2<select id="t25-3-2">
                                     <option value="1">Выполнить команду «Создать стиль»</option>
-                                    <option value="2">Задать имя стиля</option>
+
                                     <option value="3">Выбрать объект, для которого определяется стиль</option>
+                                    <option value="2">Задать имя стиля</option>
                                     <option value="4">Задать параметры форматирования</option>
                                 </select></label>
 
                             <label for="">3<select id="t25-3-3">
-                                    <option value="1">Выполнить команду «Создать стиль»</option>
-                                    <option value="2">Задать имя стиля</option>
+
                                     <option value="3">Выбрать объект, для которого определяется стиль</option>
+                                    <option value="2">Задать имя стиля</option>
+                                    <option value="1">Выполнить команду «Создать стиль»</option>
                                     <option value="4">Задать параметры форматирования</option>
                                 </select></label>
 
                             <label for="">4<select id="t25-3-4">
                                     <option value="1">Выполнить команду «Создать стиль»</option>
+                                    <option value="4">Задать параметры форматирования</option>
                                     <option value="2">Задать имя стиля</option>
                                     <option value="3">Выбрать объект, для которого определяется стиль</option>
-                                    <option value="4">Задать параметры форматирования</option>
+
                                 </select></label>
                         </div>
                         <button class="check" id="cht25-3">Проверить</button>
@@ -236,35 +240,38 @@
                             Как создать стиль? Расставьте команды в правильном порядке.<br>
 
                             <label for="">1<select id="t25-4-1">
-
-                                    <option value="1">Оформить все заголовки соответствующими стилями</option>
-                                    <option value="2">Выбрать команду Оглавление на вкладке Ссылки</option>
                                     <option value="3">Выбрать внешний вид оглавления</option>
                                     <option value="4">Задать параметры оглавления, если это необходимо</option>
+                                    <option value="1">Оформить все заголовки соответствующими стилями</option>
+                                    <option value="2">Выбрать команду Оглавление на вкладке Ссылки</option>
+
                                 </select></label>
 
                             <label for="">2<select id="t25-4-2">
 
-                                    <option value="1">Оформить все заголовки соответствующими стилями</option>
+
                                     <option value="2">Выбрать команду Оглавление на вкладке Ссылки</option>
                                     <option value="3">Выбрать внешний вид оглавления</option>
+                                    <option value="1">Оформить все заголовки соответствующими стилями</option>
                                     <option value="4">Задать параметры оглавления, если это необходимо</option>
                                 </select></label>
 
                             <label for="">3<select id="t25-4-3">
 
-                                    <option value="1">Оформить все заголовки соответствующими стилями</option>
+
                                     <option value="2">Выбрать команду Оглавление на вкладке Ссылки</option>
                                     <option value="3">Выбрать внешний вид оглавления</option>
                                     <option value="4">Задать параметры оглавления, если это необходимо</option>
+                                    <option value="1">Оформить все заголовки соответствующими стилями</option>
                                 </select></label>
 
                             <label for="">4<select id="t25-4-4">
 
                                     <option value="1">Оформить все заголовки соответствующими стилями</option>
-                                    <option value="2">Выбрать команду Оглавление на вкладке Ссылки</option>
+
                                     <option value="3">Выбрать внешний вид оглавления</option>
                                     <option value="4">Задать параметры оглавления, если это необходимо</option>
+                                    <option value="2">Выбрать команду Оглавление на вкладке Ссылки</option>
                                 </select></label>
                         </div>
                         <button class="check" id="cht25-4">Проверить</button>
@@ -508,17 +515,17 @@ myalert("Неправильно!");
 
         <div class="not-linked">
             <hr>
-            <button class="questions-btn" onclick="changeOrder23()">Тэсты</button>
+            <button class="questions-btn" onclick="changeOrder25()">Тэсты</button>
             <div class="hiddenEl">
                 <img src="images/ref-pics/ref1.png" width="50px" height="50px">
                 <ol>
                     <li>
                         <div class="flex-col">
                             Што разумеюць пад стылем тэксту ў тэкставым дакуменце?<br>
-                            <label for=""><input type="radio" value="1" name="t25-1b">Афармленне тэксту. <br></label>
-                            <label for=""><input type="radio" value="2" name="t25-1b">Тэкст, які адрозніваецца ад звычайнага. <br></label>
-                            <label for=""><input type="radio" value="3" name="t25-1b">Набор параметраў фармаціравання тэксту, які мае імя.<br></label>
-                            <label for=""><input type="radio" value="4" name="t25-1b">Разнавіднасць літаратурнай мовы. <br></label>
+                            <label for="" class="q25-1"><input type="radio" value="1" name="t25-1b">Афармленне тэксту. <br></label>
+                            <label for="" class="q25-2"><input type="radio" value="2" name="t25-1b">Тэкст, які адрозніваецца ад звычайнага. <br></label>
+                            <label for="" class="q25-3"><input type="radio" value="3" name="t25-1b">Набор параметраў фармаціравання тэксту, які мае імя.<br></label>
+                            <label for="" class="q25-4"><input type="radio" value="4" name="t25-1b">Разнавіднасць літаратурнай мовы. <br></label>
 
                         </div>
                         <button class="check" id="cht25-1b">Праверыць</button>
@@ -526,13 +533,13 @@ myalert("Неправильно!");
                     <li>
                         <div class="flex-col">
                             Якія перавагі дае выкарыстанне стыляў?<br>
-                            <label for=""><input type="checkbox" id="t25-2-1b">Выкарыстаць стыль як набор параметраў фармаціравання значна хутчэй, чым паслядоўна ўжываць асобныя параметры. <br></label>
+                            <label for="" class="q25-5"><input type="checkbox" id="t25-2-1b">Выкарыстаць стыль як набор параметраў фармаціравання значна хутчэй, чым паслядоўна ўжываць асобныя параметры. <br></label>
 
-                            <label for=""><input type="checkbox" id="t25-2-2b">Спрыяе аднастайнаму афармленню тэкставага дакумента. <br></label>
+                            <label for="" class="q25-6"><input type="checkbox" id="t25-2-2b">Спрыяе аднастайнаму афармленню тэкставага дакумента. <br></label>
 
-                            <label for=""><input type="checkbox" id="t25-2-3b">Дазваляе хутка змяніць выгляд асобных элементаў ва ўсім дакуменце.<br></label>
+                            <label for="" class="q25-7"><input type="checkbox" id="t25-2-3b">Дазваляе хутка змяніць выгляд асобных элементаў ва ўсім дакуменце.<br></label>
 
-                            <label for=""><input type="checkbox" id="t25-2-4b">Ніякіх. <br></label>
+                            <label for="" class="q25-8"><input type="checkbox" id="t25-2-4b">Ніякіх. <br></label>
 
                         </div>
                         <button class="check" id="cht25-2b">Праверыць</button>
@@ -543,17 +550,19 @@ myalert("Неправильно!");
 
                             <label for="">1<select id="t25-3-1b">
 
-                                    <option value="1">Выканаць каманду <b>«Создать стиль»</b></option>
                                     <option value="2">Задаць імя стылю</option>
                                     <option value="3">Выбраць аб’ект, для якога вызначаецца стыль</option>
+                                    <option value="1">Выканаць каманду <b>«Создать стиль»</b></option>
+
                                     <option value="4">Задаць параметры фармаціравання</option>
                                 </select></label>
 
                             <label for="">2<select id="t25-3-2b">
-                                    <option value="1">Выканаць каманду <b>«Создать стиль»</b></option>
-                                    <option value="2">Задаць імя стылю</option>
+
                                     <option value="3">Выбраць аб’ект, для якога вызначаецца стыль</option>
                                     <option value="4">Задаць параметры фармаціравання</option>
+                                    <option value="1">Выканаць каманду <b>«Создать стиль»</b></option>
+                                    <option value="2">Задаць імя стылю</option>
                                 </select></label>
 
                             <label for="">3<select id="t25-3-3b">
@@ -564,10 +573,11 @@ myalert("Неправильно!");
                                 </select></label>
 
                             <label for="">4<select id="t25-3-4b">
+                                    <option value="4">Задаць параметры фармаціравання</option>
                                     <option value="1">Выканаць каманду <b>«Создать стиль»</b></option>
                                     <option value="2">Задаць імя стылю</option>
                                     <option value="3">Выбраць аб’ект, для якога вызначаецца стыль</option>
-                                    <option value="4">Задаць параметры фармаціравання</option>
+
                                 </select></label>
                         </div>
                         <button class="check" id="cht25-3b">Праверыць</button>
@@ -578,10 +588,12 @@ myalert("Неправильно!");
 
                             <label for="">1<select id="t25-4-1b">
 
-                                    <option value="1">Аформіць усе загалоўкі адпаведнымі стылямі</option>
+
                                     <option value="2">Выбраць каманду <b>Оглавление</b> на ўкладцы <b>Ссылки</b></option>
-                                    <option value="3">Выбраць знешні выгляд зместу</option>
+
                                     <option value="4">Задаць параметры зместу, калі гэта неабходна</option>
+                                    <option value="1">Аформіць усе загалоўкі адпаведнымі стылямі</option>
+                                    <option value="3">Выбраць знешні выгляд зместу</option>
                                 </select></label>
 
                             <label for="">2<select id="t25-4-2b">
@@ -593,19 +605,20 @@ myalert("Неправильно!");
                                 </select></label>
 
                             <label for="">3<select id="t25-4-3b">
-
+                                    <option value="3">Выбраць знешні выгляд зместу</option>
                                     <option value="1">Аформіць усе загалоўкі адпаведнымі стылямі</option>
                                     <option value="2">Выбраць каманду <b>Оглавление</b> на ўкладцы <b>Ссылки</b></option>
-                                    <option value="3">Выбраць знешні выгляд зместу</option>
+
                                     <option value="4">Задаць параметры зместу, калі гэта неабходна</option>
+
                                 </select></label>
 
                             <label for="">4<select id="t25-4-4b">
-
-                                    <option value="1">Аформіць усе загалоўкі адпаведнымі стылямі</option>
-                                    <option value="2">Выбраць каманду <b>Оглавление</b> на ўкладцы <b>Ссылки</b></option>
                                     <option value="3">Выбраць знешні выгляд зместу</option>
                                     <option value="4">Задаць параметры зместу, калі гэта неабходна</option>
+                                    <option value="1">Аформіць усе загалоўкі адпаведнымі стылямі</option>
+                                    <option value="2">Выбраць каманду <b>Оглавление</b> на ўкладцы <b>Ссылки</b></option>
+
                                 </select></label>
                         </div>
                         <button class="check" id="cht25-4b">Праверыць</button>
@@ -636,7 +649,7 @@ myalert("Неправильно!");
                             <li>Стварыце стыль загалоўкаў першага ўзроўню. Стыль <b>Заголовок 1 Доклад</b> з параметрамі:
                                 <ul>
                                     <li>заснаваны на стылі <b>Заголовок 1</b>, стыль абзаца;</li>
-                                    <li>шрыфт&#160;— Comic Sans MS, памер шрыфту&#160;— 22, напісанне&#160;— паўтлустае, колерv— цёмна-сіні;</li>
+                                    <li>шрыфт&#160;— Comic Sans MS, памер шрыфту&#160;— 22, напісанне&#160;— паўтлустае, колер&#160;— цёмна-сіні;</li>
                                     <li>міжрадковы інтэрвал&#160;— паўтарачны, выраўноўванне абзаца&#160;— па цэнтры, водступ першага радка&#160;— няма, інтэрвал перад абзацам&#160;— 18, пасля&#160;— 12;</li>
                                     <li>стыль наступнага абзаца&#160;— <b>Доклад.</b></li>
                                 </ul>
@@ -745,6 +758,41 @@ myalert("Неправильно!");
 
             });
         })(jQuery);
+
+
+        function changeOrder25() {
+            let arr1 = rand(4, 1, 4)
+            let arr2 = rand(4, 1, 4)
+
+
+
+
+            $('.q25-1').css({
+                'order': arr1[0]
+            })
+            $('.q25-2').css({
+                'order': arr1[1]
+            })
+            $('.q25-3').css({
+                'order': arr1[2]
+            })
+            $('.q25-4').css({
+                'order': arr1[3]
+            })
+
+            $('.q25-5').css({
+                'order': arr2[0]
+            })
+            $('.q25-6').css({
+                'order': arr2[1]
+            })
+            $('.q25-7').css({
+                'order': arr2[2]
+            })
+            $('.q25-8').css({
+                'order': arr2[3]
+            })
+        }
 
     </script>
 </body>

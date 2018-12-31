@@ -72,49 +72,55 @@
         <h4> <a name="fo4-2">14.4. Работа с Пером и Кистью</a></h4>
         <p> В графических редакторах, прежде чем рисовать какие-либо фигуры, устанавливают их цвет. Обычно выбирают два цвета. Цвет 1 определяет цвет линий и контуров фигур, Цвет 2 используется для заливки фигур. Кроме того, можно изменять стиль линий и заливки, а также определять толщину линий.</p>
         <p>В графическом режиме PascalABC настройки линии определяет перо (Pen), а настройки внутренней области фигур&#160;— кисть (Brush). Команды для работы с кистью и пером приведены в таблице.</p>
-        <table>
-            <tr>
-                <th>Команда</th>
-                <th>Описание</th>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetPenColor</font>
-                </td>
-                <td>Цвет линий</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetPenWidth</font>
-                </td>
-                <td>Толщина линии</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetPenStyle</font>
-                </td>
-                <td>Стиль линий</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetBrushColor</font>
-                </td>
-                <td>Цвет заливки</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetBrushStyle</font>
-                </td>
-                <td>Стиль заливки</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetBrushHatch</font>
-                </td>
-                <td>Вид штриховки для заливки</td>
-            </tr>
+        <center>
+            <table class="tab1">
+                <col class="col1">
+                <col span="1" class="coln">
+                <thead>
+                    <tr>
+                        <td>Команда</td>
+                        <td>Описание</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <font>SetPenColor</font>
+                    </td>
+                    <td>Цвет линий</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetPenWidth</font>
+                    </td>
+                    <td>Толщина линии</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetPenStyle</font>
+                    </td>
+                    <td>Стиль линий</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetBrushColor</font>
+                    </td>
+                    <td>Цвет заливки</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetBrushStyle</font>
+                    </td>
+                    <td>Стиль заливки</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetBrushHatch</font>
+                    </td>
+                    <td>Вид штриховки для заливки</td>
+                </tr>
 
-        </table>
+            </table>
+        </center>
         <p>Значение, которое нужно установить для каждой из команд, записывается в скобках. Например:</p>
         <ul>
             <li>
@@ -145,7 +151,7 @@
         <p>Среда программирования PascalABC позволяет обращаться к свойствам кисти и пера по-другому. Так, например, для изменения цвета (стиля, толщины) можно записать</p>
         <font>Pen.Color := clRed;<br> Pen.Style := psDot;<br> Pen.Width := 3;<br></font>
         <p>Подсказка среды выглядит следующим образом:</p><br>
-        <img src="img/283.png" alt="" class="center-img"><br>
+        <img src="img/283.png" alt="" class="center-img" width="300px"><br>
         <p>Вторую часть команды можно выбрать из выпадающего списка.</p>
         <p>При изучении векторной графики вы познакомились с цветовой моделью RGB, которая позволяет записать любой цвет тремя составляющими: красной, зеленой и синей. Функция
             <font>RGB (r, g, b)</font> позволяет определить цвет по трем составляющим. Так, команда
@@ -158,37 +164,43 @@
         </p>
         <p>Если нужно вывести строку, то ее символы заключают в кавычки, для вывода числа можно использовать переменные или значения чисел. Если в качестве <i>z</i> записать арифметическое выражение, то будет выведено его значение.</p>
         <p>Для изменения параметров текста применяют следующие команды:</p>
-        <table>
-            <tr>
-                <th>Команда</th>
-                <th>Описание</th>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetFontColor</font>
-                </td>
-                <td>Цвет символов</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetFontSize</font>
-                </td>
-                <td>Размер символов</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetFontName</font>
-                </td>
-                <td>Имя текущего шрифта</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetFontStyle</font>
-                </td>
-                <td>Стиль текста</td>
-            </tr>
+        <center>
+            <table class="tab1">
+                <col class="col1">
+                <col span="1" class="coln">
+                <thead>
+                    <tr>
+                        <td>Команда</td>
+                        <td>Описание</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <font>SetFontColor</font>
+                    </td>
+                    <td>Цвет символов</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetFontSize</font>
+                    </td>
+                    <td>Размер символов</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetFontName</font>
+                    </td>
+                    <td>Имя текущего шрифта</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetFontStyle</font>
+                    </td>
+                    <td>Стиль текста</td>
+                </tr>
 
-        </table>
+            </table>
+        </center>
         <p>Команда
             <font>SetBrushColor</font> устанавливает цвет прямоугольника, внутри которого будет находиться текст
             <a href="#pr14-10">(пример 14.10)</a>. Команда действует до тех пор, пока цвет не будет изменен. Для записи текста без фона нужно установить прозрачный фон кисти:
@@ -211,13 +223,13 @@
                     <li>
                         <div class="flex-col">
                             Какая команда используется для подключения графической библиотеки в PascalABC?<br>
-                            <label for=""><input type="radio" value="1" name="t14-1"> Uses Robot. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-1"> Uses Drawman. <br></label>
+                            <label for="" class="q14-1"><input type="radio" value="1" name="t14-1"> Uses Robot. <br></label>
+                            <label for="" class="q14-2"><input type="radio" value="2" name="t14-1"> Uses Drawman. <br></label>
 
-                            <label for=""><input type="radio" value="3" name="t14-1"> Uses GraphABC. <br></label>
+                            <label for="" class="q14-3"><input type="radio" value="3" name="t14-1"> Uses GraphABC. <br></label>
 
-                            <label for=""><input type="radio" value="4" name="t14-1"> Uses Math. <br></label>
-                            <label for=""><input type="radio" value="5" name="t14-1"> Uses Colors. <br></label>
+                            <label for="" class="q14-4"><input type="radio" value="4" name="t14-1"> Uses Math. <br></label>
+                            <label for="" class="q14-5"><input type="radio" value="5" name="t14-1"> Uses Colors. <br></label>
 
                         </div>
                         <button class="check" id="cht14-1">Проверить</button>
@@ -226,9 +238,9 @@
                         <div class="flex-col">
                             Какие координаты может иметь точка в графическом окне на рисунке?<br>
                             <img src="img/t14-2.jpg" alt="" width="200px"><br>
-                            <label for=""><input type="radio" value="1" name="t14-2"> (50; 100). <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-2"> (200; 200). <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-2"> (100; 50). <br></label>
+                            <label for="" class="q14-6"><input type="radio" value="1" name="t14-2"> (50; 100). <br></label>
+                            <label for="" class="q14-7"><input type="radio" value="2" name="t14-2"> (200; 200). <br></label>
+                            <label for="" class="q14-8"><input type="radio" value="3" name="t14-2"> (100; 50). <br></label>
 
                         </div>
                         <button class="check" id="cht14-2">Проверить</button>
@@ -236,10 +248,10 @@
                     <li>
                         <div class="flex-col">
                             Какая команда позволяет задать размеры графического окна?<br>
-                            <label for=""><input type="radio" value="1" name="t14-3"> SizeWindow. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-3"> SetPixel. <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-3"> SetWindowSize. <br></label>
-                            <label for=""><input type="radio" value="4" name="t14-3"> SetWindowTitle. <br></label>
+                            <label for="" class="q14-9"><input type="radio" value="1" name="t14-3"> SizeWindow. <br></label>
+                            <label for="" class="q14-10"><input type="radio" value="2" name="t14-3"> SetPixel. <br></label>
+                            <label for="" class="q14-11"><input type="radio" value="3" name="t14-3"> SetWindowSize. <br></label>
+                            <label for="" class="q14-12"><input type="radio" value="4" name="t14-3"> SetWindowTitle. <br></label>
 
                         </div>
 
@@ -248,12 +260,12 @@
                     <li>
                         <div class="flex-col">
                             Какая команда предназначена для определения цвета линий?<br>
-                            <label for=""><input type="radio" value="1" name="t14-4"> SetPenColor. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-4"> SetPenWidth. <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-4"> SetPenStyle. <br></label>
-                            <label for=""><input type="radio" value="4" name="t14-4"> SetBrushColor. <br></label>
-                            <label for=""><input type="radio" value="5" name="t14-4"> SetBrushStyle. <br></label>
-                            <label for=""><input type="radio" value="6" name="t14-4"> SetBrushHatch. <br></label>
+                            <label for="" class="q14-13"><input type="radio" value="1" name="t14-4"> SetPenColor. <br></label>
+                            <label for="" class="q14-14"><input type="radio" value="2" name="t14-4"> SetPenWidth. <br></label>
+                            <label for="" class="q14-15"><input type="radio" value="3" name="t14-4"> SetPenStyle. <br></label>
+                            <label for="" class="q14-16"><input type="radio" value="4" name="t14-4"> SetBrushColor. <br></label>
+                            <label for="" class="q14-17"><input type="radio" value="5" name="t14-4"> SetBrushStyle. <br></label>
+                            <label for="" class="q14-18"><input type="radio" value="6" name="t14-4"> SetBrushHatch. <br></label>
 
                         </div>
 
@@ -262,12 +274,12 @@
                     <li>
                         <div class="flex-col">
                             Какая команда предназначена для определения цвета заливки?<br>
-                            <label for=""><input type="radio" value="1" name="t14-5"> SetPenColor. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-5"> SetPenWidth. <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-5"> SetPenStyle. <br></label>
-                            <label for=""><input type="radio" value="4" name="t14-5"> SetBrushColor. <br></label>
-                            <label for=""><input type="radio" value="5" name="t14-5"> SetBrushStyle. <br></label>
-                            <label for=""><input type="radio" value="6" name="t14-5"> SetBrushHatch<br></label>
+                            <label for="" class="q14-19"><input type="radio" value="1" name="t14-5"> SetPenColor. <br></label>
+                            <label for="" class="q14-20"><input type="radio" value="2" name="t14-5"> SetPenWidth. <br></label>
+                            <label for="" class="q14-21"><input type="radio" value="3" name="t14-5"> SetPenStyle. <br></label>
+                            <label for="" class="q14-22"><input type="radio" value="4" name="t14-5"> SetBrushColor. <br></label>
+                            <label for="" class="q14-23"><input type="radio" value="5" name="t14-5"> SetBrushStyle. <br></label>
+                            <label for="" class="q14-24"><input type="radio" value="6" name="t14-5"> SetBrushHatch<br></label>
 
                         </div>
                         <button class="check" id="cht14-5">Проверить</button>
@@ -275,11 +287,11 @@
                     <li>
                         <div class="flex-col">
                             Какая команда предназначена для вывода текста в графическом окне?<br>
-                            <label for=""><input type="radio" value="1" name="t14-6"> TextOut. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-6"> SetFontColor. <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-6"> SetFontSize. <br></label>
-                            <label for=""><input type="radio" value="4" name="t14-6"> SetFontName. <br></label>
-                            <label for=""><input type="radio" value="5" name="t14-6"> SetFontStyle. <br></label>
+                            <label for="" class="q14-25"><input type="radio" value="1" name="t14-6"> TextOut. <br></label>
+                            <label for="" class="q14-26"><input type="radio" value="2" name="t14-6"> SetFontColor. <br></label>
+                            <label for="" class="q14-27"><input type="radio" value="3" name="t14-6"> SetFontSize. <br></label>
+                            <label for="" class="q14-28"><input type="radio" value="4" name="t14-6"> SetFontName. <br></label>
+                            <label for="" class="q14-29"><input type="radio" value="5" name="t14-6"> SetFontStyle. <br></label>
 
 
                         </div>
@@ -290,7 +302,7 @@
                         <div class="flex-col">
                             Установите соответствие между действиями и командами для рисования основных графических примитивов.<br>
 
-                            <label for="">Рисует отрезок от точки (x1,y1) до точки (x2,y2)&nbsp;<select id="t14-7-1">
+                            <label for="" class="q14-30">Рисует отрезок от точки (x1,y1) до точки (x2,y2)&nbsp;<select id="t14-7-1">
 
                                     <option value="3">Ellipse(x1,y1,x2,y2)</option>
                                     <option value="4">Rectangle(x1,y1,x2,y2)</option>
@@ -300,7 +312,7 @@
 
                                 </select></label>
 
-                            <label for="">Рисует заполненный круг с центром (x,y) и радиусом r&nbsp;<select id="t14-7-2">
+                            <label for="" class="q14-31">Рисует заполненный круг с центром (x,y) и радиусом r&nbsp;<select id="t14-7-2">
 
                                     <option value="2">Circle(x,y,r)</option>
                                     <option value="3">Ellipse(x1,y1,x2,y2)</option>
@@ -310,7 +322,7 @@
 
                                 </select></label>
 
-                            <label for="">Рисует заполненный круг с центром (x,y) и радиусом r&nbsp;<select id="t14-7-3">
+                            <label for="" class="q14-32">Рисует заполненный круг с центром (x,y) и радиусом r&nbsp;<select id="t14-7-3">
                                     <option value="5">FloodFill(x,y,c)</option>
                                     <option value="1">Line(x1,y1,x2,y2)</option>
 
@@ -322,7 +334,7 @@
 
                                 </select></label>
 
-                            <label for="">Рисует заполненный прямоугольник, заданный координатами противоположных вершин (x1,y1) и (x2,y2)&nbsp;<select id="t14-7-4">
+                            <label for="" class="q14-33">Рисует заполненный прямоугольник, заданный координатами противоположных вершин (x1,y1) и (x2,y2)&nbsp;<select id="t14-7-4">
                                     <option value="1">Line(x1,y1,x2,y2)</option>
                                     <option value="4">Rectangle(x1,y1,x2,y2)</option>
                                     <option value="2">Circle(x,y,r)</option>
@@ -331,7 +343,7 @@
                                     <option value="5">FloodFill(x,y,c)</option>
                                 </select></label>
 
-                            <label for="">Заливает область одного цвета цветом c, начиная с точки (x,y)&nbsp;<select id="t14-7-5">
+                            <label for="" class="q14-34">Заливает область одного цвета цветом c, начиная с точки (x,y)&nbsp;<select id="t14-7-5">
                                     <option value="1">Line(x1,y1,x2,y2)</option>
                                     <option value="2">Circle(x,y,r)</option>
                                     <option value="3">Ellipse(x1,y1,x2,y2)</option>
@@ -390,7 +402,7 @@
             if (y2 == "3") {
                 myalert("Правильно!");
             } else {
-                myalert("Не правильно!");
+                myalert("Неправильно!");
             }
         });
                 
@@ -522,49 +534,55 @@
         <h4> <a name="fo4-2">14.4. Работа з пяром і пэндзлем</a></h4>
         <p> У графічных рэдактарах, перш чым рысаваць якія-небудзь фігуры, устанаўліваюць іх колер. Звычайна выбіраюць два колеры. Колер 1 вызначае колер ліній і контураў фігур, Колер 2 выкарыстоўваецца для заліўкі фігур. Акрамя таго, можна змяняць стыль ліній і заліўкі, а таксама вызначаць таўшчыню ліній.</p>
         <p>У графічным рэжыме PascalABC настройкі лініі вызначае пяро (Pen), а настройкі ўнутранай вобласці фігур&#160;— пэндзаль (Brush). Каманды для работы з пэндзлем і пяром прыведзены ў табліцы.</p>
-        <table>
-            <tr>
-                <th>Каманда</th>
-                <th>Апісанне</th>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetPenColor</font>
-                </td>
-                <td>Колер ліній</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetPenWidth</font>
-                </td>
-                <td>Таўшчына ліній</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetPenStyle</font>
-                </td>
-                <td>Стыль ліній</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetBrushColor</font>
-                </td>
-                <td>Колер заліўкі</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetBrushStyle</font>
-                </td>
-                <td>Стыль заліўкі</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetBrushHatch</font>
-                </td>
-                <td>Від штрыхоўкі для заліўкі</td>
-            </tr>
+        <center>
+            <table class="tab1">
+                <col class="col1">
+                <col span="1" class="coln">
+                <thead>
+                    <tr>
+                        <td>Каманда</td>
+                        <td>Апісанне</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <font>SetPenColor</font>
+                    </td>
+                    <td>Колер ліній</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetPenWidth</font>
+                    </td>
+                    <td>Таўшчына ліній</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetPenStyle</font>
+                    </td>
+                    <td>Стыль ліній</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetBrushColor</font>
+                    </td>
+                    <td>Колер заліўкі</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetBrushStyle</font>
+                    </td>
+                    <td>Стыль заліўкі</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetBrushHatch</font>
+                    </td>
+                    <td>Від штрыхоўкі для заліўкі</td>
+                </tr>
 
-        </table>
+            </table>
+        </center>
         <p>Значэнне, якое трэба ўстанавіць для кожнай з каманд, запісваецца ў дужках. Напрыклад:</p>
         <ul>
             <li>
@@ -595,7 +613,7 @@
         <p>Асяроддзе праграміравання PascalABC дазваляе звяртацца да ўласцівасцей пэндзля і пяра паіншаму. Так, напрыклад, для змянення колеру (стылю, таўшчыні) можна запісаць </p>
         <font>Pen.Color := clRed;<br> Pen.Style := psDot;<br> Pen.Width := 3;<br></font>
         <p>Падказка асяроддзя выглядае наступным чынам:</p><br>
-        <img src="img/283.png" alt="" class="center-img"><br>
+        <img src="img/283.png" alt="" class="center-img" width="300px"><br>
         <p>Другую частку каманды можна выбраць з выпадаючага спіса.</p>
         <p>Пры вывучэнні вектарнай графікі вы пазнаёміліся з колеравай мадэллю RGB, якая дазваляе запісаць любы колер трыма складнікамі: чырвоным, зялёным і сінім. Функцыя
             <font>RGB (r, g, b)</font> дазваляе вызначыць колер па трох складніках. Так, каманда
@@ -608,37 +626,43 @@
         </p>
         <p>Калі трэба вывесці радок, то яго сімвалы змяшчаюць у двукоссе, для вываду ліку можна выкарыстоўваць пераменныя або значэнні лікаў. Калі ў якасці <i>z</i> запісаць арыфметычны выраз, то будзе выведзена яго значэнне.</p>
         <p>Для змянення параметраў тэксту ўжываюць наступныя каманды:</p>
-        <table>
-            <tr>
-                <th>Каманда</th>
-                <th>Апісанне</th>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetFontColor</font>
-                </td>
-                <td>Колер сімвалаў</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetFontSize</font>
-                </td>
-                <td>Памер сімвалаў</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetFontName</font>
-                </td>
-                <td>Імя бягучага шрыфту</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>SetFontStyle</font>
-                </td>
-                <td>Стыль тэксту</td>
-            </tr>
+        <center>
+            <table class="tab1">
+                <col class="col1">
+                <col span="1" class="coln">
+                <thead>
+                    <tr>
+                        <td>Каманда</td>
+                        <td>Апісанне</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <font>SetFontColor</font>
+                    </td>
+                    <td>Колер сімвалаў</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetFontSize</font>
+                    </td>
+                    <td>Памер сімвалаў</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetFontName</font>
+                    </td>
+                    <td>Імя бягучага шрыфту</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>SetFontStyle</font>
+                    </td>
+                    <td>Стыль тэксту</td>
+                </tr>
 
-        </table>
+            </table>
+        </center>
         <p>Каманда
             <font>SetBrushColor</font> устанаў лівае колер прамавугольніка, унутры якога будзе знаходзіцца тэкст
             <a href="#pr14-10b">(прыклад&#160;14.10)</a>. Каманда дзейнічае да таго часу, пакуль колер не будзе зменены. Для запісу тэксту без фону трэба ўстанавіць празрысты фон пэндзля:
@@ -660,13 +684,13 @@
                     <li>
                         <div class="flex-col">
                             Якая каманда выкарыстоўваецца для падключэння графічнай бібліятэкі ў PascalABC?<br>
-                            <label for=""><input type="radio" value="1" name="t14-1b"> Uses Robot. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-1b"> Uses Drawman. <br></label>
+                            <label for="" class="q14-1"><input type="radio" value="1" name="t14-1b"> Uses Robot. <br></label>
+                            <label for="" class="q14-2"><input type="radio" value="2" name="t14-1b"> Uses Drawman. <br></label>
 
-                            <label for=""><input type="radio" value="3" name="t14-1b"> Uses GraphABC. <br></label>
+                            <label for="" class="q14-3"><input type="radio" value="3" name="t14-1b"> Uses GraphABC. <br></label>
 
-                            <label for=""><input type="radio" value="4" name="t14-1b"> Uses Math. <br></label>
-                            <label for=""><input type="radio" value="5" name="t14-1b"> Uses Colors. <br></label>
+                            <label for="" class="q14-4"><input type="radio" value="4" name="t14-1b"> Uses Math. <br></label>
+                            <label for="" class="q14-5"><input type="radio" value="5" name="t14-1b"> Uses Colors. <br></label>
 
                         </div>
                         <button class="check" id="cht14-1b">Праверыць</button>
@@ -675,9 +699,9 @@
                         <div class="flex-col">
                             Якія каардынаты можа мець пункт у графічным акне на рысунку?<br>
                             <img src="img/t14-2.jpg" alt="" width="200px"><br>
-                            <label for=""><input type="radio" value="1" name="t14-2b"> (50; 100). <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-2b"> (200; 200). <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-2b"> (100; 50). <br></label>
+                            <label for="" class="q14-6"><input type="radio" value="1" name="t14-2b"> (50; 100). <br></label>
+                            <label for="" class="q14-7"><input type="radio" value="2" name="t14-2b"> (200; 200). <br></label>
+                            <label for="" class="q14-8"><input type="radio" value="3" name="t14-2b"> (100; 50). <br></label>
 
                         </div>
                         <button class="check" id="cht14-2b">Праверыць</button>
@@ -685,10 +709,10 @@
                     <li>
                         <div class="flex-col">
                             Якая каманда дазваляе задаць памеры графічнага акна?<br>
-                            <label for=""><input type="radio" value="1" name="t14-3b"> SizeWindow. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-3b"> SetPixel. <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-3b"> SetWindowSize. <br></label>
-                            <label for=""><input type="radio" value="4" name="t14-3b"> SetWindowTitle. <br></label>
+                            <label for="" class="q14-9"><input type="radio" value="1" name="t14-3b"> SizeWindow. <br></label>
+                            <label for="" class="q14-10"><input type="radio" value="2" name="t14-3b"> SetPixel. <br></label>
+                            <label for="" class="q14-11"><input type="radio" value="3" name="t14-3b"> SetWindowSize. <br></label>
+                            <label for="" class="q14-12"><input type="radio" value="4" name="t14-3b"> SetWindowTitle. <br></label>
 
                         </div>
 
@@ -697,12 +721,12 @@
                     <li>
                         <div class="flex-col">
                             Якая каманда прызначана для вызначэння колеру ліній?<br>
-                            <label for=""><input type="radio" value="1" name="t14-4b"> SetPenColor. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-4b"> SetPenWidth. <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-4b"> SetPenStyle. <br></label>
-                            <label for=""><input type="radio" value="4" name="t14-4b"> SetBrushColor. <br></label>
-                            <label for=""><input type="radio" value="5" name="t14-4b"> SetBrushStyle. <br></label>
-                            <label for=""><input type="radio" value="6" name="t14-4b"> SetBrushHatch. <br></label>
+                            <label for="" class="q14-13"><input type="radio" value="1" name="t14-4b"> SetPenColor. <br></label>
+                            <label for="" class="q14-14"><input type="radio" value="2" name="t14-4b"> SetPenWidth. <br></label>
+                            <label for="" class="q14-15"><input type="radio" value="3" name="t14-4b"> SetPenStyle. <br></label>
+                            <label for="" class="q14-16"><input type="radio" value="4" name="t14-4b"> SetBrushColor. <br></label>
+                            <label for="" class="q14-17"><input type="radio" value="5" name="t14-4b"> SetBrushStyle. <br></label>
+                            <label for="" class="q14-18"><input type="radio" value="6" name="t14-4b"> SetBrushHatch. <br></label>
 
                         </div>
 
@@ -711,12 +735,12 @@
                     <li>
                         <div class="flex-col">
                             Якая каманда прызначана для вызначэння колеру заліўкі?<br>
-                            <label for=""><input type="radio" value="1" name="t14-5b"> SetPenColor. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-5b"> SetPenWidth. <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-5b"> SetPenStyle. <br></label>
-                            <label for=""><input type="radio" value="4" name="t14-5b"> SetBrushColor. <br></label>
-                            <label for=""><input type="radio" value="5" name="t14-5b"> SetBrushStyle. <br></label>
-                            <label for=""><input type="radio" value="6" name="t14-5b"> SetBrushHatch<br></label>
+                            <label for="" class="q14-19"><input type="radio" value="1" name="t14-5b"> SetPenColor. <br></label>
+                            <label for="" class="q14-20"><input type="radio" value="2" name="t14-5b"> SetPenWidth. <br></label>
+                            <label for="" class="q14-21"><input type="radio" value="3" name="t14-5b"> SetPenStyle. <br></label>
+                            <label for="" class="q14-22"><input type="radio" value="4" name="t14-5b"> SetBrushColor. <br></label>
+                            <label for="" class="q14-23"><input type="radio" value="5" name="t14-5b"> SetBrushStyle. <br></label>
+                            <label for="" class="q14-24"><input type="radio" value="6" name="t14-5b"> SetBrushHatch<br></label>
 
                         </div>
                         <button class="check" id="cht14-5b">Праверыць</button>
@@ -724,11 +748,11 @@
                     <li>
                         <div class="flex-col">
                             Якая каманда прызначана для вываду тэксту ў графічным акне?<br>
-                            <label for=""><input type="radio" value="1" name="t14-6b"> TextOut. <br></label>
-                            <label for=""><input type="radio" value="2" name="t14-6b"> SetFontColor. <br></label>
-                            <label for=""><input type="radio" value="3" name="t14-6b"> SetFontSize. <br></label>
-                            <label for=""><input type="radio" value="4" name="t14-6b"> SetFontName. <br></label>
-                            <label for=""><input type="radio" value="5" name="t14-6b"> SetFontStyle. <br></label>
+                            <label for="" class="q14-25"><input type="radio" value="1" name="t14-6b"> TextOut. <br></label>
+                            <label for="" class="q14-26"><input type="radio" value="2" name="t14-6b"> SetFontColor. <br></label>
+                            <label for="" class="q14-27"><input type="radio" value="3" name="t14-6b"> SetFontSize. <br></label>
+                            <label for="" class="q14-28"><input type="radio" value="4" name="t14-6b"> SetFontName. <br></label>
+                            <label for="" class="q14-29"><input type="radio" value="5" name="t14-6b"> SetFontStyle. <br></label>
 
 
                         </div>
@@ -739,7 +763,7 @@
                         <div class="flex-col">
                             Устанавіце адпаведнасць паміж дзеяннямі і камандамі для рысавання асноўных графічных прымітываў.<br>
 
-                            <label for="">Рысуе адрэзак ад пункта (x1,y1) да пункта (x2,y2)&nbsp;<select id="t14-7-1b">
+                            <label for="" class="q14-30"><span>Рысуе адрэзак ад пункта (x1,y1) да пункта (x2,y2)</span>&#160;<select id="t14-7-1b">
 
                                     <option value="3">Ellipse(x1,y1,x2,y2)</option>
                                     <option value="4">Rectangle(x1,y1,x2,y2)</option>
@@ -749,7 +773,7 @@
 
                                 </select></label>
 
-                            <label for="">Рысуе запоўнены круг з цэнтрам (x,y) і радыусам r&nbsp;<select id="t14-7-2b">
+                            <label for="" class="q14-31"><span>Рысуе запоўнены круг з цэнтрам (x,y) і радыусам r</span>&#160;<select id="t14-7-2b">
 
                                     <option value="2">Circle(x,y,r)</option>
                                     <option value="3">Ellipse(x1,y1,x2,y2)</option>
@@ -759,7 +783,7 @@
 
                                 </select></label>
 
-                            <label for="">Рысуе запоўнены эліпс, абмежаваны прамавугольнікам, зададзеным каардынатамі супрацьлеглых вяршынь (x1,y1) і (x2,y2)&nbsp;<select id="t14-7-3b">
+                            <label for="" class="q14-32"><span>Рысуе запоўнены эліпс, абмежаваны прамавугольнікам, зададзеным каардынатамі супрацьлеглых вяршынь (x1,y1) і (x2,y2)</span>&#160;<select id="t14-7-3b">
                                     <option value="5">FloodFill(x,y,c)</option>
                                     <option value="1">Line(x1,y1,x2,y2)</option>
 
@@ -771,7 +795,7 @@
 
                                 </select></label>
 
-                            <label for="">Рысуе запоўнены прамавугольнік, зададзены каардынатамі супрацьлеглых вяршынь (x1,y1) і (x2,y2)&nbsp;<select id="t14-7-4b">
+                            <label for="" class="q14-33"><span>Рысуе запоўнены прамавугольнік, зададзены каардынатамі супрацьлеглых вяршынь (x1,y1) і (x2,y2)</span>&#160;<select id="t14-7-4b">
                                     <option value="1">Line(x1,y1,x2,y2)</option>
                                     <option value="4">Rectangle(x1,y1,x2,y2)</option>
                                     <option value="2">Circle(x,y,r)</option>
@@ -780,7 +804,7 @@
                                     <option value="5">FloodFill(x,y,c)</option>
                                 </select></label>
 
-                            <label for="">Залівае вобласць аднаго колеру колерам c, пачынаючы з пункта (x,y)&nbsp;<select id="t14-7-5b">
+                            <label for="" class="q14-34"><span>Залівае вобласць аднаго колеру колерам c, пачынаючы з пункта (x,y)</span>&#160;<select id="t14-7-5b">
                                     <option value="1">Line(x1,y1,x2,y2)</option>
                                     <option value="2">Circle(x,y,r)</option>
                                     <option value="3">Ellipse(x1,y1,x2,y2)</option>
@@ -911,6 +935,168 @@
 
                 });
             })(jQuery);
+
+
+            function changeOrder14() {
+                let arr1 = rand(5, 1, 5)
+                let arr2 = rand(3, 1, 3)
+                let arr3 = rand(4, 1, 4)
+                let arr4 = rand(6, 1, 6)
+                let arr5 = rand(6, 1, 6)
+                let arr6 = rand(5, 1, 5)
+                let arr7 = rand(5, 1, 5)
+
+                $('.q14-1').css({
+                    'order': arr1[0]
+                })
+                $('.q14-2').css({
+                    'order': arr1[1]
+                })
+                $('.q14-3').css({
+                    'order': arr1[2]
+                })
+                $('.q14-4').css({
+                    'order': arr1[3]
+                })
+
+                $('.q14-5').css({
+                    'order': arr1[4]
+                })
+
+
+
+                $('.q14-6').css({
+                    'order': arr2[0]
+                })
+
+                $('.q14-7').css({
+                    'order': arr2[1]
+                })
+                $('.q14-8').css({
+                    'order': arr2[2]
+                })
+
+
+
+
+
+                $('.q14-9').css({
+                    'order': arr3[0]
+                })
+                $('.q14-10').css({
+                    'order': arr3[1]
+                })
+
+                $('.q14-11').css({
+                    'order': arr3[2]
+                })
+                $('.q14-12').css({
+                    'order': arr3[3]
+                })
+
+
+
+
+
+                $('.q14-13').css({
+                    'order': arr4[0]
+                })
+
+                $('.q14-14').css({
+                    'order': arr4[1]
+                })
+                $('.q14-15').css({
+                    'order': arr4[2]
+                })
+
+
+                $('.q14-16').css({
+                    'order': arr4[3]
+                })
+                $('.q14-17').css({
+                    'order': arr4[4]
+                })
+
+                $('.q14-18').css({
+                    'order': arr4[5]
+                })
+
+
+
+                $('.q14-19').css({
+                    'order': arr5[0]
+                })
+                $('.q14-20').css({
+                    'order': arr5[1]
+                })
+
+                $('.q14-21').css({
+                    'order': arr5[2]
+                })
+                $('.q14-22').css({
+                    'order': arr5[3]
+                })
+
+                $('.q14-23').css({
+                    'order': arr5[4]
+                })
+                $('.q14-24').css({
+                    'order': arr5[5]
+                })
+
+
+
+
+
+                $('.q14-25').css({
+                    'order': arr6[0]
+                })
+
+                $('.q14-26').css({
+                    'order': arr6[1]
+                })
+
+
+                $('.q14-27').css({
+                    'order': arr6[2]
+                })
+
+                $('.q14-28').css({
+                    'order': arr6[3]
+                })
+                $('.q14-29').css({
+                    'order': arr6[4]
+                })
+
+
+
+
+                $('.q14-30').css({
+                    'order': arr7[0]
+                })
+
+                $('.q14-31').css({
+                    'order': arr7[1]
+                })
+
+
+                $('.q14-32').css({
+                    'order': arr7[2]
+                })
+
+                $('.q14-33').css({
+                    'order': arr7[3]
+                })
+                $('.q14-34').css({
+                    'order': arr7[4]
+                })
+
+
+
+
+
+
+            }
 
         </script>
 </body>

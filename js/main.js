@@ -129,7 +129,7 @@ let emailClickStatus = null;
 
     // вывод боковых картинок на весь экран
     $('body').on('click', (ev) => {
-        if (ev.target.matches('.right img:not(.not-incresed)') || ev.target.matches('.hiddenEl img:not(.close-pop)') || ev.target.matches('.end img')) {
+        if (ev.target.matches('.right img:not(.not-incresed)') || ev.target.matches('.hiddenEl img:not(.close-pop)') || ev.target.matches('.end img') || ev.target.matches('.end2 img')) {
             clickState = !clickState
 
             imgState = !imgState

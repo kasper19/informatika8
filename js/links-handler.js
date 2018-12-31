@@ -1,3 +1,27 @@
+//(function ($) {
+//    $(document).ready(function () {
+//
+//        $("#a1-2").click(function () {
+//
+//            $("#_app-1-2").show();
+//            console.log("go");
+//            $(window).scrollTop(500);
+//
+//
+//        });
+//
+//
+//    }); //обертка 
+//})(jQuery);
+
+
+
+
+
+
+
+
+
 let activeParagraf = []
 let getChapterId = (chap) => {
     switch (chap) {
@@ -130,6 +154,8 @@ let getChapterById = (chap) => {
             return '25.html'
         case '#tsix':
             return '26.html'
+        case '#aone':
+            return 'end-one.html'
         case '#_glossary':
             return 'glossary.html'
         case '#_about':
@@ -167,8 +193,14 @@ let getChapterById = (chap) => {
         case '#prim2':
             return
 
+
+
     }
 }
+
+
+
+
 let chapter = "start.html";
 window.onload = function () {
     handleUrl(window.location.hash)

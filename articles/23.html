@@ -50,7 +50,10 @@
             из имеющихся шаблонов. Развернув
             группу с помощью маленькой кнопки
             со стрелочкой в нижнем правом углу <img src="img/strelka.JPG" alt="">
-            , получим доступ к общим настройкам параметров уравнений. <img src="img/paramurav.JPG" alt=""></p>
+            , получим доступ к общим настройкам параметров уравнений. </p>
+        <center>
+            <div class="end"><img src="img/paramurav.JPG" alt=""></div>
+        </center>
         <p>Большинство символов, отсутствующих на клавиатуре, но используемых
             для ввода формул, размещаются в
             группе <b>Символы</b>. Символы объединены по категориям: основные математические символы, греческие буквы,
@@ -81,10 +84,10 @@
                     <li>
                         <div class="flex-col">
                             Как вставить в текст символ, отсутствующий на клавиатуре? <br>
-                            <label for=""><input type="radio" value="1" name="t23-1">С помощью команды Уравнение на вкладке Вставка. <br></label>
-                            <label for=""><input type="radio" value="2" name="t23-1">С помощью команды Символ на вкладке Вставка. <br></label>
-                            <label for=""><input type="radio" value="3" name="t23-1">С помощью команды Эффекты на вкладке Дизайн. <br></label>
-                            <label for=""><input type="radio" value="4" name="t23-1">С помощью команды Исправления на вкладке Рецензирование. <br></label>
+                            <label for="" class="q23-1"><input type="radio" value="1" name="t23-1">С помощью команды Уравнение на вкладке Вставка. <br></label>
+                            <label for="" class="q23-2"><input type="radio" value="2" name="t23-1">С помощью команды Символ на вкладке Вставка. <br></label>
+                            <label for="" class="q23-3"><input type="radio" value="3" name="t23-1">С помощью команды Эффекты на вкладке Дизайн. <br></label>
+                            <label for="" class="q23-4"><input type="radio" value="4" name="t23-1">С помощью команды Исправления на вкладке Рецензирование. <br></label>
 
                         </div>
                         <button class="check" id="cht23-1">Проверить</button>
@@ -92,10 +95,10 @@
                     <li>
                         <div class="flex-col">
                             Как вставить формулу в текст документа?<br>
-                            <label for=""><input type="radio" value="1" name="t23-2">С помощью команды Уравнение на вкладке Вставка. <br></label>
-                            <label for=""><input type="radio" value="2" name="t23-2">С помощью команды Символ на вкладке Вставка. <br></label>
-                            <label for=""><input type="radio" value="3" name="t23-2">С помощью команды Эффекты на вкладке Дизайн. <br></label>
-                            <label for=""><input type="radio" value="4" name="t23-2">С помощью команды Исправления на вкладке Рецензирование. <br></label>
+                            <label for="" class="q23-5"><input type="radio" value="1" name="t23-2">С помощью команды Уравнение на вкладке Вставка. <br></label>
+                            <label for="" class="q23-6"><input type="radio" value="2" name="t23-2">С помощью команды Символ на вкладке Вставка. <br></label>
+                            <label for="" class="q23-7"><input type="radio" value="3" name="t23-2">С помощью команды Эффекты на вкладке Дизайн. <br></label>
+                            <label for="" class="q23-8"><input type="radio" value="4" name="t23-2">С помощью команды Исправления на вкладке Рецензирование. <br></label>
 
                         </div>
                         <button class="check" id="cht23-2">Проверить</button>
@@ -104,29 +107,31 @@
                         <div class="flex-col">
                             Определите, с помощью какого шаблона создана формула (установите соответствие).<br>
                             <img src="img/t23-3.JPG" alt=""><br>
-                            <label for="">1<select id="t23-3-1">
-
-                                    <option value="1">А</option>
+                            <label>1<select id="t23-3-1">
                                     <option value="2">Б</option>
+                                    <option value="1">А</option>
+
                                     <option value="3">В</option>
                                     <option value="4">Г</option>
                                 </select></label>
 
-                            <label for="">2<select id="t23-3-2">
+                            <label>2<select id="t23-3-2">
                                     <option value="1">А</option>
+
+                                    <option value="4">Г</option>
                                     <option value="2">Б</option>
                                     <option value="3">В</option>
+                                </select></label>
+
+                            <label>3<select id="t23-3-3">
+                                    <option value="3">В</option>
+                                    <option value="1">А</option>
+                                    <option value="2">Б</option>
+
                                     <option value="4">Г</option>
                                 </select></label>
 
-                            <label for="">3<select id="t23-3-3">
-                                    <option value="1">А</option>
-                                    <option value="2">Б</option>
-                                    <option value="3">В</option>
-                                    <option value="4">Г</option>
-                                </select></label>
-
-                            <label for="">4<select id="t23-3-4">
+                            <label>4<select id="t23-3-4">
                                     <option value="1">А</option>
                                     <option value="2">Б</option>
                                     <option value="3">В</option>
@@ -169,7 +174,7 @@
             if (y2 == "2") {
                 myalert("Правильно!");
             } else {
-                myalert("Не правильно!");
+                myalert("Неправильно!");
             }
         });
     
@@ -181,7 +186,7 @@
             if (y2 == "1") {
                 myalert("Правильно!");
             } else {
-                myalert("Не правильно!");
+                myalert("Неправильно!");
             }
         });
 
@@ -223,7 +228,10 @@ myalert("Неправильно!");
         <p>На ўкладцы вылучаны тры групы:
             <b>Сервис</b>, <b>Символы</b> и <b>Структуры</b> (<a href="#pr23-6b">прыклад&#160;23.6</a>).</p>
         <p>Каманды групы <b>Сервис</b> дазваляюць вызначыць, як будзе выглядаць формула, або ўставіць гатовае ўраўненне з наяўных шаблонаў. Разгарнуўшы групу з дапамогай маленькай кнопкі са стрэлачкай у ніжнім правым вугле <img src="img/strelka.JPG" alt="">
-            , атрымаем доступ да агульных настроек параметраў ураўненняў. <img src="img/paramurav.JPG" alt=""></p>
+            , атрымаем доступ да агульных настроек параметраў ураўненняў. </p>
+        <center>
+            <div class="end"><img src="img/paramurav.JPG" alt=""></div>
+        </center>
         <p>Большасць сімвалаў, якія адсутнічаюць на клавіятуры, але выкарыстоўваюцца для ўводу формул, размяшчаюцца ў групе <b>Символы</b>. Сімвалы аб’яднаны па катэгорыях: асноўныя матэматычныя сімвалы, грэчаскія літары, стрэлкі і інш. (<a href="#pr23-7b">прыклад&#160;23.7</a>).</p>
         <p>У групе <b>Структуры</b> знаходзяцца шаблоны для ўводу дробаў, індэксаў (верхніх і ніжніх), каранёў, дужак і інш.</p>
         <p>У (<a href="#pr23-8b">прыкладзе 23.8</a>) паказана, як з дапамогай інструмента <b>Уравнение</b> запісаць сістэму лінейных няроўнасцей: <img src="img/nerav.JPG" alt=""></p>
@@ -248,10 +256,10 @@ myalert("Неправильно!");
                     <li>
                         <div class="flex-col">
                             Як уставіць у тэкст сімвал, які адсутнічае на клавіятуры? <br>
-                            <label for=""><input type="radio" value="1" name="t23-1b"><span>З дапамогай каманды <b>Уравнение</b> на ўкладцы <b>Вставка.</b></span> <br></label>
-                            <label for=""><input type="radio" value="2" name="t23-1b"><span>З дапамогай каманды <b>Символ</b> на ўкладцы <b>Вставка.</b> </span><br></label>
-                            <label for=""><input type="radio" value="3" name="t23-1b"><span>З дапамогай каманды <b>Эффекты</b> на ўкладцы <b>Дизайн.</b> </span><br></label>
-                            <label for=""><input type="radio" value="4" name="t23-1b"><span>З дапамогай каманды <b>Исправления</b> на ўкладцы <b>Рецензирование.</b></span> <br></label>
+                            <label for="" class="q23-1"><input type="radio" value="1" name="t23-1b"><span>З дапамогай каманды <b>Уравнение</b> на ўкладцы <b>Вставка.</b></span> <br></label>
+                            <label for="" class="q23-2"><input type="radio" value="2" name="t23-1b"><span>З дапамогай каманды <b>Символ</b> на ўкладцы <b>Вставка.</b> </span><br></label>
+                            <label for="" class="q23-3"><input type="radio" value="3" name="t23-1b"><span>З дапамогай каманды <b>Эффекты</b> на ўкладцы <b>Дизайн.</b> </span><br></label>
+                            <label for="" class="q23-4"><input type="radio" value="4" name="t23-1b"><span>З дапамогай каманды <b>Исправления</b> на ўкладцы <b>Рецензирование.</b></span> <br></label>
 
                         </div>
                         <button class="check" id="cht23-1b">Праверыць</button>
@@ -259,10 +267,10 @@ myalert("Неправильно!");
                     <li>
                         <div class="flex-col">
                             Як уставіць формулу ў тэкст дакумента?<br>
-                            <label for=""><input type="radio" value="1" name="t23-2b"><span>З дапамогай каманды <b>Уравнение</b> на ўкладцы <b>Вставка.</b></span><br></label>
-                            <label for=""><input type="radio" value="2" name="t23-2b"><span>З дапамогай каманды <b>Символ</b> на ўкладцы <b>Вставка.</b> </span><br></label>
-                            <label for=""><input type="radio" value="3" name="t23-2b"><span>З дапамогай каманды <b>Эффекты</b> на ўкладцы <b>Дизайн.</b> </span><br></label>
-                            <label for=""><input type="radio" value="4" name="t23-2b"><span>З дапамогай каманды <b>Исправления</b> на ўкладцы <b>Рецензирование.</b></span><br></label>
+                            <label for="" class="q23-5"><input type="radio" value="1" name="t23-2b"><span>З дапамогай каманды <b>Уравнение</b> на ўкладцы <b>Вставка.</b></span><br></label>
+                            <label for="" class="q23-6"><input type="radio" value="2" name="t23-2b"><span>З дапамогай каманды <b>Символ</b> на ўкладцы <b>Вставка.</b> </span><br></label>
+                            <label for="" class="q23-7"><input type="radio" value="3" name="t23-2b"><span>З дапамогай каманды <b>Эффекты</b> на ўкладцы <b>Дизайн.</b> </span><br></label>
+                            <label for="" class="q23-8"><input type="radio" value="4" name="t23-2b"><span>З дапамогай каманды <b>Исправления</b> на ўкладцы <b>Рецензирование.</b></span><br></label>
 
                         </div>
                         <button class="check" id="cht23-2b">Праверыць</button>
@@ -271,32 +279,35 @@ myalert("Неправильно!");
                         <div class="flex-col">
                             Вызначыце, з дапамогай якога шаблону створана формула (устанавіце адпаведнасць).<br>
                             <img src="img/t23-3.JPG" alt=""><br>
-                            <label for="">1<select id="t23-3-1b">
-
-                                    <option value="1">А</option>
-                                    <option value="2">Б</option>
+                            <label>1<select id="t23-3-1b">
                                     <option value="3">В</option>
                                     <option value="4">Г</option>
-                                </select></label>
-
-                            <label for="">2<select id="t23-3-2b">
                                     <option value="1">А</option>
                                     <option value="2">Б</option>
+
+                                </select></label>
+
+                            <label>2<select id="t23-3-2b">
+                                    <option value="1">А</option>
+
                                     <option value="3">В</option>
                                     <option value="4">Г</option>
+                                    <option value="2">Б</option>
                                 </select></label>
 
-                            <label for="">3<select id="t23-3-3b">
-                                    <option value="1">А</option>
-                                    <option value="2">Б</option>
+                            <label>3<select id="t23-3-3b">
                                     <option value="3">В</option>
+                                    <option value="2">Б</option>
+
                                     <option value="4">Г</option>
+                                    <option value="1">А</option>
                                 </select></label>
 
-                            <label for="">4<select id="t23-3-4b">
+                            <label>4<select id="t23-3-4b">
                                     <option value="1">А</option>
-                                    <option value="2">Б</option>
+
                                     <option value="3">В</option>
+                                    <option value="2">Б</option>
                                     <option value="4">Г</option>
                                 </select></label>
                         </div>
@@ -366,6 +377,49 @@ myalert("Неправильно!");
 
             });
         })(jQuery);
+
+
+
+        function changeOrder23() {
+            let arr1 = rand(4, 1, 4)
+            let arr2 = rand(4, 1, 4)
+
+
+
+
+            $('.q23-1').css({
+                'order': arr1[0]
+            })
+            $('.q23-2').css({
+                'order': arr1[1]
+            })
+            $('.q23-3').css({
+                'order': arr1[2]
+            })
+            $('.q23-4').css({
+                'order': arr1[3]
+            })
+
+            $('.q23-5').css({
+                'order': arr2[0]
+            })
+            $('.q23-6').css({
+                'order': arr2[1]
+            })
+            $('.q23-7').css({
+                'order': arr2[2]
+            })
+            $('.q23-8').css({
+                'order': arr2[3]
+            })
+
+
+
+
+
+
+
+        }
 
     </script>
 </body>

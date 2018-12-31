@@ -28,7 +28,9 @@
         <p>Значения
             <font>false</font> и
             <font>true</font> получаются в результате выполнения операций сравнения над числовыми данными. Для сравнения используют знаки, указанные в таблице.</p>
-        <img src="img/table14-1.JPG" alt=""><br>
+        <center>
+            <img src="img/table14-1.JPG" alt=""><br>
+        </center>
         <p> Сравнивать можно константы, переменные, арифметические и логические выражения.
         </p>
         <p><b>Логическое выражение</b>&#160;— выражение, принимающее одно из двух значений:
@@ -45,50 +47,54 @@
                 ИЛИ</b>). Для логических переменных также определены логические операции, соответствующие операциям над высказываниями: <b>not, and, or</b>.</p>
         <p class="bordered">Логические выражения, в которых наряду с простыми условиями (сравнениями) используются логические операции, называют <b>составными условиями</b>.</p>
         <p>Приведем таблицы истинности логических операций.</p>
-        <table>
-            <tr>
-                <th colspan="2">Логическая переменная</th>
-                <th colspan="3">Результат операции</th>
-            </tr>
-            <tr>
-                <td>A</td>
-                <td>B</td>
-                <td><b>not</b> A</td>
-                <td><b>not</b> B</td>
-                <td>A <b>or</b> B</td>
-            </tr>
-            <tr>
-                <td>true</td>
-                <td>true</td>
-                <td>false</td>
-                <td>true</td>
-                <td>true</td>
-            </tr>
-            <tr>
-                <td>false</td>
-                <td>true</td>
-                <td>true</td>
-                <td>false</td>
-                <td>true</td>
-            </tr>
-            <tr>
-                <td>true</td>
-                <td>false</td>
-                <td>false</td>
-                <td>false</td>
-                <td>true</td>
-            </tr>
-            <tr>
-                <td>false</td>
-                <td>false</td>
-                <td>true</td>
-                <td>false</td>
-                <td>false</td>
-            </tr>
-        </table>
-        <p>В логических выражениях могут встречаться как арифметические операции, так и логические. Порядок выполнения операций определяется их приоритетом:
-        </p>
-        <p><br>
+        <center>
+            <table class="tab1">
+
+                <thead>
+                    <tr>
+                        <td colspan="2">Логическая переменная</td>
+                        <td colspan="3">Результат операции</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td><b>not</b> A</td>
+                    <td><b>not</b> B</td>
+                    <td>A <b>or</b> B</td>
+                </tr>
+                <tr>
+                    <td>true</td>
+                    <td>true</td>
+                    <td>false</td>
+                    <td>true</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>false</td>
+                    <td>true</td>
+                    <td>true</td>
+                    <td>false</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>true</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>true</td>
+                    <td>false</td>
+                    <td>false</td>
+                </tr>
+            </table>
+        </center>
+        <p>В логических выражениях могут встречаться как арифметические операции, так и логические. Порядок выполнения операций определяется их приоритетом:<br>
+
             1) <b>
                 <font>not</font>
             </b>;<br>
@@ -105,23 +111,63 @@
         <p> Операции с одинаковым приоритетом выполняются по порядку, слева направо. Для изменения порядка выполнения операций применяют скобки (
             <a href="#pr15-4">пример&#160;15.4</a>).</p>
         <p>При составлении программ часто нужно строить отрицания сложным логическим выражениям. Для этого полезно использовать тождества, известные из алгебры логики (<a href="#pr15-5">пример&#160;15.5</a>), и следующую таблицу:</p>
+        <center>
+            <table class="tab1">
+                <col class="col1">
+                <col span="1" class="coln">
+                <thead>
+
+                    <tr>
+                        <td>Условие</td>
+                        <td>Противоположное условие (отрицание условия)
+                        </td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <font>a &lt; b </font>
+                    </td>
+                    <td>
+                        <font>a &gt;= b</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>a &gt; b</font>
+                    </td>
+                    <td>
+                        <font>a &lt;= b</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>
+                            <font>a = b</font>
+                        </font>
+                    </td>
+                    <td>
+                        <font>a &lt;&gt; b</font>
+                    </td>
+                </tr>
+
+            </table>
+        </center>
         <p><b><a href="#pr15-6">Пример&#160;15.6.</a></b> Написать программу, которая выдаст на экран значение
             <font>true</font>
             или
             <font>false</font> в зависимости от того, находится ли число B между числами A и C.</p>
-        <p>
+        <p class="arab">
             Этапы выполнения задания<br> I. Исходные данные: переменные А, B, C (вводимые числа).<br> II. Результат:
-            <font>rez</font> (True или False).<br> III. Алгоритм решения задачи.<br> 1. Ввод исходных данных.<br> 2. Вычисление значения логической переменной. Рассмотрим два случая.<br> Верно неравенство: А &lt; B &lt; C. Этому неравенству соответствует логическое выражение:
+            <font>rez</font> (True или False).<br> III. Алгоритм решения задачи.<br> &nbsp;1. Ввод исходных данных.<br> &nbsp;2. Вычисление значения логической переменной. Рассмотрим два случая.<br> Верно неравенство: А &lt; B &lt; C. Этому неравенству соответствует логическое выражение:
             <font>(А &lt; B)</font> <b>and</b>
             <font>(В &lt; С)</font>. Присвоим переменной
             <font>r1</font> значение этого выражения.
             <br> Верно неравенство: А &gt; B &gt; C. Этому неравенству соответствует логическое выражение:
-            <font>(А &gt; B)</font> <b>and</b>
-            <font>(В &gt; С)</font>. Присвоим переменной
+            <font>(А&#160;&gt;&#160;B)</font>&#160;<b>and</b>&#160;<font>(В&#160;&gt;&#160;С)</font>. Присвоим переменной
             <font>r2</font> значение этого выражения.
             <br> Ответом на задачу будет значение логического выражения
             <font>r1</font> <b>or</b>
-            <font>r2</font>.<br> 3. Вывод результата.<br> IV. Описание переменных: A, B, C&#160;— integer, r1, r2, rez&#160;— boolean.<br> Для работы с логическими величинами могут использоваться функции. Функция
+            <font>r2</font>.<br> &nbsp;3. Вывод результата.<br> IV. Описание переменных: A, B, C&#160;— integer, r1, r2, rez&#160;— boolean.<br> Для работы с логическими величинами могут использоваться функции. Функция
             <font>Ord</font> (порядковый номер значения) позволяет преобразовать логическое значение в числовое:
             <font>Ord(false)</font> = 0, а
             <font>Ord(true)</font> = 1. Функции Pred (предшествующее значение) и
@@ -138,10 +184,10 @@
                     <li>
                         <div class="flex-col">
                             Выберите верные утверждения.<br>
-                            <label for=""><input type="checkbox" id="t15-1-1">Логические выражения, в которых наряду с простыми условиями (сравнениями) используются логические операции, называют составными условиями. <br></label>
-                            <label for=""><input type="checkbox" id="t15-1-2"><span>Значения <font>false</font> и <font>true</font> получаются в результате выполнения арифметических операций над числовыми данными. </span><br></label>
-                            <label for=""><input type="checkbox" id="t15-1-3">При составлении программ нельзя построить отрицание составного логического выражения. <br></label>
-                            <label for=""><input type="checkbox" id="t15-1-4">Логические выражения можно присваивать переменным типа&#160;<font>boolean. </font><br></label>
+                            <label for="" class="q15-1"><input type="checkbox" id="t15-1-1">Логические выражения, в которых наряду с простыми условиями (сравнениями) используются логические операции, называют составными условиями. <br></label>
+                            <label for="" class="q15-2"><input type="checkbox" id="t15-1-2"><span>Значения <font>false</font> и <font>true</font> получаются в результате выполнения арифметических операций над числовыми данными. </span><br></label>
+                            <label for="" class="q15-3"><input type="checkbox" id="t15-1-3">При составлении программ нельзя построить отрицание составного логического выражения. <br></label>
+                            <label for="" class="q15-4"><input type="checkbox" id="t15-1-4">Логические выражения можно присваивать переменным типа&#160;<font>boolean. </font><br></label>
 
                         </div>
 
@@ -151,12 +197,12 @@
                     <li>
                         <div class="flex-col">
                             Назовите логические операции, используемые в PascalABC. <br>
-                            <label for=""><input type="checkbox" id="t15-2-1">not. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-2">in. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-3">and. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-4">or. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-5">for. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-6"><b>end.</b> <br></label>
+                            <label for="" class="q15-5"><input type="checkbox" id="t15-2-1">not. <br></label>
+                            <label for="" class="q15-6"><input type="checkbox" id="t15-2-2">in. <br></label>
+                            <label for="" class="q15-7"><input type="checkbox" id="t15-2-3">and. <br></label>
+                            <label for="" class="q15-8"><input type="checkbox" id="t15-2-4">or. <br></label>
+                            <label for="" class="q15-9"><input type="checkbox" id="t15-2-5">for. <br></label>
+                            <label for="" class="q15-10"><input type="checkbox" id="t15-2-6"><b>end.</b> <br></label>
 
                         </div>
                         <button class="check" id="cht15-2">Проверить</button>
@@ -164,7 +210,7 @@
                     <li>
                         <div class="flex-col">
                             Расставьте логические операции в порядке приоритета. <br>
-                            <label for=""><select id="t15-3-1">
+                            <label for="" class="q15-11">1.&#160;<select id="t15-3-1">
 
 
                                     <option value="2">and</option>
@@ -174,7 +220,7 @@
 
                                 </select></label>
 
-                            <label for=""><select id="t15-3-2">
+                            <label for="" class="q15-12">2.&#160;<select id="t15-3-2">
                                     <option value="3">or</option>
                                     <option value="1">not</option>
                                     <option value="2">and</option>
@@ -183,7 +229,7 @@
 
                                 </select></label>
 
-                            <label for=""><select id="t15-3-3">
+                            <label for="" class="q15-13">3.&#160;<select id="t15-3-3">
                                     <option value="1">not</option>
                                     <option value="2">and</option>
                                     <option value="3">or</option>
@@ -198,15 +244,15 @@
                     <li>
                         <div class="flex-col">
                             Выберите из списка истинные логические выражения.<br>
-                            <label for=""><input type="checkbox" id="t15-4-1">sin(0) > 1<br></label>
+                            <label for="" class="q15-14"><input type="checkbox" id="t15-4-1">sin(0) > 1<br></label>
 
-                            <label for=""><input type="checkbox" id="t15-4-2">11 > 38<br></label>
+                            <label for="" class="q15-15"><input type="checkbox" id="t15-4-2">11 > 38<br></label>
 
-                            <label for=""><input type="checkbox" id="t15-4-3">7 < 13<br></label>
+                            <label for="" class="q15-16"><input type="checkbox" id="t15-4-3">7 < 13<br></label>
 
-                            <label for=""><input type="checkbox" id="t15-4-4">sqr(3) = 9<br></label>
+                            <label for="" class="q15-17"><input type="checkbox" id="t15-4-4">sqr(3) = 9<br></label>
 
-                            <label for=""><input type="checkbox" id="t15-4-5">2 + 4 * 3 = 18<br></label>
+                            <label for="" class="q15-18"><input type="checkbox" id="t15-4-5">2 + 4 * 3 = 18<br></label>
 
                         </div>
                         <button class="check" id="cht15-4">Проверить</button>
@@ -214,11 +260,11 @@
                     <li>
                         <div class="flex-col">
                             Выберите из списка истинные составные логические выражения.<br>
-                            <label for=""><input type="checkbox" id="t15-5-1"> (7 &gt; 13) or (11 &lt; 15) <br></label>
-                            <label for=""><input type="checkbox" id="t15-5-2"> (sqr(4) = 16) and not(sqrt(5) = 25) <br></label>
-                            <label for=""><input type="checkbox" id="t15-5-3"> (cos(1000) &gt; 1) or(abs(3) = –3) <br></label>
-                            <label for=""><input type="checkbox" id="t15-5-4"> (17 &gt; 8) and (13 &lt; 8) <br></label>
-                            <label for=""><input type="checkbox" id="t15-5-5"> not(2 + 4 * 3 = 14) <br></label>
+                            <label for="" class="q15-19"><input type="checkbox" id="t15-5-1"> (7 &gt; 13) or (11 &lt; 15) <br></label>
+                            <label for="" class="q15-20"><input type="checkbox" id="t15-5-2"> (sqr(4) = 16) and not(sqrt(5) = 25) <br></label>
+                            <label for="" class="q15-21"><input type="checkbox" id="t15-5-3"> (cos(1000) &gt; 1) or(abs(3) = –3) <br></label>
+                            <label for="" class="q15-22"><input type="checkbox" id="t15-5-4"> (17 &gt; 8) and (13 &lt; 8) <br></label>
+                            <label for="" class="q15-23"><input type="checkbox" id="t15-5-5"> not(2 + 4 * 3 = 14) <br></label>
 
                         </div>
                         <button class="check" id="cht15-5">Проверить</button>
@@ -229,10 +275,10 @@
                             A:=3; <br>
                             B:=4; <br>
                             С:=2. <br>
-                            Определите значение логического выражения (A &lt; B) and (A &lt; C). В качестве ответа выберите <font> true</font> или <font>false</font>
+                            <span> Определите значение логического выражения (A &lt; B) and (A &lt; C). В качестве ответа выберите <font> true</font> или <font>false</font></span>
                             <br>
-                            <label for=""><input type="radio" value="1" name="t15-6"> true. <br></label>
-                            <label for=""><input type="radio" value="2" name="t15-6"> false.<br></label>
+                            <label for="" class="q15-24"><input type="radio" value="1" name="t15-6"> true. <br></label>
+                            <label for="" class="q15-25"><input type="radio" value="2" name="t15-6"> false.<br></label>
 
                         </div>
 
@@ -245,9 +291,9 @@
                             A:= 3; <br>
                             B:= 4; <br>
                             С:= 2.<br>
-                            Определите значение логического выражения (С = A + B) or (A = sqr(С)). В качестве ответа выберите <font> true</font> или <font>false</font>
-                            <label for=""><input type="radio" value="1" name="t15-7"> true. <br></label>
-                            <label for=""><input type="radio" value="2" name="t15-7"> false. <br></label>
+                            <span> Определите значение логического выражения (С = A + B) or (A = sqr(С)). В качестве ответа выберите <font> true</font> или <font>false</font></span>
+                            <label for="" class="q15-26"><input type="radio" value="1" name="t15-7"> true. <br></label>
+                            <label for="" class="q15-27"><input type="radio" value="2" name="t15-7"> false. <br></label>
 
 
                         </div>
@@ -475,51 +521,55 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
         <p>З выказваннямі можна выконваць лагічныя аперацыі (<b>НЕ, І, АБО</b>). Для лагічных пераменных таксама вызначаны лагічныя аперацыі, якія адпавядаюць аперацыям над выказваннямі: <b>not, and, or</b>.</p>
         <p class="bordered">Лагічныя выразы, у якіх поруч з простымі ўмовамі (параўнаннямі) выкарыстоўваюцца лагічныя аперацыі, называюць <b>састаўнымі ўмовамі</b>.</p>
         <p>Прывядзём табліцы праўдзівасці лагічных аперацый.</p>
-        <table>
-            <tr>
-                <th colspan="2">Лагічная пераменная</th>
-                <th colspan="3">Вынік аперацыі</th>
-            </tr>
-            <tr>
-                <td>A</td>
-                <td>B</td>
-                <td><b>not</b> A</td>
-                <td><b>not</b> B</td>
-                <td>A <b>or</b> B</td>
-            </tr>
-            <tr>
-                <td>true</td>
-                <td>true</td>
-                <td>false</td>
-                <td>true</td>
-                <td>true</td>
-            </tr>
-            <tr>
-                <td>false</td>
-                <td>true</td>
-                <td>true</td>
-                <td>false</td>
-                <td>true</td>
-            </tr>
-            <tr>
-                <td>true</td>
-                <td>false</td>
-                <td>false</td>
-                <td>false</td>
-                <td>true</td>
-            </tr>
-            <tr>
-                <td>false</td>
-                <td>false</td>
-                <td>true</td>
-                <td>false</td>
-                <td>false</td>
-            </tr>
-        </table>
+        <center>
+            <table class="tab1">
 
-        <p>У лагічных выразах могуць сустракацца як арыфметычныя аперацыі, так і лагічныя. Парадак выканання аперацый вызначаецца іх прыярытэтам:
-        </p>
-        <p><br>
+                <thead>
+                    <tr>
+                        <td colspan="2">Лагічная пераменная</td>
+                        <td colspan="3">Вынік аперацыі</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td><b>not</b> A</td>
+                    <td><b>not</b> B</td>
+                    <td>A <b>or</b> B</td>
+                </tr>
+                <tr>
+                    <td>true</td>
+                    <td>true</td>
+                    <td>false</td>
+                    <td>true</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>false</td>
+                    <td>true</td>
+                    <td>true</td>
+                    <td>false</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>true</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>true</td>
+                    <td>false</td>
+                    <td>false</td>
+                </tr>
+            </table>
+        </center>
+
+        <p>У лагічных выразах могуць сустракацца як арыфметычныя аперацыі, так і лагічныя. Парадак выканання аперацый вызначаецца іх прыярытэтам:<br>
+
             1) <b>
                 <font>not</font>
             </b>;<br>
@@ -536,62 +586,66 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
         <p> Аперацыі з аднолькавым прыярытэтам выконваюцца па парадку, злева направа. Для змянення парадку выканання аперацый ужываюць дужкі (
             <a href="#pr15-4b">прыклад&#160;15.4</a>).</p>
         <p>Пры складанні праграм часта трэба будаваць адмаўленні складаным лагічным выразам. Для гэтага карысна выкарыстоўваць тоеснасці, вядомыя з алгебры логікі (<a href="#pr15-5b">прыклад&#160;15.5</a>), і наступную табліцу:</p>
-        <table>
-            <tr>
-                <th>Умова</th>
-                <th>Супрацьлеглая ўмова (адмаўленне ўмовы)
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <font>a &lt; b </font>
-                </td>
-                <td>
-                    <font>a &gt;= b</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>a &gt; b</font>
-                </td>
-                <td>
-                    <font>a &lt;= b</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>
-                        <font>a = b</font>
-                    </font>
-                </td>
-                <td>
-                    <font>a &lt;&gt; b</font>
-                </td>
-            </tr>
+        <center>
+            <table class="tab1">
+                <col class="col1">
+                <col span="1" class="coln">
+                <thead>
+                    <tr>
+                        <td>Умова</td>
+                        <td>Супрацьлеглая ўмова (адмаўленне ўмовы)
+                        </td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <font>a &lt; b </font>
+                    </td>
+                    <td>
+                        <font>a &gt;= b</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>a &gt; b</font>
+                    </td>
+                    <td>
+                        <font>a &lt;= b</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>
+                            <font>a = b</font>
+                        </font>
+                    </td>
+                    <td>
+                        <font>a &lt;&gt; b</font>
+                    </td>
+                </tr>
 
-        </table>
+            </table>
+        </center>
         <p><b><a href="#pr15-6b">Прыклад&#160;15.6.</a></b> Напісаць праграму, якая выдасць на экран значэнне
             <font>true</font>
             або
             <font>false</font> ў залежнасці ад таго, ці знаходзіцца лік <i>B</i> паміж лікамі A і C.</p>
-        <p>
+        <p class="arab">
             Этапы выканання задання
             <br> I. Зыходныя даныя: пераменныя <i>А, B, C (лікі, якія ўводзяцца)</i>.
             <br> II. II. Вынік: <font>rez</font> (True або False).
             <br> III. III. Алгарытм рашэння задачы
-            <br> 1. Увод зыходных даных.
-            <br> 2. Вылічэнне значэння лагічнай пераменнай. Разгледзім два выпадкі.
+            <br> &nbsp;1. Увод зыходных даных.
+            <br> &nbsp;2. Вылічэнне значэння лагічнай пераменнай. Разгледзім два выпадкі.
             <br> Правільная няроўнасць: <i>А &lt; B &lt; C</i>. Гэтай няроўнасці адпавядае лагічны выраз:
-            <font>(А &lt; B)</font> <b>and</b>
-            <font>(В &lt; С)</font>. Нададзім пераменнай
+            <font>(А&#160;&lt;&#160;B)</font>&#160;<b>and</b>&#160;<font>(В&#160;&lt;&#160;С)</font>. Нададзім пераменнай
             <font>r1</font> значэнне гэтага выразу.
             <br> Правільная няроўнасць: <i>А &gt; B &gt; C</i>. Гэтай няроўнасці адпавядае лагічны выраз:
-            <font>(А &gt; B)</font> <b>and</b>
-            <font>(В &gt; С)</font>. Нададзім пераменнай
+            <font>(А&#160;&gt;&#160;B)</font>&#160;<b>and</b>&#160;<font>(В&#160;&gt;&#160;С)</font>. Нададзім пераменнай
             <font>r2</font> значэнне гэтага выразу.
             <br> Адказам на задачу будзе значэнне лагічнага выразу
             <font>r1</font> <b>or</b>
-            <font>r2</font>.<br> 3. Вывад выніку.<br> IV. Апісанне пераменных: <i>A, B, C</i>&#160;— <font>integer, r1, r2, rez&#160;— boolean</font>.<br> Для работы з лагічнымі велічынямі могуць выкарыстоўвацца функцыі. Функцыя <font>Ord</font> (парадкавы нумар значэння) дазваляе пераўтвараць лагічнае значэнне ў лікавае:
+            <font>r2</font>.<br> &nbsp;3. Вывад выніку.<br> IV. Апісанне пераменных: <i>A, B, C</i>&#160;— <font>integer, r1, r2, rez&#160;— boolean</font>.<br> Для работы з лагічнымі велічынямі могуць выкарыстоўвацца функцыі. Функцыя <font>Ord</font> (парадкавы нумар значэння) дазваляе пераўтвараць лагічнае значэнне ў лікавае:
             <font>Ord(false)</font> = 0, а
             <font>Ord(true)</font> = 1. Функцыі Pred (папярэдняе значэнне) и
             <font>Succ</font> (наступнае значэнне) дазваляюць пераўтвараць лагічныя значэнні:<br>
@@ -607,10 +661,10 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
                     <li>
                         <div class="flex-col">
                             Выберыце правільныя сцверджанні.<br>
-                            <label for=""><input type="checkbox" id="t15-1-1b">Лагічныя выразы, у якіх поруч з простымі ўмовамі (параўнаннямі) выкарыстоўваюцца лагічныя аперацыі, называюць састаўнымі ўмовамі. <br></label>
-                            <label for=""><input type="checkbox" id="t15-1-2b">Значэнні false і true атрымліваюцца ў выніку выканання арыфметычных аперацый над лікавымі данымі. <br></label>
-                            <label for=""><input type="checkbox" id="t15-1-3b">Пры складанні праграм нельга пабудаваць адмаўленне састаўнога лагічнага выразу. <br></label>
-                            <label for=""><input type="checkbox" id="t15-1-4b">Лагічныя выразы можна прысвойваць пераменным тыпу&nbsp;<font>boolean. </font><br></label>
+                            <label for="" class="q15-1"><input type="checkbox" id="t15-1-1b">Лагічныя выразы, у якіх поруч з простымі ўмовамі (параўнаннямі) выкарыстоўваюцца лагічныя аперацыі, называюць састаўнымі ўмовамі. <br></label>
+                            <label for="" class="q15-2"><input type="checkbox" id="t15-1-2b">Значэнні false і true атрымліваюцца ў выніку выканання арыфметычных аперацый над лікавымі данымі. <br></label>
+                            <label for="" class="q15-3"><input type="checkbox" id="t15-1-3b">Пры складанні праграм нельга пабудаваць адмаўленне састаўнога лагічнага выразу. <br></label>
+                            <label for="" class="q15-4"><input type="checkbox" id="t15-1-4b">Лагічныя выразы можна прысвойваць пераменным тыпу&nbsp;<font>boolean. </font><br></label>
 
                         </div>
 
@@ -620,12 +674,12 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
                     <li>
                         <div class="flex-col">
                             Назавіце лагічныя аперацыі, якія выкарыстоўваюцца ў PascalABC. <br>
-                            <label for=""><input type="checkbox" id="t15-2-1b">not. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-2b">in. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-3b">and. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-4b">or. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-5b">for. <br></label>
-                            <label for=""><input type="checkbox" id="t15-2-6b"><b>end.</b> <br></label>
+                            <label for="" class="q15-5"><input type="checkbox" id="t15-2-1b">not. <br></label>
+                            <label for="" class="q15-6"><input type="checkbox" id="t15-2-2b">in. <br></label>
+                            <label for="" class="q15-7"><input type="checkbox" id="t15-2-3b">and. <br></label>
+                            <label for="" class="q15-8"><input type="checkbox" id="t15-2-4b">or. <br></label>
+                            <label for="" class="q15-9"><input type="checkbox" id="t15-2-5b">for. <br></label>
+                            <label for="" class="q15-10"><input type="checkbox" id="t15-2-6b"><b>end.</b> <br></label>
 
                         </div>
                         <button class="check" id="cht15-2b">Праверыць</button>
@@ -633,7 +687,7 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
                     <li>
                         <div class="flex-col">
                             Расстаўце лагічныя аперацыі згодна з прыярытэтам. <br>
-                            <label for=""><select id="t15-3-1b">
+                            <label for="" class="q15-11">1.&#160; <select id="t15-3-1b">
 
 
                                     <option value="2">and</option>
@@ -643,7 +697,7 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
 
                                 </select></label>
 
-                            <label for=""><select id="t15-3-2b">
+                            <label for="" class="q15-12">2.&#160;<select id="t15-3-2b">
                                     <option value="3">or</option>
                                     <option value="1">not</option>
                                     <option value="2">and</option>
@@ -652,7 +706,7 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
 
                                 </select></label>
 
-                            <label for=""><select id="t15-3-3b">
+                            <label for="" class="q15-13">3.&#160;<select id="t15-3-3b">
                                     <option value="1">not</option>
                                     <option value="2">and</option>
                                     <option value="3">or</option>
@@ -667,15 +721,15 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
                     <li>
                         <div class="flex-col">
                             Выберыце са спіса праўдзівыя лагічныя выразы.<br>
-                            <label for=""><input type="checkbox" id="t15-4-1b">sin(0) > 1<br></label>
+                            <label for="" class="q15-14"><input type="checkbox" id="t15-4-1b">sin(0) > 1<br></label>
 
-                            <label for=""><input type="checkbox" id="t15-4-2b">11 > 38<br></label>
+                            <label for="" class="q15-15"><input type="checkbox" id="t15-4-2b">11 > 38<br></label>
 
-                            <label for=""><input type="checkbox" id="t15-4-3b">7 < 13<br></label>
+                            <label for="" class="q15-16"><input type="checkbox" id="t15-4-3b">7 < 13<br></label>
 
-                            <label for=""><input type="checkbox" id="t15-4-4b">sqr(3) = 9<br></label>
+                            <label for="" class="q15-17"><input type="checkbox" id="t15-4-4b">sqr(3) = 9<br></label>
 
-                            <label for=""><input type="checkbox" id="t15-4-5b">2 + 4 * 3 = 18<br></label>
+                            <label for="" class="q15-18"><input type="checkbox" id="t15-4-5b">2 + 4 * 3 = 18<br></label>
 
                         </div>
                         <button class="check" id="cht15-4b">Праверыць</button>
@@ -683,11 +737,11 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
                     <li>
                         <div class="flex-col">
                             Выберыце са спіса праўдзівыя састаўныя лагічныя выразы.<br>
-                            <label for=""><input type="checkbox" id="t15-5-1b"> (7 &gt; 13) or (11 &lt; 15) <br></label>
-                            <label for=""><input type="checkbox" id="t15-5-2b"> (sqr(4) = 16) and not(sqrt(5) = 25) <br></label>
-                            <label for=""><input type="checkbox" id="t15-5-3b"> (cos(1000) &gt; 1) or(abs(3) = –3) <br></label>
-                            <label for=""><input type="checkbox" id="t15-5-4b"> (17 &gt; 8) and (13 &lt; 8) <br></label>
-                            <label for=""><input type="checkbox" id="t15-5-5b"> not(2 + 4 * 3 = 14) <br></label>
+                            <label for="" class="q15-19"><input type="checkbox" id="t15-5-1b"> (7 &gt; 13) or (11 &lt; 15) <br></label>
+                            <label for="" class="q15-20"><input type="checkbox" id="t15-5-2b"> (sqr(4) = 16) and not(sqrt(5) = 25) <br></label>
+                            <label for="" class="q15-21"><input type="checkbox" id="t15-5-3b"> (cos(1000) &gt; 1) or(abs(3) = –3) <br></label>
+                            <label for="" class="q15-22"><input type="checkbox" id="t15-5-4b"> (17 &gt; 8) and (13 &lt; 8) <br></label>
+                            <label for="" class="q15-23"><input type="checkbox" id="t15-5-5b"> not(2 + 4 * 3 = 14) <br></label>
 
                         </div>
                         <button class="check" id="cht15-5b">Праверыць</button>
@@ -698,10 +752,10 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
                             A:=3; <br>
                             B:=4; <br>
                             С:=2. <br>
-                            Вызначыце значэнне лагічнага выразу (A &lt; B) <b>and</b> (A &lt; C). У якасці адказу ўвядзіце <font> true</font> або <font>false</font>
+                            <span> Вызначыце значэнне лагічнага выразу (A &lt; B) <b>and</b> (A &lt; C). У якасці адказу ўвядзіце <font> true</font> або <font>false</font></span>
                             <br>
-                            <label for=""><input type="radio" value="1" name="t15-6b"> true. <br></label>
-                            <label for=""><input type="radio" value="2" name="t15-6b"> false.<br></label>
+                            <label for="" class="q15-24"><input type="radio" value="1" name="t15-6b"> true. <br></label>
+                            <label for="" class="q15-25"><input type="radio" value="2" name="t15-6b"> false.<br></label>
 
                         </div>
 
@@ -714,9 +768,9 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
                             A:= 3; <br>
                             B:= 4; <br>
                             С:= 2.<br>
-                            Вызначыце значэнне лагічнага выразу (С = A + B) <b>or</b> (A = sqr(С)). У якасці адказу ўвядзіце <font> true</font> або <font>false</font>
-                            <label for=""><input type="radio" value="1" name="t15-7b"> true. <br></label>
-                            <label for=""><input type="radio" value="2" name="t15-7b"> false. <br></label>
+                            <span> Вызначыце значэнне лагічнага выразу (С = A + B) <b>or</b> (A = sqr(С)). У якасці адказу ўвядзіце <font> true</font> або <font>false</font></span>
+                            <label for="" class="q15-26"><input type="radio" value="1" name="t15-7b"> true. <br></label>
+                            <label for="" class="q15-27"><input type="radio" value="2" name="t15-7b"> false. <br></label>
 
 
                         </div>
@@ -895,6 +949,149 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
 
             });
         })(jQuery);
+
+
+        function changeOrder15() {
+            let arr1 = rand(4, 1, 4)
+            let arr2 = rand(6, 1, 6)
+            let arr3 = rand(3, 1, 3)
+            let arr4 = rand(5, 1, 5)
+            let arr5 = rand(5, 1, 5)
+            let arr6 = rand(2, 1, 2)
+            let arr7 = rand(2, 1, 2)
+
+            $('.q15-1').css({
+                'order': arr1[0]
+            })
+            $('.q15-2').css({
+                'order': arr1[1]
+            })
+            $('.q15-3').css({
+                'order': arr1[2]
+            })
+            $('.q15-4').css({
+                'order': arr1[3]
+            })
+
+
+
+
+
+
+
+            $('.q15-5').css({
+                'order': arr2[0]
+            })
+
+            $('.q15-6').css({
+                'order': arr2[1]
+            })
+
+            $('.q15-7').css({
+                'order': arr2[2]
+            })
+            $('.q15-8').css({
+                'order': arr2[3]
+            })
+
+            $('.q15-9').css({
+                'order': arr2[4]
+            })
+            $('.q15-10').css({
+                'order': arr2[5]
+            })
+
+
+
+
+
+
+            $('.q15-11').css({
+                'order': arr3[0]
+            })
+            $('.q15-12').css({
+                'order': arr3[1]
+            })
+
+            $('.q15-13').css({
+                'order': arr3[2]
+            })
+
+
+
+
+
+
+            $('.q15-14').css({
+                'order': arr4[0]
+            })
+            $('.q15-15').css({
+                'order': arr4[1]
+            })
+
+
+            $('.q15-16').css({
+                'order': arr4[2]
+            })
+            $('.q15-17').css({
+                'order': arr4[3]
+            })
+
+            $('.q15-18').css({
+                'order': arr4[4]
+            })
+
+
+
+
+            $('.q15-19').css({
+                'order': arr5[0]
+            })
+            $('.q15-20').css({
+                'order': arr5[1]
+            })
+
+            $('.q15-21').css({
+                'order': arr5[2]
+            })
+            $('.q15-22').css({
+                'order': arr5[3]
+            })
+
+            $('.q15-23').css({
+                'order': arr5[4]
+            })
+
+
+
+
+
+
+            $('.q15-24').css({
+                'order': arr6[0]
+            })
+
+            $('.q15-25').css({
+                'order': arr6[1]
+            })
+
+
+
+
+
+            $('.q15-26').css({
+                'order': arr7[0]
+            })
+
+            $('.q15-27').css({
+                'order': arr7[1]
+            })
+
+
+
+
+
+        }
 
     </script>
 </body>

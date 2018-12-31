@@ -71,77 +71,83 @@
             <font>read</font> и
             <font>write</font> тоже реализованы как вспомогательные алгоритмы.</p>
         <p>При вычислениях часто используются различные математические функции <a href="#pr13-5">(пример&#160;13.5)</a>. Эти функции реализованы как встроенные вспомогательные алгоритмы и могут применяться при записи арифметических выражений. Аргументы функций всегда записываются в скобках. Некоторые из функций приведены в таблице (другие можно посмотреть в <i>Приложении</i>).</p>
-        <table>
-            <tr>
-                <th>Запись на языке Pascal</th>
-                <th>Описание</th>
-            </tr>
-            <tr>
-                <td>
-                    <font></font>abs(x)
-                </td>
-                <td>Находит модуль числа x</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>sqr(x)</font>
-                </td>
-                <td>Возводит число x в квадрат</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>sqrt(x)</font>
-                </td>
-                <td>Находит корень квадратный из числа x. Результат&#160;— всегда число типа
-                    <font>real</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>trunc(x)</font>
-                </td>
-                <td>Находит целую часть действительного числа x (
-                    <font>real</font>). Результат&#160;— число типа
-                    <font>integer</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>frac(x)</font>
-                </td>
-                <td>Находит дробную часть действительного числа x (
-                    <font>real</font>). Результат&#160;— число типа
-                    <font>real</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>sin(x)</font>
-                </td>
-                <td>Вычисляет синус числа x. Число x задается в радианах</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>cos(x)</font>
-                </td>
-                <td>Вычисляет косинус числа x. Число x задается в радианах</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>RadToDeg(x)</font>
-                </td>
-                <td>Переводит радианы в градусы</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>DegToRad(x)</font>
-                </td>
-                <td>Переводит градусы в радианы</td>
-            </tr>
+        <center>
+
+            <table class="tab1">
+                <col class="col1">
+                <col span="1" class="coln">
+                <thead>
+                    <tr>
+                        <td>Запись на языке Pascal</td>
+                        <td>Описание</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <font>abs(x)</font>
+                    </td>
+                    <td>Находит модуль числа x</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>sqr(x)</font>
+                    </td>
+                    <td>Возводит число x в квадрат</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>sqrt(x)</font>
+                    </td>
+                    <td>Находит корень квадратный из числа x. Результат&#160;— всегда число типа
+                        <font>real</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>trunc(x)</font>
+                    </td>
+                    <td>Находит целую часть действительного числа x (<font>real</font>). Результат&#160;— число типа
+                        <font>integer</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>frac(x)</font>
+                    </td>
+                    <td>Находит дробную часть действительного числа x (<font>real</font>). Результат&#160;— число типа
+                        <font>real</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>sin(x)</font>
+                    </td>
+                    <td>Вычисляет синус числа x. Число x задается в радианах</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>cos(x)</font>
+                    </td>
+                    <td>Вычисляет косинус числа x. Число x задается в радианах</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>RadToDeg(x)</font>
+                    </td>
+                    <td>Переводит радианы в градусы</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>DegToRad(x)</font>
+                    </td>
+                    <td>Переводит градусы в радианы</td>
+                </tr>
 
 
 
-        </table>
+            </table>
+
+        </center>
         <p> Аргументом функции может быть число, переменная, выражение или другая функция:
             <font>sin(DegToRad(45)), sqrt(abs(-16))
             </font>.</p>
@@ -155,10 +161,10 @@
                     <li>
                         <div class="flex-col">
                             Выберите определение алгоритма<br>
-                            <label for=""><input type="radio" value="1" name="t13-1"> Конечная последовательность точных действий, формальное выполнение которых позволяет получить решение задачи для любого допустимого набора исходных данных. <br></label>
-                            <label for=""><input type="radio" value="2" name="t13-1"> Человек, группа людей или техническое устройство, которые способны правильно выполнять команды. <br></label>
-                            <label for=""><input type="radio" value="3" name="t13-1"> Способ решения задачи с помощью компьютера. <br></label>
-                            <label for=""><input type="radio" value="4" name="t13-1"> Команды компьютерного исполнителя, которые могут быть реализованы виде процедур и функций. <br></label>
+                            <label for="" class="q13-1"><input type="radio" value="1" name="t13-1"> Конечная последовательность точных действий, формальное выполнение которых позволяет получить решение задачи для любого допустимого набора исходных данных. <br></label>
+                            <label for="" class="q13-2"><input type="radio" value="2" name="t13-1"> Человек, группа людей или техническое устройство, которые способны правильно выполнять команды. <br></label>
+                            <label for="" class="q13-3"><input type="radio" value="3" name="t13-1"> Способ решения задачи с помощью компьютера. <br></label>
+                            <label for="" class="q13-4"><input type="radio" value="4" name="t13-1"> Команды компьютерного исполнителя, которые могут быть реализованы виде процедур и функций. <br></label>
 
                         </div>
 
@@ -167,15 +173,15 @@
                     <li>
                         <div class="flex-col">
                             Выберите из списка основные алгоритмические конструкции.<br>
-                            <label for=""><input type="checkbox" id="t13-2-1">Следование. <br></label>
+                            <label for="" class="q13-5"><input type="checkbox" id="t13-2-1">Следование. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-2-2">Ветвление. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-3">Цикл. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-4">Ввод. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-5">Вывод. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-6">Присваивание. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-7">Описание. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-8">Процедура. <br></label>
+                            <label for="" class="q13-6"><input type="checkbox" id="t13-2-2">Ветвление. <br></label>
+                            <label for="" class="q13-7"><input type="checkbox" id="t13-2-3">Цикл. <br></label>
+                            <label for="" class="q13-8"><input type="checkbox" id="t13-2-4">Ввод. <br></label>
+                            <label for="" class="q13-9"><input type="checkbox" id="t13-2-5">Вывод. <br></label>
+                            <label for="" class="q13-10"><input type="checkbox" id="t13-2-6">Присваивание. <br></label>
+                            <label for="" class="q13-11"><input type="checkbox" id="t13-2-7">Описание. <br></label>
+                            <label for="" class="q13-12"><input type="checkbox" id="t13-2-8">Процедура. <br></label>
 
                         </div>
                         <button class="check" id="cht13-2">Проверить</button>
@@ -183,11 +189,11 @@
                     <li>
                         <div class="flex-col">
                             Какая команда используется в языке Pascal для ввода данных?<br>
-                            <label for=""><input type="radio" value="1" name="t13-3">read. <br></label>
-                            <label for=""><input type="radio" value="2" name="t13-3">write. <br></label>
-                            <label for=""><input type="radio" value="3" name="t13-3">writeln. <br></label>
-                            <label for=""><input type="radio" value="4" name="t13-3">round. <br></label>
-                            <label for=""><input type="radio" value="5" name="t13-3">sqrt. <br></label>
+                            <label for="" class="q13-13"><input type="radio" value="1" name="t13-3">read. <br></label>
+                            <label for="" class="q13-14"><input type="radio" value="2" name="t13-3">write. <br></label>
+                            <label for="" class="q13-18"><input type="radio" value="3" name="t13-3">writeln. <br></label>
+                            <label for="" class="q13-16"><input type="radio" value="4" name="t13-3">round. <br></label>
+                            <label for="" class="q13-17"><input type="radio" value="5" name="t13-3">sqrt. <br></label>
 
                         </div>
                         <button class="check" id="cht13-3">Проверить</button>
@@ -195,15 +201,15 @@
                     <li>
                         <div class="flex-col">
                             Какие команды используются в языке Pascal для вывода данных?<br>
-                            <label for=""><input type="checkbox" id="t13-4-1">read. <br></label>
+                            <label for="" class="q13-18"><input type="checkbox" id="t13-4-1">read. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-4-2">write. <br></label>
+                            <label for="" class="q13-19"><input type="checkbox" id="t13-4-2">write. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-4-3">writeln. <br></label>
+                            <label for="" class="q13-20"><input type="checkbox" id="t13-4-3">writeln. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-4-4">round. <br></label>
+                            <label for="" class="q13-21"><input type="checkbox" id="t13-4-4">round. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-4-5">sqrt. <br></label>
+                            <label for="" class="q13-22"><input type="checkbox" id="t13-4-5">sqrt. <br></label>
 
                         </div>
                         <button class="check" id="cht13-4">Проверить</button>
@@ -211,13 +217,13 @@
                     <li>
                         <div class="flex-col">
                             Для чего нужна команда присваивания? <br>
-                            <label for=""><input type="checkbox" id="t13-5-1">Задавать значения переменным. <br></label>
+                            <label for="" class="q13-23"><input type="checkbox" id="t13-5-1">Задавать значения переменным. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-5-2">Вычислять значение выражения. <br></label>
+                            <label for="" class="q13-24"><input type="checkbox" id="t13-5-2">Вычислять значение выражения. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-5-3">Вводить значения переменных. <br></label>
+                            <label for="" class="q13-25"><input type="checkbox" id="t13-5-3">Вводить значения переменных. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-5-4">Выполнять вспомогательные алгоритмы. <br></label>
+                            <label for="" class="q13-26"><input type="checkbox" id="t13-5-4">Выполнять вспомогательные алгоритмы. <br></label>
 
                         </div>
                         <button class="check" id="cht13-5">Проверить</button>
@@ -225,15 +231,15 @@
                     <li>
                         <div class="flex-col">
                             В каких случаях удобно использовать вспомогательный алгоритм?<br>
-                            <label for=""><input type="checkbox" id="t13-6-1">Когда нужно решить некоторую часть основной задачи. <br></label>
+                            <label for="" class="q13-27"><input type="checkbox" id="t13-6-1">Когда нужно решить некоторую часть основной задачи. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-6-2">Когда введены данные, не соответствующие условию задачи. <br></label>
+                            <label for="" class="q13-28"><input type="checkbox" id="t13-6-2">Когда введены данные, не соответствующие условию задачи. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-6-3">Когда в программе приходится выполнять одну и ту же последовательность команд несколько раз. <br></label>
+                            <label for="" class="q13-29"><input type="checkbox" id="t13-6-3">Когда в программе приходится выполнять одну и ту же последовательность команд несколько раз. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-6-4">Когда в программе есть ошибки. <br></label>
+                            <label for="" class="q13-30"><input type="checkbox" id="t13-6-4">Когда в программе есть ошибки. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-6-5">В любой программе для компьютерного исполнителя Робот. <br></label>
+                            <label for="" class="q13-31"><input type="checkbox" id="t13-6-5">В любой программе для компьютерного исполнителя Робот. <br></label>
 
                         </div>
                         <button class="check" id="cht13-6">Проверить</button>
@@ -245,7 +251,7 @@
                         <div class="flex-col">
                             Установите соответствие между действиями и математическими функциями, предназначенными для их выполнения.<br>
 
-                            <label for="">Находит модуль числа x &nbsp;<select id="t13-7-1">
+                            <label for="" class="q13-32">Находит модуль числа x &nbsp;<select id="t13-7-1">
                                     <option value="7">cos(x)</option>
                                     <option value="8">RadToDeg(x)</option>
                                     <option value="3">sqrt(x)</option>
@@ -258,7 +264,7 @@
                                     <option value="9">DegToRad(x)</option>
                                 </select></label>
 
-                            <label for="">Возводит число x в квадрат&nbsp;<select id="t13-7-2">
+                            <label for="" class="q13-33">Возводит число x в квадрат&nbsp;<select id="t13-7-2">
                                     <option value="1">abs(x)</option>
 
                                     <option value="3">sqrt(x)</option>
@@ -273,7 +279,7 @@
                                     <option value="6">sin(x)</option>
                                 </select></label>
 
-                            <label for="">Находит корень квадратный из числа x &nbsp;<select id="t13-7-3">
+                            <label for="" class="q13-34">Находит корень квадратный из числа x &nbsp;<select id="t13-7-3">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="3">sqrt(x)</option>
@@ -285,7 +291,7 @@
                                     <option value="9">DegToRad(x)</option>
                                 </select></label>
 
-                            <label for="">Находит целую часть действительного числа x &nbsp;<select id="t13-7-4">
+                            <label for="" class="q13-35">Находит целую часть действительного числа x &nbsp;<select id="t13-7-4">
                                     <option value="3">sqrt(x)</option>
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
@@ -299,7 +305,7 @@
                                     <option value="9">DegToRad(x)</option>
                                 </select></label>
 
-                            <label for="">Находит дробную часть действительного числа x &nbsp;<select id="t13-7-5">
+                            <label for="" class="q13-36">Находит дробную часть действительного числа x &nbsp;<select id="t13-7-5">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="3">sqrt(x)</option>
@@ -312,7 +318,7 @@
                                     <option value="5">frac(x)</option>
                                 </select></label>
 
-                            <label for="">Вычисляет синус числа x&nbsp;<select id="t13-7-6">
+                            <label for="" class="q13-37">Вычисляет синус числа x&nbsp;<select id="t13-7-6">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="3">sqrt(x)</option>
@@ -326,7 +332,7 @@
 
                                 </select></label>
 
-                            <label for="">Вычисляет косинус числа x&nbsp; <select id="t13-7-7">
+                            <label for="" class="q13-38">Вычисляет косинус числа x&nbsp; <select id="t13-7-7">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="7">cos(x)</option>
@@ -340,7 +346,7 @@
                                     <option value="9">DegToRad(x)</option>
                                 </select></label>
 
-                            <label for="">Переводит радианы в градусы&nbsp;<select id="t13-7-8">
+                            <label for="" class="q13-39">Переводит радианы в градусы&nbsp;<select id="t13-7-8">
 
                                     <option value="5">frac(x)</option>
                                     <option value="6">sin(x)</option>
@@ -354,7 +360,7 @@
                                     <option value="8">RadToDeg(x)</option>
                                 </select></label>
 
-                            <label for="">Переводит градусы в радианы&nbsp;<select id="t13-7-9">
+                            <label for="" class="q13-40">Переводит градусы в радианы&nbsp;<select id="t13-7-9">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="9">DegToRad(x)</option>
@@ -445,17 +451,17 @@
                         <ol>
                             <li>
                                 <pre><font>
-var x, y, z1, z2:integer;
-begin
-write(ꞌВведите x =ꞌ);
-read(x);
-write(ꞌВведите y =ꞌ);
-read(y);
-z1:= int(x/y);
-z2:= frac(x/y);
-write(ꞌЦелая часть =ꞌ,z1);
-write(ꞌДробная часть =ꞌ,z2);
-end.</font></pre>
+<b>var</b> x, y, z1, z2:integer;
+<b>begin</b>
+ write(ꞌВведите x =ꞌ);
+ read(x);
+ write(ꞌВведите y =ꞌ);
+ read(y);
+ z1:= int(x/y);
+ z2:= frac(x/y);
+ write(ꞌЦелая часть =ꞌ,z1);
+ write(ꞌДробная часть =ꞌ,z2);
+<b>end.</b></font></pre>
                             </li>
 
 
@@ -463,17 +469,17 @@ end.</font></pre>
 
                             <li>
                                 <pre><font>
-var x, y, z1, z2:real;
-begin
-write(ꞌВведите x =ꞌ);
-read(x);
-write(ꞌВведите y =ꞌ);
-read(y);
-z1:=x div y;
-z2:=x mod y;
-write(ꞌЦелая часть =ꞌ,z1);
-write(ꞌОстаток =ꞌ,z2);
-end.
+<b>var</b> x, y, z1, z2:real;
+<b>begin</b>
+ write(ꞌВведите x =ꞌ);
+ read(x);
+ write(ꞌВведите y =ꞌ);
+ read(y);
+ z1:=x <b>div</b> y;
+ z2:=x <b>mod</b> y;
+ write(ꞌЦелая часть =ꞌ,z1);
+ write(ꞌОстаток =ꞌ,z2);
+<b>end.</b>
                        </font></pre>
                             </li>
 
@@ -685,78 +691,82 @@ end.
             <font>read</font> і
             <font>write</font> таксама рэалізаваны як дапаможныя алгарытмы.</p>
         <p>Пры вылічэннях часта выкарыстоўваюцца розныя матэматычныя функцыі <a href="#pr13-5b">(прыклад&#160;13.5)</a>. Гэтыя функцыі рэалізаваны як убудаваныя дапаможныя алгарытмы і могуць ужывацца пры запісе арыфметычных выразаў. Аргументы функцый заўсёды запісваюцца ў дужках. Некаторыя з функцый прыведзены ў табліцы <i>Дадатку</i>).</p>
-        <table>
-            <tr>
-                <th>Запіс на мове Pascal</th>
-                <th>Апісанне</th>
-            </tr>
-            <tr>
-                <td>
-                    <font></font>abs(x)
-                </td>
-                <td>Знаходзіць модуль ліку x</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>sqr(x)</font>
-                </td>
-                <td>Узводзіць лік x у квадрат</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>sqrt(x)</font>
-                </td>
-                <td>Знаходзіць корань квадратны з ліку x. Вынік&#160;— заўсёды лік тыпу
-                    <font>real</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>trunc(x)</font>
-                </td>
-                <td>Знаходзіць цэлую частку рэчаіснага ліку x (
-                    <font>real</font>). Вынік&#160;— лік тыпу
-                    <font>integer</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>frac(x)</font>
-                </td>
-                <td>Знаходзіць дробавую частку рэчаіснага ліку x (
-                    <font>real</font>). Вынік&#160;— лік тыпу
-                    <font>real</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>sin(x)</font>
-                </td>
-                <td>Вылічае сінус ліку x. Лік x задаецца ў радыянах<sup>1</sup>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <font>cos(x)</font>
-                </td>
-                <td>Вылічае косінус ліку x. Лік x задаецца ў радыянах</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>RadToDeg(x)</font>
-                </td>
-                <td>Пераводзіць градусы ў радыяны</td>
-            </tr>
-            <tr>
-                <td>
-                    <font>DegToRad(x)</font>
-                </td>
-                <td>Пераводзіць радыяны ў градусы</td>
-            </tr>
+        <center>
+            <table class="tab1">
+                <col class="col1">
+                <col span="1" class="coln">
+                <thead>
+                    <tr>
+                        <td>Запіс на мове Pascal</td>
+                        <td>Апісанне</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <font>abs(x)</font>
+                    </td>
+                    <td>Знаходзіць модуль ліку x</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>sqr(x)</font>
+                    </td>
+                    <td>Узводзіць лік x у квадрат</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>sqrt(x)</font>
+                    </td>
+                    <td>Знаходзіць корань квадратны з ліку x. Вынік&#160;— заўсёды лік тыпу
+                        <font>real</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>trunc(x)</font>
+                    </td>
+                    <td>Знаходзіць цэлую частку рэчаіснага ліку x (<font>real</font>). Вынік&#160;— лік тыпу
+                        <font>integer</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>frac(x)</font>
+                    </td>
+                    <td>Знаходзіць дробавую частку рэчаіснага ліку x (<font>real</font>). Вынік&#160;— лік тыпу
+                        <font>real</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>sin(x)</font>
+                    </td>
+                    <td>Вылічае сінус ліку x. Лік x задаецца ў радыянах<sup>1</sup>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>cos(x)</font>
+                    </td>
+                    <td>Вылічае косінус ліку x. Лік x задаецца ў радыянах</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>RadToDeg(x)</font>
+                    </td>
+                    <td>Пераводзіць градусы ў радыяны</td>
+                </tr>
+                <tr>
+                    <td>
+                        <font>DegToRad(x)</font>
+                    </td>
+                    <td>Пераводзіць радыяны ў градусы</td>
+                </tr>
 
 
 
-        </table>
+            </table>
+        </center>
         <p> Аргументам функцыі можа быць лік, преаменная, выраз або іншая функцыя:
             <font>sin(DegToRad(45)), sqrt(abs(-16))
             </font>.</p>
@@ -774,11 +784,11 @@ end.
                     <li>
                         <div class="flex-col">
                             Выберыце азначэнне алгарытму.<br>
-                            <label for=""><input type="radio" value="1" name="t13-1b"> Канечная паслядоўнасць дакладных дзеянняў, фармальнае выкананне якіх дазваляе атрымаць рашэнне задачы для любога дапушчальнага набору
+                            <label for="" class="q13-1"><input type="radio" value="1" name="t13-1b"> Канечная паслядоўнасць дакладных дзеянняў, фармальнае выкананне якіх дазваляе атрымаць рашэнне задачы для любога дапушчальнага набору
                                 зыходных даных. <br></label>
-                            <label for=""><input type="radio" value="2" name="t13-1b"> Спосаб рашэння задачы з дапамогай камп’ютара. <br></label>
-                            <label for=""><input type="radio" value="3" name="t13-1b"> Чалавек, група людзей або тэхнічнае ўстройства, здольныя правільна выконваць каманды алгарытмаў. <br></label>
-                            <label for=""><input type="radio" value="4" name="t13-1b"> Каманды камп’ютарнага выканаўцы, якія могуць быць рэалізаваны  ў выглядзе працэдур і функцый. <br></label>
+                            <label for="" class="q13-2"><input type="radio" value="2" name="t13-1b"> Спосаб рашэння задачы з дапамогай камп’ютара. <br></label>
+                            <label for="" class="q13-3"><input type="radio" value="3" name="t13-1b"> Чалавек, група людзей або тэхнічнае ўстройства, здольныя правільна выконваць каманды алгарытмаў. <br></label>
+                            <label for="" class="q13-4"><input type="radio" value="4" name="t13-1b"> Каманды камп’ютарнага выканаўцы, якія могуць быць рэалізаваны  ў выглядзе працэдур і функцый. <br></label>
 
                         </div>
 
@@ -787,15 +797,15 @@ end.
                     <li>
                         <div class="flex-col">
                             Выберыце са спіса асноўныя алгарытмічныя канструкцыі.<br>
-                            <label for=""><input type="checkbox" id="t13-2-1b">Паслядоўнасць. <br></label>
+                            <label for="" class="q13-5"><input type="checkbox" id="t13-2-1b">Паслядоўнасць. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-2-2b">Галінаванне. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-3b">Цыкл. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-4b">Увод. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-5b">Вывад. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-6b">Прысвойванне. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-7b">Апісанне. <br></label>
-                            <label for=""><input type="checkbox" id="t13-2-8b">Працэдура. <br></label>
+                            <label for="" class="q13-6"><input type="checkbox" id="t13-2-2b">Галінаванне. <br></label>
+                            <label for="" class="q13-7"><input type="checkbox" id="t13-2-3b">Цыкл. <br></label>
+                            <label for="" class="q13-8"><input type="checkbox" id="t13-2-4b">Увод. <br></label>
+                            <label for="" class="q13-9"><input type="checkbox" id="t13-2-5b">Вывад. <br></label>
+                            <label for="" class="q13-10"><input type="checkbox" id="t13-2-6b">Прысвойванне. <br></label>
+                            <label for="" class="q13-11"><input type="checkbox" id="t13-2-7b">Апісанне. <br></label>
+                            <label for="" class="q13-12"><input type="checkbox" id="t13-2-8b">Працэдура. <br></label>
 
                         </div>
                         <button class="check" id="cht13-2b">Праверыць</button>
@@ -803,11 +813,11 @@ end.
                     <li>
                         <div class="flex-col">
                             Якая каманда выкарыстоўваецца ў мове Pascal для ўводу даных?<br>
-                            <label for=""><input type="radio" value="1" name="t13-3b">read. <br></label>
-                            <label for=""><input type="radio" value="2" name="t13-3b">write. <br></label>
-                            <label for=""><input type="radio" value="3" name="t13-3b">writeln. <br></label>
-                            <label for=""><input type="radio" value="4" name="t13-3b">round. <br></label>
-                            <label for=""><input type="radio" value="5" name="t13-3b">sqrt. <br></label>
+                            <label for="" class="q13-13"><input type="radio" value="1" name="t13-3b">read. <br></label>
+                            <label for="" class="q13-14"><input type="radio" value="2" name="t13-3b">write. <br></label>
+                            <label for="" class="q13-15"><input type="radio" value="3" name="t13-3b">writeln. <br></label>
+                            <label for="" class="q13-16"><input type="radio" value="4" name="t13-3b">round. <br></label>
+                            <label for="" class="q13-17"><input type="radio" value="5" name="t13-3b">sqrt. <br></label>
 
                         </div>
                         <button class="check" id="cht13-3b">Праверыць</button>
@@ -815,15 +825,15 @@ end.
                     <li>
                         <div class="flex-col">
                             Якія каманды выкарыстоўваюцца ў мове Pascal для вываду даных?<br>
-                            <label for=""><input type="checkbox" id="t13-4-1b">read. <br></label>
+                            <label for="" class="q13-18"><input type="checkbox" id="t13-4-1b">read. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-4-2b">write. <br></label>
+                            <label for="" class="q13-19"><input type="checkbox" id="t13-4-2b">write. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-4-3b">writeln. <br></label>
+                            <label for="" class="q13-21"><input type="checkbox" id="t13-4-3b">writeln. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-4-4b">round. <br></label>
+                            <label for="" class="q13-21"><input type="checkbox" id="t13-4-4b">round. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-4-5b">sqrt. <br></label>
+                            <label for="" class="q13-22"><input type="checkbox" id="t13-4-5b">sqrt. <br></label>
 
                         </div>
                         <button class="check" id="cht13-4b">Праверыць</button>
@@ -831,13 +841,13 @@ end.
                     <li>
                         <div class="flex-col">
                             Для чаго патрэбна каманда прысвойвання? <br>
-                            <label for=""><input type="checkbox" id="t13-5-1b">Задаваць значэнні пераменным. <br></label>
+                            <label for="" class="q13-23"><input type="checkbox" id="t13-5-1b">Задаваць значэнні пераменным. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-5-2b">Вылічаць значэнне выразу. <br></label>
+                            <label for="" class="q13-24"><input type="checkbox" id="t13-5-2b">Вылічаць значэнне выразу. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-5-3b">Уводзіць значэнні пераменных. <br></label>
+                            <label for="" class="q13-25"><input type="checkbox" id="t13-5-3b">Уводзіць значэнні пераменных. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-5-4b">Выконваць дапаможныя алгарытмы. <br></label>
+                            <label for="" class="q13-26"><input type="checkbox" id="t13-5-4b">Выконваць дапаможныя алгарытмы. <br></label>
 
                         </div>
                         <button class="check" id="cht13-5b">Праверыць</button>
@@ -845,15 +855,15 @@ end.
                     <li>
                         <div class="flex-col">
                             У якіх выпадках зручна выкарыстоўваць дапаможны алгарытм?<br>
-                            <label for=""><input type="checkbox" id="t13-6-1b">Калі трэба рашыць некаторую частку асноўнай задачы. <br></label>
+                            <label for="" class="q13-27"><input type="checkbox" id="t13-6-1b">Калі трэба рашыць некаторую частку асноўнай задачы. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-6-2b">Калі ўведзены даныя, якія не адпавядаюць ўмове задачы. <br></label>
+                            <label for="" class="q13-28"><input type="checkbox" id="t13-6-2b">Калі ўведзены даныя, якія не адпавядаюць ўмове задачы. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-6-3b">Калі ў праграме даводзіцца выконваць адну і тую ж паслядоўнасць каманд некалькі разоў. <br></label>
+                            <label for="" class="q13-29"><input type="checkbox" id="t13-6-3b">Калі ў праграме даводзіцца выконваць адну і тую ж паслядоўнасць каманд некалькі разоў. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-6-4b">У любой праграме для камп’ютарнага выканаўцы Робат. <br></label>
+                            <label for="" class="q13-30"><input type="checkbox" id="t13-6-4b">У любой праграме для камп’ютарнага выканаўцы Робат. <br></label>
 
-                            <label for=""><input type="checkbox" id="t13-6-5b">Калі ў праграме ёсць памылкі. <br></label>
+                            <label for="" class="q13-31"><input type="checkbox" id="t13-6-5b">Калі ў праграме ёсць памылкі. <br></label>
 
                         </div>
                         <button class="check" id="cht13-6b">Праверыць</button>
@@ -865,7 +875,7 @@ end.
                         <div class="flex-col">
                             Устанавіце адпаведнасць паміж дзеяннямі і матэматычнымі функцыямі, прызначанымі для іх выканання.<br>
 
-                            <label for="">Знаходзіць модуль ліку <i>x</i> &nbsp;<select id="t13-7b-1">
+                            <label for="" class="q13-32">Знаходзіць модуль ліку <i>x</i> &nbsp;<select id="t13-7-1b">
                                     <option value="7">cos(x)</option>
                                     <option value="8">RadToDeg(x)</option>
                                     <option value="3">sqrt(x)</option>
@@ -878,7 +888,7 @@ end.
                                     <option value="9">DegToRad(x)</option>
                                 </select></label>
 
-                            <label for="">Узводзіць лік <i>x</i> у квадрат&nbsp;<select id="t13-7b-2">
+                            <label for="" class="q13-33">Узводзіць лік <i>x</i> у квадрат&nbsp;<select id="t13-7-2b">
                                     <option value="1">abs(x)</option>
 
                                     <option value="3">sqrt(x)</option>
@@ -893,7 +903,7 @@ end.
                                     <option value="6">sin(x)</option>
                                 </select></label>
 
-                            <label for="">Знаходзіць корань квадратны з ліку <i>x</i> &nbsp;<select id="t13-7b-3">
+                            <label for="" class="q13-34">Знаходзіць корань квадратны з ліку <i>x</i> &nbsp;<select id="t13-7-3b">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="3">sqrt(x)</option>
@@ -905,7 +915,7 @@ end.
                                     <option value="9">DegToRad(x)</option>
                                 </select></label>
 
-                            <label for="">Знаходзіць цэлую частку рэчаіснага ліку <i>x</i> &nbsp;<select id="t13-7b-4">
+                            <label for="" class="q13-35">Знаходзіць цэлую частку рэчаіснага ліку <i>x</i> &nbsp;<select id="t13-7-4b">
                                     <option value="3">sqrt(x)</option>
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
@@ -919,7 +929,7 @@ end.
                                     <option value="9">DegToRad(x)</option>
                                 </select></label>
 
-                            <label for="">Знаходзіць дробную частку рэчаіснага ліку&nbsp;<i>x</i> &nbsp;<select id="t13-7b-5">
+                            <label for="" class="q13-36">Знаходзіць дробную частку рэчаіснага ліку&nbsp;<i>x</i> &nbsp;<select id="t13-7-5b">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="3">sqrt(x)</option>
@@ -932,7 +942,7 @@ end.
                                     <option value="5">frac(x)</option>
                                 </select></label>
 
-                            <label for="">Вылічае сінус ліку&nbsp;<i>x</i> &nbsp;<select id="t13-7b6">
+                            <label for="" class="q13-37">Вылічае сінус ліку&nbsp;<i>x</i> &nbsp;<select id="t13-7-6b">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="3">sqrt(x)</option>
@@ -946,7 +956,7 @@ end.
 
                                 </select></label>
 
-                            <label for="">Вылічае косінус ліку&nbsp;<i>x</i> &nbsp;<select id="t13-7b-7">
+                            <label for="" class="q13-38">Вылічае косінус ліку&nbsp;<i>x</i> &nbsp;<select id="t13-7-7b">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="7">cos(x)</option>
@@ -960,7 +970,7 @@ end.
                                     <option value="9">DegToRad(x)</option>
                                 </select></label>
 
-                            <label for="">Пераводзіць радыяны ў градусы&nbsp;<select id="t13-7b-8">
+                            <label for="" class="q13-39">Пераводзіць радыяны ў градусы&nbsp;<select id="t13-7-8b">
 
                                     <option value="5">frac(x)</option>
                                     <option value="6">sin(x)</option>
@@ -974,7 +984,7 @@ end.
                                     <option value="8">RadToDeg(x)</option>
                                 </select></label>
 
-                            <label for="">Пераводзіць градусы ў радыяны&nbsp;<select id="t13-7b-9">
+                            <label for="" class="q13-40">Пераводзіць градусы ў радыяны&nbsp;<select id="t13-7-9b">
                                     <option value="1">abs(x)</option>
                                     <option value="2">sqr(x)</option>
                                     <option value="9">DegToRad(x)</option>
@@ -1068,14 +1078,14 @@ end.
                                 <pre><font>
 <b>var</b> x, y, z1, z2:integer;
 <b>begin</b>
-write(ꞌУвядзіце  x =ꞌ);
-read(x);
-write(ꞌУвядзіце  y =ꞌ);
-read(y);
-z1:= int(x/y);
-z2:= frac(x/y);
-write(ꞌЦэлая  частка  =ꞌ,z1);
-write(ꞌДробная частка  =ꞌ,z2);
+ write(ꞌУвядзіце  x =ꞌ);
+ read(x);
+ write(ꞌУвядзіце  y =ꞌ);
+ read(y);
+ z1:= int(x/y);
+ z2:= frac(x/y);
+ write(ꞌЦэлая  частка  =ꞌ,z1);
+ write(ꞌДробная частка  =ꞌ,z2);
 <b>end</b>.</font></pre>
                             </li>
 
@@ -1086,14 +1096,14 @@ write(ꞌДробная частка  =ꞌ,z2);
                                 <pre><font>
 <b>var</b> x, y, z1, z2:real;
 <b>begin</b>
-write(ꞌУвядзіце  x =ꞌ);
-read(x);
-write(ꞌВведите y =ꞌ);
-read(y);
-z1:=x <b>div</b> y;
-z2:=x <b>mod</b> y;
-write(ꞌЦэлая  частка =ꞌ,z1);
-write(ꞌАстача  =ꞌ,z2);
+ write(ꞌУвядзіце  x =ꞌ);
+ read(x);
+ write(ꞌВведите y =ꞌ);
+ read(y);
+ z1:=x <b>div</b> y;
+ z2:=x <b>mod</b> y;
+ write(ꞌЦэлая  частка =ꞌ,z1);
+ write(ꞌАстача  =ꞌ,z2);
 <b>end</b>.
                        </font></pre>
                             </li>
@@ -1129,6 +1139,7 @@ write(ꞌАстача  =ꞌ,z2);
                             myalert("Няправiльна!");
                         }
                     });
+
 
 
 
@@ -1231,8 +1242,182 @@ write(ꞌАстача  =ꞌ,z2);
                 });
             })(jQuery);
 
-            });
-            })(jQuery);
+            function changeOrder13() {
+                let arr1 = rand(4, 1, 4)
+                let arr2 = rand(8, 1, 8)
+                let arr3 = rand(5, 1, 5)
+                let arr4 = rand(5, 1, 5)
+                let arr5 = rand(4, 1, 4)
+                let arr6 = rand(5, 1, 5)
+                let arr7 = rand(9, 1, 9)
+
+                $('.q13-1').css({
+                    'order': arr1[0]
+                })
+                $('.q13-2').css({
+                    'order': arr1[1]
+                })
+                $('.q13-3').css({
+                    'order': arr1[2]
+                })
+                $('.q13-4').css({
+                    'order': arr1[3]
+                })
+
+
+
+                $('.q13-5').css({
+                    'order': arr2[0]
+                })
+                $('.q13-6').css({
+                    'order': arr2[1]
+                })
+
+                $('.q13-7').css({
+                    'order': arr2[2]
+                })
+                $('.q13-8').css({
+                    'order': arr2[3]
+                })
+
+                $('.q13-9').css({
+                    'order': arr2[4]
+                })
+                $('.q13-10').css({
+                    'order': arr2[5]
+                })
+
+                $('.q13-11').css({
+                    'order': arr2[6]
+                })
+                $('.q13-12').css({
+                    'order': arr2[7]
+                })
+
+
+
+
+
+                $('.q13-13').css({
+                    'order': arr3[0]
+                })
+
+                $('.q13-14').css({
+                    'order': arr3[1]
+                })
+                $('.q13-15').css({
+                    'order': arr3[2]
+                })
+
+
+                $('.q13-16').css({
+                    'order': arr3[3]
+                })
+                $('.q13-17').css({
+                    'order': arr3[4]
+                })
+
+
+
+
+
+                $('.q13-18').css({
+                    'order': arr4[0]
+                })
+                $('.q13-19').css({
+                    'order': arr4[1]
+                })
+                $('.q13-20').css({
+                    'order': arr4[2]
+                })
+
+                $('.q13-21').css({
+                    'order': arr4[3]
+                })
+                $('.q13-22').css({
+                    'order': arr4[4]
+                })
+
+
+
+
+
+                $('.q13-23').css({
+                    'order': arr5[0]
+                })
+                $('.q13-24').css({
+                    'order': arr5[1]
+                })
+                $('.q13-25').css({
+                    'order': arr5[2]
+                })
+
+                $('.q13-26').css({
+                    'order': arr5[3]
+                })
+
+
+
+
+
+                $('.q13-27').css({
+                    'order': arr6[0]
+                })
+
+                $('.q13-28').css({
+                    'order': arr6[1]
+                })
+                $('.q13-29').css({
+                    'order': arr6[2]
+                })
+                $('.q13-30').css({
+                    'order': arr6[3]
+                })
+
+
+                $('.q13-31').css({
+                    'order': arr6[4]
+                })
+
+
+
+
+                $('.q13-32').css({
+                    'order': arr7[0]
+                })
+
+                $('.q13-33').css({
+                    'order': arr7[1]
+                })
+                $('.q13-34').css({
+                    'order': arr7[2]
+                })
+                $('.q13-35').css({
+                    'order': arr7[3]
+                })
+                $('.q13-36').css({
+                    'order': arr7[4]
+                })
+
+                $('.q13-37').css({
+                    'order': arr7[5]
+                })
+                $('.q13-38').css({
+                    'order': arr7[6]
+                })
+                $('.q13-39').css({
+                    'order': arr7[7]
+                })
+                $('.q13-40').css({
+                    'order': arr7[8]
+                })
+
+
+
+
+
+
+            }
 
         </script>
 </body>
