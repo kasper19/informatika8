@@ -101,6 +101,10 @@ div p pre b {
 
 }
 
+.main font b {
+    font-family: Courier New, monospace;
+}
+
 .blue-back pre font b {
     font-family: Courier New, monospace;
 
@@ -905,6 +909,10 @@ textarea {
 
 .end img {
     width: 60%;
+}
+
+.end23 img {
+    width: 35%;
 }
 
 .end img1 {

@@ -210,29 +210,30 @@
                     <li>
                         <div class="flex-col">
                             Расставьте логические операции в порядке приоритета. <br>
-                            <label for="" class="q15-11">1.&#160;<select id="t15-3-1">
+
+                            <label for="">1.&#160;<select id="t15-3-1">
 
 
-                                    <option value="2">and</option>
-                                    <option value="3">or</option>
-                                    <option value="1">not</option>
-
-
-                                </select></label>
-
-                            <label for="" class="q15-12">2.&#160;<select id="t15-3-2">
-                                    <option value="3">or</option>
-                                    <option value="1">not</option>
-                                    <option value="2">and</option>
-
+                                    <option value="2" class="q15-11">and</option>
+                                    <option value="3" class="q15-11">or</option>
+                                    <option value="1" class="q15-11">not</option>
 
 
                                 </select></label>
 
-                            <label for="" class="q15-13">3.&#160;<select id="t15-3-3">
-                                    <option value="1">not</option>
-                                    <option value="2">and</option>
-                                    <option value="3">or</option>
+                            <label for="">2.&#160;<select id="t15-3-2">
+                                    <option value="3" class="q15-12">or</option>
+                                    <option value="1" class="q15-12">not</option>
+                                    <option value="2" class="q15-12">and</option>
+
+
+
+                                </select></label>
+
+                            <label for="">3.&#160;<select id="t15-3-3">
+                                    <option value="1" class="q15-13">not</option>
+                                    <option value="2" class="q15-13">and</option>
+                                    <option value="3" class="q15-13">or</option>
 
 
 
@@ -368,7 +369,13 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
             $(document).ready(function() {
                 
               
-        
+        $(".questions-btn").click(function () {
+            jQuery('.q15-11').shuffle();
+            jQuery('.q15-12').shuffle();
+            jQuery('.q15-13').shuffle();
+            
+            
+        });
         
         
         $("#cht15-1").click(function () {
@@ -687,29 +694,29 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
                     <li>
                         <div class="flex-col">
                             Расстаўце лагічныя аперацыі згодна з прыярытэтам. <br>
-                            <label for="" class="q15-11">1.&#160; <select id="t15-3-1b">
+                            <label for="">1.&#160;<select id="t15-3-1b">
 
 
-                                    <option value="2">and</option>
-                                    <option value="3">or</option>
-                                    <option value="1">not</option>
-
-
-                                </select></label>
-
-                            <label for="" class="q15-12">2.&#160;<select id="t15-3-2b">
-                                    <option value="3">or</option>
-                                    <option value="1">not</option>
-                                    <option value="2">and</option>
-
+                                    <option value="2" class="q15-11b">and</option>
+                                    <option value="3" class="q15-11b">or</option>
+                                    <option value="1" class="q15-11b">not</option>
 
 
                                 </select></label>
 
-                            <label for="" class="q15-13">3.&#160;<select id="t15-3-3b">
-                                    <option value="1">not</option>
-                                    <option value="2">and</option>
-                                    <option value="3">or</option>
+                            <label for="">2.&#160;<select id="t15-3-2b">
+                                    <option value="3" class="q15-12b">or</option>
+                                    <option value="1" class="q15-12b">not</option>
+                                    <option value="2" class="q15-12b">and</option>
+
+
+
+                                </select></label>
+
+                            <label for="">3.&#160;<select id="t15-3-3b">
+                                    <option value="1" class="q15-13b">not</option>
+                                    <option value="2" class="q15-13b">and</option>
+                                    <option value="3" class="q15-13b">or</option>
 
 
 
@@ -844,6 +851,14 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
         (function($) {
             $(document).ready(function() {
 
+                $(".questions-btn").click(function() {
+                    jQuery('.q15-11b').shuffle();
+                    jQuery('.q15-12b').shuffle();
+                    jQuery('.q15-13b').shuffle();
+
+
+                });
+
 
 
 
@@ -954,7 +969,9 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
         function changeOrder15() {
             let arr1 = rand(4, 1, 4)
             let arr2 = rand(6, 1, 6)
-            let arr3 = rand(3, 1, 3)
+            let arr31 = rand(3, 1, 3)
+            let arr32 = rand(3, 1, 3)
+            let arr33 = rand(3, 1, 3)
             let arr4 = rand(5, 1, 5)
             let arr5 = rand(5, 1, 5)
             let arr6 = rand(2, 1, 2)
@@ -1006,15 +1023,37 @@ write(ꞌЧисло ...&#160;— ꞌ,a);
 
 
 
-            $('.q15-11').css({
-                'order': arr3[0]
+            $('option.q15-11-1').css({
+                'order': arr31[0]
             })
-            $('.q15-12').css({
-                'order': arr3[1]
+            $('option.q15-11-2').css({
+                'order': arr31[1]
+            })
+            $('option.q15-11-3').css({
+                'order': arr31[2]
             })
 
-            $('.q15-13').css({
-                'order': arr3[2]
+
+
+            $('option.q15-12-1').css({
+                'order': arr32[0]
+            })
+            $('option.q15-12-2').css({
+                'order': arr32[1]
+            })
+            $('option.q15-12-3').css({
+                'order': arr32[2]
+            })
+
+
+            $('option.q15-13-1').css({
+                'order': arr33[0]
+            })
+            $('option.q15-13-2').css({
+                'order': arr33[1]
+            })
+            $('option.q15-13-3').css({
+                'order': arr33[2]
             })
 
 
