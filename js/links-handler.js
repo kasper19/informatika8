@@ -66,13 +66,19 @@ let getChapterId = (chap) => {
         case '19.html':
             return '#nineteenth'
         case '20.html':
-            return '#twentieth'
+            return '#tww'
         case '21.html':
-            return '#twenty-first'
+            return '#tf'
         case '22.html':
-            return '#twenty-sec'
+            return '#twt'
         case '23.html':
-            return '#twenty-third'
+            return '#tt'
+        case '24.html':
+            return '#tfo'
+        case '25.html':
+            return '#tfv'
+        case '26.html':
+            return '#tsix'
         case 'glossary.html':
             return '#glossary'
         case 'about.html':
