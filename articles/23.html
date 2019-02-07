@@ -106,7 +106,25 @@
                     <li>
                         <div class="flex-col">
                             Определите, с помощью какого шаблона создана формула (установите соответствие).<br>
-                            <img src="img/t23-3.JPG" alt=""><br>
+                            <table>
+                                <tr>
+                                    <td><img src="images/24-1.JPG" alt=""></td>
+                                    <td class="qa23">А&#160;<img src="images/24-1.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/24-2.JPG" alt=""></td>
+                                    <td class="qa23">Б&#160;<img src="images/24-2.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/24-3.JPG" alt=""></td>
+                                    <td class="qa23">В&#160;<img src="images/24-2.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/24-4.JPG" alt=""></td>
+                                    <td class="qa23">Г&#160;<img src="images/24-3.png" alt=""></td>
+                                </tr>
+
+                            </table><br>
                             <label>1<select id="t23-3-1">
                                     <option value="2">Б</option>
                                     <option value="1">А</option>
@@ -176,6 +194,13 @@
     <script>
         (function($) {
             $(document).ready(function() {
+                
+                 $(".questions-btn").click(function () {
+            jQuery('table tr td.qa23').shuffle();
+           
+            
+            
+        });
                 
                 $("#cht23-1").click(function () {
             var y2 = $("input[name='t23-1']:checked").attr("value");
@@ -257,7 +282,7 @@ myalert("Неправильно!");
 
         <div class="not-linked">
             <hr>
-            <button class="questions-btn" onclick="changeOrder23()">Тесты</button>
+            <button class="questions-btn" onclick="changeOrder23()">Тэсты</button>
             <div class="hiddenEl">
                 <img src="images/ref-pics/ref1.png" width="50px" height="50px">
                 <ol>
@@ -286,7 +311,25 @@ myalert("Неправильно!");
                     <li>
                         <div class="flex-col">
                             Вызначыце, з дапамогай якога шаблону створана формула (устанавіце адпаведнасць).<br>
-                            <img src="img/t23-3.JPG" alt=""><br>
+                            <table>
+                                <tr>
+                                    <td><img src="images/24-1.JPG" alt=""></td>
+                                    <td class="qab23">А&#160;<img src="images/24-1.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/24-2.JPG" alt=""></td>
+                                    <td class="qab23">Б&#160;<img src="images/24-2.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/24-3.JPG" alt=""></td>
+                                    <td class="qab23">В&#160;<img src="images/24-2.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/24-4.JPG" alt=""></td>
+                                    <td class="qab23">Г&#160;<img src="images/24-3.png" alt=""></td>
+                                </tr>
+
+                            </table><br>
                             <label>1<select id="t23-3-1b">
                                     <option value="3">В</option>
                                     <option value="4">Г</option>
@@ -353,6 +396,14 @@ myalert("Неправильно!");
         (function($) {
             $(document).ready(function() {
 
+
+                $(".questions-btn").click(function() {
+                    jQuery('table tr td.qab23').shuffle();
+
+
+
+                });
+
                 $("#cht23-1b").click(function() {
                     var y2 = $("input[name='t23-1b']:checked").attr("value");
                     if (y2 == "2") {
@@ -393,6 +444,7 @@ myalert("Неправильно!");
 
 
         function changeOrder23() {
+
             let arr1 = rand(4, 1, 4)
             let arr2 = rand(4, 1, 4)
 
